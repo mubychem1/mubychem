@@ -1,0 +1,117 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+const perks = [
+  {
+    icon: "/images/teamwork.svg",
+    title: "Teamwork",
+    description: "Our employees work in teams and share even the boldest ideas.",
+  },
+  {
+    icon: "/images/ideas.svg",
+    title: "Room for New Ideas",
+    description: "We’re always ready to listen and discuss new initiatives.",
+  },
+  {
+    icon: "/images/salary.svg",
+    title: "Competitive Salary",
+    description: "Get paid well for your skills! We offer competitive salary + benefits.",
+  },
+  {
+    icon: "/images/development.svg",
+    title: "Personal Development",
+    description: "We encourage you to study and cover your expenses on courses.",
+  },
+];
+
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const zoomIn = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+};
+
+const Career = () => {
+  return (
+    <>
+      {/* Perks Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="bg-white text-black py-16 px-8 md:px-20 text-center"
+      >
+        <p className="text-blue-600 text-sm font-semibold">- Perks -</p>
+        <h2 className="text-3xl md:text-4xl font-bold mt-2">Main Reasons Why You Should Work Here</h2>
+        <p className="text-gray-500 mt-3 text-lg">
+          Being a part of Outer Web means enjoying every working day!
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+          {perks.map((perk, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              className="text-center flex flex-col items-center"
+            >
+              <div className="bg-gray-100 p-4 rounded-full mb-4">
+                <img src={perk.icon} alt={perk.title} className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-semibold">{perk.title}</h3>
+              <div className="w-10 h-1 bg-blue-600 my-2"></div>
+              <p className="text-gray-500 text-sm">{perk.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Benefits Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="bg-[#FAF8F1] py-16 px-8 md:px-20 flex flex-col md:flex-row items-center gap-10"
+      >
+        <div className="md:w-1/2">
+          <p className="text-blue-600 text-sm font-semibold">- Benefits -</p>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Feel and Do Your Best</h2>
+          <p className="text-xl font-semibold text-gray-700 mt-2">We really care about our employees.</p>
+          <p className="text-gray-600 mt-4 text-lg">
+            Working in Outer Web, you get a range of benefits, resources, and expert guidance to help you prioritize your well-being and find a work-life balance.
+          </p>
+          <ul className="mt-4 space-y-3 text-lg">
+            <li className="flex items-center gap-2">✅ Full healthcare coverage for you and your family;</li>
+            <li className="flex items-center gap-2">✅ Wellbeing reimbursement (up to $500 every month);</li>
+            <li className="flex items-center gap-2">✅ Home office budget to make your home workplace comfortable;</li>
+          </ul>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 mt-6 rounded-lg font-semibold"
+          >
+            Learn More
+          </motion.button>
+        </div>
+        
+        {/* Image Section with Zoom-in Effect */}
+        <motion.div variants={zoomIn} className="md:w-1/2">
+          <img src="/images/benefits.jpg" alt="Employee working" className="w-full rounded-lg" />
+        </motion.div>
+      </motion.div>
+    </>
+  );
+};
+
+export default Career;
+
+// https://careerspage.weblium.site/
