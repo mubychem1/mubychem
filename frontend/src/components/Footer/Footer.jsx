@@ -143,11 +143,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="Carrer"
+                      href="Career"
                       className="hover:text-blue-600 cursor-pointer"
                       rel="noopener noreferrer"
                     >
-                      Carrer
+                      Career
                     </a>
                   </li>
                   <li>
