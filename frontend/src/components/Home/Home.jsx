@@ -13,32 +13,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
 
 
-const testimonials = [
-  {
-    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
-    name: "Parsons William",
-    title: "Lab Specialist",
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
-  },
-  {
-    text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples.",
-    name: "Ariana Green",
-    title: "Happy Customer",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    text: "The team provided excellent service and ensured we had the best experience possible. Highly recommended!",
-    name: "Michael Johnson",
-    title: "Business Owner",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    text: "Their attention to detail and customer support exceeded my expectations. I will definitely return for future needs.",
-    name: "Emily Carter",
-    title: "Consultant",
-    image: "https://randomuser.me/api/portraits/women/50.jpg",
-  }
-];
+
 
 const features = [
   "Sample Collection",
@@ -81,7 +56,7 @@ const Home = () => {
     <>
       {/*------------ Hero Section ------- */}
       <div
-        className="flex flex-col md:flex-row items-center bg-gray-100 p-6 md:p-12 rounded-2xl h-auto md:h-[900px] gap-6 md:gap-12"
+        className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12"
         style={{
           fontFamily: "Open Sans, sans-serif",
           fontWeight: "normal",
@@ -175,7 +150,7 @@ const Home = () => {
 
 
       {/* -----------ResearchSection ------------ */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-screen ">
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-full">
 
         {/* Left Side - Image */}
         <motion.div

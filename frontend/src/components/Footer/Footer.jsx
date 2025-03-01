@@ -11,42 +11,26 @@ import logo1 from "../../assets/logo1.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#ecf2ff] min-h-screen p-1">
-      <div className="bg-[#06102b]  text-white py-16 px-6 md:px-0 lg:px-12 rounded-[28px] relative min-h-[590px]">
+    <div className="bg-[#ecf2ff] m-h-full p-1">
+      <div className="bg-[#06102b]  text-white py-16 px-6 md:px-0 lg:px-12 rounded-t-3xl rounded-b-xl relative min-h-[590px]">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Section - Logo & Social Media */}
-          <div className="space-y-6 md:w-1/3 ml-[6px]">
-            <div className="w-40">
+          <div className="space-y-6">
+            <div className="w-30">
               <img src={logo1} alt="Logo" className="w-full" />
             </div>
             <div className="flex space-x-6 text-2xl">
-              <a
-                href="https://www.facebook.com/mubychemicails1976"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookF className="hover:text-blue-500 cursor-pointer" />
+              <a href="#" className="hover:text-blue-500 cursor-pointer">
+                <FaFacebookF />
               </a>
-              <a
-                href="https://twitter.com/muby_chemicals"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaXTwitter className="hover:text-blue-400 cursor-pointer" />
+              <a href="#" className="hover:text-blue-400 cursor-pointer">
+                <FaXTwitter />
               </a>
-              <a
-                href="https://www.linkedin.com/in/company/muby-chemicals"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="hover:text-blue-600 cursor-pointer" />
+              <a href="#" className="hover:text-blue-600 cursor-pointer">
+                <FaLinkedinIn />
               </a>
-              <a
-                href="https://www.instagram.com/mubychemicalsgroups"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="hover:text-blue-600 cursor-pointer" />
+              <a href="#" className="hover:text-blue-600 cursor-pointer">
+                <FaInstagram />
               </a>
             </div>
           </div>
@@ -143,11 +127,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="Carrer"
+                      href="Career"
                       className="hover:text-blue-600 cursor-pointer"
                       rel="noopener noreferrer"
                     >
-                      Carrer
+                      Career
                     </a>
                   </li>
                   <li>
@@ -208,39 +192,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 bg-white text-black py-4  rounded-t-[28px] rounded-b-[8px] pr-9 pl-9 w-[97%] absolute inset-x-5 bottom-0  shadow-md ">
-          <div className="container mx-auto px-4 flex flex-wrap items-center justify-between">
-            <div className="w-full md:w-1/2 sm:w-1/2 text-center md:text-left text-sm">
-              <p>
-                Copyright &copy; 2025{" "}
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline"
-                >
-                  Muby Chemicals
-                </a>{" "}
-                All Rights Reserved.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-              <ul className="flex flex-col md:flex-row items-center gap-4 text-sm">
-                <li>
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Terms and Conditions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    FAQ
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className="mt-8 bg-white text-black py-2  rounded-t-[20px] rounded-b-[8px] pr-7 pl-2 w-[97] absolute inset-x-5 bottom-0  justify-center ">
+          <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm">
+            <p>Copyright &copy; 2024 Xleb All Rights Reserved.</p>
+            <ul className="flex space-x-4">
+              <li><a href="#" className="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" className="hover:underline">Term And Condition</a></li>
+              <li><a href="#" className="hover:underline">FAQ</a></li>
+            </ul>
           </div>
         </div>
       </div>
