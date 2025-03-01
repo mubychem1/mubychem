@@ -5,7 +5,7 @@ import { FaArrowRight, FaPlay } from 'react-icons/fa';
 import { IoMdFlask } from "react-icons/io";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-// import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
 // import lab from '../../assets/lab-research.png';
 import { FaQuoteLeft } from "react-icons/fa";
@@ -40,7 +40,7 @@ const Home = () => {
     { title: "Lab Technician", description: "The newest automation technology is used in our labs to improve data quality.", icon: "⚗️" },
   ];
 
-  const [active, setActive] = useState(0);
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -55,6 +55,8 @@ const Home = () => {
       prevIndex >= testimonials.length - 2 ? 0 : prevIndex + 1
     );
   };
+
+
 
   return (
     <>
@@ -310,6 +312,14 @@ const Home = () => {
               ))}
             </ul>
           </div>
+        </div>
+      </div>
+
+      {/* --------------section3------------ */}
+      <div className='relative w-full  bg-[#0B1C3F] text-white p-10'>
+        <div className="text-left mb-6 font-sans" style={{ fontFamily: "Open Sans, sans-serif" }}>
+          <button className="bg-white text-black px-4 py-2 rounded-full text-sm">OUR SERVICE</button>
+          <h2 className="text-5xl font-medium  mt-4">Reliable & High Quality Service</h2>
         </div>
       </div>
     </>
