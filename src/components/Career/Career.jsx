@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const services = [
+const project_details = [
   { title: "Elemental Analysis", icon: "\u269B", description: "Our clinical pathologists are available seven days a week..." },
   { title: "Chemical Research", icon: "\uD83E\uDDE0", description: "Our clinical pathologists are available seven days a week..." },
   { title: "Pathology Testing", icon: "\uD83C\uDF93", description: "Our clinical pathologists are available seven days a week..." },
@@ -32,10 +32,10 @@ const services = [
 //   }
 // ];
 const Career = () => {
-  const [current, setCurrent] = useState(0);
+  const [currents, setCurrents] = useState(0);
 
-  const prevSlide = () => setCurrent(current > 0 ? current - 1 : services.length - 1);
-  const nextSlide = () => setCurrent(current < services.length - 1 ? current + 1 : 0);
+  const prevSlide = () => setCurrents(currents > 0 ? currents - 1 : project_details.length - 1);
+  const nextSlide = () => setCurrents(currents < project_details.length - 1 ? currents + 1 : 0);
   return (
     <>
       <div className="relative w-full bg-[#0B1C3F] text-white p-10">
@@ -46,10 +46,10 @@ const Career = () => {
         <div className="overflow-hidden relative flex items-center">
           <motion.div
             className="flex space-x-6"
-            animate={{ x: `-${current * 100}%` }}
+            animate={{ x: `-${currents * 100}%` }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
           >
-            {services.map((service, index) => (
+            {project_details.map((service, index) => (
               <div key={index} className="w-[300px] bg-[#11254D] p-6 rounded-2xl flex-shrink-0">
                 <div className="text-4xl">{service.icon}</div>
                 <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
