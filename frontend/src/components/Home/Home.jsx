@@ -63,18 +63,11 @@ const Home = () => {
     setCurrentIndex((prev) => (prev === services.length - 1 ? 0 : prev + 1));
   };
 
-
-
-
-
-
-
-
   return (
     <>
       {/*------------ Hero Section ------- */}
       <div
-        className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12 w-full"
+        className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12"
         style={{
           fontFamily: "Open Sans, sans-serif",
           fontWeight: "normal",
@@ -88,34 +81,46 @@ const Home = () => {
       >
         {/* Left Side - Image */}
         <div className="md:w-1/2 h-full flex items-center justify-center relative">
+          {/* Background Image */}
           <img
             src="https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg"
             alt="Scientist working in lab"
             className="w-full h-full object-cover rounded-2xl"
           />
+
+          {/* Watch Video Button - Positioned Bottom Right Inside Image */}
           <div className="absolute bottom-0 right-0 bg-[#EAF0FC] px-6 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
             <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
               <FaPlay className="text-gray-800" />
             </div>
-            <span className="ml-3 text-lg font-semibold text-gray-900">Watch Video</span>
+            <span className="ml-3 text-lg font-semibold text-gray-900">
+              Watch Video
+            </span>
           </div>
         </div>
 
         {/* Right Side - Content */}
-        <div className="md:w-1/2 h-full bg-[#3772ff] text-white p-6 md:p-12 rounded-2xl flex flex-col justify-center">
-          <p className="uppercase text-xs font-semibold bg-[#3772ff] text-white px-3 py-1 rounded-full inline-block w-max border ">
+        <div className="w-full max-w-[650px] h-full bg-[#3772ff] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden "
+        >
+          <p className="uppercase text-xs font-semibold bg-[#3772ff] text-white px-3 py-1 rounded-full w-max border">
             Best Solutions for Laboratory
           </p>
-          <h1 className="text-[84px] font-bold leading-[84px] mt-4 whitespace-nowrap">
+
+          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[65px] font-bold leading-tight mt-4">
             Micro Biology
           </h1>
-          <h2 className="text-[60px] font-bold leading-[60px] mt-3">
-            Research Institution
+
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[40px] lg:text-[50px] font-bold leading-tight mt-2">
+            Research <br />  Institution
           </h2>
-          <p className="mt-1 text-[18px] leading-[28px]">
+
+          <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
+
+          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]">
             Hire us! We are a professional laboratory offering services.
           </p>
-          <button className="mt-6 bg-black text-white px-6 py-3 rounded-full font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black border border-transparent hover:border-black">
+
+          <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
         </div>
@@ -379,8 +384,9 @@ const Home = () => {
                 <p className="mt-2 text-sm opacity-75 relative">{service.description}</p>
 
                 {/* Button */}
-                <div className="mt-4 relative">
-                  <button className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                <div className="mt-4 relative pt-7 bottom-10 left-45 top-[-15px] ">
+                  <button className="w-15 h-15 bg-blue-500 text-white rounded-full 
+                  flex items-center justify-center border-[#011938] border-8 hover:bg-white hover:text-blue-500">
                     ➜
                   </button>
                 </div>
@@ -388,9 +394,63 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
-
       </div>
 
+      {/* {------------estimate section--------------} */}
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#ecf2ff] p-6">
+        {/* Image Section */}
+        <div className="md:w-1/2 p-4">
+          <img
+            src="https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/contact-bg-left-col.jpg"
+            alt="Scientist working"
+            className="rounded-3xl  w-full h-[549px]"
+          />
+        </div>
+
+        {/* Form Section */}
+        <div className="md:w-1/2 bg-[#061c3d] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
+          <button className="border border-white px-4 py-1 rounded-full text-sm mb-4"  >
+            CONTACT US
+          </button>
+          <h2 className=" font-semibold text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
+
+          {/* Form Inputs */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <select className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15">
+              <option>Choose a Service</option>
+            </select>
+            <select className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300">
+              <option>Type of Clean</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Total Floor Area (sq ft)"
+              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15 "
+            />
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15"
+            />
+            <p className="text-white text-sm mt-4 italic">
+              Submit this information and we will send <br /> you the cost for the service.
+            </p>
+          </div>
+
+
+          {/* Submit Button */}
+          <div className="mt-6 flex justify-end ">
+            <button className="bg-white text-[#061c3d] px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-300 h-15">
+              Get Cost Estimate →
+            </button>
+          </div>
+        </div>
+      </div>
 
 
     </>
