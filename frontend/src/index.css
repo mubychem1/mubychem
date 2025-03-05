@@ -21,3 +21,10 @@
     width: 20px;
     box-shadow: 0 20px 0 0 var(--pbmit-xleb-light-bg-color);
 }
+
+.tab--left{
+    border-top-right-radius: 30px;
+  }
+  .tab--right{
+    border-top-left-radius: 30px;
+  }

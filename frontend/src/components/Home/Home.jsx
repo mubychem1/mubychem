@@ -7,7 +7,9 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
-// import lab from '../../assets/lab-research.png';
+import pattern from '../../assets/Pattern.png';
+import demo1 from '../../assets/demo-1.png';
+
 import { FaQuoteLeft } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
@@ -83,26 +85,42 @@ const Home = () => {
         <div className="md:w-1/2 h-full flex items-center justify-center relative">
           {/* Background Image */}
           <img
-            src="https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg"
+            src={demo1}
             alt="Scientist working in lab"
             className="w-full h-full object-cover rounded-2xl"
           />
 
           {/* Watch Video Button - Positioned Bottom Right Inside Image */}
+          <div className='absolute rotate-50 bottom-10 -right-6 px-7 py-3 flex
+           rounded-full'>
+            <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div>
+    <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
+
+            <div className='border-r-[15px] border-[#EAF0FC] rounded-full bg-opacity-3'>&nbsp;</div>
+          </div>
           <div className="absolute bottom-0 right-0 bg-[#EAF0FC] px-6 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
             <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
               <FaPlay className="text-gray-800" />
             </div>
-            <span className="ml-3 text-lg font-semibold text-gray-900">
+            <span className="ml-3 text-lg font-semibold text-gray-900"
+            style={{
+            }}>
               Watch Video
             </span>
           </div>
+          
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-full max-w-[650px] h-full bg-[#3772ff] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden "
+        <div
+          className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat "
+          style={{
+            backgroundImage:` url(${pattern})`,
+            backgroundSize: "100%",
+            backgroundPosition: "top-right",
+          }}
         >
-          <p className="uppercase text-xs font-semibold bg-[#3772ff] text-white px-3 py-1 rounded-full w-max border">
+          <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border">
             Best Solutions for Laboratory
           </p>
 
@@ -111,7 +129,7 @@ const Home = () => {
           </h1>
 
           <h2 className="text-[clamp(24px,5vw,50px)] md:text-[40px] lg:text-[50px] font-bold leading-tight mt-2">
-            Research <br />  Institution
+            Research Institution
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
@@ -123,7 +141,7 @@ const Home = () => {
           <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
-        </div>
+        </div>
       </div>
 
       {/* ------------ServicesCard Section ------------ */}
@@ -333,7 +351,7 @@ const Home = () => {
       </div>
 
       {/* --------------Our Services ------------ */}
-      <div className="bg-[#011938] text-white px-10 py-16">
+      <div className="bg-[#7B3931] text-white px-10 py-16">
         {/* Header Section */}
         <div className="flex justify-between items-center">
           <div className="text-left">
@@ -365,7 +383,7 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group w-[300px] bg-[#011938] p-6 rounded-4xl flex-shrink-0 border border-gray-500 h-[400px] relative overflow-hidden"
+                className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-gray-500 h-[400px] relative overflow-hidden"
               >
                 {/* Background image (visible on hover) */}
                 <div
@@ -384,9 +402,15 @@ const Home = () => {
                 <p className="mt-2 text-sm opacity-75 relative">{service.description}</p>
 
                 {/* Button */}
+
+                <div>
+                  
+                </div>
+
+                {/* Button */}
                 <div className="mt-4 relative pt-7 bottom-10 left-45 top-[-15px] ">
                   <button className="w-15 h-15 bg-blue-500 text-white rounded-full 
-                  flex items-center justify-center border-[#011938] border-8 hover:bg-white hover:text-blue-500">
+                  flex items-center justify-center hover:bg-white hover:text-blue-500">
                     ➜
                   </button>
                 </div>
@@ -408,7 +432,7 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#061c3d] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
+        <div className="md:w-1/2 bg-[#061c3d] text-white p-8 rounded-3xl" style={{ fontFamily: "Open Sans, sans-serif" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4"  >
             CONTACT US
           </button>
@@ -445,14 +469,13 @@ const Home = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end ">
-            <button className="bg-white text-[#061c3d] px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-300 h-15">
-              Get Cost Estimate →
+            <button className="bg-white text-[#061c3d] px-6 py-3 rounded-full font-semibold flex 
+            items-center gap-2 hover:bg-blue-500 hover:text-white h-15">
+              Get Cost Estimate ➜
             </button>
           </div>
         </div>
       </div>
-
-
     </>
   )
 }
