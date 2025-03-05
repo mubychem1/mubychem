@@ -115,7 +115,7 @@ const Home = () => {
         <div
           className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat "
           style={{
-            backgroundImage:` url(${pattern})`,
+            backgroundImage: `url(${pattern})`,
             backgroundSize: "100%",
             backgroundPosition: "top-right",
           }}
@@ -141,7 +141,7 @@ const Home = () => {
           <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
-        </div>
+        </div>
       </div>
 
       {/* ------------ServicesCard Section ------------ */}
@@ -156,14 +156,29 @@ const Home = () => {
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600">{service.icon}</div>
-              <h2 className="text-lg font-semibold text-gray-900">{service.title}</h2>
+              <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600">
+                {service.icon}
+              </div>
+              <h2 className="text-lg font-semibold text-gray-900">
+                {service.title}
+              </h2>
             </div>
             <hr className="mt-3 p-4 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-2" />
-            <p className="text-gray-600 text-sm ml-auto text-[15px]">{service.description}</p>
+            <p className="text-gray-600 text-sm ml-auto text-[15px]">
+              {service.description}
+            </p>
             <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full border-indigo-50 border-8 transition-all duration-100">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="23"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"
+                />
               </svg>
             </button>
           </motion.div>
@@ -172,7 +187,6 @@ const Home = () => {
 
       {/* ----------Research Section  -------------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-full ">
-
         {/* Left Side - Image */}
         <motion.div
           className="w-1/2 md:w-1/2 flex justify-center"
@@ -220,9 +234,10 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            Chemistry Research Documentation Center, a hub for exploration & discovery in the realm of
-            uncommon & extraordinary chemical phenomena. Our clinical pathologists are available
-            seven days a week to render diagnoses.
+            Chemistry Research Documentation Center, a hub for exploration &
+            discovery in the realm of uncommon & extraordinary chemical
+            phenomena. Our clinical pathologists are available seven days a week
+            to render diagnoses.
           </motion.p>
 
           {/* Features Section */}
@@ -241,37 +256,51 @@ const Home = () => {
             {/* Feature 1 */}
             <motion.div
               className="flex items-center space-x-3 p-4 rounded-lg "
-              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.6 }}
             >
               <div className="p-3 bg-gray-100 rounded-full">
-                <IoMdFlask className="text-2xl text-blue-600" />
+                <IoMdFlask className="text-2xl text-stone-800" />
               </div>
-              <div className='pr-1'>
-                <h4 className="font-semibold text-gray-900">Medical Research</h4>
-                <p className="text-gray-600 text-sm pt-2">Health research, sometimes referred to as medical research.</p>
+              <div className="pr-1">
+                <h4 className="font-semibold text-gray-900">
+                  Medical Research
+                </h4>
+                <p className="text-gray-600 text-sm pt-2">
+                  Health research, sometimes referred to as medical research.
+                </p>
               </div>
             </motion.div>
 
             {/* Feature 2 */}
             <motion.div
               className="flex items-center space-x-3 p-4 rounded-lg "
-              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="p-3 bg-gray-100 rounded-full">
-                <BsCheck2Circle className="text-2xl text-blue-600" />
+                <BsCheck2Circle className="text-2xl text-stone-800" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Accurate Analysis</h4>
-                <p className="text-gray-600 text-sm pt-2">Accurate Analysis is an absolute testing laboratory.</p>
+                <h4 className="font-semibold text-gray-900">
+                  Accurate Analysis
+                </h4>
+                <p className="text-gray-600 text-sm pt-2">
+                  Accurate Analysis is an absolute testing laboratory.
+                </p>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Button with Hover Animation */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] flex items-center gap-2 hover:bg-blue-600 hover:text-white transition "
+            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] flex items-center gap-2 hover:bg-yellow-900 hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -281,8 +310,11 @@ const Home = () => {
       </div>
 
       {/* --------------Feature Section --------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6" >
-        <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{ fontFamily: "Open Sans, sans-serif" }}>
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
+        <div
+          className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4"
+          style={{ fontFamily: "Open Sans, sans-serif" }}
+        >
           WHY CHOOSE US?
         </div>
         <h2 className="text-4xl font-bold text-center mt-4 text-gray-900">
@@ -295,23 +327,25 @@ const Home = () => {
             {features.map((feature, index) => (
               <button
                 key={index}
-                className={`flex justify-between items-center w-4/5 p-3 rounded-full transition-all duration-300 font- ${index === 0
-                  ? "bg-white text-gray-900"
-                  : "border border-gray-300 text-gray-900 bg-transparent"
-                  }`}
+                className={`flex justify-between items-center w-4/5 p-3 rounded-full transition-all duration-300 font- ${
+                  index === 0
+                    ? "bg-white text-gray-900"
+                    : "border border-gray-300 text-gray-900 bg-transparent"
+                }`}
               >
-
                 <span>{feature}</span>
                 <div
-                  className={`w-10 h-10 flex items-center justify-center rounded-full ${index === 0 ? "bg-blue-600 text-white" : "bg-gray-900 text-white"
-                    }`}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                    index === 0
+                      ? "bg-yellow-900 hover:text-black text-white"
+                      : "bg-yellow-900 hover:text-black text-white"
+                  }`}
                 >
                   <FaArrowUpRightFromSquare />
                 </div>
               </button>
             ))}
           </div>
-
 
           {/* Image Section */}
           <motion.div
@@ -334,14 +368,19 @@ const Home = () => {
             </h3>
             <p className="text-[#6a7391] mt-3">
               We help ambitious businesses like yours generate more profits by
-              building awareness, driving web traffic, connecting with customers,
-              and growing overall sales. Give us a call.
+              building awareness, driving web traffic, connecting with
+              customers, and growing overall sales. Give us a call.
             </p>
 
             <ul className="mt-4 space-y-2">
-              {["Access Expert Advice For A Thriving Life", "Benefits Of Health Conscious Living", "Benefits Of Proactive Health Management", "Countless Benefits Of Prioritizing Health"].map((benefit, index) => (
+              {[
+                "Access Expert Advice For A Thriving Life",
+                "Benefits Of Health Conscious Living",
+                "Benefits Of Proactive Health Management",
+                "Countless Benefits Of Prioritizing Health",
+              ].map((benefit, index) => (
                 <li key={index} className="flex items-center text-gray-900">
-                  <span className="text-blue-600 text-lg">&#10003;</span>
+                  <span className="text-yellow-900 text-lg">&#10003;</span>
                   <span className="ml-2">{benefit}</span>
                 </li>
               ))}
@@ -355,19 +394,27 @@ const Home = () => {
         {/* Header Section */}
         <div className="flex justify-between items-center">
           <div className="text-left">
-            <button className="bg-[#011938] text-white border border-white px-4 py-2 rounded-full text-sm">
+            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm">
               OUR SERVICE
             </button>
-            <h2 className="text-4xl font-semibold mt-4">Reliable & High Quality Service</h2>
+            <h2 className="text-4xl font-semibold mt-4">
+              Reliable & High Quality Service
+            </h2>
           </div>
 
           {/* Navigation Buttons */}
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
-            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full hover:bg-gray-200 transition"
+            >
               <ChevronLeft size={20} />
             </button>
             <div className="border-l border-gray-400 h-5"></div>
-            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full hover:bg-gray-200 transition"
+            >
               <ChevronRight size={20} />
             </button>
           </div>
@@ -383,13 +430,13 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-gray-500 h-[400px] relative overflow-hidden"
+                className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
               >
                 {/* Background image (visible on hover) */}
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
                   style={{ backgroundImage: `url(${service.bgImage})` }} // Corrected dynamic background
-                // Dynamic Background
+                  // Dynamic Background
                 ></div>
 
                 {/* Service icon (disappears on hover) */}
@@ -398,19 +445,16 @@ const Home = () => {
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="mt-12 text-xl pt-42 font-semibold relative">{service.title}</h3>
-                <p className="mt-2 text-sm opacity-75 relative">{service.description}</p>
+                <h3 className="mt-12 text-xl pt-42 font-semibold relative">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm opacity-75 relative">
+                  {service.description}
+                </p>
 
                 {/* Button */}
-
-                <div>
-                  
-                </div>
-
-                {/* Button */}
-                <div className="mt-4 relative pt-7 bottom-10 left-45 top-[-15px] ">
-                  <button className="w-15 h-15 bg-blue-500 text-white rounded-full 
-                  flex items-center justify-center hover:bg-white hover:text-blue-500">
+                <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
                     ➜
                   </button>
                 </div>
@@ -418,8 +462,8 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
+        
       </div>
-
       {/* {------------estimate section--------------} */}
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#ecf2ff] p-6">
         {/* Image Section */}
@@ -432,7 +476,7 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#061c3d] text-white p-8 rounded-3xl" style={{ fontFamily: "Open Sans, sans-serif" }}>
+        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4"  >
             CONTACT US
           </button>
@@ -440,44 +484,43 @@ const Home = () => {
 
           {/* Form Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15">
+            <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15">
               <option>Choose a Service</option>
             </select>
-            <select className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300">
+            <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300">
               <option>Type of Clean</option>
             </select>
             <input
               type="text"
               placeholder="Total Floor Area (sq ft)"
-              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15 "
+              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
             />
             <input
               type="text"
               placeholder="Your Name"
-              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300"
+              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="bg-transparent border border-gray-400 p-3 rounded-4xl text-gray-300 h-15"
+              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15"
             />
             <p className="text-white text-sm mt-4 italic">
               Submit this information and we will send <br /> you the cost for the service.
             </p>
-          </div>
+          </div>
 
 
           {/* Submit Button */}
-          <div className="mt-6 flex justify-end ">
-            <button className="bg-white text-[#061c3d] px-6 py-3 rounded-full font-semibold flex 
-            items-center gap-2 hover:bg-blue-500 hover:text-white h-15">
-              Get Cost Estimate ➜
+          <div className="mt-6 flex justify-end">
+            <button className="bg-black text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-300 h-15">
+              Get Cost Estimate →
             </button>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
