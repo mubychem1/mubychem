@@ -94,7 +94,7 @@ const ContactUs = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </div>
 
       {/* ---------------------- Contact Form Section ----------------- */}
       <div className="w-full min-h-screen flex items-center justify-center bg-[#ecf2ff] ">
@@ -198,7 +198,21 @@ const ContactUs = () => {
             </Formik>
           </div>
         </div>
-      </div>
+      </div>
+
+      {/*----------------- Map section --------------- */}
+      <section className="py-8 px-6 bg-[#ecf2ff] flex justify-center  ">
+        <div className="w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Google Map"
+            className="w-full h-[600px] rounded-2xl border border-black "
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.3316800082143!2d72.8368572751069!3d18.96095375557437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce39e004da3d%3A0xe68fe70feac03506!2sSandhurst%20Road!5e0!3m2!1sen!2sin!4v1741342335458!5m2!1sen!2sin"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
     </>
   );
 };

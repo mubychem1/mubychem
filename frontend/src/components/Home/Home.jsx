@@ -11,6 +11,7 @@ import pattern from '../../assets/Pattern.png';
 import demo1 from '../../assets/demo-1.png';
 
 import { FaQuoteLeft } from "react-icons/fa";
+
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
 
@@ -136,7 +137,9 @@ const Home = () => {
             Hire us! We are a professional laboratory offering services.
           </p>
 
-          <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black border border-transparent hover:border-black">
+          <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
+          font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
+          border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
         </div>
@@ -210,7 +213,8 @@ const Home = () => {
         >
           {/* Badge */}
           <motion.span
-            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
+            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
+            font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -263,7 +267,7 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="p-3 bg-gray-100 rounded-full">
-                <IoMdFlask className="text-2xl text-stone-800" />
+                <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
               <div className="pr-1">
                 <h4 className="font-semibold text-gray-900">
@@ -285,7 +289,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="p-3 bg-gray-100 rounded-full">
-                <BsCheck2Circle className="text-2xl text-stone-800" />
+                <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">
@@ -300,7 +304,8 @@ const Home = () => {
 
           {/* Button with Hover Animation */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] flex items-center gap-2 hover:bg-yellow-900 hover:text-white transition "
+            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] 
+            flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -312,8 +317,7 @@ const Home = () => {
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
         <div
-          className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4"
-          style={{ fontFamily: "Open Sans, sans-serif" }}
+          className="border font-[Open_Sans] border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4"
         >
           WHY CHOOSE US?
         </div>
@@ -337,8 +341,8 @@ const Home = () => {
                 <div
                   className={`w-10 h-10 flex items-center justify-center rounded-full ${
                     index === 0
-                      ? "bg-yellow-900 hover:text-black text-white"
-                      : "bg-yellow-900 hover:text-black text-white"
+                      ? "bg-[#7b3931] hover:text-black text-white"
+                      : "bg-[#7b3931] hover:text-black text-white"
                   }`}
                 >
                   <FaArrowUpRightFromSquare />
@@ -394,7 +398,7 @@ const Home = () => {
         {/* Header Section */}
         <div className="flex justify-between items-center">
           <div className="text-left">
-            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm">
+            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm font-[Open_Sans]">
               OUR SERVICE
             </button>
             <h2 className="text-4xl font-semibold mt-4">
@@ -477,7 +481,7 @@ const Home = () => {
 
         {/* Form Section */}
         <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
-          <button className="border border-white px-4 py-1 rounded-full text-sm mb-4"  >
+          <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
             CONTACT US
           </button>
           <h2 className=" font-semibold text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
