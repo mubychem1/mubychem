@@ -95,10 +95,8 @@ const Home = () => {
            rounded-full'>
             <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div>
     <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
-
-            <div className='border-r-[15px] border-[#EAF0FC] rounded-full bg-opacity-3'>&nbsp;</div>
           </div>
-          <div className="absolute bottom-0 right-0 bg-[#EAF0FC] px-6 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
+          <div className="absolute bottom-2 right-3 bg-[#EAF0FC] px-2 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
             <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
               <FaPlay className="text-gray-800" />
             </div>
@@ -149,7 +147,8 @@ const Home = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white py-[45px] px-[25px] rounded-[30px] w-80 h-70 flex flex-col items-center text-center relative cursor-pointer"
+            className="bg-white py-[45px] px-[25px] rounded-[30px] w-80 h-70 flex flex-col items-center 
+            text-center relative cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
@@ -167,7 +166,8 @@ const Home = () => {
             <p className="text-gray-600 text-sm ml-auto text-[15px]">
               {service.description}
             </p>
-            <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full border-indigo-50 border-8 transition-all duration-100">
+            <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full 
+            border-indigo-50 border-8 transition-all duration-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

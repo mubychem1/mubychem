@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import background from '../../assets/background.png';
 import { Mail, MapPin, Phone, Calendar, ArrowUpRight } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { submitForm } from "../../redux/slice/formSlice.js";
+import { submitForm } from "../../redux/slice/formSlice.js";  // Ensure path is correct
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -54,80 +54,69 @@ const ContactUs = () => {
 
   return (
     <>
-
       {/* -----------------Contact Us Banner --------------*/}
-      <div className="bg-[#ecf2ff] py-10 px-10"> {/* Added outer background color */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          className="relative h-[400px] bg-cover rounded-3xl overflow-hidden mx-4 md:mx-10"
-          style={{ backgroundImage: `url(${background})`, marginTop: "40px" }}
-        >
+      <div className='bg-[#ecf2ff] '>
+        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <h1 className="text-white text-5xl font-bold mb-4">Contact Us</h1>
-              <p className="text-white text-lg">XLEB &gt; CONTACT US</p>
-            </motion.div>
+          <div className="absolute inset-0 flex items-center justify-left">
+            <div>
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">Contact Us</h1>
+              <p className="text-white text-lg pl-5 ">XLEB &gt; CONTACT US</p>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* -------------Contact Information -------------------*/}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-[#ecf2ff] mt-15 "
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-[#ecf2ff] ">
         {contactDetails.map((contact, index) => (
           <motion.div
             key={index}
-            variants={fadeInUp}
             whileHover={{ scale: 1.05 }}
-            className="p-6 rounded-xl shadow-lg flex flex-col justify-between border border-gray-200 transition transform "
+            className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#e7eefc] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{contact.title}</h3>
-            {contact.details.map((detail, idx) => (
-              <p key={idx} className="text-gray-600 text-sm">{detail}</p>
-            ))}
+            <h3 className="text-xl font-semibold text-gray-900">{contact.title}</h3>
+            <div className="mt-2">
+              {contact.details.map((detail, idx) => (
+                <p key={idx} className="text-gray-600 text-sm">{detail}</p>
+              ))}
+            </div>
             <div className="flex justify-between items-center mt-6">
-              <div className="bg-blue-100 p-4 rounded-lg">{contact.icon}</div>
-              <motion.div whileHover={{ scale: 1.2 }} className="bg-white p-3 rounded-full shadow-md cursor-pointer hover:bg-gray-100">
+              <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center ">
+                {contact.icon}
+              </div>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
+              >
                 <ArrowUpRight className="text-blue-500" size={20} />
               </motion.div>
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
-      {/*---------------------- Contact Form Section -----------------*/}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        className="w-full min-h-screen flex items-center justify-center bg-[#ecf2ff] p-6"
-      >
-        <div className="w-full max-w-7xl rounded-3xl p-8 flex flex-col md:flex-row">
+      {/* ---------------------- Contact Form Section ----------------- */}
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#ecf2ff] ">
+        <div className="w-full max-w-8xl rounded-3xl flex flex-col md:flex-row">
           {/* Left Side */}
-          <motion.div variants={fadeInUp} className="w-full md:w-1/2 p-6">
+          <div className="w-full md:w-1/2 p-6">
             <h2 className="text-4xl font-bold text-gray-900">Happy to Answer All Your Questions</h2>
             <p className="text-gray-600 mt-4">
               We carefully screen all of our cleaners, so you can rest assured that your home would receive the absolute highest quality of service.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700"
-            >
+            <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700">
               More Details →
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
 
           {/* Right Side (Form) */}
-          <motion.div variants={fadeInUp} className="w-full md:w-1/2 p-6 bg-white rounded-xl">
-            <h3 className="text-3xl font-bold text-gray-900">Send a message to staff</h3>
-            <p className="text-gray-500 text-sm mt-2">Your email address will not be published. Required fields are marked *</p>
+          <div className="w-full md:w-1/0.5 p-6 bg-white rounded-4xl mr-6 ml-6">
+            <h3 className="text-3xl font-bold text-gray-900 pt-7 ml-5" style={{ fontFamily: "Raleway, sans-serif" }}>
+              Send a message to staff
+            </h3>
+
+            <p className="text-gray-500 text-sm mt-2 pt-2 pb-7 ml-5" style={{ fontFamily: "Raleway, sans-serif" }} >Your email address will not be published. Required fields are marked *</p>
 
             <Formik
               initialValues={{ name: "", email: "", phone: "", subject: "", message: "" }}
@@ -146,19 +135,18 @@ const ContactUs = () => {
                         type="text"
                         name="name"
                         placeholder="Your Name"
-                        className="w-full p-3 border rounded-full bg-white"
+                        className="w-full p-3 border rounded-full bg-white ml-5"
                       />
-                      <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1" />
+                      <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
-
                     <div>
                       <Field
                         type="email"
                         name="email"
                         placeholder="Your Email"
-                        className="w-full p-3 border rounded-full bg-white"
+                        className="w-full p-3 border rounded-full bg-white ml-5"
                       />
-                      <ErrorMessage name="email" component="p" className="text-red-500 text-sm mt-1" />
+                      <ErrorMessage name="email" component="p" className="text-red-500 text-sm mt-1 ml-8 " />
                     </div>
                   </div>
 
@@ -169,19 +157,18 @@ const ContactUs = () => {
                         type="tel"
                         name="phone"
                         placeholder="Your Phone"
-                        className="w-full p-3 border rounded-full bg-white"
+                        className="w-full p-3 border rounded-full bg-white ml-5"
                       />
-                      <ErrorMessage name="phone" component="p" className="text-red-500 text-sm mt-1" />
+                      <ErrorMessage name="phone" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
-
                     <div>
                       <Field
                         type="text"
                         name="subject"
                         placeholder="Subject"
-                        className="w-full p-3 border rounded-full bg-white"
+                        className="w-full p-3 border rounded-full bg-white ml-5"
                       />
-                      <ErrorMessage name="subject" component="p" className="text-red-500 text-sm mt-1" />
+                      <ErrorMessage name="subject" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
                   </div>
 
@@ -190,30 +177,28 @@ const ContactUs = () => {
                     as="textarea"
                     name="message"
                     placeholder="Message"
-                    className="w-full p-3 border rounded-2xl bg-white h-28"
+                    className="w-full p-3 border rounded-2xl bg-white h-28 ml-5"
                   />
 
                   {/* Checkbox */}
-                  <div className="flex items-center space-x-2 text-gray-500 text-sm">
+                  <div className="flex items-center space-x-2 text-gray-500 text-sm ml-5">
                     <input type="checkbox" className="w-4 h-4 border-gray-400" />
                     <span>Save my name, email, and website in this browser for the next time I comment.</span>
                   </div>
 
                   {/* Submit Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
+                  <button
                     type="submit"
-                    className="w-full py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition flex justify-center items-center gap-2"
+                    className="w-48 py-3 bg-white  text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 ml-5"
                   >
                     {isSubmitting ? "Submitting..." : "Get Cost Estimate →"}
-                  </motion.button>
+                  </button>
                 </Form>
               )}
             </Formik>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-
+      </div>
     </>
   );
 };
