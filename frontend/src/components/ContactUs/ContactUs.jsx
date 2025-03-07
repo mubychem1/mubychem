@@ -135,7 +135,7 @@ const ContactUs = () => {
                         type="text"
                         name="name"
                         placeholder="Your Name"
-                        className="w-full p-3 border rounded-full bg-white ml-5"
+                        className="w-3/4 p-3 border rounded-full bg-white ml-5 "
                       />
                       <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
@@ -144,7 +144,7 @@ const ContactUs = () => {
                         type="email"
                         name="email"
                         placeholder="Your Email"
-                        className="w-full p-3 border rounded-full bg-white ml-5"
+                        className="w-3/4 p-3 border rounded-full bg-white ml-5 "
                       />
                       <ErrorMessage name="email" component="p" className="text-red-500 text-sm mt-1 ml-8 " />
                     </div>
@@ -157,7 +157,7 @@ const ContactUs = () => {
                         type="tel"
                         name="phone"
                         placeholder="Your Phone"
-                        className="w-full p-3 border rounded-full bg-white ml-5"
+                        className="w-3/4 p-3 border rounded-full bg-white ml-5"
                       />
                       <ErrorMessage name="phone" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
@@ -166,7 +166,7 @@ const ContactUs = () => {
                         type="text"
                         name="subject"
                         placeholder="Subject"
-                        className="w-full p-3 border rounded-full bg-white ml-5"
+                        className="w-3/4 p-3 border rounded-full bg-white ml-5"
                       />
                       <ErrorMessage name="subject" component="p" className="text-red-500 text-sm mt-1 ml-8" />
                     </div>
@@ -177,7 +177,7 @@ const ContactUs = () => {
                     as="textarea"
                     name="message"
                     placeholder="Message"
-                    className="w-full p-3 border rounded-2xl bg-white h-28 ml-5"
+                    className="w-[670px] p-3 border rounded-3xl bg-white h-28 ml-5"
                   />
 
                   {/* Checkbox */}
@@ -198,7 +198,7 @@ const ContactUs = () => {
             </Formik>
           </div>
         </div>
-      </div>
+      </div>
 
       {/*----------------- Map section --------------- */}
       <section className="py-8 px-6 bg-[#ecf2ff] flex justify-center  ">
