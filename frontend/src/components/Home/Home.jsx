@@ -9,12 +9,12 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
 import pattern from '../../assets/Pattern.png';
 import demo1 from '../../assets/demo-1.png';
+import VerticalTabs from '../Products/VerticalTabs';
 
 import { FaQuoteLeft } from "react-icons/fa";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
-
 
 
 
@@ -28,25 +28,25 @@ const features = [
 
 const services = [
   {
-    title: "Artificial Intelligence",
+    title: "Pharmaceuticals",
     description: "Our clinical pathologists are available seven days a week to...",
     icon: "🤖",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg"
   },
   {
-    title: "Healthcare Labs",
+    title: "Nutraceuticals",
     description: "Our clinical pathologists are available seven days a week to...",
     icon: "🧠",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg"
   },
   {
-    title: "Diabetes Testing",
+    title: "Speciality chemicals",
     description: "Our clinical pathologists are available seven days a week to...",
     icon: "⚛",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg"
   },
   {
-    title: "Elemental Analysis",
+    title: "Mineral Fortifiers",
     description: "Our clinical pathologists are available seven days a week to...",
     icon: "🧬",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg"
@@ -95,19 +95,19 @@ const Home = () => {
           <div className='absolute rotate-50 bottom-10 -right-6 px-7 py-3 flex
            rounded-full'>
             <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div>
-    <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
+            <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
           </div>
           <div className="absolute bottom-2 right-3 bg-[#EAF0FC] px-2 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
             <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
               <FaPlay className="text-gray-800" />
             </div>
             <span className="ml-3 text-lg font-semibold text-gray-900"
-            style={{
-            }}>
+              style={{
+              }}>
               Watch Video
             </span>
           </div>
-          
+
         </div>
 
         {/* Right Side - Content */}
@@ -120,21 +120,22 @@ const Home = () => {
           }}
         >
           <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border">
-            Best Solutions for Laboratory
+            IP / BP / USP / NF / Ph. Eur, JP / CP
           </p>
 
-          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[65px] font-bold leading-tight mt-4">
-            Micro Biology
+          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] font-bold leading-tight mt-4">
+            Quality Products
           </h1>
 
-          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[40px] lg:text-[50px] font-bold leading-tight mt-2">
-            Research Institution
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-bold leading-tight mt-2">
+            From approved manufactureres
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
 
           <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]">
-            Hire us! We are a professional laboratory offering services.
+            Pharmaceutical Excipents, Food Grade chemicals,
+            BP USP IP EP Ph Eur FCC ACS Manufactureres.
           </p>
 
           <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
@@ -238,10 +239,8 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            Chemistry Research Documentation Center, a hub for exploration &
-            discovery in the realm of uncommon & extraordinary chemical
-            phenomena. Our clinical pathologists are available seven days a week
-            to render diagnoses.
+            Muby Chem has established the comprehensive manufacturing, distribution, and wholesale bulk supply of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors. With the expertise and continued excellence in research and development, we have constantly pushed the boundaries and developed an exceptionally high-quality product.
+            <br /><br />"We have served 10000+ clients across the world in over 48 years since establishing the manufacturing unit. All the products are produced under careful supervision and tested before the final distribution. We help in taking care of all the logistic needs for creating an operational supply chain."
           </motion.p>
 
           {/* Features Section */}
@@ -325,25 +324,27 @@ const Home = () => {
           We Advice to Choose a <br /> Right Decision
         </h2>
 
+        {/* <div className="min-h-screen flex justify-center items-center">
+          <VerticalTabs />
+        </div> */}
+
         <div className="flex flex-col lg:flex-row items-center mt-8 max-w-7xl w-full">
           {/* Left Section */}
           <div className="w-full lg:w-1/3 space-y-4">
             {features.map((feature, index) => (
               <button
                 key={index}
-                className={`flex justify-between items-center w-4/5 p-3 rounded-full transition-all duration-300 font- ${
-                  index === 0
+                className={`flex justify-between items-center w-4/5 p-3 rounded-full transition-all duration-300 font- ${index === 0
                     ? "bg-white text-gray-900"
                     : "border border-gray-300 text-gray-900 bg-transparent"
-                }`}
+                  }`}
               >
                 <span>{feature}</span>
                 <div
-                  className={`w-10 h-10 flex items-center justify-center rounded-full ${
-                    index === 0
+                  className={`w-10 h-10 flex items-center justify-center rounded-full ${index === 0
                       ? "bg-[#7b3931] hover:text-black text-white"
                       : "bg-[#7b3931] hover:text-black text-white"
-                  }`}
+                    }`}
                 >
                   <FaArrowUpRightFromSquare />
                 </div>
@@ -440,7 +441,7 @@ const Home = () => {
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
                   style={{ backgroundImage: `url(${service.bgImage})` }} // Corrected dynamic background
-                  // Dynamic Background
+                // Dynamic Background
                 ></div>
 
                 {/* Service icon (disappears on hover) */}
@@ -466,7 +467,7 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
-        
+
       </div>
       {/* {------------estimate section--------------} */}
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#ecf2ff] p-6">
@@ -512,7 +513,7 @@ const Home = () => {
             <p className="text-white text-sm mt-4 italic">
               Submit this information and we will send <br /> you the cost for the service.
             </p>
-          </div>
+          </div>
 
 
           {/* Submit Button */}
@@ -527,4 +528,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;
