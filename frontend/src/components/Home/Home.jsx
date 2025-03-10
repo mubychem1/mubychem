@@ -9,7 +9,7 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
 import pattern from '../../assets/Pattern.png';
 import demo1 from '../../assets/demo-1.png';
-import VerticalTabs from '../Products/VerticalTabs';
+import VerticalTabs from './VerticalTabs';
 
 import { FaQuoteLeft } from "react-icons/fa";
 
@@ -324,13 +324,13 @@ const Home = () => {
           We Advice to Choose a <br /> Right Decision
         </h2>
 
-        {/* <div className="min-h-screen flex justify-center items-center">
+        <div className="flex justify-center items-center mt-8 max-w-7xl w-full ">
           <VerticalTabs />
-        </div> */}
+        </div>
 
-        <div className="flex flex-col lg:flex-row items-center mt-8 max-w-7xl w-full">
+        {/* <div className="flex flex-col lg:flex-row items-center mt-8 max-w-7xl w-full"> */}
           {/* Left Section */}
-          <div className="w-full lg:w-1/3 space-y-4">
+          {/* <div className="w-full lg:w-1/3 space-y-4">
             {features.map((feature, index) => (
               <button
                 key={index}
@@ -350,10 +350,10 @@ const Home = () => {
                 </div>
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Image Section */}
-          <motion.div
+          {/* <motion.div
             className="w-full lg:w-1/3 flex justify-start mt-6 lg:mt-0"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -364,10 +364,10 @@ const Home = () => {
               alt="Lab Research"
               className="rounded-3xl w-full max-w-sm"
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/3 px-6">
+          {/* <div className="w-full lg:w-1/3 px-6">
             <h3 className="text-2xl font-bold text-gray-900">
               Well Ensure You Always Covid 19 Vaccine.
             </h3>
@@ -391,7 +391,7 @@ const Home = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* --------------Our Services ------------ */}
