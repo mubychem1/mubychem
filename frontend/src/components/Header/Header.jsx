@@ -5,6 +5,8 @@ import dot from "../../assets/dot_img.jpg"
 import logo from '../../assets/logo.png';
 import { Link } from "react-router-dom";
 
+const phoneNumber = "+1234567890";
+
 const Header = () => {
     return (
         <div className='bg-[#ecf2ff] h-full flex flex-col'>
@@ -59,7 +61,8 @@ const Header = () => {
                         <FaPhoneAlt className="text-yellow-900 hover:text-black transition duration-300 text-2xl" />
                         {/* <h1 className="font-semibold text-gray-700">+91-22-23770100</h1> */}
                     </div>
-                    <h1 className="font-semibold text-gray-700">+91-22-23770100</h1>
+                    <h1 className="font-semibold text-gray-700 hover:text-yellow-900">
+                        <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></h1>
                     {/* Search Icon Section */}
                     <div className="flex items-center space-x-3 bg-blue-100 p-3 rounded-full cursor-pointer">
                         <IoMdSearch className="text-yellow-900 hover:text-black transition duration-300 text-2xl" />

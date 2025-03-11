@@ -16,6 +16,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
 
+const YouTubeButton ='https://www.youtube.com/watch?v=buwI_49ZTp0';
 
 
 const features = [
@@ -97,9 +98,10 @@ const Home = () => {
             <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div>
             <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
           </div>
-          <div className="absolute bottom-2 right-3 bg-[#EAF0FC] px-2 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
+          <div className="absolute bottom-2 right-3 bg-[#EAF0FC] px-5 
+          py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
             <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-              <FaPlay className="text-gray-800" />
+            <a href={`${YouTubeButton}`}><FaPlay className="text-gray-800" /></a>
             </div>
             <span className="ml-3 text-lg font-semibold text-gray-900"
               style={{
@@ -146,7 +148,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ------------ServicesCard Section ------------ */}
+      {/* ------------Services Card Section ------------ */}
       <div className="bg-[#ecf2ff] py-10 px-5 md:px-20 flex flex-nowrap overflow-x-auto gap-10 justify-between w-full">
         {services.map((service, index) => (
           <motion.div
@@ -159,7 +161,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600">
+              <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600 ">
                 {service.icon}
               </div>
               <h2 className="text-lg font-semibold text-gray-900">
@@ -171,7 +173,7 @@ const Home = () => {
               {service.description}
             </p>
             <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full 
-            border-indigo-50 border-8 transition-all duration-100">
+            border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -329,8 +331,8 @@ const Home = () => {
         </div>
 
         {/* <div className="flex flex-col lg:flex-row items-center mt-8 max-w-7xl w-full"> */}
-          {/* Left Section */}
-          {/* <div className="w-full lg:w-1/3 space-y-4">
+        {/* Left Section */}
+        {/* <div className="w-full lg:w-1/3 space-y-4">
             {features.map((feature, index) => (
               <button
                 key={index}
@@ -352,8 +354,8 @@ const Home = () => {
             ))}
           </div> */}
 
-          {/* Image Section */}
-          {/* <motion.div
+        {/* Image Section */}
+        {/* <motion.div
             className="w-full lg:w-1/3 flex justify-start mt-6 lg:mt-0"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -366,8 +368,8 @@ const Home = () => {
             />
           </motion.div> */}
 
-          {/* Right Section */}
-          {/* <div className="w-full lg:w-1/3 px-6">
+        {/* Right Section */}
+        {/* <div className="w-full lg:w-1/3 px-6">
             <h3 className="text-2xl font-bold text-gray-900">
               Well Ensure You Always Covid 19 Vaccine.
             </h3>
@@ -427,46 +429,41 @@ const Home = () => {
 
         {/* Sliding Service Cards Section */}
         <div className="overflow-hidden relative flex items-center mt-10 h-[400px]">
-          <motion.div
-            className="flex space-x-6"
-            animate={{ x: `-${currentIndex * 320}px` }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
+      <motion.div
+        className="flex space-x-6"
+        animate={{ x: `-${currentIndex * 320}px` }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+      >
+        {services.concat(services).map((service, index) => (
+          <div
+            key={index}
+            className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
           >
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
-              >
-                {/* Background image (visible on hover) */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
-                  style={{ backgroundImage: `url(${service.bgImage})` }} // Corrected dynamic background
-                // Dynamic Background
-                ></div>
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+              style={{ backgroundImage: `url(${service.bgImage})` }}
+            ></div>
 
-                {/* Service icon (disappears on hover) */}
-                <div className="absolute top-4 right-4 text-4xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
-                  {service.icon}
-                </div>
+            <div className="absolute top-4 right-4 text-4xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+              {service.icon}
+            </div>
 
-                {/* Title & Description */}
-                <h3 className="mt-12 text-xl pt-42 font-semibold relative">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm opacity-75 relative">
-                  {service.description}
-                </p>
+            <h3 className="mt-12 text-xl pt-42 font-semibold relative">
+              {service.title}
+            </h3>
+            <p className="mt-2 text-sm opacity-75 relative">
+              {service.description}
+            </p>
 
-                {/* Button */}
-                <div className="mt-4 relative">
-                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
-                    ➜
-                  </button>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+            <div className="mt-4 relative">
+              <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                ➜
+              </button>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
 
       </div>
       {/* {------------estimate section--------------} */}
