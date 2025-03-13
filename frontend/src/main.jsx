@@ -11,7 +11,7 @@ import ContactUs from './components/ContactUs/ContactUs.jsx'
 import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Career from './components/Career/Career.jsx';
 import Products from './components/Products/Products.jsx';
-
+import Homes from './components/Home/Homes.jsx';
 
 
 
@@ -19,8 +19,13 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
+      <Route path="homes" element={<Homes />} />
       <Route path="about" element={<AboutUs/>} />
-      <Route path="products" element={<Products/>} />
+      <Route path="products" element={<Products />}>
+      {/* Child Routes for Products */}
+      <Route path="category1" element={<Products />} />
+      
+    </Route>
       <Route path="contact" element={<ContactUs />} />
       <Route path="career" element={<Career />} />
     </Route>

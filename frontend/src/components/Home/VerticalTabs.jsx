@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+import vision from "../../assets/vision.jpg";
+import mission from "../../assets/mission.jpg";
+import quality from "../../assets/quality.jpg";
+import value from "../../assets/value.jpg";
 
 
 const VerticalTabs = () => {
@@ -10,7 +14,7 @@ const VerticalTabs = () => {
     "Our Vision",
     "Our Mission",
     "Our Quality",
-    "Virus Detection",
+    "Values",
     "Blood Cell Research",
   ];
 
@@ -19,14 +23,14 @@ const VerticalTabs = () => {
 
       {/* Image Section */}
       <motion.div
-        className="w-full lg:w-1/2 flex justify-start mt-6 lg:mt-0"
+        className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img
-          src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-          alt="Lab Research"
+          src={vision}
+          alt="Vision"
           className="rounded-3xl w-full max-w-sm"
         />
       </motion.div>
@@ -36,7 +40,9 @@ const VerticalTabs = () => {
         <h3 className="text-2xl font-bold text-gray-900">
           Our Vision
         </h3>
-        <p className="text-[#6a7391] mt-3">
+        <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+          }
+          }>
           To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.
         </p>
 
@@ -60,14 +66,14 @@ const VerticalTabs = () => {
 
       {/* Image Section */}
       <motion.div
-        className="w-full lg:w-1/2 flex justify-start mt-6 lg:mt-0"
+        className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img
-          src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-          alt="Lab Research"
+          src={mission}
+          alt="Mission"
           className="rounded-3xl w-full max-w-sm"
         />
       </motion.div>
@@ -77,10 +83,11 @@ const VerticalTabs = () => {
         <h3 className="text-2xl font-bold text-gray-900">
           Our Mission
         </h3>
-        <p className="text-[#6a7391] mt-3">
+        <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+          }
+          }>
           We strive to establish our Company as the market leader, by meeting the growing needs of are customers consistently.
         </p>
-
         <ul className="mt-4 space-y-2">
           {[
             "Access Expert Advice For A Thriving Life",
@@ -98,17 +105,16 @@ const VerticalTabs = () => {
     </div>,
 
     <div className="flex flex-col lg:flex-row items-center max-w-7xl w-full">
-
       {/* Image Section */}
       <motion.div
-        className="w-full lg:w-1/2 flex justify-start mt-6 lg:mt-0"
+        className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img
-          src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-          alt="Lab Research"
+          src={quality}
+          alt="Quality"
           className="rounded-3xl w-full max-w-sm"
         />
       </motion.div>
@@ -118,8 +124,10 @@ const VerticalTabs = () => {
         <h3 className="text-2xl font-bold text-gray-900">
           Our Quality
         </h3>
-        <p className="text-[#6a7391] mt-3">
-        Quality has always been our point of focus and it is of utmost importance to us.<br/>
+        <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+          }
+          }>
+        Quality has always been our point of focus and it is of utmost importance to us. To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.<br/>
         <br/>
         </p>
 
@@ -142,29 +150,31 @@ const VerticalTabs = () => {
     <div className="flex flex-col lg:flex-row items-center max-w-7xl w-full">
 
       {/* Image Section */}
-      <motion.div
-        className="w-full lg:w-1/2 flex justify-start mt-6 lg:mt-0"
+     {/* Image Section */}
+     <motion.div
+        className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img
-          src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-          alt="Lab Research"
+          src={value}
+          alt="Value"
           className="rounded-3xl w-full max-w-sm"
         />
       </motion.div>
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">
-          Well Ensure You Always Covid 19 Vaccine.
-        </h3>
-        <p className="text-[#6a7391] mt-3">
-          We help ambitious businesses like yours generate more profits by
-          building awareness, driving web traffic, connecting with
-          customers, and growing overall sales. Give us a call.
-        </p>
+        <h3 className="text-2xl font-bold text-gray-900">Our Values</h3>
+        <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+          }
+          }>
+          To be a global leader in providing quality and performance based
+          technological solutions and services in wide ranging industries with a
+          reputation for integrity and commitment to creating value for every
+          customer.
+        </p>
 
         <ul className="mt-4 space-y-2">
           {[
@@ -186,14 +196,14 @@ const VerticalTabs = () => {
 
       {/* Image Section */}
       <motion.div
-        className="w-full lg:w-1/2 flex justify-start mt-6 lg:mt-0"
+        className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img
-          src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-          alt="Lab Research"
+          src={value}
+          alt="Value"
           className="rounded-3xl w-full max-w-sm"
         />
       </motion.div>

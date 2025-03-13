@@ -1,16 +1,16 @@
-import React from "react";
-import Aboutleft from "../../assets/Aboutleft.png";
+import React, { useState } from "react";
+import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
-import AboutUsbg from "../../assets/AboutUsbg.png";
+import Aboutleft from "../../assets/Aboutleft.png";
 import Demo1 from "../../assets/Demo1.png";
 import fidbg from "../../assets/fidbg.png";
 import Nationalbg from "../../assets/Nationalbg.png";
 import Simplebg from "../../assets/4Simplebg.png";
 import labtest from "../../assets/lab-test-img.png";
-
 import { FaQuoteLeft } from "react-icons/fa";
-
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import background from "../../assets/background.png";
+import { AnimatePresence } from "framer-motion";
 
 const steps = [
   {
@@ -57,6 +57,18 @@ const zoomIn = {
 };
 
 const AboutUs = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+
+  const openModal = (url) => {
+    setVideoUrl(url);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setVideoUrl("");
+  };
   return (
     <>
       {/* -----------------About Us Banner------------------ */}
@@ -70,29 +82,24 @@ const AboutUs = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-xl"
+          className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
         >
           {/* <img
             src={''} // Add your background image path here
             alt="About Us Background"
             className="w-full h-full object-cover"
           /> */}
-          <div
-            className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center bg-no-repeat px-8"
-            style={{
-              backgroundImage: `url(${AboutUsbg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "Center",
-            }}
-          >
-            <h1 className="text-white text-4xl md:text-5xl font-bold">
-              About Us
-            </h1>
-            <p className="text-blue-200 mt-2 text-sm md:text-base">
-              <span className="text-yellow-400">Muby Chemical</span> &gt; ABOUT
-              US
-            </p>
-          </div>
+           <div className='bg-[#ecf2ff] '>
+                  <div className='relative h-[500px] bg-cover rounded-4xl  overflow-hidden mx-4 md:mx-10' style={{ backgroundImage:` url(${background})` }}>
+                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 flex items-center justify-left">
+                      <div>
+                        <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">About Us</h1>
+                        <p className="text-white text-lg pl-5 ">Muby chem &gt; ABOUT US</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
         </motion.div>
       </motion.section>
 
@@ -154,46 +161,65 @@ const AboutUs = () => {
         className=" bg-[#ecf2ff] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  p-6 sm:p-10 "
       >
         {/* Card 1 - Watch Video with Curved Edge */}
-        <div className="relative  rounded-3xl  overflow-hidden">
-          <img
-            src={Demo1}
-            alt="Scientist working in lab"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        {/* Watch Video Button - Positioned Bottom Right Inside Image */}
-        {/* <div className="absolute bottom-0 right-0 bg-[#EAF0FC] px-6 py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
-            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-              <FaPlay className="text-gray-800" />
-            </div>
-            <span className="ml-3 text-lg font-semibold text-gray-900">
-              Watch Video
-            </span>
-          </div> */}
+        <div className="relative rounded-2xl overflow-hidden">
+        <img
+          src={Demo1} // Replace with your image path
+          alt="Scientist working in lab"
+          className="w-full h-full object-cover rounded-2xl"
+        />
+        {/* Play Button */}
+        <button
+          onClick={() => openModal("https://www.youtube.com/embed/buwI_49ZTp0")}
+          className="absolute bottom-4 right-3  rounded-full flex items-center 
+               hover:scale-110  transition-transform duration-300 ease-in-out"
+        >
+          <FaPlay className="text-gray-900 text-lg" />
+          <span className="ml-2 text-sm font-semibold">Watch Video</span>
+        </button>
+      </div>
+
+      {/* Video Popup Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2  text-white p-1 rounded-full"
+            >
+              ✖
+            </button>
+            <iframe
+              width="100%"
+              height="315"
+              src={videoUrl}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+      )}
 
         {/* Card 2 - Staff Info */}
         <div
-          className="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-center object-cover bg-no-repeat text-left w-full h-full"
+          className="bg-white p-6 sm:p-4 rounded-2xl shadow-md flex flex-col justify-center items-start w-full h-auto min-h-[300px] relative"
           style={{
             backgroundImage: `url(${fidbg})`,
             backgroundSize: "cover",
-            backgroundPosition: "Center",
+            backgroundPosition: "center",
           }}
         >
-          <h2 className="text-4xl font-bold">20+</h2>
-          <p className="text-gray-600">
-            Professional and Experienced <br></br>staff ready to help you
+          <span className="text-4xl font-bold text-white ml-2">20+</span>
+          <p className="text-white text-l sm:text-xs leading-tight mt-3 ml-2">
+            Professional and Experienced <br /> staff ready to help you
           </p>
-          {/* <img
-            src={fidbg} 
-            alt="About Us Background"
-            className="rounded-2xl shadow-lg flex flex-col  items-center  text-center w-full h-full  justify-center md:justify-end"
-          /> */}
         </div>
 
         {/* Card 3 - National Science Day */}
         <div
-          className="pr-3 rounded-2xl shadow-lg flex flex-col justify-center object-cover text-right bg-no-repeat w-full h-full"
+          className="pr-6 sm:p-4 rounded-2xl shadow-lg flex flex-col justify-center  text-right bg-no-repeat w-full h-auto min-h-[300px]"
           style={{
             backgroundImage: `url(${Nationalbg})`,
             backgroundSize: "cover",
@@ -204,7 +230,7 @@ const AboutUs = () => {
             National Science Day
           </h2>
           <p className=" text-white text-lg">25th Feb 2022</p>
-          <div className="border-t-1  border-white my-2  mx-auto"></div>
+          <div className="border-t border-white my-2  w-2/3 mx-30"></div>
           <p className=" text-white mt-2">With The Best Experts In Science</p>
         </div>
       </motion.div>
@@ -214,7 +240,7 @@ const AboutUs = () => {
         <section
           className="bg-[#7B3931] rounded-2xl  text-white py-16  px-10 md:px-10 lg:px-12 rounded-t-6xl rounded-b-xl  bg-no-repeat"
           style={{
-            backgroundImage: `url(${Simplebg})`,
+            backgroundImage:` url(${Simplebg})`,
             backgroundSize: "60%",
             backgroundPosition: "right",
           }}

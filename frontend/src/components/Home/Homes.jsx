@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // import Image1 from '../../assets/hero-section1.png'
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
@@ -7,16 +7,18 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
-import pattern from '../../assets/Pattern.png';
+import pattern from '../../assets/Pattern.png'
+
 import demo1 from '../../assets/demo-1.png';
 import VerticalTabs from './VerticalTabs';
 import homecontact from "../../assets/home-contact.png";
+
 import { FaQuoteLeft } from "react-icons/fa";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
 
-
+const YouTubeButton = 'https://www.youtube.com/watch?v=buwI_49ZTp0';
 
 
 const features = [
@@ -26,6 +28,7 @@ const features = [
   "Virus Detection",
   "Blood Cell Research",
 ];
+
 
 const services = [
   {
@@ -67,31 +70,13 @@ const Home = () => {
     setCurrentIndex((prev) => (prev === services.length - 1 ? 0 : prev + 1));
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [videoUrl, setVideoUrl] = useState("");
-
-  const openModal = (url) => {
-    setVideoUrl(url);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    setVideoUrl("");
-  };
   return (
     <>
       {/*------------ Hero Section ------- */}
       <div
         className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12"
         style={{
-          fontFamily: "Open Sans, sans-serif",
+          // fontFamily: "Times New Roman",
           fontWeight: "normal",
           fontSize: "15px",
           lineHeight: "1.6",
@@ -111,47 +96,24 @@ const Home = () => {
           />
 
           {/* Watch Video Button - Positioned Bottom Right Inside Image */}
-          {/* <div className='absolute rotate-50 bottom-10 -right-6 px-7 py-3 flex
-           rounded-full'> */}
-            {/* <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div> */}
-            {/* <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
-          </div> */}
-          {/* Watch Video Button - Positioned Bottom Right Inside Image */}
-          <button
-            onClick={() =>
-              openModal("https://www.youtube.com/embed/buwI_49ZTp0")
-            }
-            className="absolute bottom-4 right-3 p-4 rounded-full flex items-center 
-                         hover:scale-110  transition-transform duration-300 ease-in-out"
-          ><div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-            <FaPlay className="text-black text-lg " /></div>
-            <span className="ml-2 text-lg font-semibold text-black">Watch Video</span>
-          </button>
-        </div>
-        {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
-              <button
-                onClick={closeModal}
-                className="absolute top-2 right-2  text-white p-1 rounded-full"
-              >
-                ✖
-              </button>
-              <iframe
-                width="100%"
-                height="315"
-                src={videoUrl}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            </div>
+          <div className='absolute rotate-50 bottom-10 -right-6 px-7 py-3 flex
+           rounded-full'>
+            <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div>
+            <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
           </div>
-        )}
+          <div className="absolute bottom-2 right-3 bg-[#EAF0FC] px-5 
+          py-3 flex items-center rounded-tl-[50px] rounded-br-xl ">
+            <div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
+              <a href={`${YouTubeButton}`}><FaPlay className="text-gray-800" /></a>
+            </div>
+            <span className="ml-3 text-lg font-semibold text-gray-900"
+              style={{
+              }}>
+              Watch Video
+            </span>
+          </div>
 
-        
+        </div>
 
         {/* Right Side - Content */}
         <div
@@ -162,27 +124,34 @@ const Home = () => {
             backgroundPosition: "top-right",
           }}
         >
-          <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border">
+          <p className="uppercase text-xs  text-white px-3 py-1 rounded-full w-max border" style={{fontFamily: "Times New Roman",
+          }
+          }>
             IP / BP / USP / NF / Ph. Eur, JP / CP
           </p>
 
-          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] font-bold leading-tight mt-4">
+          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px]   leading-tight mt-4"
+          style={{fontFamily: "Times New Roman",
+          }
+          }>
             Quality Products
           </h1>
 
-          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-bold leading-tight mt-2">
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-graphik leading-tight mt-2">
             From approved manufactureres
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
 
-          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]">
+          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]" style={{fontFamily: "Graphik",
+          }
+          }>
             Pharmaceutical Excipents, Food Grade chemicals,
             BP USP IP EP Ph Eur FCC ACS Manufactureres.
           </p>
 
           <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
-          font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
+          font-Graphik flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
           border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
@@ -205,12 +174,16 @@ const Home = () => {
               <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600 ">
                 {service.icon}
               </div>
-              <h2 className="text-lg font-semibold text-gray-900">
+              <h2 className="text-lg font-semibold text-gray-900" style={{fontFamily: "Times New Roman",
+          }
+          }>
                 {service.title}
               </h2>
             </div>
             <hr className="mt-3 p-4 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-2" />
-            <p className="text-gray-600 text-sm ml-auto text-[15px]">
+            <p className="text-gray-600 text-sm ml-auto text-[15px]" style={{fontFamily: "Graphik",
+          }
+          }>
               {service.description}
             </p>
             <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full 
@@ -257,8 +230,9 @@ const Home = () => {
         >
           {/* Badge */}
           <motion.span
-            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
-            font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
+            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic" style={{fontFamily: "Times New Roman",
+            }
+            }
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -268,7 +242,9 @@ const Home = () => {
 
           {/* Heading */}
           <motion.h2
-            className="font-raleway font-semibold text-[50px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic mb-4 w-full"
+            className="font-Times New Roman  text-[50px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic mb-4 w-full"style={{fontFamily: "Times New Roman",
+            }
+            }
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -277,13 +253,15 @@ const Home = () => {
           </motion.h2>
           {/* Description */}
           <motion.p
-            className="font-opensans font-normal text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6"
+            className="font-Graphik  text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6" style={{fontFamily: "Graphik",
+            }
+            }
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
             Muby Chem has established the comprehensive manufacturing, distribution, and wholesale bulk supply of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors. With the expertise and continued excellence in research and development, we have constantly pushed the boundaries and developed an exceptionally high-quality product.
-            <br /><br />"We have served 10000+ clients across the world in over 48 years since establishing the manufacturing unit. All the products are produced under careful supervision and tested before the final distribution. We help in taking care of all the logistic needs for creating an operational supply chain."
+            <br /><br />"We have served 10000+ clients across the world in over 48 years since establishing the manufacturing unit. All the products are produced under careful supervision and tested before the final distribution. We help in taking care of all the logistic needs for creating an operational supply chain."
           </motion.p>
 
           {/* Features Section */}
@@ -312,10 +290,14 @@ const Home = () => {
                 <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
               <div className="pr-1">
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-Graphik text-gray-900"style={{fontFamily: "Times New Roman",
+          }
+          }>
                   Medical Research
                 </h4>
-                <p className="text-gray-600 text-sm pt-2">
+                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik",
+          }
+          }>
                   Health research, sometimes referred to as medical research.
                 </p>
               </div>
@@ -334,10 +316,14 @@ const Home = () => {
                 <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-Graphik text-gray-900" style={{fontFamily: "Times New Roman",
+          }
+          }>
                   Accurate Analysis
                 </h4>
-                <p className="text-gray-600 text-sm pt-2">
+                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik",
+          }
+          }>
                   Accurate Analysis is an absolute testing laboratory.
                 </p>
               </div>
@@ -346,7 +332,7 @@ const Home = () => {
 
           {/* Button with Hover Animation */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] 
+            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full font-['Open_Sans',sans-serif] 
             flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -359,15 +345,19 @@ const Home = () => {
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
         <div
-          className="border font-[Open_Sans] border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4"
+          className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{fontFamily: "Times New Roman",
+          }
+          }
         >
           WHY CHOOSE US?
         </div>
-        <h2 className="text-4xl font-bold text-center mt-4 text-gray-900">
+        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{fontFamily: "Times New Roman",
+          }
+          }>
           We Advice to Choose a <br /> Right Decision
         </h2>
 
-        <div className="flex items-center mt-8 max-w-7xl w-full ">
+        <div className="flex justify-center items-center mt-8 max-w-7xl w-full ">
           <VerticalTabs />
         </div>
 
@@ -438,31 +428,46 @@ const Home = () => {
       </div>
 
       {/* --------------Our Services ------------ */}
-      <div className="bg-[#7B3931] text-white px-15 py-16">
+      <div className="bg-[#7B3931] text-white px-10 py-16">
+        {/* Header Section */}
         <div className="flex justify-between items-center">
           <div className="text-left">
-            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm font-[Open_Sans]">
+            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm" style={{fontFamily: "Times New Roman",
+          }
+          }>
               OUR SERVICE
             </button>
-            <h2 className="text-4xl font-semibold mt-4">Reliable & High Quality Service</h2>
+            <h2 className="text-4xl mt-4" style={{fontFamily: "Times New Roman",
+          }
+          }>
+              Reliable & High Quality Service
+            </h2>
           </div>
 
+          {/* Navigation Buttons */}
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
-            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full hover:bg-gray-200 transition"
+            >
               <ChevronLeft size={20} />
             </button>
             <div className="border-l border-gray-400 h-5"></div>
-            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full hover:bg-gray-200 transition"
+            >
               <ChevronRight size={20} />
             </button>
           </div>
         </div>
 
+        {/* Sliding Service Cards Section */}
         <div className="overflow-hidden relative flex items-center mt-10 h-[400px]">
           <motion.div
             className="flex space-x-6"
-            animate={{ x: `-${currentIndex * 320}px` }}
-            transition={{ ease: "easeInOut", duration: 1 }}
+            animate={`{ x: -${currentIndex * 320}px }`}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
           >
             {services.concat(services).map((service, index) => (
               <div
@@ -471,15 +476,23 @@ const Home = () => {
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
-                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                  style={{backgroundImage: `url(${service.bgImage})`}}
                 ></div>
 
                 <div className="absolute top-4 right-4 text-4xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
                   {service.icon}
                 </div>
 
-                <h3 className="mt-12 text-xl pt-42 font-semibold relative">{service.title}</h3>
-                <p className="mt-2 text-sm opacity-75 relative">{service.description}</p>
+                <h3 className="mt-12 text-xl pt-42" style={{fontFamily: "Times New Roman",
+          }
+          }>
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm opacity-75 relative" style={{fontFamily: "Graphik",
+          }
+          }>
+                  {service.description}
+                </p>
 
                 <div className="mt-4 relative">
                   <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
@@ -490,9 +503,8 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
+
       </div>
-
-
       {/* {------------estimate section--------------} */}
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#ecf2ff] p-6">
         {/* Image Section */}
@@ -505,11 +517,11 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
-          <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
+        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
+          <button className="border border-white px-4 py-1 rounded-full text-sm mb-4"  >
             CONTACT US
           </button>
-          <h2 className=" font-semibold text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
+          <h2 className="text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
 
           {/* Form Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -534,7 +546,9 @@ const Home = () => {
               placeholder="Email Address"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15"
             />
-            <p className="text-white text-sm mt-4 italic">
+            <p className="text-white text-sm mt-4 italic" style={{fontFamily: "Graphik",
+          }
+          }>
               Submit this information and we will send <br /> you the cost for the service.
             </p>
           </div>
@@ -542,7 +556,7 @@ const Home = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button className="bg-black text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-300 h-15">
+            <button className="bg-black text-white px-6 py-3 rounded-full font-Times New Roman flex items-center gap-2 hover:bg-gray-300 h-15">
               Get Cost Estimate →
             </button>
           </div>
