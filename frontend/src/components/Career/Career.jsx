@@ -23,7 +23,7 @@ const JobCard = ({ title, location, color }) => (
     </p>
     <div className="mt-4 flex justify-between w-full">
       {/* Job Description Button */}
-      <button className="px-6 py-2 text-yellow-900 rounded-lg border border-yellow-900 hover:bg-yellow-100">
+      <button className="px-6 py-2 text-yellow-900   ">
         Job Description
       </button>
       {/* Apply Now Button */}
