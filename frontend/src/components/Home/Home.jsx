@@ -84,7 +84,7 @@ const Home = () => {
   const closeModal = () => {
     setIsOpen(false);
     setVideoUrl("");
-  };
+  };
   return (
     <>
       {/*------------ Hero Section ------- */}
@@ -107,14 +107,14 @@ const Home = () => {
           <img
             src={demo1}
             alt="Scientist working in lab"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full rounded-2xl"
           />
 
           {/* Watch Video Button - Positioned Bottom Right Inside Image */}
           {/* <div className='absolute rotate-50 bottom-10 -right-6 px-7 py-3 flex
            rounded-full'> */}
-            {/* <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div> */}
-            {/* <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
+          {/* <div class="absolute -left-10 bottom-3 z-10 h-10 w-10 rounded-full group-aria-selected:bg-color-bright"></div> */}
+          {/* <div class="absolute -bottom-2 -left-5 z-0 h-10 w-10 rounded-full group-aria-selected:bg-color-dark"></div>
           </div> */}
           {/* Watch Video Button - Positioned Bottom Right Inside Image */}
           <button
@@ -124,13 +124,13 @@ const Home = () => {
             className="absolute bottom-4 right-3 p-4 rounded-full flex items-center 
                          hover:scale-110  transition-transform duration-300 ease-in-out"
           ><div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-            <FaPlay className="text-black text-lg " /></div>
+              <FaPlay className="text-black text-lg " /></div>
             <span className="ml-2 text-lg font-semibold text-black">Watch Video</span>
           </button>
         </div>
         {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
+          <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
+            <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#7B3931]">
               <button
                 onClick={closeModal}
                 className="absolute top-2 right-2  text-white p-1 rounded-full"
@@ -149,9 +149,9 @@ const Home = () => {
               ></iframe>
             </div>
           </div>
-        )}
+        )}
 
-        
+
 
         {/* Right Side - Content */}
         <div
@@ -438,8 +438,8 @@ const Home = () => {
       </div>
 
       {/* --------------Our Services ------------ */}
-      <div className="bg-[#7B3931] text-white px-15 py-16">
-        <div className="flex justify-between items-center">
+      <div className="bg-[#7B3931] text-white  py-16">
+        <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm font-[Open_Sans]">
               OUR SERVICE
@@ -458,7 +458,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="overflow-hidden relative flex items-center mt-10 h-[400px]">
+        <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
           <motion.div
             className="flex space-x-6"
             animate={{ x: `-${currentIndex * 320}px` }}
@@ -467,7 +467,7 @@ const Home = () => {
             {services.concat(services).map((service, index) => (
               <div
                 key={index}
-                className="group w-[300px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
+                className="group w-[290px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"

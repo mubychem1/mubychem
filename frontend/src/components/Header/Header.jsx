@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaShoppingCart, FaSearch, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import dot from "../../assets/dot_img.jpg";
 import logo from '../../assets/logo.png';
@@ -7,11 +7,14 @@ import { Link, NavLink } from "react-router-dom";
 import { FiSearch, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
+
 const phoneNumber = "+1234567890";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isTap, setIsTap] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isProductsOpen, setIsProductsOpen] = useState(false);
     
     const dropdownRef = useRef(null);
 
@@ -25,11 +28,16 @@ const Header = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
+    useEffect(() => {
+        document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'auto';
+    }, [isMobileMenuOpen]);
+
+
     return (
         <div className='bg-[#ecf2ff] h-full flex flex-col'>
             <nav className='bg-white py-4 px-4 md:py-6 md:px-6 flex justify-between items-center rounded-2xl mx-4 md:mx-6 lg:mx-8 my-4 md:my-6'>
                 {/* ----------- Logo Section -----------*/}
-                <div className='flex items-center '>
+                <div className='flex items-center'>
                     <Link to="/">
                         <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer " />
                     </Link>
@@ -37,7 +45,7 @@ const Header = () => {
 
                 {/* Navigation  */}
                 <div className="flex items-center space-x-4 flex-grow justify-center">
-                    {/* Navigation Menu */}
+                    {/* Desktop Navigation Menu */}
                     <ul className="hidden md:flex items-center text-[12px] font-bold font-['Raleway',sans-serif] text-gray-700">
                         <li className='px-4 py-2'>
                             <NavLink
@@ -50,7 +58,7 @@ const Header = () => {
                                 HOME
                             </NavLink>
                         </li>
-                        <li className='px-4 py-2'>
+                        {/* <li className='px-4 py-2'>
                             <NavLink
                                 to="/homes"
                                 className={({ isActive }) =>
@@ -60,7 +68,7 @@ const Header = () => {
                             >
                                 HOME
                             </NavLink>
-                        </li>
+                        </li> */}
                         {/*   */}
 
                         <li className='px-4 py-2'>
@@ -84,7 +92,7 @@ const Header = () => {
 
                             {/* Dropdown Content (Appears on Hover) */}
                             <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                <ul className="py-2">
+                                <ul className="py-2 ">
                                     <li className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition">
                                         <NavLink
                                             to="/products/category1"
@@ -96,6 +104,7 @@ const Header = () => {
                                             Shale Gas Hydraulic Fracturing Chemicals
                                         </NavLink>
                                     </li>
+                                    
                                     <li className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition">
                                         <Link to="/products/category2">IP, BP, EP, Ph Eur, USP NF, JP, FCC Food</Link>
                                     </li>
@@ -186,6 +195,40 @@ const Header = () => {
                             </NavLink>
                         </li>
                     </ul>
+                     {/* Mobile Menu Button */}
+                <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                    {isMobileMenuOpen ? <FiX className="text-3xl" /> : <FaBars className="text-3xl" />}
+                </button>
+
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <motion.div 
+                    initial={{ x: "100%" }} 
+                    animate={{ x: 0 }} 
+                    exit={{ x: "100%" }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                        className="fixed inset-0 bg-white z-50 p-6 flex flex-col space-y-6 text-xl">
+                        <button className="self-end" onClick={() => setIsMobileMenuOpen(false)}>
+                            <IoClose className="text-3xl" />
+                        </button>
+                        <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
+                        <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</NavLink>
+                        <div>
+                            <button onClick={() => setIsProductsOpen(!isProductsOpen)} className="w-full text-left">PRODUCTS</button>
+                            {isProductsOpen && (
+                                <div className="pl-4">
+                                    <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Shale Gas Chemicals</NavLink><br/><hr/>
+                                    <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Essential Oils</NavLink><br/><hr/>
+                                    <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Best Sellers</NavLink><br/><hr/>
+                                </div>
+                            )}
+                        </div>
+                        <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>BLOGS</NavLink>
+                        <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>CAREER</NavLink>
+                        <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
+                    </motion.div>
+                )}
                 </div>
 
                 {/* Contact Section (Phone & Email Aligned to Right) */}

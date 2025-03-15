@@ -11,7 +11,6 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import background from "../../assets/background.png";
 import { AnimatePresence } from "framer-motion";
-
 const steps = [
   {
     id: "01",
@@ -55,7 +54,33 @@ const zoomIn = {
   hidden: { scale: 0.9, opacity: 0 },
   visible: { scale: 1, opacity: 1, transition: { duration: 0.8 } },
 };
-
+const reviews = [
+  {
+    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
+    name: "Parsons William",
+    role: "Lab Specialist",
+  },
+  {
+    text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples. Thank you all!",
+    name: "Evangeline Lee",
+    role: "Satisfied Client",
+  },
+  {
+    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
+    name: "Adeline wood ",
+    role: "Happy Customer ",
+  },
+  {
+    text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples. Thank you all!",
+    name: "Naomi Violet  ",
+    role: "Customer ",
+  },
+  {
+    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
+    name: "Hazel Jenkins   ",
+    role: "Satisfied Client  ",
+  },
+];
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
@@ -68,7 +93,21 @@ const AboutUs = () => {
   const closeModal = () => {
     setIsOpen(false);
     setVideoUrl("");
-  };
+  };
+  
+  const [currentReview, setCurrentReview] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const nextReview = () => {
+    setDirection(1);
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setDirection(-1);
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
   return (
     <>
       {/* -----------------About Us Banner------------------ */}
@@ -76,7 +115,7 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="relative bg-[#ecf2ff] p-6 "
+        className="relative bg-[#ecf2ff] "
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -89,17 +128,24 @@ const AboutUs = () => {
             alt="About Us Background"
             className="w-full h-full object-cover"
           /> */}
-           <div className='bg-[#ecf2ff] '>
-                  <div className='relative h-[500px] bg-cover rounded-4xl  overflow-hidden mx-4 md:mx-10' style={{ backgroundImage:` url(${background})` }}>
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="absolute inset-0 flex items-center justify-left">
-                      <div>
-                        <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">About Us</h1>
-                        <p className="text-white text-lg pl-5 ">Muby chem &gt; ABOUT US</p>
-                      </div>
-                    </div>
-                  </div>
+          <div className="bg-[#ecf2ff] ">
+            <div
+              className="relative h-[500px] bg-cover rounded-4xl  overflow-hidden mx-4 md:mx-10"
+              style={{ backgroundImage:   `url(${background})` }}
+            >
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <div className="absolute inset-0 flex items-center justify-left">
+                <div>
+                  <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+                    About Us
+                  </h1>
+                  <p className="text-white text-lg pl-5 ">
+                    Muby chem &gt; ABOUT US
+                  </p>
                 </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </motion.section>
 
@@ -128,21 +174,25 @@ const AboutUs = () => {
           variants={fadeInUp}
           className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10 text-center md:text-left"
         >
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="border border-black px-4 py-1 rounded-full text-sm font-semibold"
-          >
-            WHO WE ARE
-          </motion.button>
+           <motion.span
+                     className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
+                     font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
+                     initial={{ opacity: 0, y: -20 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.6, delay: 0.5 }}
+                   >
+                     Who We Are
+                   </motion.span>
+                   
           <h2 className="text-4xl font-bold text-gray-900 mt-4">
-            We'll Ensure You Always Get the Best Results
+          Offer 24/7 Quick Support
           </h2>
           <p className="text-gray-600 mt-4">
-            Chemistry Research Documentation Center, a hub exploration &
-            discovery in the realm of uncommon & extraordinary chemical
-            phenomena. Our clinical pathologists are available seven days a week
-            to render diagnoses.
+            In order to achieve these objectives the management has established
+            a policy to maintain an effective and efficient Quality Assurance
+            Programme, which is planned and developed in conjunction with all
+            management functions. Anmol considers quality as a key element to
+            its success.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -170,11 +220,11 @@ const AboutUs = () => {
         {/* Play Button */}
         <button
           onClick={() => openModal("https://www.youtube.com/embed/buwI_49ZTp0")}
-          className="absolute bottom-4 right-3  rounded-full flex items-center 
+          className="absolute bottom-4 right-1 p-0.5 rounded-full flex items-center 
                hover:scale-110  transition-transform duration-300 ease-in-out"
         >
           <FaPlay className="text-gray-900 text-lg" />
-          <span className="ml-2 text-sm font-semibold">Watch Video</span>
+          <span className="ml-1 text-sm font-semibold">Watch Video</span>
         </button>
       </div>
 
@@ -199,8 +249,8 @@ const AboutUs = () => {
               className="rounded-lg"
             ></iframe>
           </div>
-        </div>
-      )}
+        </div>
+      )}
 
         {/* Card 2 - Staff Info */}
         <div
@@ -234,110 +284,113 @@ const AboutUs = () => {
           <p className=" text-white mt-2">With The Best Experts In Science</p>
         </div>
       </motion.div>
+           {/*--------------------- Sample post ----------------- */}
+      <div className="bg-[#ecf2ff] p-2">
+  <section
+    className="bg-[#7B3931] rounded-2xl text-white py-16 px-6 sm:px-8 md:px-10 lg:px-12 bg-no-repeat"
+    style={{
+      backgroundImage: `url(${Simplebg})`,
+      backgroundSize: "60%",
+      backgroundPosition: "right",
+    }}
+  >
+    {/* Heading */}
+    <div className="text-left mb-10">
+      <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
+        How It Works
+      </span>
+      <h2 className="text-3xl md:text-4xl font-bold mt-4 leading-tight">
+        Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
+      </h2>
+    </div>
 
-      {/*--------------------- Sample post ----------------- */}
-      <div className="bg-[#ecf2ff] p-2 ">
-        <section
-          className="bg-[#7B3931] rounded-2xl  text-white py-16  px-10 md:px-10 lg:px-12 rounded-t-6xl rounded-b-xl  bg-no-repeat"
-          style={{
-            backgroundImage:` url(${Simplebg})`,
-            backgroundSize: "60%",
-            backgroundPosition: "right",
-          }}
+    {/* Steps Section */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((step) => (
+        <div
+          key={step.id}
+          className="bg-[#7B3931] p-10 sm:p-10 md:p-12 lg:p-16 h-full rounded-xl shadow-lg flex flex-col justify-between text-center relative border border-white"
         >
-          {/* Heading */}
-          <div className="text-left mb-10">
-            <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
-              How It Works
-            </span>
-            <h2 className="text-4xl font-bold mt-4">
-              Get amazing cleaning in <br /> 4 simple steps
-            </h2>
+          <div className="text-4xl sm:text-5xl">{step.icon}</div>
+          <h3 className="text-xl sm:text-2xl font-semibold mt-4">{step.title}</h3>
+          <p className="text-sm sm:text-base mt-1 text-gray-300">{step.description}</p>
+          <div className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
+            {step.id}
           </div>
-
-          {/* Steps Section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.id}
-                className="bg-[#7B3931] p-16  h-full rounded-xl shadow-lg flex flex-col justify-between text-center relative border border-white"
-              >
-                <div className="text-5xl">{step.icon}</div>
-                <h3 className="text-2xl font-semibold mt-4">{step.title}</h3>
-                <p className="text-l mt-1 text-gray-300">{step.description}</p>
-                <div className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
-                  {step.id}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
-
+        </div>
+      ))}
+    </div>
+  </section>
+</div>
+      
       {/*--------------------- Sample post ----------------- */}
-
       <div className="bg-[#E9F1FF] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
-        <div className=" max-w-7xl w-full  h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
-          <div className="relative">
-            <img
-              src={labtest}
-              alt="Scientist in lab"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-4 left-4  bg-opacity-80 pt-1 sm:p-8 md:p-10 rounded-lg text-white">
-              <span className="text-3xl sm:text-4xl font-bold text-white">
-                460+
-              </span>
-              <p className="text-xs sm:text-sm">
-                Professional and
-                <br /> Experienced staff ready <br />
-                to help you
-              </p>
+      <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
+        <div className="relative">
+          <img
+            src={labtest}
+            alt="Scientist in lab"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-1 rounded-lg text-white">
+            <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
+            <p className="text-xs sm:text-sm">
+              Professional and <br /> Experienced staff ready <br /> to help you
+            </p>
+          </div>
+        </div>
+        <div className="p-8 flex flex-col justify-center">
+          <p className="text-sm uppercase font-semibold text-gray-400">Client Reviews</p>
+          <h2 className="text-3xl font-bold my-2">
+            Trusted by thousands of people & companies.
+          </h2>
+          <FaQuoteLeft className="text-3xl text-black mb-2" />
+          
+          {/* Animated Review Text */}
+          <div className="overflow-hidden h-32 relative">
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.p
+                key={currentReview}
+                initial={{ x: direction * 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -direction * 100, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-lg mb-7 p-4 absolute w-full"
+              >
+                {reviews[currentReview].text}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
+          <div className="flex items-center p-6 gap-3">
+            <div>
+              <h4 className="text-lg font-semibold">{reviews[currentReview].name}</h4>
+              <h3 className="text-md text-black">{reviews[currentReview].role}</h3>
             </div>
           </div>
-          <div className="p-8 flex flex-col justify-center">
-            <p className="text-sm uppercase font-semibold text-gray-400">
-              Client Reviews
-            </p>
-            <h2 className="text-3xl font-bold my-2">
-              Trusted by thousand of people & companies.
-            </h2>
-            <FaQuoteLeft className="text-3xl text-black mb-2" />
-            <p className="text-lg mb-7 p-4">
-              "I would recommend practitioners at this center to everyone! They
-              are great to work with and are excellent trainers. Thank you all!"
-            </p>
-            <div className="flex items-center gap-3">
-              {/* <img
-              src="/user-avatar.jpg"
-              alt="Parsons William"
-              className="w-12 h-12 rounded-full object-cover"
-            /> */}
-              <div>
-                <h4 className="text-lg font-semibold">Parsons William</h4>
-                <h3 className="text-md text-black">Lab Specialist</h3>
-              </div>
-            </div>
-            <div className="flex justify-end items-center mt-6">
-              {/* <div className="flex space-x-4">
-              <img src="/ecolab-logo.png" alt="Ecolab" className="h-6" />
-              <img src="/dna-logo.png" alt="DNA" className="h-6" />
-              <img src="/lab-logo.png" alt="LAB" className="h-6" />
-            </div> */}
-              <div className="flex space-x-2">
-                <button className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10">
-                  <IoIosArrowBack className="text-white text-lg" />
-                </button>
-                <button className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10">
-                  <IoIosArrowForward className="text-white text-lg" />
-                </button>
-              </div>
+
+          {/* Navigation Buttons */}
+          <div className="flex justify-end items-center mt-6">
+            <div className="flex space-x-2">
+              <button
+                onClick={prevReview}
+                className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
+              >
+                <IoIosArrowBack className="text-white text-lg" />
+              </button>
+              <button
+                onClick={nextReview}
+                className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
+              >
+                <IoIosArrowForward className="text-white text-lg" />
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 };
 
-export default AboutUs;
+export default AboutUs;

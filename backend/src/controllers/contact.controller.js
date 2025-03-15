@@ -1,5 +1,5 @@
 import { Contact } from "../models/contact.model.js";
-import asyncHandler from "../utils/asyncHandler.js"
+import {asyncHandler} from "../utils/asyncHandler.js"
 
 export const submitContactForm = asyncHandler(async (req, res) => {
     const { name, email, phone, subject, message } = req.body;
