@@ -332,7 +332,7 @@ const AboutUs = () => {
             alt="Scientist in lab"
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-1 rounded-lg text-white">
+          <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
             <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
             <p className="text-xs sm:text-sm">
               Professional and <br /> Experienced staff ready <br /> to help you

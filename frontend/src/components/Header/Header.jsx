@@ -195,9 +195,10 @@ const Header = () => {
                             </NavLink>
                         </li>
                     </ul>
+
                      {/* Mobile Menu Button */}
                 <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                    {isMobileMenuOpen ? <FiX className="text-3xl" /> : <FaBars className="text-3xl" />}
+                    {isMobileMenuOpen ? <FiX className="text-2xl" /> : <FaBars className="text-2xl" />}
                 </button>
 
 
@@ -208,7 +209,7 @@ const Header = () => {
                     animate={{ x: 0 }} 
                     exit={{ x: "100%" }}
                     transition={{ duration: 0.4, delay: 0.2 }}
-                        className="fixed inset-0 bg-white z-50 p-6 flex flex-col space-y-6 text-xl">
+                        className="absolute inset-0 bg-white w-auto h-[400px] rounded-[50px] z-50 px-10 py-5 flex flex-col space-y-6 text-xl">
                         <button className="self-end" onClick={() => setIsMobileMenuOpen(false)}>
                             <IoClose className="text-3xl" />
                         </button>
