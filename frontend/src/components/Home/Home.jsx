@@ -91,7 +91,7 @@ const Home = () => {
       <div
         className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12"
         style={{
-          fontFamily: "Open Sans, sans-serif",
+          fontFamily: "Times New Roman",
           fontWeight: "normal",
           fontSize: "15px",
           lineHeight: "1.6",
@@ -157,32 +157,32 @@ const Home = () => {
         <div
           className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat "
           style={{
-            backgroundImage: `url(${pattern})`,
+            backgroundImage: 'url(${pattern})',
             backgroundSize: "100%",
             backgroundPosition: "top-right",
           }}
         >
-          <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border">
+          <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border" style={{fontFamily: "Times New Roman"}}>
             IP / BP / USP / NF / Ph. Eur, JP / CP
           </p>
 
-          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] font-bold leading-tight mt-4">
+          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4" style={{fontFamily: "Times New Roman"}}>
             Quality Products
           </h1>
 
-          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-bold leading-tight mt-2">
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-graphik leading-tight mt-2">
             From approved manufactureres
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
 
-          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]">
+          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]" style={{fontFamily: "Graphik"}}>
             Pharmaceutical Excipents, Food Grade chemicals,
             BP USP IP EP Ph Eur FCC ACS Manufactureres.
           </p>
 
           <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
-          font-semibold flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
+          font-Graphik  flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
           border border-transparent hover:border-black">
             Our Services <span className="ml-2">&rarr;</span>
           </button>
@@ -201,7 +201,7 @@ const Home = () => {
             whileHover={{ y: -20 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
               <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600 ">
                 {service.icon}
               </div>
@@ -268,7 +268,7 @@ const Home = () => {
 
           {/* Heading */}
           <motion.h2
-            className="font-raleway font-semibold text-[50px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic mb-4 w-full"
+            className="font-Times New Roman  text-[50px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic mb-4 w-full"style={{fontFamily: "Times New Roman"}}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -277,7 +277,7 @@ const Home = () => {
           </motion.h2>
           {/* Description */}
           <motion.p
-            className="font-opensans font-normal text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6"
+            className="font-Graphik  text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6" style={{fontFamily: "Graphik"}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -312,10 +312,10 @@ const Home = () => {
                 <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
               <div className="pr-1">
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-Graphik text-gray-900" style={{fontFamily: "Times New Roman"}}>
                   Medical Research
                 </h4>
-                <p className="text-gray-600 text-sm pt-2">
+                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik"}}>
                   Health research, sometimes referred to as medical research.
                 </p>
               </div>
@@ -334,10 +334,10 @@ const Home = () => {
                 <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-Graphik text-gray-900" style={{fontFamily: "Times New Roman"}}>
                   Accurate Analysis
                 </h4>
-                <p className="text-gray-600 text-sm pt-2">
+                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik"}}>
                   Accurate Analysis is an absolute testing laboratory.
                 </p>
               </div>
@@ -346,7 +346,7 @@ const Home = () => {
 
           {/* Button with Hover Animation */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-semibold rounded-full font-['Open_Sans',sans-serif] 
+            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-[Graphik] rounded-full 
             flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -359,11 +359,12 @@ const Home = () => {
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
         <div
-          className="border font-[Open_Sans] border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4"
+          className="border  border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{fontFamily: "Times New Roman",
+          }}
         >
           WHY CHOOSE US?
         </div>
-        <h2 className="text-4xl font-bold text-center mt-4 text-gray-900">
+        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{fontFamily: "Times New Roman"}}>
           We Advice to Choose a <br /> Right Decision
         </h2>
 
@@ -441,10 +442,10 @@ const Home = () => {
       <div className="bg-[#7B3931] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
-            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm font-[Open_Sans]">
+            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm "style={{fontFamily: "Times New Roman"}}>
               OUR SERVICE
             </button>
-            <h2 className="text-4xl font-semibold mt-4">Reliable & High Quality Service</h2>
+            <h2 className="text-4xl  mt-4"style={{fontFamily: "Times New Roman"}}>Reliable & High Quality Service</h2>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -478,8 +479,9 @@ const Home = () => {
                   {service.icon}
                 </div>
 
-                <h3 className="mt-12 text-xl pt-42 font-semibold relative">{service.title}</h3>
-                <p className="mt-2 text-sm opacity-75 relative">{service.description}</p>
+                <h3 className="mt-12 text-xl pt-42  relative" style={{fontFamily: "Times New Roman",
+          }}>{service.title}</h3>
+                <p className="mt-2 text-sm opacity-75 relative"  style={{fontFamily: "Graphik"}}>{service.description}</p>
 
                 <div className="mt-4 relative">
                   <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
@@ -505,11 +507,11 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Open Sans, sans-serif" }}>
+        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman"  }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
             CONTACT US
           </button>
-          <h2 className=" font-semibold text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
+          <h2 className="  text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
 
           {/* Form Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -534,7 +536,7 @@ const Home = () => {
               placeholder="Email Address"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15"
             />
-            <p className="text-white text-sm mt-4 italic">
+            <p className="text-white text-sm mt-4 italic" style={{fontFamily: "Graphik"}}>
               Submit this information and we will send <br /> you the cost for the service.
             </p>
           </div>
@@ -542,8 +544,8 @@ const Home = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button className="bg-black text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-300 h-15">
-              Get Cost Estimate →
+            <button className="bg-black text-white px-6 py-3 rounded-full font-Times New Roman flex items-center gap-2 hover:bg-gray-300 h-15">
+              Submit →
             </button>
           </div>
         </div>
@@ -552,4 +554,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;

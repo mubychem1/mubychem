@@ -16,4 +16,4 @@ app.use(cookieParser())
 
 import userRouter from './routes/contact.route.js'
 
-app.use("/api/v1/user", userRouter)
+app.use("/api", userRouter)

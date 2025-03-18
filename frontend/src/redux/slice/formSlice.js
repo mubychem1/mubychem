@@ -4,7 +4,7 @@ export const submitForm = createAsyncThunk(
   "form/submitForm",
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await fetch("http://example.domain/dev/v1/contact-us", {
+      const response = await fetch("http://localhost:9000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -26,6 +26,7 @@ const formSlice = createSlice({
   initialState: {
     status: null,
     error: null,
+    message: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -36,6 +37,7 @@ const formSlice = createSlice({
       .addCase(submitForm.fulfilled, (state) => {
         state.status = "success";
         state.error = null;
+        state.message = "Form is submitted";
       })
       .addCase(submitForm.rejected, (state, action) => {
         state.status = "failed";

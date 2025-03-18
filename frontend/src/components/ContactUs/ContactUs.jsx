@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import background from '../../assets/background.png';
+import background from "../../assets/background.png";
 import { Mail, MapPin, Phone, Calendar, ArrowUpRight } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { submitForm } from "../../redux/slice/formSlice.js";  // Ensure path is correct
+import { submitForm } from "../../redux/slice/formSlice.js"; // Ensure path is correct
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -36,7 +36,10 @@ const ContactUs = () => {
     },
     {
       title: "Working Days",
-      details: ["Mon to Fri - 09:00am To 06:00pm", "Saturday to Sunday - Closed"],
+      details: [
+        "Mon to Fri - 09:00am To 06:00pm",
+        "Saturday to Sunday - Closed",
+      ],
       icon: <Calendar className="text-blue-500" size={32} />,
     },
   ];
@@ -46,8 +49,12 @@ const ContactUs = () => {
 
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().email("Invalid email format").required("Email is required"),
-    phone: Yup.string().matches(/^\d{10}$/, "Phone number must be exactly 10 digits").required("Phone number is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    phone: Yup.string()
+      .matches(/^\d{10}$/, "Phone number must be exactly 10 digits")
+      .required("Phone number is required"),
     subject: Yup.string(),
     message: Yup.string(),
   });
@@ -55,18 +62,22 @@ const ContactUs = () => {
   return (
     <>
       {/* -----------------Contact Us Banner --------------*/}
-      <div className='bg-[#ecf2ff] '>
-        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
+      <div className="bg-[#ecf2ff] ">
+        <div
+          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10"
+          style={{ backgroundImage: `url(${background})` }}
+        >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">Contact Us</h1>
-              <p className="text-white text-lg pl-5 ">XLEB &gt; CONTACT US</p>
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+                Contact Us
+              </h1>
+              <p className="text-white text-lg pl-5 ">Mubychem &gt; CONTACT US</p>
             </div>
           </div>
         </div>
       </div>
-
       {/* -------------Contact Information -------------------*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-[#ecf2ff] ">
         {contactDetails.map((contact, index) => (
@@ -75,10 +86,14 @@ const ContactUs = () => {
             whileHover={{ scale: 1.05 }}
             className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#e7eefc] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
           >
-            <h3 className="text-xl font-semibold text-gray-900">{contact.title}</h3>
+            <h3 className="text-xl font-semibold text-gray-900">
+              {contact.title}
+            </h3>
             <div className="mt-2">
               {contact.details.map((detail, idx) => (
-                <p key={idx} className="text-gray-600 text-sm">{detail}</p>
+                <p key={idx} className="text-gray-600 text-sm">
+                  {detail}
+                </p>
               ))}
             </div>
             <div className="flex justify-between items-center mt-6">
@@ -95,111 +110,108 @@ const ContactUs = () => {
           </motion.div>
         ))}
       </div>
-
       {/* ---------------------- Contact Form Section ----------------- */}
-      <div className="w-full min-h-screen flex items-center justify-center bg-[#ecf2ff] ">
-        <div className="w-full max-w-8xl rounded-3xl flex flex-col md:flex-row">
-          {/* Left Side */}
-          <div className="w-full md:w-1/2 p-6">
-            <h2 className="text-4xl font-bold text-gray-900">Happy to Answer All Your Questions</h2>
-            <p className="text-gray-600 mt-4">
-              We carefully screen all of our cleaners, so you can rest assured that your home would receive the absolute highest quality of service.
-            </p>
-            <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700">
-              More Details →
-            </button>
-          </div>
-
-          {/* Right Side (Form) */}
-          <div className="w-full md:w-1/0.5 p-6 bg-white rounded-4xl mr-6 ml-6">
-            <h3 className="text-3xl font-bold text-gray-900 pt-7 ml-5" style={{ fontFamily: "Raleway, sans-serif" }}>
-              Send a message to staff
-            </h3>
-
-            <p className="text-gray-500 text-sm mt-2 pt-2 pb-7 ml-5" style={{ fontFamily: "Raleway, sans-serif" }} >Your email address will not be published. Required fields are marked *</p>
-
-            <Formik
-              initialValues={{ name: "", email: "", phone: "", subject: "", message: "" }}
-              validationSchema={validationSchema}
-              onSubmit={(values, { resetForm }) => {
-                dispatch(submitForm(values));
-                resetForm();
-              }}
-            >
-              {({ isSubmitting }) => (
-                <Form className="mt-6 space-y-4">
-                  {/* Two Column Layout for Name & Email */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <Field
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        className="w-3/4 p-3 border rounded-full bg-white ml-5 "
-                      />
-                      <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1 ml-8" />
-                    </div>
-                    <div>
-                      <Field
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        className="w-3/4 p-3 border rounded-full bg-white ml-5 "
-                      />
-                      <ErrorMessage name="email" component="p" className="text-red-500 text-sm mt-1 ml-8 " />
-                    </div>
-                  </div>
-
-                  {/* Two Column Layout for Phone & Subject */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <Field
-                        type="tel"
-                        name="phone"
-                        placeholder="Your Phone"
-                        className="w-3/4 p-3 border rounded-full bg-white ml-5"
-                      />
-                      <ErrorMessage name="phone" component="p" className="text-red-500 text-sm mt-1 ml-8" />
-                    </div>
-                    <div>
-                      <Field
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        className="w-3/4 p-3 border rounded-full bg-white ml-5"
-                      />
-                      <ErrorMessage name="subject" component="p" className="text-red-500 text-sm mt-1 ml-8" />
-                    </div>
-                  </div>
-
-                  {/* Message Field */}
-                  <Field
-                    as="textarea"
-                    name="message"
-                    placeholder="Message"
-                    className="w-[670px] p-3 border rounded-3xl bg-white h-28 ml-5"
-                  />
-
-                  {/* Checkbox */}
-                  <div className="flex items-center space-x-2 text-gray-500 text-sm ml-5">
-                    <input type="checkbox" className="w-4 h-4 border-gray-400" />
-                    <span>Save my name, email, and website in this browser for the next time I comment.</span>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-48 py-3 bg-white  text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 ml-5"
-                  >
-                    {isSubmitting ? "Submitting..." : "Get Cost Estimate →"}
-                  </button>
-                </Form>
-              )}
-            </Formik>
-          </div>
+      <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between bg-[#ecf2ff] px-4 md:px-6 lg:px-12 py-12 gap-y-6 md:gap-x-12">
+        {/* Left Side */}
+        <div className="w-full md:w-[50%] lg:w-[45%] text-center md:text-left flex-grow">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            Happy to Answer All Your Questions
+          </h2>
+          <p className="text-gray-600 mt-4 text-base md:text-lg">
+            We carefully screen all of our cleaners, so you can rest assured
+            that your home would receive the absolute highest quality of
+            service.
+          </p>
+          <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700 mx-auto md:mx-0">
+            More Details →
+          </button>
         </div>
-      </div>
 
+        {/* Right Side (Form) */}
+        <div className="w-full md:w-[50%] lg:w-[45%] p-6 md:p-8 bg-white rounded-3xl shadow-lg max-w-[95%] md:max-w-[80%] lg:max-w-[60%] flex-grow">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
+            Send a message to staff
+          </h3>
+          <p className="text-gray-500 text-sm text-center mt-2">
+            Your email address will not be published. Required fields are marked
+            *
+          </p>
+
+          <Formik
+            initialValues={{
+              name: "",
+              email: "",
+              phone: "",
+              subject: "",
+              message: "",
+            }}
+            validationSchema={validationSchema}
+            onSubmit={(values, { resetForm }) => {
+              dispatch(submitForm(values));
+              resetForm();
+            }}
+          >
+            {({ isSubmitting }) => (
+              <Form className="mt-6 space-y-4">
+                {/* Two Column Layout for Name & Email */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Field
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                </div>
+
+                {/* Two Column Layout for Phone & Subject */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Field
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                  <Field
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                </div>
+
+                {/* Message Field */}
+                <Field
+                  as="textarea"
+                  name="message"
+                  placeholder="Message"
+                  className="w-full p-3 border rounded-3xl bg-white h-28"
+                />
+
+                {/* Checkbox */}
+                <div className="flex items-center space-x-2 text-gray-500 text-sm">
+                  <input type="checkbox" className="w-4 h-4 border-gray-400" />
+                  <span>Save my name, email, and website for next time.</span>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-48 py-3 bg-white text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
+                >
+                  {isSubmitting ? "Submitting..." : "Get Cost Estimate →"}
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </div>
+      </div>
+            
       {/*----------------- Map section --------------- */}
       <section className="py-8 px-6 bg-[#ecf2ff] flex justify-center  ">
         <div className="w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
@@ -217,4 +229,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUs;
