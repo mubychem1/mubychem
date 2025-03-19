@@ -15,7 +15,7 @@ const VerticalTabs = () => {
     "Our Mission",
     "Our Quality",
     "Values",
-    "Blood Cell Research",
+    "Excellence",
   ];
 
   const content = [
@@ -37,16 +37,16 @@ const VerticalTabs = () => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">
+        <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
           Our Vision
         </h3>
         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
           }
           }>
-          To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.
+          Our vision is to contribute to a healthier, more sustainable future by advancing pharmaceuticals, nutraceuticals, specialty chemicals, and food additives that promote better health, improve quality of life, and foster environmental responsibility.
         </p>
 
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
             "Access Expert Advice For A Thriving Life",
             "Benefits Of Health Conscious Living",
@@ -80,15 +80,15 @@ const VerticalTabs = () => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">
+        <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
           Our Mission
         </h3>
         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
           }
           }>
-          We strive to establish our Company as the market leader, by meeting the growing needs of are customers consistently.
+          Our mission is to be the partner of choice for businesses worldwide, offering products and services that drive success, support innovation, and help improve the quality of life for people across the globe.
         </p>
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
             "Access Expert Advice For A Thriving Life",
             "Benefits Of Health Conscious Living",
@@ -121,17 +121,17 @@ const VerticalTabs = () => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">
+        <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
           Our Quality
         </h3>
         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
           }
           }>
-        Quality has always been our point of focus and it is of utmost importance to us. To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.<br/>
+       At Muby Chem, quality is at the heart of everything we do. We are dedicated to providing our clients with exceptional products that meet the highest standards of safety, performance, and regulatory compliance. Our rigorous commitment to quality ensures that each product we produce is reliable, effective, and consistently exceeds expectations.<br/>
         <br/>
         </p>
 
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
             "Access Expert Advice For A Thriving Life",
             "Benefits Of Health Conscious Living",
@@ -166,17 +166,14 @@ const VerticalTabs = () => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">Our Values</h3>
+        <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}> Values</h3>
         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
           }
           }>
-          To be a global leader in providing quality and performance based
-          technological solutions and services in wide ranging industries with a
-          reputation for integrity and commitment to creating value for every
-          customer.
+          Our core values drive every aspect of our business. We are committed to maintaining the highest ethical standards, fostering innovation, and creating meaningful partnerships with our customers, employees, and communities. Our values form the foundation of our work culture and guide our actions as we strive to make a positive impact on industries and lives around the world.
         </p>
 
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
             "Access Expert Advice For A Thriving Life",
             "Benefits Of Health Conscious Living",
@@ -210,16 +207,14 @@ const VerticalTabs = () => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/2 px-6">
-        <h3 className="text-2xl font-bold text-gray-900">
-          Well Ensure You Always Covid 19 Vaccine.
+        <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
+        Excellence
         </h3>
-        <p className="text-[#6a7391] mt-3">
-          We help ambitious businesses like yours generate more profits by
-          building awareness, driving web traffic, connecting with
-          customers, and growing overall sales. Give us a call.
+        <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik" }}>
+        We continuously strive for excellence in everything we do. Our dedication to high standards of performance, attention to detail, and a relentless pursuit of improvement ensures that we remain leaders in the industry, delivering the best products and services to our customers.
         </p>
 
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
             "Access Expert Advice For A Thriving Life",
             "Benefits Of Health Conscious Living",
@@ -263,7 +258,7 @@ const VerticalTabs = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="w-3/4 ">
+      <div className="w-3/4">
         <div className=" p-4 rounded-md">
           {content[activeTab]}
         </div>

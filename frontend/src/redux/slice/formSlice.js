@@ -3,7 +3,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const submitForm = createAsyncThunk(
   "form/submitForm",
   async (formData, { rejectWithValue }) => {
+
     try {
+      console.log("Aayush");
+      
       const response = await fetch("http://localhost:9000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -16,6 +19,8 @@ export const submitForm = createAsyncThunk(
 
       return await response.json();
     } catch (error) {
+      console.log("rohan");
+      
       return rejectWithValue(error.message);
     }
   }

@@ -12,12 +12,14 @@ import demo1 from '../../assets/demo-1.png';
 import VerticalTabs from './VerticalTabs';
 import homecontact from "../../assets/home-contact.png";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import ReadMoreArea from '@foxeian/react-read-more';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // import { motion } from "framer-motion";
 
-
-
+const buttonStyle = {
+  color: "#7B3931",
+  // Add any other CSS styles as needed
+};
 
 const features = [
   "Sample Collection",
@@ -30,25 +32,25 @@ const features = [
 const services = [
   {
     title: "Pharmaceuticals",
-    description: "Our clinical pathologists are available seven days a week to...",
+    description: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
     icon: "🤖",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg"
   },
   {
-    title: "Nutraceuticals",
-    description: "Our clinical pathologists are available seven days a week to...",
+    title: "Speciality chemicals",
+    description: "Tailored chemical solutions designed specifically for your needs, ensuring optimal results and seamless integration into your production processes.",
     icon: "🧠",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg"
   },
   {
-    title: "Speciality chemicals",
-    description: "Our clinical pathologists are available seven days a week to...",
+    title: "Nutraceuticals",
+    description: "We specialize in the development and manufacturing of high-quality nutraceutical products that promote health and wellness. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
     icon: "⚛",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg"
   },
   {
     title: "Mineral Fortifiers",
-    description: "Our clinical pathologists are available seven days a week to...",
+    description: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability. ",
     icon: "🧬",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg"
   },
@@ -124,7 +126,7 @@ const Home = () => {
             className="absolute bottom-4 right-3 p-4 rounded-full flex items-center 
                          hover:scale-110  transition-transform duration-300 ease-in-out"
           ><div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-              <FaPlay className="text-black text-lg " /></div>
+              <FaPlay className="text-black text-lg"/></div>
             <span className="ml-2 text-lg font-semibold text-black">Watch Video</span>
           </button>
         </div>
@@ -142,7 +144,6 @@ const Home = () => {
                 height="315"
                 src={videoUrl}
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="rounded-lg"
@@ -157,34 +158,33 @@ const Home = () => {
         <div
           className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat "
           style={{
-            backgroundImage: 'url(${pattern})',
+            backgroundImage: `url(${pattern})`,
             backgroundSize: "100%",
             backgroundPosition: "top-right",
           }}
         >
-          <p className="uppercase text-xs font-semibold  text-white px-3 py-1 rounded-full w-max border" style={{fontFamily: "Times New Roman"}}>
-            IP / BP / USP / NF / Ph. Eur, JP / CP
+          <p className="text-xl font-semibold text-white px-3 italic py-1 rounded-full w-max border " style={{ fontFamily: "Times New Roman" }}>
+            Quality Chemicals Worldwide - Since 1976
           </p>
 
-          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4" style={{fontFamily: "Times New Roman"}}>
+          <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4 " style={{ fontFamily: "Times New Roman" }}>
             Quality Products
-          </h1>
+          </h1><br/>
 
-          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[35px] lg:text-[35px] font-graphik leading-tight mt-2">
-            From approved manufactureres
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[20px] italic lg:text-[20px] font-graphik leading-tight mt-2 text-right">
+            Where Chemistry Meets Excellence.
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
 
-          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6]" style={{fontFamily: "Graphik"}}>
-            Pharmaceutical Excipents, Food Grade chemicals,
-            BP USP IP EP Ph Eur FCC ACS Manufactureres.
-          </p>
+          <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6] rounded-xl border p-2 w-max shadow-2xl" style={{ fontFamily: "Graphik" }}>
+            IP/BP/ Ph. Eur./USP-NF/JP/CP/FCC/ACS
+          </p><br />
 
           <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
-          font-Graphik  flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
-          border border-transparent hover:border-black">
-            Our Services <span className="ml-2">&rarr;</span>
+         flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
+          border border-transparent hover:border-black" style={{ fontFamily: "Graphik" }}>
+            <a href="/products">Our Products <span className="ml-2">&rarr;</span></a>
           </button>
         </div>
       </div>
@@ -194,24 +194,27 @@ const Home = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white py-[45px] px-[25px] rounded-[30px] w-80 h-70 flex flex-col items-center 
+            className="bg-white py-[35px] px-[15px] rounded-[30px] w-90 h-auto flex flex-col items-center 
             text-center relative cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <div className="flex items-center space-x-6">
-              <div className="bg-blue-100 p-2 rounded-full text-3xl text-blue-600 ">
+            <div className="flex items-center space-x-2">
+              <div className="bg-blue-100 p-2 rounded-full text-[12px] text-blue-600 ">
                 {service.icon}
               </div>
-              <h2 className="text-lg font-semibold text-gray-900">
+              <h2 className="text-[17px] font-semibold text-gray-900">
                 {service.title}
               </h2>
             </div>
-            <hr className="mt-3 p-4 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-2" />
-            <p className="text-gray-600 text-sm ml-auto text-[15px]">
-              {service.description}
+            <hr className="mt-3 p-3 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-0" />
+            <p className="text-gray-600 text-sm ml-auto text-[15px] text-center">
+              <ReadMoreArea buttonStyle={buttonStyle} 
+                lettersLimit={115} // limit of letters (100 letters)
+              >{service.description}
+              </ReadMoreArea>
             </p>
             <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full 
             border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
@@ -233,7 +236,7 @@ const Home = () => {
       </div>
 
       {/* ----------Research Section  -------------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-full ">
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-full pt-10 pb-5">
         {/* Left Side - Image */}
         <motion.div
           className="w-1/2 md:w-1/2 flex justify-center"
@@ -268,22 +271,25 @@ const Home = () => {
 
           {/* Heading */}
           <motion.h2
-            className="font-Times New Roman  text-[50px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic mb-4 w-full"style={{fontFamily: "Times New Roman"}}
+            className="font-Times New Roman  text-4xl leading-[60px] tracking-[0] text-[#001837] normal-case not-italic  w-full" style={{ fontFamily: "Times New Roman" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            We'll Ensure You Always Get the Best Results
+            Welcome to MUBY CHEM PRIVATE LIMITED
           </motion.h2>
+          <motion.p className='mb-4'>
+            Obsessed with Quality since 1976
+          </motion.p>
           {/* Description */}
           <motion.p
-            className="font-Graphik  text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6" style={{fontFamily: "Graphik"}}
+            className="font-Graphik  text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6" style={{ fontFamily: "Graphik" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            Muby Chem has established the comprehensive manufacturing, distribution, and wholesale bulk supply of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors. With the expertise and continued excellence in research and development, we have constantly pushed the boundaries and developed an exceptionally high-quality product.
-            <br /><br />"We have served 10000+ clients across the world in over 48 years since establishing the manufacturing unit. All the products are produced under careful supervision and tested before the final distribution. We help in taking care of all the logistic needs for creating an operational supply chain."
+            At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
+            <br /><br />"We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner."
           </motion.p>
 
           {/* Features Section */}
@@ -312,10 +318,10 @@ const Home = () => {
                 <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
               <div className="pr-1">
-                <h4 className="font-Graphik text-gray-900" style={{fontFamily: "Times New Roman"}}>
-                  Medical Research
+                <h4 className="font-Graphik text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+                  APIs
                 </h4>
-                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik"}}>
+                <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
                   Health research, sometimes referred to as medical research.
                 </p>
               </div>
@@ -334,10 +340,10 @@ const Home = () => {
                 <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
               <div>
-                <h4 className="font-Graphik text-gray-900" style={{fontFamily: "Times New Roman"}}>
-                  Accurate Analysis
+                <h4 className="font-Graphik text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+                  Mineral Actives
                 </h4>
-                <p className="text-gray-600 text-sm pt-2" style={{fontFamily: "Graphik"}}>
+                <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
                   Accurate Analysis is an absolute testing laboratory.
                 </p>
               </div>
@@ -350,8 +356,8 @@ const Home = () => {
             flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
-            Know More <FaArrowRight />
+          ><a href="/about">
+            Know More </a><FaArrowRight />
           </motion.button>
         </motion.div>
       </div>
@@ -359,93 +365,31 @@ const Home = () => {
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
         <div
-          className="border  border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{fontFamily: "Times New Roman",
+          className="border  border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
+            fontFamily: "Times New Roman",
           }}
         >
           WHY CHOOSE US?
         </div>
-        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{fontFamily: "Times New Roman"}}>
-          We Advice to Choose a <br /> Right Decision
+        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+          Why Choose Muby Chem?
         </h2>
 
         <div className="flex items-center mt-8 max-w-7xl w-full ">
           <VerticalTabs />
         </div>
 
-        {/* <div className="flex flex-col lg:flex-row items-center mt-8 max-w-7xl w-full"> */}
-        {/* Left Section */}
-        {/* <div className="w-full lg:w-1/3 space-y-4">
-            {features.map((feature, index) => (
-              <button
-                key={index}
-                className={`flex justify-between items-center w-4/5 p-3 rounded-full transition-all duration-300 font- ${index === 0
-                    ? "bg-white text-gray-900"
-                    : "border border-gray-300 text-gray-900 bg-transparent"
-                  }`}
-              >
-                <span>{feature}</span>
-                <div
-                  className={`w-10 h-10 flex items-center justify-center rounded-full ${index === 0
-                      ? "bg-[#7b3931] hover:text-black text-white"
-                      : "bg-[#7b3931] hover:text-black text-white"
-                    }`}
-                >
-                  <FaArrowUpRightFromSquare />
-                </div>
-              </button>
-            ))}
-          </div> */}
-
-        {/* Image Section */}
-        {/* <motion.div
-            className="w-full lg:w-1/3 flex justify-start mt-6 lg:mt-0"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img
-              src="https://xleb-demo.pbminfotech.com/demo1/wp-content/themes/xleb/images/tab.jpg"
-              alt="Lab Research"
-              className="rounded-3xl w-full max-w-sm"
-            />
-          </motion.div> */}
-
-        {/* Right Section */}
-        {/* <div className="w-full lg:w-1/3 px-6">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Well Ensure You Always Covid 19 Vaccine.
-            </h3>
-            <p className="text-[#6a7391] mt-3">
-              We help ambitious businesses like yours generate more profits by
-              building awareness, driving web traffic, connecting with
-              customers, and growing overall sales. Give us a call.
-            </p>
-
-            <ul className="mt-4 space-y-2">
-              {[
-                "Access Expert Advice For A Thriving Life",
-                "Benefits Of Health Conscious Living",
-                "Benefits Of Proactive Health Management",
-                "Countless Benefits Of Prioritizing Health",
-              ].map((benefit, index) => (
-                <li key={index} className="flex items-center text-gray-900">
-                  <span className="text-yellow-900 text-lg">&#10003;</span>
-                  <span className="ml-2">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div> */}
+        
       </div>
 
       {/* --------------Our Services ------------ */}
       <div className="bg-[#7B3931] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
-            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm "style={{fontFamily: "Times New Roman"}}>
+            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
               OUR SERVICE
             </button>
-            <h2 className="text-4xl  mt-4"style={{fontFamily: "Times New Roman"}}>Reliable & High Quality Service</h2>
+            <h2 className="text-4xl  mt-4" style={{ fontFamily: "Times New Roman" }}>Reliable & High Quality Service</h2>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -475,13 +419,14 @@ const Home = () => {
                   style={{ backgroundImage: `url(${service.bgImage})` }}
                 ></div>
 
-                <div className="absolute top-4 right-4 text-4xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+                <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
                   {service.icon}
                 </div>
 
-                <h3 className="mt-12 text-xl pt-42  relative" style={{fontFamily: "Times New Roman",
-          }}>{service.title}</h3>
-                <p className="mt-2 text-sm opacity-75 relative"  style={{fontFamily: "Graphik"}}>{service.description}</p>
+                <h3 className="mt-12 text-xl pt-42  relative" style={{
+                  fontFamily: "Times New Roman",
+                }}>{service.title}</h3>
+                <p className="mt-2 text-sm opacity-75 relative" style={{ fontFamily: "Graphik" }}>We manufacture high-quality active pharmaceutical ingredients (APIs)</p>
 
                 <div className="mt-4 relative">
                   <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
@@ -507,7 +452,7 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman"  }}>
+        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
             CONTACT US
           </button>
@@ -515,28 +460,37 @@ const Home = () => {
 
           {/* Form Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15">
+            <input
+              type="text"
+              placeholder="Name"
+              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
+            />
+            {/* <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15">
               <option>Choose a Service</option>
             </select>
             <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300">
               <option>Type of Clean</option>
-            </select>
+            </select> */}
             <input
-              type="text"
-              placeholder="Total Floor Area (sq ft)"
+              type="phone"
+              placeholder="Phone number"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
             />
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="Subject"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300"
             />
-            <input
-              type="email"
-              placeholder="Email Address"
+            <textarea
+              placeholder="Message"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15"
             />
-            <p className="text-white text-sm mt-4 italic" style={{fontFamily: "Graphik"}}>
+            <p className="text-white text-sm mt-4 italic" style={{ fontFamily: "Graphik" }}>
               Submit this information and we will send <br /> you the cost for the service.
             </p>
           </div>
@@ -544,7 +498,7 @@ const Home = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button className="bg-black text-white px-6 py-3 rounded-full font-Times New Roman flex items-center gap-2 hover:bg-gray-300 h-15">
+            <button className="bg-black text-white px-6 py-3 rounded-full font-Times New Roman flex items-center gap-2 hover:bg-gray-300 hover:text-black h-15">
               Submit →
             </button>
           </div>
@@ -554,4 +508,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;

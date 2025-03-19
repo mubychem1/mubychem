@@ -32,12 +32,14 @@ const Header = () => {
         document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'auto';
     }, [isMobileMenuOpen]);
 
-    const [isHovered, setIsHovered] = useState(false);
-    const [isHovered1, setIsHovered1] = useState(false);
-    const [isHovered2, setIsHovered2] = useState(false);
-    const [isHovered3, setIsHovered3] = useState(false);
-    const [isHovered5, setIsHovered5] = useState(false);
-    const [isHovered4, setIsHovered4] = useState(false);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    const menuItems = [
+        { label: "Shale Gas Hydraulic Fracturing Chemicals", link: "/products/category1" },
+        { label: "IP, BP, EP, Ph Eur, USP NF, JP, FCC Food", link: "/products/category2" },
+        { label: "Essential Oils", link: "/products/category3" },
+        { label: "Other Best Seller Products", link: "/products/category4" },
+        { label: "New R & D Products", link: "/products/category5" },]
 
     return (
         <div className='bg-[#ecf2ff] h-full flex flex-col'>
@@ -64,18 +66,7 @@ const Header = () => {
                                 HOME
                             </NavLink>
                         </li>
-                        {/* <li className='px-4 py-2'>
-                            <NavLink
-                                to="/homes"
-                                className={({ isActive }) =>
-                                    `cursor-pointer hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
-                                    }`
-                                }
-                            >
-                                HOME
-                            </NavLink>
-                        </li> */}
-                        {/*   */}
+                   
 
                         <li className='px-4 py-2'>
                             <NavLink
@@ -91,113 +82,42 @@ const Header = () => {
 
 
                         <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]">
-                            {/* Dropdown Toggle Button */}
+                            {/* Dropdown Toggle */}
                             <span className="px-4 py-2 rounded-md text-black hover:text-yellow-900 font-semibold transition">
                                 PRODUCTS
                             </span>
 
-                            {/* Dropdown Content (Appears on Hover) */}
-                            <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                <ul className="py-2 ">
-                                    <li
-                                        className="px-6 py-3 text-gray-800 flex items-center"
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
+                            {/* Dropdown Content */}
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+                            >
+                                <ul className="py-2">
+                                    {menuItems.map((item, index) => (
+                                        <li
+                                            key={index}
+                                            className="px-6 py-3 text-gray-800 flex items-center hover:bg-gray-100 transition-all duration-300 ease-in-out"
+                                            onMouseEnter={() => setHoveredIndex(index)}
+                                            onMouseLeave={() => setHoveredIndex(null)}
                                         >
-                                            {isHovered && <FaMinus />}
-                                            Shale Gas Hydraulic Fracturing Chemicals
-                                        </NavLink>
-                                    </li>
-
-                                    <li
-                                        className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition delay-50 duration-30 flex items-center"
-                                        onMouseEnter={() => setIsHovered1(true)}
-                                        onMouseLeave={() => setIsHovered1(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
-                                        >
-                                            {isHovered1 && <FaMinus />}
-                                            IP, BP, EP, Ph Eur, USP NF, JP, FCC Food</NavLink>
-                                    </li>
-                                    <li
-                                        className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition delay-50 duration-30 flex items-center"
-                                        onMouseEnter={() => setIsHovered2(true)}
-                                        onMouseLeave={() => setIsHovered2(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
-                                        >
-                                            {isHovered2 && <FaMinus />}
-                                            IP, BP, EP, Ph Eur, USP NF, JP, FCC Food
-                                        </NavLink>
-                                    </li>
-                                    <li
-                                        className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition delay-50 duration-30 flex items-center"
-                                        onMouseEnter={() => setIsHovered3(true)}
-                                        onMouseLeave={() => setIsHovered3(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
-                                        >
-                                            {isHovered3 && <FaMinus />}
-                                            Essential Oils
-                                        </NavLink>
-                                    </li>
-                                    <li
-                                        className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition delay-50 duration-30 flex items-center"
-                                        onMouseEnter={() => setIsHovered4(true)}
-                                        onMouseLeave={() => setIsHovered4(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
-                                        >
-                                            {isHovered4 && <FaMinus />}
-                                            Other Best Seller Products
-                                        </NavLink>
-                                    </li>
-                                    <li
-                                        className="px-6 py-3 text-gray-800 hover:bg-gray-100 transition delay-50 duration-30 flex items-center"
-                                        onMouseEnter={() => setIsHovered5(true)}
-                                        onMouseLeave={() => setIsHovered5(false)}
-                                    >
-                                        <NavLink
-                                            to="/products/category1"
-                                            className={({ isActive }) =>
-                                                `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 ${isActive ? "text-yellow-900" : "text-black"
-                                                }`
-                                            }
-                                        >
-                                            {isHovered5 && <FaMinus />}
-                                            New R & D Products
-                                        </NavLink>
-                                    </li>
+                                            <NavLink
+                                                to={item.link}
+                                                className={({ isActive }) =>
+                                                    `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-yellow-900" : "text-black"
+                                                    }`
+                                                }
+                                            >
+                                                {hoveredIndex === index && <FaMinus />}
+                                                {item.label}
+                                            </NavLink>
+                                        </li>
+                                    ))}
                                 </ul>
-                            </div>
-                        </li>
+                            </motion.div>
+                        </li>
 
 
                         <li className='px-4 py-2'>
