@@ -87,6 +87,7 @@ const Home = () => {
     setIsOpen(false);
     setVideoUrl("");
   };
+
   return (
     <>
       {/*------------ Hero Section ------- */}
@@ -104,7 +105,7 @@ const Home = () => {
         }}
       >
         {/* Left Side - Image */}
-        <div className="md:w-1/2 h-full flex items-center justify-center relative">
+        <div className="md:w-2/4 h-full flex items-center justify-center relative">
           {/* Background Image */}
           <img
             src={demo1}
@@ -123,19 +124,22 @@ const Home = () => {
             onClick={() =>
               openModal("https://www.youtube.com/embed/buwI_49ZTp0")
             }
-            className="absolute bottom-4 right-3 p-4 rounded-full flex items-center 
-                         hover:scale-110  transition-transform duration-300 ease-in-out"
-          ><div className="w-10 h-10 flex items-center justify-center border-2 border-gray-500 rounded-full">
-              <FaPlay className="text-black text-lg"/></div>
-            <span className="ml-2 text-lg font-semibold text-black">Watch Video</span>
+            className="absolute bottom-0 right-[-17px] sm:bottom-4 sm:right-103 md:bottom-6 md:right-8 
+               flex items-center  px-3 py-2 sm:px-5 sm:py-3  rounded-full 
+               hover:scale-105 transition-all duration-300"
+          >
+            <FaPlay className="text-black text-xl sm:text-base md:text-lg " />
+            <span className="ml-2 text-xs sm:text-sm md:text-base font-semibold text-black">
+              Watch Video
+            </span>
           </button>
-        </div>
+        </div>
         {isOpen && (
           <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
             <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#7B3931]">
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2  text-white p-1 rounded-full"
+                className="absolute top-2 right-2 text-white p-1 rounded-full"
               >
                 ✖
               </button>
@@ -152,20 +156,21 @@ const Home = () => {
           </div>
         )}
 
-
-
         {/* Right Side - Content */}
         <div
-          className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat "
+          className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat"
           style={{
             backgroundImage: `url(${pattern})`,
             backgroundSize: "100%",
             backgroundPosition: "top-right",
           }}
         >
-          <p className="text-xl font-semibold text-white px-3 italic py-1 rounded-full w-max border " style={{ fontFamily: "Times New Roman" }}>
-            Quality Chemicals Worldwide - Since 1976
-          </p>
+          <p
+  className="text-lg sm:text-lg md:text-xl font-semibold text-white px-4 sm:px-5 md:px-6 italic py-2 rounded-full w-max border border-white"
+  style={{ fontFamily: "Times New Roman" }}
+>
+  Quality Chemicals Worldwide - Since 1976
+</p>
 
           <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4 " style={{ fontFamily: "Times New Roman" }}>
             Quality Products
@@ -176,12 +181,11 @@ const Home = () => {
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
-
           <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6] rounded-xl border p-2 w-max shadow-2xl" style={{ fontFamily: "Graphik" }}>
             IP/BP/ Ph. Eur./USP-NF/JP/CP/FCC/ACS
-          </p><br />
+          </p><br/>
 
-          <button className=" mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
+          <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
          flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
           border border-transparent hover:border-black" style={{ fontFamily: "Graphik" }}>
             <a href="/products">Our Products <span className="ml-2">&rarr;</span></a>
@@ -190,19 +194,18 @@ const Home = () => {
       </div>
 
       {/* ------------Services Card Section ------------ */}
-      <div className="bg-[#ecf2ff] py-10 px-5 md:px-20 flex flex-nowrap overflow-x-auto gap-10 justify-between w-full">
+      <div className="bg-[#ecf2ff] py-10 px-5 md:px-20 flex flex-wrap md:flex-nowrap overflow-x-auto gap-10 justify-center md:justify-between w-full">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white py-[35px] px-[15px] rounded-[30px] w-90 h-auto flex flex-col items-center 
-            text-center relative cursor-pointer"
+            className="bg-white py-[35px] px-[15px] rounded-[30px] w-full sm:w-80 md:w-90 h-auto flex flex-col items-center text-center relative cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="flex items-center space-x-2">
-              <div className="bg-blue-100 p-2 rounded-full text-[12px] text-blue-600 ">
+              <div className="bg-blue-100 p-2 rounded-full text-[12px] text-blue-600">
                 {service.icon}
               </div>
               <h2 className="text-[17px] font-semibold text-gray-900">
@@ -211,13 +214,11 @@ const Home = () => {
             </div>
             <hr className="mt-3 p-3 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-0" />
             <p className="text-gray-600 text-sm ml-auto text-[15px] text-center">
-              <ReadMoreArea buttonStyle={buttonStyle} 
-                lettersLimit={115} // limit of letters (100 letters)
-              >{service.description}
+              <ReadMoreArea buttonStyle={buttonStyle} lettersLimit={115}>
+                {service.description}
               </ReadMoreArea>
             </p>
-            <button className="absolute table text-center bg-white px-[15px] py-[10px] mb-[-20px] bottom-0 right-10 rounded-full 
-            border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
+            <button className="absolute table text-center bg-white px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -226,20 +227,20 @@ const Home = () => {
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"
                 />
               </svg>
             </button>
           </motion.div>
         ))}
-      </div>
+      </div>
 
       {/* ----------Research Section  -------------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between md:px-20  w-full pt-10 pb-5">
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
         {/* Left Side - Image */}
         <motion.div
-          className="w-1/2 md:w-1/2 flex justify-center"
+          className="w-full sm:w-3/4 md:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -251,9 +252,10 @@ const Home = () => {
             sizes="(max-width: 647px) 100vw, 647px"
           />
         </motion.div>
+
         {/* Right Side - Content */}
         <motion.div
-          className="w-full md:w-2/5 text-gray-800 max-w-lg"
+          className="w-full md:w-2/5 text-gray-800 max-w-lg mt-10 md:mt-0 text-center md:text-left"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -261,7 +263,7 @@ const Home = () => {
           {/* Badge */}
           <motion.span
             className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
-            font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
+      font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -271,30 +273,40 @@ const Home = () => {
 
           {/* Heading */}
           <motion.h2
-            className="font-Times New Roman  text-4xl leading-[60px] tracking-[0] text-[#001837] normal-case not-italic  w-full" style={{ fontFamily: "Times New Roman" }}
+            className="text-4xl leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full"
+            style={{ fontFamily: "Times New Roman" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             Welcome to MUBY CHEM PRIVATE LIMITED
           </motion.h2>
-          <motion.p className='mb-4'>
-            Obsessed with Quality since 1976
-          </motion.p>
+          <motion.p className="mb-4">Obsessed with Quality since 1976</motion.p>
+
           {/* Description */}
           <motion.p
-            className="font-Graphik  text-[15px] leading-[1.6] tracking-[0] text-[#6a7391] normal-case not-italic mb-6" style={{ fontFamily: "Graphik" }}
+            className="text-[15px] leading-[1.6] text-[#6a7391] normal-case not-italic mb-6"
+            style={{ fontFamily: "Graphik" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
             At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
-            <br /><br />"We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner."
           </motion.p>
+          <motion.p
+            className="text-[15px] leading-[1.6] text-[#6a7391] normal-case not-italic mb-6"
+            style={{ fontFamily: "Graphik" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+          >
+           We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
+          </motion.p>
+
 
           {/* Features Section */}
           <motion.div
-            className="flex gap-6 mb-6 border-t pt-6 border-gray-400"
+            className="flex flex-col sm:flex-row gap-6 mb-6 border-t pt-6 border-gray-400"
             initial="hidden"
             animate="visible"
             variants={{
@@ -307,7 +319,7 @@ const Home = () => {
           >
             {/* Feature 1 */}
             <motion.div
-              className="flex items-center space-x-3 p-4 rounded-lg "
+              className="flex items-center space-x-3 p-4 rounded-lg"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -317,8 +329,8 @@ const Home = () => {
               <div className="p-3 bg-gray-100 rounded-full">
                 <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
-              <div className="pr-1">
-                <h4 className="font-Graphik text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+              <div className="text-left">
+                <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
                   APIs
                 </h4>
                 <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
@@ -329,7 +341,7 @@ const Home = () => {
 
             {/* Feature 2 */}
             <motion.div
-              className="flex items-center space-x-3 p-4 rounded-lg "
+              className="flex items-center space-x-3 p-4 rounded-lg"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -339,8 +351,8 @@ const Home = () => {
               <div className="p-3 bg-gray-100 rounded-full">
                 <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
-              <div>
-                <h4 className="font-Graphik text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+              <div className="text-left">
+                <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
                   Mineral Actives
                 </h4>
                 <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
@@ -352,18 +364,18 @@ const Home = () => {
 
           {/* Button with Hover Animation */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-[Graphik] rounded-full 
+            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full font-['Open_Sans',sans-serif] 
             flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           ><a href="/about">
             Know More </a><FaArrowRight />
           </motion.button>
-        </motion.div>
-      </div>
+        </motion.div>
+      </div>
 
       {/* --------------Feature Section --------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-6">
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
         <div
           className="border  border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
             fontFamily: "Times New Roman",

@@ -8,7 +8,7 @@ import { FiSearch, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 
-const phoneNumber = "+1234567890";
+const phoneNumber = "+912223770100";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
         { label: "IP, BP, EP, Ph Eur, USP NF, JP, FCC Food", link: "/products/category2" },
         { label: "Essential Oils", link: "/products/category3" },
         { label: "Other Best Seller Products", link: "/products/category4" },
-        { label: "New R & D Products", link: "/products/category5" },]
+        { label: "New R & D Products", link: "/products/category5" },]
 
     return (
         <div className='bg-[#ecf2ff] h-full flex flex-col'>
@@ -66,7 +66,7 @@ const Header = () => {
                                 HOME
                             </NavLink>
                         </li>
-                   
+
 
                         <li className='px-4 py-2'>
                             <NavLink
@@ -88,11 +88,7 @@ const Header = () => {
                             </span>
 
                             {/* Dropdown Content */}
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            <div
                                 className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
                             >
                                 <ul className="py-2">
@@ -116,8 +112,8 @@ const Header = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </motion.div>
-                        </li>
+                            </div>
+                        </li>
 
 
                         <li className='px-4 py-2'>
@@ -172,7 +168,7 @@ const Header = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ duration: 0.4, delay: 0.2 }}
-                            className="absolute inset-0 bg-white w-auto h-[400px] rounded-[50px] z-50 px-10 py-5 flex flex-col space-y-6 text-xl">
+                            className="absolute inset-0 bg-white w-auto h-[900px] rounded-[50px] z-50 px-10 py-5 flex flex-col space-y-6 text-xl">
                             <button className="self-end" onClick={() => setIsMobileMenuOpen(false)}>
                                 <IoClose className="text-3xl" />
                             </button>
