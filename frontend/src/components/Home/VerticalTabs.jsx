@@ -348,7 +348,7 @@ const VerticalTabs = () => {
             >
               {tab}
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#7b3931] text-white">
-                <FaArrowUpRightFromSquare />
+                <FaArrowUpRightFromSquare/>
               </div>
             </motion.li>
           ))}

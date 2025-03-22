@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@foxeian/react-read-more": "^1.1.5",
+    "@headlessui/react": "^2.2.0",
     "@reduxjs/toolkit": "^2.6.0",
     "@tailwindcss/vite": "^4.0.8",
+    "axios": "^1.8.4",
     "formik": "^2.4.6",
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",

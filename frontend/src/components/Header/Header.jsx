@@ -35,11 +35,18 @@ const Header = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const menuItems = [
-        { label: "Shale Gas Hydraulic Fracturing Chemicals", link: "/products/category1" },
-        { label: "IP, BP, EP, Ph Eur, USP NF, JP, FCC Food", link: "/products/category2" },
-        { label: "Essential Oils", link: "/products/category3" },
-        { label: "Other Best Seller Products", link: "/products/category4" },
-        { label: "New R & D Products", link: "/products/category5" },]
+        { label: "Pharmaceuticals", link: "/products/category1" },
+        { label: "Nutraceuticals", link: "/products/category2" },
+        { label: "Speciality chemicals", link: "/products/category3" },
+        { label: "Lab Chemicals", link: "/products/category4" },
+        { label: "Analytical Reagent", link: "/products/category5" },
+        { label: "Amino Acid", link: "/products/category6" },
+        { label: "API/Intermediates", link: "/products/category7" },
+        { label: "Food Additives", link: "/products/category8" },
+        { label: "Excipients", link: "/products/category9" },
+        { label: "Other Products", link: "/products/category10" },
+    
+    ]
 
     return (
         <div className='bg-[#ecf2ff] h-full flex flex-col'>
@@ -178,9 +185,16 @@ const Header = () => {
                                 <button onClick={() => setIsProductsOpen(!isProductsOpen)} className="w-full text-left">PRODUCTS</button>
                                 {isProductsOpen && (
                                     <div className="pl-4">
-                                        <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Shale Gas Chemicals</NavLink><br /><hr />
-                                        <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Essential Oils</NavLink><br /><hr />
-                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Best Sellers</NavLink><br /><hr />
+                                        <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Pharmaceuticals</NavLink><br /><hr />
+                                        <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Nutraceuticals</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Speciality chemicals</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Lab Chemicals</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Analytical Reagent</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Amino Acid</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>API/Intermediates</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Food Additives</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Excipients</NavLink><br /><hr />
+                                        <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Other Products</NavLink><br /><hr />
                                     </div>
                                 )}
                             </div>

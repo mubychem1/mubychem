@@ -4,17 +4,27 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
 import { BsCheck2Circle } from "react-icons/bs";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import microscopeImage from '../../assets/microscope.png';
 import pattern from '../../assets/Pattern.png';
 import demo1 from '../../assets/demo-1.png';
 import VerticalTabs from './VerticalTabs';
 import homecontact from "../../assets/home-contact.png";
-import { FaQuoteLeft } from "react-icons/fa";
-import ReadMoreArea from '@foxeian/react-read-more';
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-// import { motion } from "framer-motion";
+import iso from "../../assets/logo/ISO.png";
+import kstar from "../../assets/logo/kstar.png";
+import halal from "../../assets/logo/halal.png";
+import haccp from "../../assets/logo/haccp.png";
+import gptw from "../../assets/logo/gptw.png";
+import gmp from "../../assets/logo/gmp.png";
+import glutten from "../../assets/logo/glutten-free.png";
+import glp from "../../assets/logo/glp.png";
+import fssc from "../../assets/logo/fssc-22000.png";
+import fssai from "../../assets/logo/fssai.png";
+import fdca from "../../assets/logo/fdca.png";
+import allergen from "../../assets/logo/allergen-free.png";
+import bg from "../../assets/slider-1.jpeg";
+
+
 
 const buttonStyle = {
   color: "#7B3931",
@@ -29,30 +39,69 @@ const features = [
   "Blood Cell Research",
 ];
 
+const certification = [
+  {
+    bgImage: iso
+  },
+  {
+    bgImage: kstar
+  },
+  {
+    bgImage: allergen
+  },
+  {
+    bgImage: fdca
+  },
+  {
+    bgImage: fssai
+  },
+  {
+    bgImage: fssc
+  },
+  {
+    bgImage: glp
+  },
+  {
+    bgImage: gmp
+  },
+  {
+    bgImage: gptw
+  },
+  {
+    bgImage: haccp
+  },
+  {
+    bgImage: halal
+  },
+  {
+    bgImage: glutten
+  },
+];
+
 const services = [
   {
     title: "Pharmaceuticals",
     description: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
     icon: "🤖",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg"
+    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg",
   },
   {
     title: "Speciality chemicals",
     description: "Tailored chemical solutions designed specifically for your needs, ensuring optimal results and seamless integration into your production processes.",
     icon: "🧠",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg"
+    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg",
   },
   {
     title: "Nutraceuticals",
-    description: "We specialize in the development and manufacturing of high-quality nutraceutical products that promote health and wellness. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
+    description: "We specialize in the development and manufacturing. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
     icon: "⚛",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg"
+    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg",
   },
   {
     title: "Mineral Fortifiers",
-    description: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability. ",
+    description: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability.",
     icon: "🧬",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg"
+    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
   },
 ];
 
@@ -87,6 +136,7 @@ const Home = () => {
     setIsOpen(false);
     setVideoUrl("");
   };
+
 
   return (
     <>
@@ -133,7 +183,7 @@ const Home = () => {
               Watch Video
             </span>
           </button>
-        </div>
+        </div>
         {isOpen && (
           <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
             <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#7B3931]">
@@ -166,24 +216,24 @@ const Home = () => {
           }}
         >
           <p
-  className="text-lg sm:text-lg md:text-xl font-semibold text-white px-4 sm:px-5 md:px-6 italic py-2 rounded-full w-max border border-white"
-  style={{ fontFamily: "Times New Roman" }}
->
-  Quality Chemicals Worldwide - Since 1976
-</p>
+            className="text-lg sm:text-lg md:text-xl font-semibold text-white px-4 sm:px-5 md:px-6 italic py-2 rounded-full w-max border border-white"
+            style={{ fontFamily: "Times New Roman" }}
+          >
+            Quality Chemicals Worldwide - Since 1976
+          </p>
 
           <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4 " style={{ fontFamily: "Times New Roman" }}>
             Quality Products
-          </h1><br/>
+          </h1><br />
 
           <h2 className="text-[clamp(24px,5vw,50px)] md:text-[20px] italic lg:text-[20px] font-graphik leading-tight mt-2 text-right">
-            Where Chemistry Meets Excellence.
+            Where Chemistry Meets.
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
           <p className="mt-2 text-[clamp(14px,2vw,18px)] md:text-[16px] lg:text-[18px] leading-[1.6] rounded-xl border p-2 w-max shadow-2xl" style={{ fontFamily: "Graphik" }}>
             IP/BP/ Ph. Eur./USP-NF/JP/CP/FCC/ACS
-          </p><br/>
+          </p><br />
 
           <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
          flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
@@ -198,7 +248,7 @@ const Home = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white py-[35px] px-[15px] rounded-[30px] w-full sm:w-80 md:w-90 h-auto flex flex-col items-center text-center relative cursor-pointer"
+            className="bg-white py-[35px] px-[15px] rounded-[30px] w-full sm:w-80 md:w-90 h-[350px] flex flex-col items-start text-left relative cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
@@ -213,10 +263,8 @@ const Home = () => {
               </h2>
             </div>
             <hr className="mt-3 p-3 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-0" />
-            <p className="text-gray-600 text-sm ml-auto text-[15px] text-center">
-              <ReadMoreArea buttonStyle={buttonStyle} lettersLimit={115}>
-                {service.description}
-              </ReadMoreArea>
+            <p className="text-gray-600 text-sm ml-auto text-[15px] text-left">
+              {service.description}
             </p>
             <button className="absolute table text-center bg-white px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
               <svg
@@ -234,7 +282,7 @@ const Home = () => {
             </button>
           </motion.div>
         ))}
-      </div>
+      </div>
 
       {/* ----------Research Section  -------------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
@@ -300,7 +348,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-           We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
+            We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
           </motion.p>
 
 
@@ -369,17 +417,16 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           ><a href="/about">
-            Know More </a><FaArrowRight />
+              Know More </a><FaArrowRight />
           </motion.button>
-        </motion.div>
-      </div>
+        </motion.div>
+      </div>
 
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
-        <div
-          className="border  border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
-            fontFamily: "Times New Roman",
-          }}
+        <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
+          fontFamily: "Times New Roman",
+        }}
         >
           WHY CHOOSE US?
         </div>
@@ -391,11 +438,73 @@ const Home = () => {
           <VerticalTabs />
         </div>
 
-        
+
       </div>
 
       {/* --------------Our Services ------------ */}
-      <div className="bg-[#7B3931] text-white  py-16">
+      <div className="bg-[#7B3931] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
+        <div className="flex justify-between items-center px-15">
+          <div className="text-left">
+            <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
+              Certifications
+            </button>
+            <h2 className="text-4xl  mt-4" style={{ fontFamily: "Times New Roman" }}>Reliable & High Quality Service</h2>
+          </div>
+
+          <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
+            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronLeft size={20} />
+            </button>
+            <div className="border-l border-gray-400 h-5"></div>
+            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+
+        <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
+          <motion.div
+            className="flex space-x-6"
+            animate={{ x: `-${currentIndex * 320}px` }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
+            {certification.concat(certification).map((certification, index) => (
+              <div
+                key={index}
+                className="group w-[290px] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
+              >
+                <img
+                  src={certification.bgImage}
+                  alt="Scientist working in lab"
+                  className="w-full h-full rounded-2xl"
+                />
+                {/* <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                ></div> */}
+
+                {/* <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+                  {service.icon}
+                </div> */}
+
+                {/* <h3 className="mt-12 text-xl pt-42  relative" style={{
+                  fontFamily: "Times New Roman",
+                }}>{service.title}</h3> */}
+                {/* <p className="mt-2 text-sm opacity-75 relative" style={{ fontFamily: "Graphik" }}>We manufacture high-quality active pharmaceutical ingredients (APIs)</p> */}
+
+                {/* <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                    ➜
+                  </button>
+                </div> */}
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+
+      {/*  <div className="bg-[#7B3931] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
@@ -449,7 +558,7 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
 
       {/* {------------estimate section--------------} */}
