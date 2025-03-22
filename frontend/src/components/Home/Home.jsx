@@ -41,39 +41,51 @@ const features = [
 
 const certification = [
   {
+    title: 'ISO 9001:2015 - International Organization For Standardization',
     bgImage: iso
   },
   {
+    title: 'STAR-K (Kosher Certified)',
     bgImage: kstar
   },
   {
+    title: 'ALLERGEN Free',
     bgImage: allergen
   },
   {
+    title: 'FDCA (Food & Drugs Control ADMN)',
     bgImage: fdca
   },
   {
+    title: 'Fssai',
     bgImage: fssai
   },
   {
+    title: 'FSSC 22000 (Food Safety System Certification)',
     bgImage: fssc
   },
   {
+    title: 'GLP',
     bgImage: glp
   },
   {
+    title: 'GMP (Good Manufacturing Practice)',
     bgImage: gmp
   },
   {
+    title: 'Greate Place To Work (Sep 2024- Sep 2025) India',
     bgImage: gptw
   },
   {
+    title: 'HACCP Certified',
     bgImage: haccp
   },
   {
+    title: 'HALAL India',
     bgImage: halal
   },
   {
+    title: 'Glutten Free',
     bgImage: glutten
   },
 ];
@@ -309,7 +321,7 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
           {/* Badge */}
-          <motion.span
+          {/* <motion.span
             className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
       font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4"
             initial={{ opacity: 0, y: -20 }}
@@ -317,7 +329,7 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             Who We Are
-          </motion.span>
+          </motion.span> */}
 
           {/* Heading */}
           <motion.h2
@@ -327,7 +339,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            Welcome to MUBY CHEM PRIVATE LIMITED
+            Welcome to Muby Chem <br />Private Limited
           </motion.h2>
           <motion.p className="mb-4">Obsessed with Quality since 1976</motion.p>
 
@@ -424,14 +436,14 @@ const Home = () => {
 
       {/* --------------Feature Section --------- */}
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
-        <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
+        {/* <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
           fontFamily: "Times New Roman",
         }}
         >
           WHY CHOOSE US?
-        </div>
+        </div> */}
         <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-          Why Choose Muby Chem?
+          Why Choose Muby Chem <br />Private Limited?
         </h2>
 
         <div className="flex items-center mt-8 max-w-7xl w-full ">
@@ -442,7 +454,7 @@ const Home = () => {
       </div>
 
       {/* --------------Our Services ------------ */}
-      <div className="bg-[#7B3931] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
+      {/* <div className="bg-[#7B3931] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
@@ -460,9 +472,9 @@ const Home = () => {
               <ChevronRight size={20} />
             </button>
           </div>
-        </div>
+        </div> */}
 
-        <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
+      {/* <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
           <motion.div
             className="flex space-x-6"
             animate={{ x: `-${currentIndex * 320}px` }}
@@ -477,34 +489,34 @@ const Home = () => {
                   src={certification.bgImage}
                   alt="Scientist working in lab"
                   className="w-full h-full rounded-2xl"
-                />
-                {/* <div
+                /> */}
+      {/* <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
                   style={{ backgroundImage: `url(${service.bgImage})` }}
                 ></div> */}
 
-                {/* <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+      {/* <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
                   {service.icon}
                 </div> */}
 
-                {/* <h3 className="mt-12 text-xl pt-42  relative" style={{
+      {/* <h3 className="mt-12 text-xl pt-42  relative" style={{
                   fontFamily: "Times New Roman",
-                }}>{service.title}</h3> */}
-                {/* <p className="mt-2 text-sm opacity-75 relative" style={{ fontFamily: "Graphik" }}>We manufacture high-quality active pharmaceutical ingredients (APIs)</p> */}
+                }}>{certification.title}</h3> 
+                 */}
 
-                {/* <div className="mt-4 relative">
+      {/* <div className="mt-4 relative">
                   <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
                     ➜
                   </button>
                 </div> */}
-              </div>
+      {/* </div>
             ))}
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
 
-      {/*  <div className="bg-[#7B3931] text-white  py-16">
+      {/* <div className="bg-[#7B3931] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
@@ -559,6 +571,61 @@ const Home = () => {
           </motion.div>
         </div>
       </div> */}
+
+      <div className="bg-[#7B3931] text-white  py-16 " style={{ backgroundImage: `url(${bg})` }}>
+        <div className="flex justify-between items-center px-15">
+          <div className="text-left">
+            <button className=" text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
+              OUR SERVICE
+            </button>
+            <h2 className="text-4xl mt-4 " style={{ fontFamily: "Times New Roman" }}>
+              Reliable & High Quality Service</h2>
+          </div>
+
+          <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
+            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronLeft size={20} />
+            </button>
+            <div className="border-l border-gray-400 h-5"></div>
+            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+
+        <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
+          <motion.div
+            className="flex space-x-6 "
+            animate={{ x: `-${currentIndex * 320}px` }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
+            {certification.concat(certification).map((certification, index) => (
+              <div
+                key={index}
+                className="group w-[290px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#7B3931] relative overflow-hidden"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{
+                    backgroundImage: `url(${certification.bgImage})`,
+                  }}
+                ></div>
+
+                <h3 className="absolute bottom-0 text-2xl relative text-Black text-center" style={{
+                  fontFamily: "Times New Roman",
+                }}>{certification.title}</h3>
+
+                {/* 
+                <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                    ➜
+                  </button>
+                </div> */}
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
 
 
       {/* {------------estimate section--------------} */}
