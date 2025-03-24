@@ -150,11 +150,6 @@ const Career = () => {
             <JobCard key={job.id} {...job} onOpen={openModal} />
           ))}
         </div>
-        <div className="mt-6 text-center">
-          <a href="#" className="text-blue-600 font-semibold hover:underline">
-            Find More Jobs →
-          </a>
-        </div>
       </section>
 
       {/* Job responsibility Modal */}
