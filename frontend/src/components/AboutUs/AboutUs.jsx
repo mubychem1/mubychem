@@ -11,6 +11,8 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import background from "../../assets/background.png";
 import { AnimatePresence } from "framer-motion";
+import VerticalTabs from '../Home/VerticalTabs';
+
 const steps = [
   {
     id: "01",
@@ -94,7 +96,7 @@ const AboutUs = () => {
     setIsOpen(false);
     setVideoUrl("");
   };
-  
+
   const [currentReview, setCurrentReview] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -131,7 +133,7 @@ const AboutUs = () => {
           <div className="bg-[#ecf2ff] ">
             <div
               className="relative h-[500px] bg-cover rounded-4xl  overflow-hidden mx-4 md:mx-10"
-              style={{ backgroundImage:   `url(${background})` }}
+              style={{ backgroundImage: `url(${background})` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
               <div className="absolute inset-0 flex items-center justify-left">
@@ -155,8 +157,9 @@ const AboutUs = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-[#ecf2ff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]"
-      >
+        className="bg-[#ecf2ff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]" style={{
+          fontFamily: "Times New Roman",
+        }}>
         {/* Image Section */}
         <motion.div
           variants={zoomIn}
@@ -174,32 +177,32 @@ const AboutUs = () => {
           variants={fadeInUp}
           className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10 text-center md:text-left"
         >
-           <motion.span
-                     className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
+          {/* <motion.span
+            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
                      font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4 self-start not-italic"
-                     initial={{ opacity: 0, y: -20 }}
-                     animate={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.6, delay: 0.5 }}
-                   >
-                     Who We Are
-                   </motion.span>
-                   
-          <h2 className="text-4xl font-bold text-gray-900 mt-4">
-          Offer 24/7 Quick Support
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            Who We Are
+          </motion.span> */}
+
+          <h2 className="text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4" style={{ fontFamily: "Times New Roman" }}>
+          Welcome to Muby Chem<br/>
+          Private Limited
           </h2>
           <p className="text-gray-600 mt-4">
-            In order to achieve these objectives the management has established
-            a policy to maintain an effective and efficient Quality Assurance
-            Programme, which is planned and developed in conjunction with all
-            management functions. Anmol considers quality as a key element to
-            its success.
+            At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
+          </p><br/>
+          <p className="text-gray-600 mt-4">
+          We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-6 px-6 py-3 border hover:bg-yellow-900 hover:text-white border-black rounded-full flex items-center gap-2 text-lg font-medium"
           >
-            Read More ➝
+            Enquire Now ➝
           </motion.button>
         </motion.div>
       </motion.div>
@@ -212,45 +215,45 @@ const AboutUs = () => {
       >
         {/* Card 1 - Watch Video with Curved Edge */}
         <div className="relative rounded-2xl overflow-hidden">
-        <img
-          src={Demo1} // Replace with your image path
-          alt="Scientist working in lab"
-          className="w-full h-full object-cover rounded-2xl"
-        />
-        {/* Play Button */}
-        <button
-          onClick={() => openModal("https://www.youtube.com/embed/buwI_49ZTp0")}
-          className="absolute bottom-4 right-1 p-0.5 rounded-full flex items-center 
+          <img
+            src={Demo1} // Replace with your image path
+            alt="Scientist working in lab"
+            className="w-full h-full object-cover rounded-2xl"
+          />
+          {/* Play Button */}
+          <button
+            onClick={() => openModal("https://www.youtube.com/embed/buwI_49ZTp0")}
+            className="absolute bottom-4 right-1 p-0.5 rounded-full flex items-center 
                hover:scale-110  transition-transform duration-300 ease-in-out"
-        >
-          <FaPlay className="text-gray-900 text-lg" />
-          <span className="ml-1 text-sm font-semibold">Watch Video</span>
-        </button>
-      </div>
-
-      {/* Video Popup Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2  text-white p-1 rounded-full"
-            >
-              ✖
-            </button>
-            <iframe
-              width="100%"
-              height="315"
-              src={videoUrl}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
-          </div>
+          >
+            <FaPlay className="text-gray-900 text-lg" />
+            <span className="ml-1 text-sm font-semibold">Watch Video</span>
+          </button>
         </div>
-      )}
+
+        {/* Video Popup Modal */}
+        {isOpen && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2  text-white p-1 rounded-full"
+              >
+                ✖
+              </button>
+              <iframe
+                width="100%"
+                height="315"
+                src={videoUrl}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        )}
 
         {/* Card 2 - Staff Info */}
         <div
@@ -284,111 +287,122 @@ const AboutUs = () => {
           <p className=" text-white mt-2">With The Best Experts In Science</p>
         </div>
       </motion.div>
-           {/*--------------------- Sample post ----------------- */}
-      <div className="bg-[#ecf2ff] p-2">
-  <section
-    className="bg-[#7B3931] rounded-2xl text-white py-16 px-6 sm:px-8 md:px-10 lg:px-12 bg-no-repeat"
-    style={{
-      backgroundImage: `url(${Simplebg})`,
-      backgroundSize: "60%",
-      backgroundPosition: "right",
-    }}
-  >
-    {/* Heading */}
-    <div className="text-left mb-10">
-      <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
-        How It Works
-      </span>
-      <h2 className="text-3xl md:text-4xl font-bold mt-4 leading-tight">
-        Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
-      </h2>
-    </div>
-
-    {/* Steps Section */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {steps.map((step) => (
-        <div
-          key={step.id}
-          className="bg-[#7B3931] p-10 sm:p-10 md:p-12 lg:p-16 h-full rounded-xl shadow-lg flex flex-col justify-between text-center relative border border-white"
-        >
-          <div className="text-4xl sm:text-5xl">{step.icon}</div>
-          <h3 className="text-xl sm:text-2xl font-semibold mt-4">{step.title}</h3>
-          <p className="text-sm sm:text-base mt-1 text-gray-300">{step.description}</p>
-          <div className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
-            {step.id}
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-</div>
-      
       {/*--------------------- Sample post ----------------- */}
-      <div className="bg-[#E9F1FF] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
-      <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
-        <div className="relative">
-          <img
-            src={labtest}
-            alt="Scientist in lab"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
-            <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
-            <p className="text-xs sm:text-sm">
-              Professional and <br /> Experienced staff ready <br /> to help you
-            </p>
-          </div>
-        </div>
-        <div className="p-8 flex flex-col justify-center">
-          <p className="text-sm uppercase font-semibold text-gray-400">Client Reviews</p>
-          <h2 className="text-3xl font-bold my-2">
-            Trusted by thousands of people & companies.
-          </h2>
-          <FaQuoteLeft className="text-3xl text-black mb-2" />
-          
-          {/* Animated Review Text */}
-          <div className="overflow-hidden h-32 relative">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.p
-                key={currentReview}
-                initial={{ x: direction * 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -direction * 100, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-lg mb-7 p-4 absolute w-full"
-              >
-                {reviews[currentReview].text}
-              </motion.p>
-            </AnimatePresence>
-          </div>
 
-          <div className="flex items-center p-6 gap-3">
-            <div>
-              <h4 className="text-lg font-semibold">{reviews[currentReview].name}</h4>
-              <h3 className="text-md text-black">{reviews[currentReview].role}</h3>
+      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
+            <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+              Why Choose Muby Chem <br />Private Limited?
+            </h2>
+            <div className="flex items-center mt-8 max-w-7xl w-full ">
+              <VerticalTabs />
             </div>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="flex justify-end items-center mt-6">
-            <div className="flex space-x-2">
-              <button
-                onClick={prevReview}
-                className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
+      {/* <div className="bg-[#ecf2ff] p-2"> */}
+        {/* <section
+          className="bg-[#7B3931] rounded-2xl text-white py-16 px-6 sm:px-8 md:px-10 lg:px-12 bg-no-repeat"
+          style={{
+            backgroundImage: `url(${Simplebg})`,
+            backgroundSize: "60%",
+            backgroundPosition: "right",
+          }}
+        > */}
+          {/* Heading */}
+          {/* <div className="text-left mb-10">
+            <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
+              How It Works
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-4 leading-tight">
+              Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
+            </h2>
+          </div> */}
+          
+
+          {/* Steps Section */}
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((step) => (
+              <div
+                key={step.id}
+                className="bg-[#7B3931] p-10 sm:p-10 md:p-12 lg:p-16 h-full rounded-xl shadow-lg flex flex-col justify-between text-center relative border border-white"
               >
-                <IoIosArrowBack className="text-white text-lg" />
-              </button>
-              <button
-                onClick={nextReview}
-                className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
-              >
-                <IoIosArrowForward className="text-white text-lg" />
-              </button>
+                <div className="text-4xl sm:text-5xl">{step.icon}</div>
+                <h3 className="text-xl sm:text-2xl font-semibold mt-4">{step.title}</h3>
+                <p className="text-sm sm:text-base mt-1 text-gray-300">{step.description}</p>
+                <div className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
+                  {step.id}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div> */}
+
+      {/*--------------------- Sample post ----------------- */}
+      <div className="bg-[#E9F1FF] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
+        <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
+          <div className="relative">
+            <img
+              src={labtest}
+              alt="Scientist in lab"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
+              <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
+              <p className="text-xs sm:text-sm">
+                Professional and <br /> Experienced staff ready <br /> to help you
+              </p>
+            </div>
+          </div>
+          <div className="p-8 flex flex-col justify-center">
+            <p className="text-sm uppercase font-semibold text-gray-400">Client Reviews</p>
+            <h2 className="text-3xl font-bold my-2">
+              Trusted by thousands of people & companies.
+            </h2>
+            <FaQuoteLeft className="text-3xl text-black mb-2" />
+
+            {/* Animated Review Text */}
+            <div className="overflow-hidden h-32 relative">
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.p
+                  key={currentReview}
+                  initial={{ x: direction * 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -direction * 100, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg mb-7 p-4 absolute w-full"
+                >
+                  {reviews[currentReview].text}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+
+            <div className="flex items-center p-6 gap-3">
+              <div>
+                <h4 className="text-lg font-semibold">{reviews[currentReview].name}</h4>
+                <h3 className="text-md text-black">{reviews[currentReview].role}</h3>
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-end items-center mt-6">
+              <div className="flex space-x-2">
+                <button
+                  onClick={prevReview}
+                  className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
+                >
+                  <IoIosArrowBack className="text-white text-lg" />
+                </button>
+                <button
+                  onClick={nextReview}
+                  className="p-2 bg-gray-700 rounded-full flex items-center justify-center w-10 h-10"
+                >
+                  <IoIosArrowForward className="text-white text-lg" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

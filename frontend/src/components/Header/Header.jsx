@@ -109,7 +109,7 @@ const Header = () => {
                                             <NavLink
                                                 to={item.link}
                                                 className={({ isActive }) =>
-                                                    `cursor-pointer hover:text-yellow-900 hover:pl-5 font-semibold flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-yellow-900" : "text-black"
+                                                    `cursor-pointer hover:text-yellow-900 hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-yellow-900" : "text-black"
                                                     }`
                                                 }
                                             >
@@ -123,7 +123,7 @@ const Header = () => {
                         </li>
 
 
-                        <li className='px-4 py-2'>
+                        {/* <li className='px-4 py-2'>
                             <NavLink
                                 to="/blogs"
                                 className={({ isActive }) =>
@@ -133,7 +133,7 @@ const Header = () => {
                             >
                                 BLOGS
                             </NavLink>
-                        </li>
+                        </li> */}
 
 
                         <li className='px-4 py-2'>
