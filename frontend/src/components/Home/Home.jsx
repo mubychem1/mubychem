@@ -591,7 +591,7 @@ const Home = () => {
                 className="group w-[290px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#7B3931] relative overflow-hidden"
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-4 group-hover:opacity-100 transition duration-500"
                   style={{
                     backgroundImage: `url(${certification.bgImage})`,
                   }}

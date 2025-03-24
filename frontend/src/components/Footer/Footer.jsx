@@ -22,7 +22,7 @@ const Footer = () => {
                 <img className="h-20 sm:h-15" src= {logo} alt="logo" />
               </a>
               <p
-                className="mt-6 text-gray-300"
+                className="mt-6 text-gray-100"
                 style={{ fontFamily: "Open_Sans, sans-serif" }}
               >
                 We specialize in producing high-quality specialty chemicals and excipients for the pharmaceutical industry. Our products are known for their purity and effectiveness, supporting various industries worldwide.
@@ -46,7 +46,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
                   >
                     Home
                   </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
                   >
                     About Us
                   </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
                   >
                     Career
                   </a>
@@ -70,7 +70,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
                   >
                     Product
                   </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                         href="#"
                         className="hover:text-gray-400 transition-all duration-500 ease-in-out"
                       >
-                        Speciality Chemicals
+                        Food Additives
                       </a>
                     </li>
                     <li>
@@ -126,7 +126,7 @@ const Footer = () => {
                         href="#"
                         className="hover:text-gray-400 transition-all duration-500 ease-in-out"
                       >
-                        Food Additives
+                        Speciality Chemicals
                       </a>
                     </li>
                   </ul>

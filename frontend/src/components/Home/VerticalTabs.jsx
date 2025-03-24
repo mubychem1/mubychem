@@ -358,12 +358,12 @@ const VerticalTabs = () => {
       {/* Tab Content */}
       <motion.div
         key={activeTab}
-        className="w-full md:w-3/4 pl-4 rounded-md"
+        className="w-full px-4 md:px-10 rounded-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex flex-col lg:flex-row ">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
           <motion.img
             src={content[activeTab].img}
             alt={content[activeTab].title}
@@ -372,7 +372,7 @@ const VerticalTabs = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           />
-          <div className="w-full lg:w-1/2 pl-6 ">
+          <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-8 text-center lg:text-left">
             <h3 className="text-2xl font-bold text-gray-900 ">
               {content[activeTab].title}
             </h3>
