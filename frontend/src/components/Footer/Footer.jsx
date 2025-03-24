@@ -6,27 +6,26 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import logo from '../../assets/logo-white.png'
 
 const phoneNumber = "+1234567890";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl">
+      <footer className="bg-[#737373] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl">
         <div className="container mx-auto py-14 px-6 min-h-[450px] pt-20">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-7">
             {/* Logo & Description */}
             <div className="lg:col-span-4 col-span-12">
               <a href="/">
-                <img className="h-12" src="path/to/logo.png" alt="logo" />
+                <img className="h-20 sm:h-15" src= {logo} alt="logo" />
               </a>
               <p
                 className="mt-6 text-gray-300"
                 style={{ fontFamily: "Open_Sans, sans-serif" }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-                incidunt beatae eligendi veniam quam quae cupiditate minus sit
-                illo, consequatur corporis dolorem aspernatur, laboriosam cum!
+                We specialize in producing high-quality specialty chemicals and excipients for the pharmaceutical industry. Our products are known for their purity and effectiveness, supporting various industries worldwide.
               </p>
               <div className="flex pt-7 space-x-5">
                 <FaFacebookF className="text-white" />

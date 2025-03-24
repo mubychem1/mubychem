@@ -25,20 +25,6 @@ import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
 
 
-
-const buttonStyle = {
-  color: "#7B3931",
-  // Add any other CSS styles as needed
-};
-
-const features = [
-  "Sample Collection",
-  "Covid 19 Vaccine",
-  "Genetics Research",
-  "Virus Detection",
-  "Blood Cell Research",
-];
-
 const certification = [
   {
     title: 'ISO 9001:2015 ',

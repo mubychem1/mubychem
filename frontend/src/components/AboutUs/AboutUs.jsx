@@ -188,14 +188,14 @@ const AboutUs = () => {
           </motion.span> */}
 
           <h2 className="text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4" style={{ fontFamily: "Times New Roman" }}>
-          Welcome to Muby Chem<br/>
-          Private Limited
+            Welcome to Muby Chem<br />
+            Private Limited
           </h2>
           <p className="text-gray-600 mt-4">
             At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
-          </p><br/>
+          </p><br />
           <p className="text-gray-600 mt-4">
-          We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
+            We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -290,16 +290,16 @@ const AboutUs = () => {
       {/*--------------------- Sample post ----------------- */}
 
       <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
-            <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-              Why Choose Muby Chem <br />Private Limited?
-            </h2>
-            <div className="flex items-center mt-8 max-w-7xl w-full ">
-              <VerticalTabs />
-            </div>
-          </div>
+        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
+          Why Choose Muby Chem <br />Private Limited?
+        </h2>
+        <div className="flex items-center mt-8 max-w-7xl w-full ">
+          <VerticalTabs />
+        </div>
+      </div>
 
       {/* <div className="bg-[#ecf2ff] p-2"> */}
-        {/* <section
+      {/* <section
           className="bg-[#7B3931] rounded-2xl text-white py-16 px-6 sm:px-8 md:px-10 lg:px-12 bg-no-repeat"
           style={{
             backgroundImage: `url(${Simplebg})`,
@@ -307,8 +307,8 @@ const AboutUs = () => {
             backgroundPosition: "right",
           }}
         > */}
-          {/* Heading */}
-          {/* <div className="text-left mb-10">
+      {/* Heading */}
+      {/* <div className="text-left mb-10">
             <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
               How It Works
             </span>
@@ -316,10 +316,10 @@ const AboutUs = () => {
               Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
             </h2>
           </div> */}
-          
 
-          {/* Steps Section */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {/* Steps Section */}
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div
                 key={step.id}
