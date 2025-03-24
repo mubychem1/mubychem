@@ -13,6 +13,7 @@
   "dependencies": {
     "@foxeian/react-read-more": "^1.1.5",
     "@headlessui/react": "^2.2.0",
+    "@material-tailwind/react": "^2.1.10",
     "@reduxjs/toolkit": "^2.6.0",
     "@tailwindcss/vite": "^4.0.8",
     "axios": "^1.8.4",

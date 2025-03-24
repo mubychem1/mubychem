@@ -163,7 +163,7 @@ const AboutUs = () => {
         {/* Image Section */}
         <motion.div
           variants={zoomIn}
-          className="relative w-full md:w-1/2 flex justify-center md:justify-start h-[450px]"
+          className="relative w-full p-10 md:w-1/2 flex justify-center md:justify-start h-[450px]"
         >
           <img
             src={Aboutleft} // Replace with your image path
