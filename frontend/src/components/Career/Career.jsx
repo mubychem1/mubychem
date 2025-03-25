@@ -136,7 +136,7 @@ const Career = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", position: "", resume: null });
 
   const openModal = (title, description, responsibility, qualification, experience) => {
-    setSelectedJob({ title, description, responsibility, qualification, experience});
+    setSelectedJob({ title, description, responsibility, qualification, experience });
     setIsOpen(true);
   };
 
@@ -146,8 +146,7 @@ const Career = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleFileChange = (e) => {
@@ -156,7 +155,16 @@ const Career = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
+
+    const applicationData = new FormData();
+    applicationData.append("name", formData.name);
+    applicationData.append("email", formData.email);
+    applicationData.append("phone", formData.phone);
+    applicationData.append("position", formData.position);
+    applicationData.append("resume", formData.resume);
+
+    console.log("Form Data Submitted:", Object.fromEntries(applicationData));
+
     setIsFormOpen(false);
   };
 
@@ -224,15 +232,23 @@ const Career = () => {
               <input type="text" name="name" placeholder="Full Name" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
               <input type="email" name="email" placeholder="Email" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
               <input type="tel" name="phone" placeholder="Phone" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
-              
-              <select label="Select Position" name="position" className=" border p-3 w-full p-2 border rounded-lg" value={selectedPosition} onChange={handleChange} >
-              {jobs.map((job) => (
-                <option key={job.id} value={job.title}>{job.title}</option>
-              ))}
-            </select></div>
-              <input type="file" name="resume" className="w-full p-2 border rounded-lg mb-3" onChange={handleFileChange} required />
+              <select
+                name="position"
+                className="border p-3 w-full rounded-lg"
+                value={formData.position}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled>Select a position</option>
+                {jobs.map((job) => (
+                  <option key={job.id} value={job.title}>{job.title}</option>
+                ))}
+              </select>
+            </div>
+            <input type="file" name="resume" className="w-full p-2 border rounded-lg mb-3" onChange={handleFileChange} required />
+            <button type="submit" className="w-full bg-[#7B3931] text-white p-2 rounded-lg">Submit</button>
           </form>
-          <button type="submit" className="w-full bg-[#7B3931] text-white p-2 rounded-lg">Submit</button>
+
         </div>
       </Dialog>
     </>
