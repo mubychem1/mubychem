@@ -3,6 +3,7 @@ import background from '../../assets/background.png';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import registration from '../../assets/registration.png';
 import { Dialog } from "@headlessui/react";
+import { Select, Option } from "@material-tailwind/react";
 
 const jobs = [
   {
@@ -130,11 +131,12 @@ const JobCard = ({ title, location, description, responsibility, qualification, 
 const Career = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState({ title: "", description: "", responsibility: [], qualification: [], experience: "" });
+  const [selectedPosition, setSelectedPosition] = useState("");
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", position: "", resume: null });
 
   const openModal = (title, description, responsibility, qualification, experience) => {
-    setSelectedJob({ title, description, responsibility, qualification, experience });
+    setSelectedJob({ title, description, responsibility, qualification, experience});
     setIsOpen(true);
   };
 
@@ -222,7 +224,13 @@ const Career = () => {
               <input type="text" name="name" placeholder="Full Name" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
               <input type="email" name="email" placeholder="Email" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
               <input type="tel" name="phone" placeholder="Phone" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
-              <input type="file" name="resume" className="w-full p-2 border rounded-lg" onChange={handleFileChange} required /></div>
+              
+              <select label="Select Position" name="position" className=" border p-3 w-full p-2 border rounded-lg" value={selectedPosition} onChange={handleChange} >
+              {jobs.map((job) => (
+                <option key={job.id} value={job.title}>{job.title}</option>
+              ))}
+            </select></div>
+              <input type="file" name="resume" className="w-full p-2 border rounded-lg mb-3" onChange={handleFileChange} required />
           </form>
           <button type="submit" className="w-full bg-[#7B3931] text-white p-2 rounded-lg">Submit</button>
         </div>

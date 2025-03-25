@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import logo from '../../assets/logo-white.png'
 
-const phoneNumber = "+1234567890";
+const phoneNumber = "+912223770100";
 
 const Footer = () => {
   return (

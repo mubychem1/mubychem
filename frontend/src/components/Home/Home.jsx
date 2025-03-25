@@ -25,6 +25,7 @@ import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
 
 
+
 const certification = [
   {
     title: 'ISO 9001:2015 ',

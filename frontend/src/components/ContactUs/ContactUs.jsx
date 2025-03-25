@@ -31,7 +31,7 @@ const ContactUs = () => {
     },
     {
       title: "Call US 24/7",
-      details: ["Phone: +001 236-895-4732", "Mobile: +9123 895-4732-236"],
+      details: ["Phone: +91 222 377 0100", "Mobile: +91 222 377 0100"],
       icon: <Phone className="text-blue-500" size={32} />,
     },
     {
