@@ -46,7 +46,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
                   >
                     Home
                   </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
                   >
                     About Us
                   </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
                   >
                     Career
                   </a>
@@ -70,7 +70,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-100 hover:text-gray-400 transition-all duration-500 ease-in-out"
+                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
                   >
                     Product
                   </a>
@@ -92,7 +92,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Pharmaceuticals
                       </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Food Additives
                       </a>
@@ -108,7 +108,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Analytical Reagent
                       </a>
@@ -116,7 +116,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Amino Acid
                       </a>
@@ -124,7 +124,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Speciality Chemicals
                       </a>
@@ -139,7 +139,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Nutraceuticals
                       </a>
@@ -147,7 +147,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         API/Intermediates
                       </a>
@@ -155,7 +155,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Lab Chemicals
                       </a>
@@ -163,7 +163,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Mineral Fortifiers
                       </a>
@@ -171,7 +171,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Excipients
                       </a>
@@ -179,7 +179,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="hover:text-gray-400 transition-all duration-500 ease-in-out"
+                        className="hover:text-black transition-all duration-500 ease-in-out"
                       >
                         Other Products
                       </a>
@@ -194,22 +194,22 @@ const Footer = () => {
               <h5 className="tracking-wide text-gray-100 font-bold">
                 CONTACT DETAILS
               </h5>
-              <h3 className="pt-5 font-bold">MubyChemicals</h3>
+              <h3 className="pt-5 font-bold">Muby Chemicals</h3>
               <p className="flex items-center space-x-2 text-white pt-2">
                 <FaEnvelope className="text-white" />
                 <a
                   href="mailto:info@mubychem.in"
-                  className="hover:text-gray-400 cursor-pointer"
+                  className="hover:text-black cursor-pointer"
                 >
                   info@mubychem.in
                 </a>
               </p>
               <p className="flex items-center space-x-2 text-white mt-2">
                 <FaPhone className="text-white" />
-                <span className="text-lg hover:text-gray-400">
+                <span className="text-lg hover:text-black">
                   <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
                 </span>
-              </p>
+              </p> 
             </div>
           </div>
         </div>
