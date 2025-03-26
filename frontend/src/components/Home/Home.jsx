@@ -5,7 +5,7 @@ import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
 import { BsCheck2Circle } from "react-icons/bs";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import microscopeImage from '../../assets/microscope.png';
+import microscopeImage from '../../assets/welcomeImg.png';
 import pattern from '../../assets/Pattern.png';
 import demo1 from '../../assets/demo-1.png';
 import VerticalTabs from './VerticalTabs';
@@ -141,7 +141,7 @@ const Home = () => {
     <>
       {/*------------ Hero Section ------- */}
       <div
-        className="flex flex-col md:flex-row items-center bg-[#ecf2ff] p-6 md:p-12  h-auto md:h-[900px] gap-6 md:gap-12"
+        className="flex flex-col md:flex-row items-center bg-white p-6 md:p-12  h-auto md:h-[700px] gap-6 md:gap-12"
         style={{
           fontFamily: "Times New Roman",
           fontWeight: "normal",
@@ -173,8 +173,8 @@ const Home = () => {
             onClick={() =>
               openModal("https://www.youtube.com/embed/buwI_49ZTp0")
             }
-            className="absolute bottom-0 right-[-17px] sm:bottom-4 sm:right-103 md:bottom-6 md:right-8 
-               flex items-center  px-3 py-2 sm:px-5 sm:py-3  rounded-full 
+            className="absolute bottom-0 right-[2px] sm:bottom-4 sm:right-103 md:bottom-3 md:right-2
+               flex items-center  px-0 py-2 sm:px-5 sm:py-3  rounded-full 
                hover:scale-105 transition-all duration-300"
           >
             <FaPlay className="text-black text-xl sm:text-base md:text-lg " />
@@ -243,11 +243,11 @@ const Home = () => {
       </div>
 
       {/* ------------Services Card Section ------------ */}
-      <div className="bg-[#ecf2ff] py-10 px-5 md:px-20 flex flex-wrap md:flex-nowrap overflow-x-auto gap-10 justify-center md:justify-between w-full">
+      <div className="bg-white py-10 px-5 md:px-20 flex flex-wrap md:flex-nowrap overflow-x-auto gap-10 justify-center md:justify-between w-full">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white py-[35px] px-[15px] rounded-[30px] w-full sm:w-80 md:w-90 h-[350px] flex flex-col items-start text-left relative cursor-pointer"
+            className="bg-[#f7f4e9] py-[35px] px-[15px] rounded-[30px] w-full sm:w-80 md:w-90 h-[350px] flex flex-col items-start text-left relative cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
@@ -284,7 +284,7 @@ const Home = () => {
       </div>
 
       {/* ----------Research Section  -------------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
+      <div className="bg-white min-h-screen flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
         {/* Left Side - Image */}
         <motion.div
           className="w-full sm:w-3/4 md:w-1/2 flex justify-center"
@@ -295,7 +295,7 @@ const Home = () => {
           <img
             src={microscopeImage}
             alt="Lab Equipment"
-            className="w-full max-w-[647px] h-auto"
+            className="w-full rounded-xl max-w-[647px] h-auto"
             sizes="(max-width: 647px) 100vw, 647px"
           />
         </motion.div>
@@ -373,7 +373,7 @@ const Home = () => {
               }}
               transition={{ duration: 0.6 }}
             >
-              <div className="p-3 bg-gray-100 rounded-full">
+              <div className="p-3 bg-[#F8F2DE] rounded-full">
                 <IoMdFlask className="text-2xl text-[#7b3931]" />
               </div>
               <div className="text-left">
@@ -395,7 +395,7 @@ const Home = () => {
               }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="p-3 bg-gray-100 rounded-full">
+              <div className="p-3 bg-[#F8F2DE] rounded-full">
                 <BsCheck2Circle className="text-2xl text-[#7b3931]" />
               </div>
               <div className="text-left">
@@ -422,7 +422,7 @@ const Home = () => {
       </div>
 
       {/* --------------Feature Section --------- */}
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
+      <div className="bg-white min-h-screen flex flex-col items-center py-12 px-3">
         {/* <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
           fontFamily: "Times New Roman",
         }}
@@ -570,11 +570,11 @@ const Home = () => {
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
-            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-[#F8F2DE] transition">
               <ChevronLeft size={20} />
             </button>
             <div className="border-l border-gray-400 h-5"></div>
-            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-[#F8F2DE] transition">
               <ChevronRight size={20} />
             </button>
           </div>
@@ -616,7 +616,7 @@ const Home = () => {
 
 
       {/* {------------estimate section--------------} */}
-      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#ecf2ff] p-6">
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-white p-6">
         {/* Image Section */}
         <div className="md:w-1/2 p-4">
           <img

@@ -7,9 +7,9 @@ import path from "path"
 
 
 export const applyForm = asyncHandler(async (req, res) => {
-    const { fullName, email, phone } = req.body;
+    const { fullName, email, phone , position } = req.body;
 
-    if (!fullName || !email || !phone) {
+    if (!fullName || !email || !phone || !position ) {
         throw new ApiError(400, "All fields are required");
     }
 
@@ -34,6 +34,7 @@ export const applyForm = asyncHandler(async (req, res) => {
         resume: resume.url,
         email,
         phone,
+        position,
     });
 
     return res.status(201).json(new ApiResponse(200, apply, "User registered successfully"));

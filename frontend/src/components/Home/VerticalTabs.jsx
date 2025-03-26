@@ -347,7 +347,7 @@ const VerticalTabs = () => {
               transition={{ duration: 0.5 }}
             >
               {tab}
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#7b3931] text-white">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#F8F2DE] text-[#7b3931]">
                 <FaArrowUpRightFromSquare/>
               </div>
             </motion.li>
