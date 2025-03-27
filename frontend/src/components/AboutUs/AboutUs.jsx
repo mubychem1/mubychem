@@ -289,14 +289,7 @@ const AboutUs = () => {
       </motion.div>
       {/*--------------------- Sample post ----------------- */}
 
-      <div className="bg-[#ecf2ff] min-h-screen flex flex-col items-center py-12 px-3">
-        <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-          Why Choose Muby Chem <br />Private Limited?
-        </h2>
-        <div className="flex items-center mt-8 max-w-7xl w-full ">
-          <VerticalTabs />
-        </div>
-      </div>
+     
 
       {/* <div className="bg-[#ecf2ff] p-2"> */}
       {/* <section

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import background from '../../assets/background.png';
+import background from '../../assets/carrerbg.png';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import registration from '../../assets/registration.png';
 import { Dialog } from "@headlessui/react";

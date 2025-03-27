@@ -1,4 +1,6 @@
 import React from "react";
+import background from '../../assets/background.png';
+
 
 const products = [
   {
@@ -51,6 +53,9 @@ const products = [
 
 const ProductCard = ({ product }) => {
   return (
+
+
+
     <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
       <img
         src={product.image}
@@ -78,11 +83,25 @@ const ProductCard = ({ product }) => {
 
 const Products = () => {
   return (
-    <div className="bg-[#ecf2ff] flex flex-wrap justify-center gap-6 p-6">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
+    <>
+      <div className='bg-[#ecf2ff]'>
+        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 flex items-center justify-left">
+            <div>
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4">Product</h1>
+              <p className="text-white text-lg pl-5">Mubychem &gt; Product</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#ecf2ff] flex flex-wrap justify-center gap-6 p-6">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </>
   );
 };
 

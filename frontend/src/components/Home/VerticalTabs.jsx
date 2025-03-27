@@ -246,8 +246,8 @@
 //               {tab}
 //               <div
 //                 className={`w-10 h-10 flex items-center justify-center rounded-full ${index === 0
-//                   ? "bg-[#7b3931] hover:text-black text-white"
-//                   : "bg-[#7b3931] hover:text-black text-white"
+//                   ? "bg-[#773135] hover:text-black text-white"
+//                   : "bg-[#773135] hover:text-black text-white"
 //                   }`}
 //               >
 //                 <FaArrowUpRightFromSquare />
@@ -338,7 +338,7 @@ const VerticalTabs = () => {
               key={index}
               className={`flex justify-between items-center w-full p-3 rounded-full cursor-pointer transition-all duration-300 ${
                 activeTab === index
-                  ? "bg-[#7b3931] text-white"
+                  ? "bg-[#773135] text-white"
                   : "border border-gray-300 text-gray-900 bg-transparent"
               } ${visibleTabs.includes(index) ? "opacity-100" : "opacity-0"}`}
               onClick={() => setActiveTab(index)}
@@ -347,7 +347,7 @@ const VerticalTabs = () => {
               transition={{ duration: 0.5 }}
             >
               {tab}
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#F8F2DE] text-[#7b3931]">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#F8F2DE] text-[#773135]">
                 <FaArrowUpRightFromSquare/>
               </div>
             </motion.li>

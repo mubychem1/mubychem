@@ -66,7 +66,7 @@ const Header = () => {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    `cursor-pointer hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
+                                    `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                     }`
                                 }
                             >
@@ -79,7 +79,7 @@ const Header = () => {
                             <NavLink
                                 to="/about"
                                 className={({ isActive }) =>
-                                    `cursor-pointer  hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
+                                    `cursor-pointer  hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                     }`
                                 }
                             >
@@ -90,7 +90,7 @@ const Header = () => {
 
                         <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]">
                             {/* Dropdown Toggle */}
-                            <span className="px-4 py-2 rounded-md text-black hover:text-yellow-900 font-semibold transition">
+                            <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
                                 PRODUCTS
                             </span>
 
@@ -109,7 +109,7 @@ const Header = () => {
                                             <NavLink
                                                 to={item.link}
                                                 className={({ isActive }) =>
-                                                    `cursor-pointer hover:text-yellow-900 hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-yellow-900" : "text-black"
+                                                    `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"
                                                     }`
                                                 }
                                             >
@@ -123,24 +123,24 @@ const Header = () => {
                         </li>
 
 
-                        {/* <li className='px-4 py-2'>
+                        <li className='px-4 py-2'>
                             <NavLink
                                 to="/blogs"
                                 className={({ isActive }) =>
-                                    `cursor-pointer hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
+                                    `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                     }`
                                 }
                             >
                                 BLOGS
                             </NavLink>
-                        </li> */}
+                        </li>
 
 
                         <li className='px-4 py-2'>
                             <NavLink
                                 to="/career"
                                 className={({ isActive }) =>
-                                    `cursor-pointer hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
+                                    `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                     }`
                                 }
                             >
@@ -153,7 +153,7 @@ const Header = () => {
                             <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>
-                                    `cursor-pointer hover:text-yellow-900 font-semibold ${isActive ? "text-yellow-900" : "text-black"
+                                    `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                     }`
                                 }
                             >
@@ -209,9 +209,9 @@ const Header = () => {
                 <div className="hidden md:flex items-center space-x-6 ml-auto">
                     {/*-------------- Phone Section --------------- */}
                     <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-full">
-                        <FaPhoneAlt className="text-yellow-900 hover:text-black transition duration-300 text-2xl" />
+                        <FaPhoneAlt className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
                     </div>
-                    <h1 className="font-semibold text-gray-700 hover:text-yellow-900">
+                    <h1 className="font-semibold text-gray-700 hover:text-[#773135]">
                         <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
                     </h1>
 
@@ -223,7 +223,7 @@ const Header = () => {
                             className="flex items-center space-x-3 bg-blue-100 p-3 rounded-full cursor-pointer"
                             onClick={() => setIsTap(true)}
                         >
-                            <IoMdSearch className="text-yellow-900 hover:text-black transition duration-300 text-2xl" />
+                            <IoMdSearch className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
                         </div>
 
                         {/* Search Popup */}
@@ -254,7 +254,7 @@ const Header = () => {
 
                     {/*---------- Email Section -------------- */}
                     <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-full">
-                        <FaEnvelope className="text-yellow-900 hover:text-black transition duration-300 text-2xl" />
+                        <FaEnvelope className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
                     </div>
                 </div>
             </nav>

@@ -141,7 +141,8 @@ const Home = () => {
     <>
       {/*------------ Hero Section ------- */}
       <div
-        className="flex flex-col md:flex-row items-center bg-white p-6 md:p-12  h-auto md:h-[700px] gap-6 md:gap-12"
+        className="flex flex-col md:flex-row items-center
+         bg-white p-6 md:p-12  h-auto md:h-[700px] gap-6 md:gap-12"
         style={{
           fontFamily: "Times New Roman",
           fontWeight: "normal",
@@ -185,7 +186,7 @@ const Home = () => {
         </div>
         {isOpen && (
           <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
-            <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#7B3931]">
+            <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#773135]">
               <button
                 onClick={closeModal}
                 className="absolute top-2 right-2 text-white p-1 rounded-full"
@@ -207,7 +208,7 @@ const Home = () => {
 
         {/* Right Side - Content */}
         <div
-          className="w-full max-w-[650px] h-full bg-[#7B3931] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat"
+          className="w-full max-w-[650px] h-full bg-[#773135] text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-center flex-1 relative overflow-hidden bg-no-repeat"
           style={{
             backgroundImage: `url(${pattern})`,
             backgroundSize: "100%",
@@ -265,7 +266,7 @@ const Home = () => {
             <p className="text-gray-600 text-sm ml-auto text-[15px] text-left">
               {service.description}
             </p>
-            <button className="absolute table text-center bg-white px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-indigo-50 border-8 transition-all duration-100 hover:text-yellow-900">
+            <button className="absolute table text-center bg-[#f7f4e9] px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-white border-8 transition-all duration-100 hover:text-[#773135]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -295,7 +296,7 @@ const Home = () => {
           <img
             src={microscopeImage}
             alt="Lab Equipment"
-            className="w-full rounded-xl max-w-[647px] h-auto"
+            className="w-auto rounded-xl max-w-[647px]  h-[500px]"
             sizes="(max-width: 647px) 100vw, 647px"
           />
         </motion.div>
@@ -374,7 +375,7 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="p-3 bg-[#F8F2DE] rounded-full">
-                <IoMdFlask className="text-2xl text-[#7b3931]" />
+                <IoMdFlask className="text-2xl text-[#773135]" />
               </div>
               <div className="text-left">
                 <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
@@ -396,7 +397,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="p-3 bg-[#F8F2DE] rounded-full">
-                <BsCheck2Circle className="text-2xl text-[#7b3931]" />
+                <BsCheck2Circle className="text-2xl text-[#773135]" />
               </div>
               <div className="text-left">
                 <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
@@ -412,7 +413,7 @@ const Home = () => {
           {/* Button with Hover Animation */}
           <motion.button
             className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full font-['Open_Sans',sans-serif] 
-            flex items-center gap-2 hover:bg-[#7b3931] hover:text-white transition "
+            flex items-center gap-2 hover:bg-[#773135] hover:text-white transition "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           ><a href="/about">
@@ -441,7 +442,7 @@ const Home = () => {
       </div>
 
       {/* --------------Our Services ------------ */}
-      {/* <div className="bg-[#7B3931] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
+      {/* <div className="bg-[#773135] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
@@ -503,10 +504,10 @@ const Home = () => {
       </div> */}
 
 
-      {/* <div className="bg-[#7B3931] text-white  py-16">
+      {/* <div className="bg-[#773135] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
-            <button className="bg-[#7B3931] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
+            <button className="bg-[#773135] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
               OUR SERVICE
             </button>
             <h2 className="text-4xl  mt-4" style={{ fontFamily: "Times New Roman" }}>Reliable & High Quality Service</h2>
@@ -532,7 +533,7 @@ const Home = () => {
             {services.concat(services).map((service, index) => (
               <div
                 key={index}
-                className="group w-[290px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
+                className="group w-[290px] bg-[#773135] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
@@ -559,14 +560,14 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="bg-[#7B3931] text-white py-16" style={{ backgroundImage: `url(${bg})` }}>
+      <div className="bg-[#773135] text-white py-16" style={{ backgroundImage: `url(${bg})` }}>
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
               OUR SERVICE
             </button>
             <h2 className="text-4xl mt-4 " style={{ fontFamily: "Times New Roman" }}>
-              Reliable & High Quality Service</h2>
+              Manufacturing Facilities</h2>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -589,7 +590,7 @@ const Home = () => {
             {certification.concat(certification).map((certification, index) => (
               <div
                 key={index}
-                className="group w-[290px] bg-[#7B3931] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#7B3931] relative overflow-hidden"
+                className="group w-[290px] bg-[#773135] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#773135] relative overflow-hidden"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-4 group-hover:opacity-100 transition duration-500"
@@ -627,7 +628,7 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-        <div className="md:w-1/2 bg-[#7B3931] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
+        <div className="md:w-1/2 bg-[#773135] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
             CONTACT US
           </button>
