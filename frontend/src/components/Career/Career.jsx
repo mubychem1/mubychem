@@ -156,25 +156,25 @@ const Career = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const formDataToSend = new FormData();
     formDataToSend.append("fullName", formData.fullName);
     formDataToSend.append("email", formData.email);
     formDataToSend.append("phone", formData.phone);
     formDataToSend.append("position", formData.position);
     formDataToSend.append("resume", formData.resume);
-  
+
     try {
       console.log("aayush");
-  
+
       const response = await fetch("http://localhost:9000/api/apply", {
         method: "POST",
         body: formDataToSend,
       });
-  
+
       const data = await response.json();
       console.log("Server Response:", data);
-  
+
       if (response.ok) {
         alert("Application submitted successfully!");
         setIsFormOpen(false);
@@ -187,12 +187,12 @@ const Career = () => {
         });
       } else {
         console.log("hello");
-        
+
         alert("Failed to submit application: " + data.message);
       }
     } catch (error) {
       console.log("apple");
-      
+
       console.error("Error submitting form:", error);
       alert("An error occurred. Please check the console.");
     }
@@ -260,6 +260,13 @@ const Career = () => {
               ✖
             </button>
           </div>
+
+          <img
+            src={career}// Replace with your image URL
+            alt="Job Application Banner"
+            className="w-full h-32 object-cover rounded-lg mb-4"
+          />
+
           <h3 className="text-xl font-bold text-gray-900 mt-3 mb-5">Apply for {formData.position}</h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
@@ -292,7 +299,7 @@ const Career = () => {
               />
               <input
                 type="text"
-                name="position"  
+                name="position"
                 placeholder="Position"
                 className="w-full border border-gray-300 p-4 rounded-full bg-white"
                 onChange={handleChange}
