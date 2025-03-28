@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import background from '../../assets/carrerbg.png';
+import background from '../../assets/background.png';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import registration from '../../assets/registration.png';
 import { Dialog } from "@headlessui/react";
-import { Select, Option } from "@material-tailwind/react";
+import career from '../../assets/career.png'
 
 const jobs = [
   {
@@ -222,24 +222,31 @@ const Career = () => {
 
       <Dialog open={isFormOpen} onClose={() => setIsFormOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10">
+        <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-lg z-10 pb-10">
           <div className="flex justify-end">
             <button onClick={() => setIsFormOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]">✖</button>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Apply for {formData.position}</h3>
+          <div className="">
+            <img
+              src={career}
+              alt="Scientist working in lab"
+              className=" h-1/2 "
+            />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mt-3 mb-5">Apply for {formData.position}</h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-3'>
-              <input type="text" name="name" placeholder="Full Name" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
-              <input type="email" name="email" placeholder="Email" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
-              <input type="tel" name="phone" placeholder="Phone" className="w-full p-2 border rounded-lg" onChange={handleChange} required />
+              <input type="text" name="name" placeholder="Full Name" className="w-full border border-gray-300 p-5 rounded-full bg-white" onChange={handleChange} required />
+              <input type="email" name="email" placeholder="Email" className="w-full border border-gray-300 p-5 rounded-full bg-white" onChange={handleChange} required />
+              <input type="tel" name="phone" placeholder="Phone" className="w-full border border-gray-300 p-5 rounded-full bg-white" onChange={handleChange} required />
               <select
                 name="position"
-                className="border p-3 w-full rounded-lg"
+                className="w-full border border-gray-300 p-5 rounded-full"
                 value={formData.position}
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled>Select a position</option>
+                <option value="" disabled >Select a position</option>
                 {jobs.map((job) => (
                   <option key={job.id} value={job.title}>{job.title}</option>
                 ))}
@@ -256,5 +263,3 @@ const Career = () => {
 };
 
 export default Career;
-
-
