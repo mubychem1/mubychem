@@ -96,7 +96,7 @@ const Blog = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-center ">
             <div>
-              <h1 className="text-[#773135] text-8xl font-bold mb-4 pl-4">ACACIA</h1>
+              <h1 className="text-white text-8xl font-bold mb-4 pl-4">ACACIA</h1>
               <p className="text-[#773135] text-xl font-bold text-center">IP/BP/PH.EUR/USP/JP/FCC</p>
             </div>
           </div>
@@ -113,39 +113,42 @@ const Blog = () => {
               <tbody>
                 {/* Product Name */}
                 <tr className="border-b border-gray-300 ">
-                  {/* <td className="font-bold text-blue-600 py-2 pr-2">Product Name:</td>
-                  <td className="py-2 font-semibold text-blue-600">MILK CALCIUM POWDER</td> */}
                   <td className="py-2 pr-2">
                     <span className="font-bold text-[#773135]">Product Name: </span>
                     <span className="font-normal text-black">ACACIA</span>
-                  </td>
-                  <td className="py-2">
-                    <span className="font-bold text-[#773135]">EC No:</span>
-                    <span className="ml-2">232-519-5</span>
                   </td>
                 </tr>
 
                 {/* CAS No. & HSN Code */}
                 <tr className="border-b border-gray-300">
                   <td className="py-2">
+                    <span className="font-bold text-[#773135]">EC No:</span>
+                    <span className="ml-2">232-519-5</span>
+                  </td>
+                  <td className="py-2">
                     <span className="font-bold text-[#773135]">CAS No:</span>
                     <span className="ml-2">9000-01-5</span>
                   </td>
+
+                </tr>
+
+                {/* Shelf Life & Pharmaceutical Grade */}
+                <tr className='border-b border-gray-300'>
+
                   <td className="py-2">
                     <span className="font-bold text-[#773135]">Molecular Weight:</span>
                     <span className="ml-2">--</span>
                   </td>
-                </tr>
-
-                {/* Shelf Life & Pharmaceutical Grade */}
-                <tr>
-                  {/* <td className="py-2">
-                    <span className="font-bold text-blue-600">Shelf Life:</span>
-                    <span className="ml-2">3 years - 20ºC powder</span>
-                  </td> */}
                   <td className="py-2">
                     <span className="font-bold text-[#773135]">Molecular Formula:</span>
                     <span className="ml-2">--</span>
+                  </td>
+                </tr>
+                <tr >
+                  <td className="py-2">
+                    <span className="font-bold text-[#773135] border-b border-black ">Key Attributes:</span>
+                    <div className="pt-3">• DMF Support Available</div>
+                    <div className="pt-1">• COA / TDS / MSDS</div>
                   </td>
                 </tr>
               </tbody>
@@ -174,14 +177,12 @@ const Blog = () => {
           {/* <button className="px-4 py-2 bg-[#773135]  text-gray-600 font-semibold rounded-t-lg">SYNONYMS</button> */}
         </div>
         <div className=" border border-black rounded-lg">
-          <h2 className="text-xl text-[#773135] pl-5 pt-5">USP of ACACIA</h2>
-          <ul className="mt-2 space-y-2 text-gray-700 pl-5 pt-5 pb-5">
+          <h2 className="text-xl text-[#773135] pl-5 pt-5"></h2>
+          {/* <ul className="mt-2 space-y-2 text-gray-700 pl-5 pt-5 pb-5">
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> DMF Support Available.</li>
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> COA / TDS / MSDS.</li>
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> Multi-Compendial.</li>
-            {/* <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> Dairy-free option suitable for lactose intolerant and vegan individuals.</li>
-            <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> Comprehensive bone health support with essential nutrients.</li> */}
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -209,9 +210,9 @@ const Blog = () => {
 
 
       {/* ---------description ---------  */}
-      <div className="space-y-8 p-8"> {/* Added padding to the overall container */}
+      <div className="space-y-8 p-8"> 
         {/* Description  */}
-        <div className="bg-white p-8 rounded-lg w-full mx-auto">
+        {/* <div className="bg-white p-8 rounded-lg w-full mx-auto">
           <h2 className="text-2xl font-semibold mb-4 text-[#773135]">
             Description of ACACIA
           </h2>
@@ -219,7 +220,7 @@ const Blog = () => {
             Acacia is a genus of trees and shrubs, primarily found in tropical and subtropical regions. Known for their resilience and adaptability, acacias thrive in arid climates and are commonly found in Africa, Australia, and parts of Asia. They belong to the Fabaceae family and often have small, feathery leaves and clusters of fragrant flowers, which can be yellow, white, or cream-colored.
             Acacia trees are culturally significant and ecologically valuable. Some species are used for their wood, which is prized for its strength, while others produce gum arabic, a key ingredient in food, pharmaceuticals, and cosmetics. Additionally, they play a vital role in restoring soil fertility due to their nitrogen-fixing properties.
           </p>
-        </div>
+        </div> */}
 
         {/* ---------Application  ---------- */}
         <div className="bg-white p-8 rounded-lg w-full mx-auto font-sans">
@@ -249,7 +250,7 @@ const Blog = () => {
               &#x2756; Ecological Importance:
             </p>
             <p className="text-sm">
-            Acacia trees play a significant role in soil conservation and are used in reforestation projects.
+              Acacia trees play a significant role in soil conservation and are used in reforestation projects.
             </p>
           </div>
 
@@ -258,7 +259,7 @@ const Blog = () => {
               &#x2756; Traditional Uses:
             </p>
             <p className="text-sm">
-            In many cultures, Acacia species are used in traditional medicine to treat various ailments.
+              In many cultures, Acacia species are used in traditional medicine to treat various ailments.
             </p>
           </div>
         </div>
@@ -266,5 +267,5 @@ const Blog = () => {
     </>
   )
 }
-  
+
 export default Blog

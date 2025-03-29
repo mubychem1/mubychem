@@ -646,12 +646,6 @@ const Home = () => {
               placeholder="Email"
               className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
             />
-            {/* <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15">
-              <option>Choose a Service</option>
-            </select>
-            <select className="bg-transparent border border-white p-3 rounded-4xl text-gray-300">
-              <option>Type of Clean</option>
-            </select> */}
             <input
               type="phone"
               placeholder="Phone number"
