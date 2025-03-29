@@ -13,8 +13,8 @@ app.use(cookieParser())
 // app.use(cors())
 import userRouter from './routes/contact.route.js'
 import applyRouter from './routes/apply.route.js'
-
+import productRouter from './routes/product.route.js'
 
 app.use("/api", userRouter)
 app.use("/api",applyRouter)
-
+app.use("/api",productRouter)

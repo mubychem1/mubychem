@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import Image1 from '../../assets/hero-section1.png'
+import axios from 'axios'
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
@@ -135,6 +135,35 @@ const Home = () => {
     setIsOpen(false);
     setVideoUrl("");
   };
+
+  // --------estimation -----
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log("aayush");
+
+      const response = await axios.post("http://localhost:9000/api/contact", formData);
+      alert(response.data.message);
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
+    } catch (error) {
+      console.log("mayuri");
+
+      alert("Error submitting form. Try again!");
+    }
+  };
+
 
 
   return (
@@ -635,43 +664,31 @@ const Home = () => {
           <h2 className="  text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
 
           {/* Form Inputs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
-            />
-            <input
-              type="phone"
-              placeholder="Phone number"
-              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15 "
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300"
-            />
-            <textarea
-              placeholder="Message"
-              className="bg-transparent border border-white p-3 rounded-4xl text-gray-300 h-15"
-            />
-            <p className="text-white text-sm mt-4 italic" style={{ fontFamily: "Graphik" }}>
-              Submit this information and we will send <br /> you the cost for the service.
-            </p>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300" />
+              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300" />
+              <input type="tel" name="phone" placeholder="Phone number" value={formData.phone} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300" />
+              <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300" />
+              <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300"></textarea>
+            </div>
+
+            <p className="text-white text-sm mt-4 italic">Submit this information and we will send <br /> you the cost for the service.</p>
+
+            <div className="mt-6 flex justify-end">
+              <button type="submit" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-300 hover:text-black">
+                Submit →
+              </button>
+            </div>
+          </form>
 
 
           {/* Submit Button */}
-          <div className="mt-6 flex justify-end">
+          {/* <div className="mt-6 flex justify-end">
             <button className="bg-black text-white px-6 py-3 rounded-full font-Times New Roman flex items-center gap-2 hover:bg-gray-300 hover:text-black h-15">
               Submit →
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -106,3 +106,78 @@ const Products = () => {
 };
 
 export default Products;
+
+
+// import background from '../../assets/background.png';
+
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+
+// const ProductCard = ({ product }) => {
+//   return (
+//     <>
+//       <div className="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+//         <img
+//           className="w-full h-40 object-cover"
+//           src={product.image || "https://via.placeholder.com/300"}
+//           alt={product.name}
+//         />
+//         <div className="p-4">
+//           <p className="text-gray-700 text-sm font-semibold">CATEGORY: {product.category}</p>
+//           <p className="text-gray-700 text-sm">CAS No: {product.casNo}</p>
+//           {product.hsnCode && <p className="text-gray-700 text-sm">HSN Code: {product.hsnCode}</p>}
+//           <h2 className="text-blue-600 font-bold text-lg mt-2 hover:underline cursor-pointer">
+//             {product.name}
+//           </h2>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// const Products = () => {
+
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     axios.get("http://localhost:9000/api/product")
+//       .then((response) => {
+//         console.log("API Response:", response.data);
+//         if (Array.isArray(response.data.data)) {
+//           setProducts(response.data.data);  // Extracting the `data` array
+//         } else {
+//           console.error("Unexpected API response format:", response.data);
+//         }
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching products:", error);
+//       });
+//   }, []);
+
+//   return (
+//     <>
+//        <div className='bg-[#ecf2ff]'>
+//         <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
+//           <div className="absolute inset-0 bg-black opacity-50"></div>
+//           <div className="absolute inset-0 flex items-center justify-left">
+//             <div>
+//               <h1 className="text-white text-5xl font-bold mb-4 pl-4">Product</h1>
+//               <p className="text-white text-lg pl-5">Mubychem &gt; Product</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="p-6 bg-blue-100 min-h-screen">
+//         <h1 className="text-center text-2xl font-bold text-gray-800 mb-6">Our Products</h1>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+//           {products.map((product) => (
+//             <ProductCard key={product.id} product={product} />
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Products;
