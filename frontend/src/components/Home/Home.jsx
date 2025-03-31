@@ -325,7 +325,7 @@ const Home = () => {
           <img
             src={microscopeImage}
             alt="Lab Equipment"
-            className="w-auto rounded-xl max-w-[647px]  h-[500px]"
+            className="w-auto rounded-xl max-w-[647px] h-[500px]"
             sizes="(max-width: 647px) 100vw, 647px"
           />
         </motion.div>

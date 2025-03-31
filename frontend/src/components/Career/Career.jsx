@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import background from '../../assets/background.png';
+import background from '../../assets/carrerbg.png';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import registration from '../../assets/registration.png';
 import { Dialog } from "@headlessui/react";
@@ -200,7 +200,7 @@ const Career = () => {
 
   return (
     <>
-      <div className='bg-[#ecf2ff]'>
+      <div className='bg-[#fff] p-6 md:p-12'>
         <div
           className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10'
           style={{ backgroundImage: `url(${background})` }}
@@ -215,7 +215,7 @@ const Career = () => {
         </div>
       </div>
 
-      <section className="p-10 bg-[#ecf2ff] min-h-screen">
+      <section className="p-10 bg-[#fff] min-h-screen">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">
             Find jobs for every industry and role.

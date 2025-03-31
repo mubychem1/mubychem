@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import background from "../../assets/background.png";
+import background from "../../assets/contactbg.png";
 import { Mail, MapPin, Phone, Calendar, ArrowUpRight } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { submitForm } from "../../redux/slice/formSlice.js"; // Ensure path is correct
@@ -62,9 +62,9 @@ const ContactUs = () => {
   return (
     <>
       {/* -----------------Contact Us Banner --------------*/}
-      <div className="bg-[#ecf2ff] ">
+      <div className="bg-[#ecf2ff] p-6 md:p-12">
         <div
-          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10"
+          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>

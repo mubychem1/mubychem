@@ -85,7 +85,7 @@ const Products = () => {
   return (
     <>
       <div className='bg-[#ecf2ff]'>
-        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
+        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden' style={{ backgroundImage: `url(${background})` }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
             <div>

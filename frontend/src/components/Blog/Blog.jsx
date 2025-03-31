@@ -91,10 +91,10 @@ const Blog = () => {
   return (
     <>
       {/*----------- Header Section ---------- */}
-      <div className='bg-white'>
+      <div className='bg-white p-6 md:p-12'>
         <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10 max-w-screen-xl mx-auto' style={{ backgroundImage: `url(${background})` }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center ">
+          <div className="absolute inset-0 flex items-center justify-center">
             <div>
               <h1 className="text-white text-8xl font-bold mb-4 pl-4">ACACIA</h1>
               <p className="text-[#773135] text-xl font-bold text-center">IP/BP/PH.EUR/USP/JP/FCC</p>
@@ -109,25 +109,31 @@ const Blog = () => {
 
           {/* Left Side - Product Details */}
           <div className="w-full pl-6">
-            <table className="w-full text-gray-900">
+            <table className="w-4xl sm:1/2 text-gray-900">
               <tbody>
                 {/* Product Name */}
+               
                 <tr className="border-b border-gray-300 ">
-                  <td className="py-2 pr-2">
-                    <span className="font-bold text-[#773135]">Product Name: </span>
-                    <span className="font-normal text-black">ACACIA</span>
+                  <td className="py-2 pr-2 font-bold text-[#773135]">
+                    Product name
                   </td>
+                  <td className="font-2xl text-[#773135]"> ACACIA</td>
                 </tr>
 
                 {/* CAS No. & HSN Code */}
                 <tr className="border-b border-gray-300">
-                  <td className="py-2">
-                    <span className="font-bold text-[#773135]">EC No:</span>
-                    <span className="ml-2">232-519-5</span>
+                  <td className="py-2 font-bold text-[#773135]">
+                    EC No:
+                  </td>
+                  <td className="py-2">232-519-5
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-300">
+                  <td className="py-2 font-bold text-[#773135]">
+                   CAS No:
                   </td>
                   <td className="py-2">
-                    <span className="font-bold text-[#773135]">CAS No:</span>
-                    <span className="ml-2">9000-01-5</span>
+                   9000-01-5
                   </td>
 
                 </tr>
@@ -171,23 +177,23 @@ const Blog = () => {
           </div> */}
 
       {/* --------- Other Section --------- */}
-      <div className="bg-white rounded-lg w-full max-w-screen-xl mx-auto p-6">
+      {/* <div className="bg-white rounded-lg w-full max-w-screen-xl mx-auto p-6">
         <div className="flex pl-2">
-          <button className="px-4 py-2 bg-[#773135]  text-white font-semibold rounded-t-lg">Application</button>
+          <button className="px-4 py-2 bg-[#773135]  text-white font-semibold rounded-t-lg">Application</button> */}
           {/* <button className="px-4 py-2 bg-[#773135]  text-gray-600 font-semibold rounded-t-lg">SYNONYMS</button> */}
-        </div>
+        {/* </div>
         <div className=" border border-black rounded-lg">
-          <h2 className="text-xl text-[#773135] pl-5 pt-5"></h2>
+          <h2 className="text-xl text-[#773135] pl-5 pt-5"></h2> */}
           {/* <ul className="mt-2 space-y-2 text-gray-700 pl-5 pt-5 pb-5">
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> DMF Support Available.</li>
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> COA / TDS / MSDS.</li>
             <li className="flex items-start"><span className="text-[#773135]  pr-2">✦</span> Multi-Compendial.</li>
           </ul> */}
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
 
       {/* --------------- Design ------------ */}
-      <div className="flex items-center bg-white rounded-lg mx-4 md:mx-10 max-w-screen-2xl mx-auto min-h-[300px]">
+      <div className="flex items-center bg-white rounded-lg mx-4 md:mx-10 max-w-screen-2xl min-h-[300px]">
         {/* Single Image Section */}
         <img
           src={glp} // Change src as needed
@@ -210,7 +216,7 @@ const Blog = () => {
 
 
       {/* ---------description ---------  */}
-      <div className="space-y-8 p-8"> 
+      <div className="space-y-8 p-8">
         {/* Description  */}
         {/* <div className="bg-white p-8 rounded-lg w-full mx-auto">
           <h2 className="text-2xl font-semibold mb-4 text-[#773135]">
@@ -232,7 +238,6 @@ const Blog = () => {
             </p>
             <p className="text-sm">
               Acacia species are known for their therapeutic properties. They contain bioactive compounds like flavonoids, alkaloids, and phenolics, which have antibacterial, antifungal, antioxidant, and anticancer properties.
-
             </p>
           </div>
 

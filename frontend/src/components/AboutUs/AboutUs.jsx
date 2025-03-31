@@ -117,7 +117,7 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="relative bg-[#ecf2ff] "
+        className="relative bg-[#fff] "
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -130,9 +130,9 @@ const AboutUs = () => {
             alt="About Us Background"
             className="w-full h-full object-cover"
           /> */}
-          <div className="bg-[#ecf2ff] ">
+          <div className="bg-[#fff] p-6 md:p-12">
             <div
-              className="relative h-[500px] bg-cover rounded-4xl  overflow-hidden mx-4 md:mx-10"
+              className="relative h-[500px] bg-cover rounded-4xl  overflow-hidden"
               style={{ backgroundImage: `url(${background})` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -157,7 +157,7 @@ const AboutUs = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-[#ecf2ff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]" style={{
+        className="bg-[#fff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]" style={{
           fontFamily: "Times New Roman",
         }}>
         {/* Image Section */}
@@ -211,7 +211,7 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
-        className=" bg-[#ecf2ff] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  p-6 sm:p-10 "
+        className=" bg-[#fff] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  p-6 sm:p-10 "
       >
         {/* Card 1 - Watch Video with Curved Edge */}
         <div className="relative rounded-2xl overflow-hidden">
@@ -331,7 +331,7 @@ const AboutUs = () => {
       </div> */}
 
       {/*--------------------- Sample post ----------------- */}
-      <div className="bg-[#E9F1FF] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
+      <div className="bg-[#fff] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
         <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
           <div className="relative">
             <img
@@ -342,7 +342,7 @@ const AboutUs = () => {
             <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
               <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
               <p className="text-xs sm:text-sm">
-                Professional and <br /> Experienced staff ready <br /> to help you
+                Professional and <br /> Experienced Staff ready <br /> to help you
               </p>
             </div>
           </div>

@@ -13,7 +13,7 @@ const phoneNumber = "+912223770100";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#737373] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl">
+      <footer className="bg-[#544522] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl">
         <div className="container mx-auto py-14 px-6 min-h-[450px] pt-20">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-7">
             {/* Logo & Description */}
@@ -46,7 +46,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
+                    className="text-black hover:text-black transition-all duration-500 ease-in-out"
                   >
                     Home
                   </a>
