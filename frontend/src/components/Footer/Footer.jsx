@@ -7,10 +7,15 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import logo from '../../assets/logo-white.png'
+import translations from '../translater/translations.js'
+import { useSelector } from "react-redux"
 
 const phoneNumber = "+912223770100";
 
 const Footer = () => {
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+
   return (
     <>
       <footer className="bg-[#544522] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl">
@@ -19,7 +24,7 @@ const Footer = () => {
             {/* Logo & Description */}
             <div className="lg:col-span-4 col-span-12">
               <a href="/">
-                <img className="h-20 sm:h-15" src= {logo} alt="logo" />
+                <img className="h-20 sm:h-15" src={logo} alt="logo" />
               </a>
               <p
                 className="mt-6 text-gray-100"
@@ -37,162 +42,48 @@ const Footer = () => {
             {/* Useful Links */}
             <div className="lg:col-span-2 md:col-span-4 col-span-12 ml-7">
               <h5 className="tracking-wide text-gray-100 font-bold">
-                USEFUL LINKS
+                {currentTranslations.USEFUL_LINKS}
               </h5>
-              <ul
-                className="list-none mt-6 space-y-2"
-                style={{ fontFamily: "Open_Sans, sans-serif" }}
-              >
-                <li>
-                  <a
-                    href="#"
-                    className="text-black hover:text-black transition-all duration-500 ease-in-out"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
-                  >
-                    Career
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
-                  >
-                    Product
-                  </a>
-                </li>
+              <ul className="list-none mt-6 space-y-2" style={{ fontFamily: "Open_Sans, sans-serif" }}>
+                {["HOME", "ABOUT_US", "CAREER", "PRODUCT"].map((key) => (
+                  <li key={key}>
+                    <a href="#" className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out">
+                      {currentTranslations[key]}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Categories */}
             <div className="lg:col-span-3 md:col-span-4 col-span-12">
               <h5 className="tracking-wide text-gray-100 font-bold text-center pr-8">
-                CATEGORIES
+                {currentTranslations.CATEGORIES}
               </h5>
               <div className="grid grid-cols-1 sm:grid-cols-2">
-                <div>
-                  <ul
-                    className="list-none space-y-2 mt-6"
-                    style={{ fontFamily: "Open_Sans, sans-serif" }}
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Pharmaceuticals
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Food Additives
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Analytical Reagent
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Amino Acid
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Speciality Chemicals
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul
-                    className="list-none space-y-2 mt-6"
-                    style={{ fontFamily: "Open_Sans, sans-serif" }}
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Nutraceuticals
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        API/Intermediates
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Lab Chemicals
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Mineral Fortifiers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Excipients
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="hover:text-black transition-all duration-500 ease-in-out"
-                      >
-                        Other Products
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                {[
+                  ["PHARMACEUTICALS", "FOOD_ADDITIVES", "ANALYTICAL_REAGENT", "AMINO_ACID", "SPECIALITY_CHEMICALS"],
+                  ["NUTRACEUTICALS", "API_INTERMEDIATES", "LAB_CHEMICALS", "MINERAL_FORTIFIERS", "EXCIPIENTS", "OTHER_PRODUCTS"]
+                ].map((column, i) => (
+                  <div key={i}>
+                    <ul className="list-none space-y-2 mt-6" style={{ fontFamily: "Open_Sans, sans-serif" }}>
+                      {column.map((key) => (
+                        <li key={key}>
+                          <a href="#" className="hover:text-black transition-all duration-500 ease-in-out">
+                            {currentTranslations[key]}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Contact Details */}
             <div className="lg:col-span-3 md:col-span-4 col-span-12 ml-3">
               <h5 className="tracking-wide text-gray-100 font-bold">
-                CONTACT DETAILS
+                {currentTranslations.CONTACT_DETAILS}
               </h5>
               <h3 className="pt-5 font-bold">Muby Chemicals</h3>
               <p className="flex items-center space-x-2 text-white pt-2">
@@ -201,15 +92,15 @@ const Footer = () => {
                   href="mailto:info@mubychem.in"
                   className="hover:text-black cursor-pointer"
                 >
-                  info@mubychem.in
+                  {currentTranslations.EMAIL}
                 </a>
               </p>
               <p className="flex items-center space-x-2 text-white mt-2">
-                <FaPhone className="text-white" />
-                <span className="text-lg hover:text-black">
-                  <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-                </span>
-              </p> 
+              <FaPhone className="text-white" />
+              <a href={`tel:${phoneNumber}`} className="text-lg hover:text-black">
+                {phoneNumber}
+              </a>
+            </p>
             </div>
           </div>
         </div>
@@ -222,7 +113,7 @@ const Footer = () => {
               {" "}
               Muby Chemicals{" "}
             </a>
-            All Rights Reserved.
+            {currentTranslations.COPYRIGHT}
           </p>
         </div>
       </footer>

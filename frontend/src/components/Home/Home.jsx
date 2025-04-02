@@ -23,8 +23,8 @@ import fssai from "../../assets/logo/fssai.png";
 import fdca from "../../assets/logo/fdca.png";
 import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
-
-
+import translations from '../translater/translations.js'
+import { useSelector } from "react-redux"
 
 const certification = [
   {
@@ -106,6 +106,9 @@ const services = [
 
 
 const Home = () => {
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -209,7 +212,7 @@ const Home = () => {
           >
             <FaPlay className="text-black text-xl sm:text-base md:text-lg " />
             <span className="ml-2 text-xs sm:text-sm md:text-base font-semibold text-black">
-              Watch Video
+              {currentTranslations.watchVideo}
             </span>
           </button>
         </div>
@@ -248,15 +251,15 @@ const Home = () => {
             className="text-lg sm:text-lg md:text-xl font-semibold text-white px-4 sm:px-5 md:px-6 italic py-2 rounded-full w-max border border-white"
             style={{ fontFamily: "Times New Roman" }}
           >
-            Quality Chemicals Worldwide - Since 1976
+            {currentTranslations.qualityChemicals}
           </p>
 
           <h1 className="text-[clamp(32px,6vw,72px)] md:text-[60px] lg:text-[57px] leading-tight mt-4 " style={{ fontFamily: "Times New Roman" }}>
-            Quality Products
+            {currentTranslations.qualityProducts}
           </h1><br />
 
           <h2 className="text-[clamp(24px,5vw,50px)] md:text-[20px] italic lg:text-[20px] font-graphik leading-tight mt-2 text-right">
-            Where Chemistry Meets.
+            {currentTranslations.whereChemistryMeets}
           </h2>
 
           <div className="flex gap-6 mt-4 border-t pt-4 border-gray-400"></div>
@@ -267,7 +270,7 @@ const Home = () => {
           <button className="mt-4 bg-black text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full 
          flex items-center w-max transition duration-300 hover:bg-white hover:text-black 
           border border-transparent hover:border-black" style={{ fontFamily: "Graphik" }}>
-            <a href="/products">Our Products <span className="ml-2">&rarr;</span></a>
+            <a href="/products">{currentTranslations.ourProducts} <span className="ml-2">&rarr;</span></a>
           </button>
         </div>
       </div>
@@ -356,9 +359,10 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            Welcome to Muby Chem <br />Private Limited
+            {currentTranslations.welcomeToMubyChem}
+            {/* Welcome to Muby Chem <br />Private Limited */}
           </motion.h2>
-          <motion.p className="mb-4">Obsessed with Quality since 1976</motion.p>
+          <motion.p className="mb-4">{currentTranslations.obsessedWithQuality}</motion.p>
 
           {/* Description */}
           <motion.p
@@ -368,7 +372,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
+             {currentTranslations.mubyChemDescription1}
           </motion.p>
           <motion.p
             className="text-[15px] leading-[1.6] text-[#6a7391] normal-case not-italic mb-6"
@@ -377,7 +381,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
+            {currentTranslations.mubyChemDescription2}
           </motion.p>
 
 
@@ -408,10 +412,10 @@ const Home = () => {
               </div>
               <div className="text-left">
                 <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-                  APIs
+                {currentTranslations.apis}
                 </h4>
                 <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
-                  Health research, sometimes referred to as medical research.
+                {currentTranslations.apisDescription}
                 </p>
               </div>
             </motion.div>
@@ -430,10 +434,10 @@ const Home = () => {
               </div>
               <div className="text-left">
                 <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-                  Mineral Actives
+                {currentTranslations.mineralActives}
                 </h4>
                 <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
-                  Accurate Analysis is an absolute testing laboratory.
+                {currentTranslations.mineralActivesDescription}
                 </p>
               </div>
             </motion.div>
@@ -446,7 +450,7 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           ><a href="/about">
-              Know More </a><FaArrowRight />
+              {currentTranslations.knowMore} </a><FaArrowRight />
           </motion.button>
         </motion.div>
       </div>
@@ -659,7 +663,7 @@ const Home = () => {
         {/* Form Section */}
         <div className="md:w-1/2 bg-[#773135] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
-            CONTACT US
+          {currentTranslations.CONTACT_US}
           </button>
           <h2 className="  text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
 

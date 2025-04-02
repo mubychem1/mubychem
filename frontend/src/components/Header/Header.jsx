@@ -1,16 +1,38 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaShoppingCart, FaSearch, FaPhoneAlt, FaEnvelope, FaBars, FaMinus } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import dot from "../../assets/dot_img.jpg";
 import logo from '../../assets/logo.png';
 import { Link, NavLink } from "react-router-dom";
 import { FiSearch, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
+import { useSelector, useDispatch } from 'react-redux';
+import { setLanguage } from '../../redux/slice/languageSlice.js'
+import translations from '../translater/translations.js';
+import { ChevronDown } from "lucide-react";
 
-const phoneNumber = "+912223770100";
 
 const Header = () => {
+
+    
+        const [selected, setSelected] = useState("English");
+        const [isOpe, setIsOpe] = useState(false);
+      
+        const options = [
+          { value: "en", label: "English" },
+          { value: "hi", label: "Hindi" },
+          { value: "fr", label: "Franch" }
+        ];
+
+    const language = useSelector((state) => state.language.language); // Corrected Redux reference
+    const dispatch = useDispatch();
+
+    const handleLanguageChange = (selectedLanguage) => {
+        dispatch(setLanguage(selectedLanguage));
+    };
+
+    const currentTranslations = translations[language] || translations.en
+
     const [isOpen, setIsOpen] = useState(false);
     const [isTap, setIsTap] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,7 +67,7 @@ const Header = () => {
         { label: "Food Additives", link: "/products/category8" },
         { label: "Excipients", link: "/products/category9" },
         { label: "Other Products", link: "/products/category10" },
-    
+
     ]
 
     return (
@@ -70,7 +92,7 @@ const Header = () => {
                                     }`
                                 }
                             >
-                                HOME
+                                {currentTranslations.HOME}
                             </NavLink>
                         </li>
 
@@ -83,7 +105,7 @@ const Header = () => {
                                     }`
                                 }
                             >
-                                ABOUT US
+                                {currentTranslations.ABOUT_US}
                             </NavLink>
                         </li>
 
@@ -91,7 +113,7 @@ const Header = () => {
                         <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]">
                             {/* Dropdown Toggle */}
                             <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
-                                PRODUCTS
+                                {currentTranslations.PRODUCTS}
                             </span>
 
                             {/* Dropdown Content */}
@@ -131,7 +153,7 @@ const Header = () => {
                                     }`
                                 }
                             >
-                                BLOGS
+                                {currentTranslations.BLOGS}
                             </NavLink>
                         </li>
 
@@ -144,7 +166,7 @@ const Header = () => {
                                     }`
                                 }
                             >
-                                CAREER
+                                {currentTranslations.CAREER}
                             </NavLink>
                         </li>
 
@@ -157,7 +179,7 @@ const Header = () => {
                                     }`
                                 }
                             >
-                                CONTACT US
+                                {currentTranslations.CONTACT_US}
                             </NavLink>
                         </li>
                     </ul>
@@ -211,9 +233,6 @@ const Header = () => {
                     <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-full">
                         <FaPhoneAlt className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
                     </div>
-                    <h1 className="font-semibold text-gray-700 hover:text-[#773135]">
-                        <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-                    </h1>
 
                     {/*------------ Search Icon Section ---------- */}
 
@@ -251,11 +270,39 @@ const Header = () => {
                             </div>
                         )}
                     </div>
+                    {/* Language Selector */}
+                    <select value={language} onChange={(e) => handleLanguageChange(e.target.value)}
+                        className="bg-blue-100 p-2 h-12 w-32 rounded-full text-sm font-semibold text-gray-700">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="fr">Franch</option>
+                    </select>
 
-                    {/*---------- Email Section -------------- */}
-                    <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-full">
-                        <FaEnvelope className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
-                    </div>
+                    {/* <div className="relative w-40">
+                        <button
+                            onClick={() => setIsOpe(!isOpe)}
+                            className="bg-blue-100 w-full h-12 rounded-full text-sm font-semibold text-gray-700 flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                        >
+                            {selected}
+                            <ChevronDown className="h-4 w-4" />
+                        </button>
+                        {isOpe && (
+                            <ul className="absolute w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden">
+                                {options.map((option) => (
+                                    <li
+                                        key={option.value}
+                                        onClick={() => {
+                                            setSelected(option.label);
+                                            setIsOpe(false);
+                                        }}
+                                        className="p-3 text-gray-700 hover:bg-blue-200 cursor-pointer"
+                                    >
+                                        {option.label}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div> */}
                 </div>
             </nav>
         </div>
@@ -274,7 +321,7 @@ export default Header;
 // import { FiSearch, FiX } from "react-icons/fi";
 // import { motion } from "framer-motion";
 // import { IoClose } from "react-icons/io5";
-// import logo from '../../assets/logo.png'; 
+// import logo from '../../assets/logo.png';
 // const phoneNumber = "+912223770100";
 
 // const Header = () => {
