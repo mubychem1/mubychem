@@ -14,15 +14,15 @@ import { ChevronDown } from "lucide-react";
 
 const Header = () => {
 
-    
-        const [selected, setSelected] = useState("English");
-        const [isOpe, setIsOpe] = useState(false);
-      
-        const options = [
-          { value: "en", label: "English" },
-          { value: "hi", label: "Hindi" },
-          { value: "fr", label: "Franch" }
-        ];
+
+    const [selected, setSelected] = useState("English");
+    const [isOpe, setIsOpe] = useState(false);
+
+    const options = [
+        { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
+        { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
+        { value: "fr", label: "Franch", flag: "https://flagcdn.com/w40/fr.png" },
+    ];
 
     const language = useSelector((state) => state.language.language); // Corrected Redux reference
     const dispatch = useDispatch();
@@ -270,13 +270,14 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-                    {/* Language Selector */}
-                    <select value={language} onChange={(e) => handleLanguageChange(e.target.value)}
+                    {/*----------- Language Selector -------------*/}
+                    {/* <select value={language} onChange={(e) => handleLanguageChange(e.target.value)}
                         className="bg-blue-100 p-2 h-12 w-32 rounded-full text-sm font-semibold text-gray-700">
                         <option value="en">English</option>
                         <option value="hi">Hindi</option>
                         <option value="fr">Franch</option>
-                    </select>
+                    </select> */}
+
 
                     {/* <div className="relative w-40">
                         <button
@@ -287,15 +288,16 @@ const Header = () => {
                             <ChevronDown className="h-4 w-4" />
                         </button>
                         {isOpe && (
-                            <ul className="absolute w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden">
+                            <ul className="absolute w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden z-50">
                                 {options.map((option) => (
                                     <li
                                         key={option.value}
                                         onClick={() => {
+                                            handleLanguageChange(option.value);
                                             setSelected(option.label);
                                             setIsOpe(false);
                                         }}
-                                        className="p-3 text-gray-700 hover:bg-blue-200 cursor-pointer"
+                                        className="p-3 text-gray-700 hover:bg-blue-200 cursor-pointer font-semibold"
                                     >
                                         {option.label}
                                     </li>
@@ -303,6 +305,40 @@ const Header = () => {
                             </ul>
                         )}
                     </div> */}
+
+                    <div className="relative w-40">
+                        <button
+                            onClick={() => setIsOpe(!isOpe)}
+                            className="bg-blue-100 w-full h-12 rounded-full text-sm font-semibold text-gray-700 flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                        >
+                            <div className="flex items-center gap-2">
+                                <img src={selected.flag} alt={selected.label} className="w-5 h-5 rounded-full" />
+                                {selected.label}
+                            </div>
+                            <ChevronDown className="h-4 w-4" />
+                        </button>
+                        {isOpe && (
+                            <ul className="absolute w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden z-50">
+                                {options.map((option) => (
+                                    <li
+                                        key={option.value}
+                                        onClick={() => {
+                                            handleLanguageChange(option.value);
+                                            setSelected(option);
+                                            setIsOpe(false);
+                                        }}
+                                        className="flex items-center gap-2 p-3 text-gray-700 hover:bg-blue-200 cursor-pointer font-semibold"
+                                    >
+                                        <img src={option.flag} alt={option.label} className="w-5 h-5 rounded-full" />
+                                        {option.label}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+
+
+
                 </div>
             </nav>
         </div>
