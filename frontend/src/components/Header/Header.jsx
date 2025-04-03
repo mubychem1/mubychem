@@ -71,7 +71,7 @@ const Header = () => {
     ]
 
     return (
-        <div className='bg-[#ecf2ff] h-full flex flex-col'>
+        <div className='bg-[#773135] h-full flex flex-col'>
             <nav className='bg-white py-4 px-4 md:py-6 md:px-6 flex justify-between items-center rounded-2xl mx-4 md:mx-6 lg:mx-8 my-4 md:my-6'>
                 {/* ----------- Logo Section -----------*/}
                 <div className='flex items-center'>
