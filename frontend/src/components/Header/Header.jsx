@@ -15,14 +15,14 @@ import { ChevronDown } from "lucide-react";
 const Header = () => {
 
 
-    const [selected, setSelected] = useState("English");
-    const [isOpe, setIsOpe] = useState(false);
-
+    
     const options = [
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
         { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
         { value: "fr", label: "Franch", flag: "https://flagcdn.com/w40/fr.png" },
     ];
+    const [selected, setSelected] = useState(options[0]);
+    const [isOpe, setIsOpe] = useState(false);
 
     const language = useSelector((state) => state.language.language); // Corrected Redux reference
     const dispatch = useDispatch();
@@ -74,9 +74,9 @@ const Header = () => {
         <div className='bg-[#773135] h-full flex flex-col'>
             <nav className='bg-white py-4 px-4 md:py-6 md:px-6 flex justify-between items-center rounded-2xl mx-4 md:mx-6 lg:mx-8 my-4 md:my-6'>
                 {/* ----------- Logo Section -----------*/}
-                <div className='flex items-center'>
+                <div className='flex items-center '>
                     <Link to="/">
-                        <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer " />
+                        <img src={logo} alt="Logo" className="h-22 w-auto cursor-pointer pl-5 " />
                     </Link>
                 </div>
 

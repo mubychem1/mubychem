@@ -12,6 +12,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import background from "../../assets/background.png";
 import { AnimatePresence } from "framer-motion";
 import VerticalTabs from '../Home/VerticalTabs';
+import translations from '../translater/translations.js'
+import { useSelector } from "react-redux"
 
 const steps = [
   {
@@ -84,6 +86,10 @@ const reviews = [
   },
 ];
 const AboutUs = () => {
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+
   const [isOpen, setIsOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
 
@@ -139,10 +145,10 @@ const AboutUs = () => {
               <div className="absolute inset-0 flex items-center justify-left">
                 <div>
                   <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                    About Us
+                  {currentTranslations.ABOUT_US}
                   </h1>
                   <p className="text-white text-lg pl-5 ">
-                    Muby chem &gt; ABOUT US
+                    Muby chem &gt; {currentTranslations.ABOUT_US}
                   </p>
                 </div>
               </div>
@@ -289,7 +295,7 @@ const AboutUs = () => {
       </motion.div>
       {/*--------------------- Sample post ----------------- */}
 
-     
+
 
       {/* <div className="bg-[#ecf2ff] p-2"> */}
       {/* <section
