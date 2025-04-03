@@ -15,7 +15,7 @@ import { ChevronDown } from "lucide-react";
 const Header = () => {
 
 
-    
+
     const options = [
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
         { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
@@ -76,7 +76,7 @@ const Header = () => {
                 {/* ----------- Logo Section -----------*/}
                 <div className='flex items-center '>
                     <Link to="/">
-                        <img src={logo} alt="Logo" className="h-22 w-auto cursor-pointer pl-5 " />
+                        <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer pl-3 " />
                     </Link>
                 </div>
 
