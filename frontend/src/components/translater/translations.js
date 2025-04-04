@@ -164,6 +164,167 @@ const translations = {
 
     ourService: "Notre Service",
     manufacturing: "Installations de Fabrication"
+  },
+
+  ru: {
+    HOME: "ГЛАВНАЯ",
+    ABOUT_US: "О НАС",
+    PRODUCTS: "ПРОДУКТЫ",
+    BLOGS: "БЛОГИ",
+    CAREER: "КАРЬЕРА",
+    CONTACT_US: "СВЯЗАТЬСЯ С НАМИ",
+    USEFUL_LINKS: "Полезные ссылки",
+  
+    // -------------Footer Section ----------
+    PRODUCT: "Продукт",
+    CATEGORIES: "Категории",
+    PHARMACEUTICALS: "Фармацевтика",
+    FOOD_ADDITIVES: "Пищевые добавки",
+    ANALYTICAL_REAGENT: "Аналитические реагенты",
+    AMINO_ACID: "Аминокислоты",
+    SPECIALITY_CHEMICALS: "Специализированные химикаты",
+    NUTRACEUTICALS: "Нутрицевтики",
+    API_INTERMEDIATES: "API / Промежуточные продукты",
+    LAB_CHEMICALS: "Лабораторные химикаты",
+    MINERAL_FORTIFIERS: "Минеральные усилители",
+    EXCIPIENTS: "Экципиенты",
+    OTHER_PRODUCTS: "Другие продукты",
+    CONTACT_DETAILS: "Контактные данные",
+    COMPANY_NAME: "Muby Chemicals",
+    EMAIL: "info@mubychem.in",
+    COPYRIGHT: "Все права защищены.",
+  
+    SPECIALTY_CHEMICALS: "Мы специализируемся на производстве высококачественных специализированных химикатов и эксципиентов.",
+    PHARMACEUTICAL_INDUSTRY: "Наши продукты известны своей чистотой и эффективностью, поддерживая различные отрасли по всему миру.",
+  
+    // -------Home Section ---------
+    qualityChemicals: "Качественная химия по всему миру — с 1976 года",
+    qualityProducts: "Качественная продукция",
+    whereChemistryMeets: "Где встречается химия.",
+    ourProducts: "Наши продукты",
+    watchVideo: "Смотреть видео",
+  
+    welcomeToMubyChem: "Добро пожаловать в Muby Chem Private Limited",
+    obsessedWithQuality: "Одержимы качеством с 1976 года",
+    mubyChemDescription1: "В Muby Chem мы стремимся развивать отрасли, предоставляя высококачественные химикаты и инновационные решения для фармацевтики, нутрицевтики, специализированной химии, пищевых добавок и других сфер. С более чем 49-летним опытом мы гордимся тем, что предлагаем передовые продукты, соответствующие самым строгим стандартам качества и регулирования.",
+    mubyChemDescription2: "Мы сотрудничаем с отраслями по всему миру, поддерживая разработку исключительных продуктов, улучшающих здоровье, благополучие и производительность. Независимо от того, нужны ли вам индивидуальные химические решения, ингредиенты для нутрицевтиков или специализированные химические формулы — Muby Chem — ваш надежный партнер.",
+  
+    apis: "API",
+    apisDescription: "Медицинские исследования, иногда называемые научными исследованиями в области здравоохранения.",
+    mineralActives: "Минеральные активы",
+    mineralActivesDescription: "Точная аналитика — это абсолютная испытательная лаборатория.",
+    knowMore: "Узнать больше",
+  
+    ourService: "НАШИ УСЛУГИ",
+    manufacturing: "Производственные мощности",
+    hello: "получите бесплатную <br /> оценку!"
+  },
+
+  ko: {
+    HOME: "홈",
+    ABOUT_US: "회사 소개",
+    PRODUCTS: "제품",
+    BLOGS: "블로그",
+    CAREER: "채용",
+    CONTACT_US: "문의하기",
+    USEFUL_LINKS: "유용한 링크",
+  
+    // -------------Footer Section ----------
+    PRODUCT: "제품",
+    CATEGORIES: "카테고리",
+    PHARMACEUTICALS: "의약품",
+    FOOD_ADDITIVES: "식품 첨가물",
+    ANALYTICAL_REAGENT: "분석 시약",
+    AMINO_ACID: "아미노산",
+    SPECIALITY_CHEMICALS: "특수 화학물질",
+    NUTRACEUTICALS: "건강기능식품",
+    API_INTERMEDIATES: "API/중간체",
+    LAB_CHEMICALS: "실험실 화학물질",
+    MINERAL_FORTIFIERS: "미네랄 강화제",
+    EXCIPIENTS: "부형제",
+    OTHER_PRODUCTS: "기타 제품",
+    CONTACT_DETAILS: "연락처",
+    COMPANY_NAME: "Muby Chemicals",
+    EMAIL: "info@mubychem.in",
+    COPYRIGHT: "판권 소유.",
+  
+    SPECIALTY_CHEMICALS: "우리는 고품질의 특수 화학물질과 부형제를 생산하는 데 특화되어 있습니다.",
+    PHARMACEUTICAL_INDUSTRY: "저희 제품은 순도와 효능으로 전 세계 다양한 산업을 지원하고 있습니다.",
+  
+    // -------Home Section ---------
+    qualityChemicals: "1976년부터 전 세계에 고품질 화학물질 공급",
+    qualityProducts: "고품질 제품",
+    whereChemistryMeets: "화학이 만나는 곳.",
+    ourProducts: "우리의 제품",
+    watchVideo: "영상 보기",
+  
+    welcomeToMubyChem: "Muby Chem Private Limited에 오신 것을 환영합니다",
+    obsessedWithQuality: "1976년부터 품질에 집착",
+    mubyChemDescription1: "Muby Chem은 의약품, 건강기능식품, 특수 화학물질, 식품 첨가물 등 다양한 산업 분야를 위한 고품질 화학 제품과 혁신적인 솔루션을 제공합니다. 49년 이상의 전문성을 바탕으로 가장 엄격한 품질 및 규제 기준을 충족하는 최첨단 제품을 제공합니다.",
+    mubyChemDescription2: "우리는 전 세계 산업과 협력하여 건강, 웰빙 및 산업 성능을 향상시키는 뛰어난 제품 개발을 지원합니다. 맞춤형 화학 솔루션, 건강기능식품 원료 또는 특수 화학 제형이 필요하다면 Muby Chem이 신뢰할 수 있는 파트너입니다.",
+  
+    apis: "API",
+    apisDescription: "의학 연구는 건강 연구라고도 불립니다.",
+    mineralActives: "미네랄 활성 성분",
+    mineralActivesDescription: "정확한 분석은 신뢰할 수 있는 시험실입니다.",
+    knowMore: "더 알아보기",
+  
+    ourService: "우리의 서비스",
+    manufacturing: "제조 시설",
+    hello: "무료 <br /> 견적 받기!"
+  },
+  es: {
+    HOME: "INICIO",
+    ABOUT_US: "SOBRE NOSOTROS",
+    PRODUCTS: "PRODUCTOS",
+    BLOGS: "BLOGS",
+    CAREER: "CARRERA",
+    CONTACT_US: "CONTÁCTENOS",
+    USEFUL_LINKS: "Enlaces Útiles",
+  
+    // -------------Footer Section ----------
+    PRODUCT: "Producto",
+    CATEGORIES: "Categorías",
+    PHARMACEUTICALS: "Farmacéuticos",
+    FOOD_ADDITIVES: "Aditivos Alimentarios",
+    ANALYTICAL_REAGENT: "Reactivo Analítico",
+    AMINO_ACID: "Aminoácidos",
+    SPECIALITY_CHEMICALS: "Productos Químicos Especiales",
+    NUTRACEUTICALS: "Nutracéuticos",
+    API_INTERMEDIATES: "API / Intermedios",
+    LAB_CHEMICALS: "Químicos de Laboratorio",
+    MINERAL_FORTIFIERS: "Fortificantes Minerales",
+    EXCIPIENTS: "Excipientes",
+    OTHER_PRODUCTS: "Otros Productos",
+    CONTACT_DETAILS: "Datos de Contacto",
+    COMPANY_NAME: "Muby Chemicals",
+    EMAIL: "info@mubychem.in",
+    COPYRIGHT: "Todos los derechos reservados.",
+  
+    SPECIALTY_CHEMICALS: "Nos especializamos en la producción de productos químicos especiales y excipientes de alta calidad.",
+    PHARMACEUTICAL_INDUSTRY: "Nuestros productos son reconocidos por su pureza y eficacia, respaldando a diversas industrias a nivel mundial.",
+  
+    // -------Home Section ---------
+    qualityChemicals: "Químicos de calidad en todo el mundo - Desde 1976",
+    qualityProducts: "Productos de Calidad",
+    whereChemistryMeets: "Donde la Química se Encuentra.",
+    ourProducts: "Nuestros Productos",
+    watchVideo: "Ver Video",
+  
+    welcomeToMubyChem: "Bienvenido a Muby Chem Private Limited",
+    obsessedWithQuality: "Obsesionados con la Calidad desde 1976",
+    mubyChemDescription1: "En Muby Chem, estamos comprometidos con el avance de las industrias al proporcionar productos químicos de alta calidad y soluciones innovadoras para las industrias farmacéutica, nutracéutica, de productos químicos especiales, aditivos alimentarios y más. Con más de 49 años de experiencia, nos enorgullece ofrecer productos de vanguardia que cumplen con los estándares regulatorios y de calidad más exigentes.",
+    mubyChemDescription2: "Trabajamos con industrias de todo el mundo, apoyando el desarrollo de productos excepcionales que mejoran la salud, el bienestar y el rendimiento industrial. Ya sea que necesite soluciones químicas personalizadas, ingredientes nutracéuticos o formulaciones químicas especiales, Muby Chem es su socio de confianza.",
+  
+    apis: "APIs",
+    apisDescription: "La investigación en salud, a veces llamada investigación médica.",
+    mineralActives: "Activos Minerales",
+    mineralActivesDescription: "El Análisis Preciso es un laboratorio de pruebas absoluto.",
+    knowMore: "Saber Más",
+  
+    ourService: "NUESTRO SERVICIO",
+    manufacturing: "Instalaciones de Producción",
+    hello: "¡Obtén tu <br /> estimación gratuita!"
   }
 };
 

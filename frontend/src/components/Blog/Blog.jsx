@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import background from '../../assets/background.png';
 // import { useNavigate } from "react-router-dom";
-
+import Page1 from './Page1'
+import { Link } from 'react-router-dom'; 
 
 const data = [
   { title: "Essential Amino Acid – Its Uses and Benefits for our Body.", description: "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.", image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png" },
@@ -52,11 +53,12 @@ const Blog = () => {
               </div> */}
 
               <div className='mt-4 ml-1 flex justify-start'>
-                <button className="p-2 bg-[#7B3931] text-white rounded-full hover:bg-blue-700 transition-all font-semibold">
-                  Read More
-                </button>
+                <Link to="/Page1">
+                  <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
+                    Read More
+                  </button>
+                </Link>
               </div>
-
             </div>
           ))}
         </div>

@@ -200,7 +200,8 @@ const Career = () => {
 
   return (
     <>
-      <div className="bg-[#ecf2ff] p-6 md:p-12">
+    {/*-------------- Banner section ----------- */}
+      <div className="bg-white p-6 md:p-12">
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
@@ -209,9 +210,9 @@ const Career = () => {
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                Product
+                Career
               </h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; PRODUCT</p>
+              <p className="text-white text-lg pl-5 ">Mubychem &gt; CAREER</p>
             </div>
           </div>
         </div>

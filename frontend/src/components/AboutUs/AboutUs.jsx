@@ -239,11 +239,11 @@ const AboutUs = () => {
 
         {/* Video Popup Modal */}
         {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className=" p-4 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-1/2">
+          <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
+            <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#773135]">
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2  text-white p-1 rounded-full"
+                className="absolute top-2 right-2 text-white p-1 rounded-full"
               >
                 ✖
               </button>
@@ -252,7 +252,6 @@ const AboutUs = () => {
                 height="315"
                 src={videoUrl}
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="rounded-lg"

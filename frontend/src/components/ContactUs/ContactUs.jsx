@@ -23,16 +23,19 @@ const ContactUs = () => {
       title: "Mail Us 24/7",
       details: ["no-reply@mubychem.com", "support@MubyChem.com"],
       icon: <Mail className="text-blue-500" size={32} />,
+      link: "mailto:support@MubyChem.com",
     },
     {
       title: "Our Location",
       details: ["Sandhrust road ", "Dongri  Mumbai  "],
       icon: <MapPin className="text-blue-500" size={32} />,
+      link: "https://www.google.com/maps?q=Sandhurst+Road+Dongri+Mumbai",
     },
     {
       title: "Call US 24/7",
       details: ["Phone: +91 222 377 0100", "Mobile: +91 222 377 0100"],
       icon: <Phone className="text-blue-500" size={32} />,
+      link: "tel:+912223770100",
     },
     {
       title: "Working Days",
@@ -41,6 +44,7 @@ const ContactUs = () => {
         "Saturday to Sunday - Closed",
       ],
       icon: <Calendar className="text-blue-500" size={32} />,
+      link: "#working-hours", // This could scroll to a section with more info
     },
   ];
 
@@ -62,7 +66,7 @@ const ContactUs = () => {
   return (
     <>
       {/* -----------------Contact Us Banner --------------*/}
-      <div className="bg-[#ecf2ff] p-6 md:p-12">
+      <div className="bg-white p-6 md:p-12">
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
@@ -79,39 +83,45 @@ const ContactUs = () => {
         </div>
       </div>
       {/* -------------Contact Information -------------------*/}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-[#ecf2ff] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-white">
         {contactDetails.map((contact, index) => (
-          <motion.div
+          <a
             key={index}
-            whileHover={{ scale: 1.05 }}
-            className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#e7eefc] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
+            href={contact.link}
+            target={contact.link.startsWith("http") ? "_blank" : "_self"}
+            rel="noopener noreferrer"
           >
-            <h3 className="text-xl font-semibold text-gray-900">
-              {contact.title}
-            </h3>
-            <div className="mt-2">
-              {contact.details.map((detail, idx) => (
-                <p key={idx} className="text-gray-600 text-sm">
-                  {detail}
-                </p>
-              ))}
-            </div>
-            <div className="flex justify-between items-center mt-6">
-              <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center ">
-                {contact.icon}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#9d916c] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                {contact.title}
+              </h3>
+              <div className="mt-2">
+                {contact.details.map((detail, idx) => (
+                  <p key={idx} className="text-gray-600 text-sm">
+                    {detail}
+                  </p>
+                ))}
               </div>
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
-              >
-                <ArrowUpRight className="text-blue-500" size={20} />
-              </motion.div>
-            </div>
-          </motion.div>
+              <div className="flex justify-between items-center mt-6">
+                <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center">
+                  {contact.icon}
+                </div>
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
+                >
+                  <ArrowUpRight className="text-blue-500" size={20} />
+                </motion.div>
+              </div>
+            </motion.div>
+          </a>
         ))}
       </div>
       {/* ---------------------- Contact Form Section ----------------- */}
-      <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between bg-[#ecf2ff] px-4 md:px-6 lg:px-12 py-12 gap-y-6 md:gap-x-12">
+      <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between bg-white px-4 md:px-6 lg:px-12 py-12 gap-y-6 md:gap-x-12">
         {/* Left Side */}
         <div className="w-full md:w-[50%] lg:w-[45%] text-center md:text-left flex-grow">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
@@ -211,9 +221,9 @@ const ContactUs = () => {
           </Formik>
         </div>
       </div>
-            
+
       {/*----------------- Map section --------------- */}
-      <section className="py-8 px-6 bg-[#ecf2ff] flex justify-center  ">
+      <section className="py-8 px-6 bg-white flex justify-center  ">
         <div className="w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
           <iframe
             title="Google Map"
@@ -229,4 +239,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUs;

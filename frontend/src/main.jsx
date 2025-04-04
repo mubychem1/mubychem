@@ -13,6 +13,7 @@ import Career from './components/Career/Career.jsx';
 import Products from './components/Products/Products.jsx';
 // import Homes from './components/Home/Homes.jsx';
 import Blog from './components/Blog/Blog.jsx';
+import Page1 from './components/Blog/Page1.jsx';
 
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
 
       </Route>
       <Route path="blogs" element={<Blog />} />
+      <Route path="Page1" element={<Page1 />} />
       <Route path="contact" element={<ContactUs />} />
       <Route path="career" element={<Career />} />
     </Route>

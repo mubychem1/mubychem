@@ -19,6 +19,9 @@ const Header = () => {
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
         { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
         { value: "fr", label: "Franch", flag: "https://flagcdn.com/w40/fr.png" },
+        { value: "ru", label: "Russian", flag: "https://flagcdn.com/w40/ru.png" },
+        { value: "ko", label: "Korean", flag: "https://flagcdn.com/w40/kr.png" },
+        { value: "es", label: "Spanish", flag: "https://flagcdn.com/w40/es.png" }
     ];
     const [selected, setSelected] = useState(options[0]);
     const [isOpe, setIsOpe] = useState(false);
@@ -61,22 +64,22 @@ const Header = () => {
             label: "Pharmaceuticals",
             link: "/products/category1",
             submenu: [
-                { label: "category1", link: "/products/category1/tablets" },
-                { label: "category2", link: "/products/category1/injections" },
-                { label: "category3", link: "/products/category1/syrups" },
+                { label: "category1", link: "/products/category1/" },
+                { label: "category2", link: "/products/category1/" },
+                { label: "category3", link: "/products/category1/" },
             ]
         },
         {
             label: "Nutraceuticals",
             link: "/products/category2",
             submenu: [
-                { label: "category1", link: "/products/category2/vitamins" },
-                { label: "category2", link: "/products/category2/supplements" },
+                { label: "category1", link: "/products/category2/" },
+                { label: "category2", link: "/products/category2/" },
             ]
         },
-        { label: "Speciality chemicals", link: "/products/category3" },
-        { label: "Lab Chemicals", link: "/products/category4" },
-        { label: "Analytical Reagent", link: "/products/category5" },
+        { label: "Speciality chemicals", link: "/products/" },
+        { label: "Lab Chemicals", link: "/products/" },
+        { label: "Analytical Reagent", link: "/products/" },
         {
             label: "Amino Acid",
             link: "/products/category6",
@@ -158,6 +161,7 @@ const Header = () => {
                                                     {hoveredIndex === index && <FaMinus />}
                                                     {item.label}
                                                 </NavLink>
+
 
                                                 {/* Submenu Dropdown */}
                                                 {item.submenu && hoveredIndex === index && (
@@ -277,8 +281,8 @@ const Header = () => {
                     {/* Contact Section (Phone & Email Aligned to Right) */}
                     <div className="hidden md:flex items-center space-x-6 ml-auto">
                         {/*-------------- Phone Section --------------- */}
-                        <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-full">
-                            <FaPhoneAlt className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
+                        <div className="flex items-center space-x-2 bg-[#773135] p-3 rounded-full">
+                            <FaPhoneAlt className="text-white transition duration-300 text-2xl" />
                         </div>
 
                         {/*------------ Search Icon Section ---------- */}
@@ -286,10 +290,10 @@ const Header = () => {
                         <div>
                             {/* Search Icon Button */}
                             <div
-                                className="flex items-center space-x-3 bg-blue-100 p-3 rounded-full cursor-pointer"
+                                className="flex items-center space-x-3 bg-[#773135] p-3 rounded-full cursor-pointer"
                                 onClick={() => setIsTap(true)}
                             >
-                                <IoMdSearch className="text-[#773135] hover:text-black transition duration-300 text-2xl" />
+                                <IoMdSearch className="text-white transition duration-300 text-2xl" />
                             </div>
 
                             {/* Search Popup */}
@@ -322,7 +326,7 @@ const Header = () => {
                         <div className="relative w-40">
                             <button
                                 onClick={() => setIsOpe(!isOpe)}
-                                className="bg-blue-100 w-full h-12 rounded-full text-sm font-semibold text-gray-700 flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                                className="bg-[#773135] w-full h-12 rounded-full text-sm font-semibold text-white flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
                             >
                                 <div className="flex items-center gap-2">
                                     <img src={selected.flag} alt={selected.label} className="w-5 h-5 rounded-full" />
