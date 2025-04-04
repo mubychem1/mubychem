@@ -12,6 +12,7 @@ import translations from '../translater/translations.js';
 import { ChevronDown } from "lucide-react";
 
 
+
 const Header = () => {
 
     const options = [
@@ -53,20 +54,42 @@ const Header = () => {
     }, [isMobileMenuOpen]);
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [subhoveredIndex, setSubhoveredIndex] = useState(null);
 
     const menuItems = [
-        { label: "Pharmaceuticals", link: "/products/category1" },
-        { label: "Nutraceuticals", link: "/products/category2" },
+        {
+            label: "Pharmaceuticals",
+            link: "/products/category1",
+            submenu: [
+                { label: "category1", link: "/products/category1/tablets" },
+                { label: "category2", link: "/products/category1/injections" },
+                { label: "category3", link: "/products/category1/syrups" },
+            ]
+        },
+        {
+            label: "Nutraceuticals",
+            link: "/products/category2",
+            submenu: [
+                { label: "category1", link: "/products/category2/vitamins" },
+                { label: "category2", link: "/products/category2/supplements" },
+            ]
+        },
         { label: "Speciality chemicals", link: "/products/category3" },
         { label: "Lab Chemicals", link: "/products/category4" },
         { label: "Analytical Reagent", link: "/products/category5" },
-        { label: "Amino Acid", link: "/products/category6" },
+        {
+            label: "Amino Acid",
+            link: "/products/category6",
+            // submenu: [
+            //     { label: "category1", link: "/products/category6/essential" },
+            //     { label: "category2", link: "/products/category6/non-essential" },
+            // ]
+        },
         { label: "API/Intermediates", link: "/products/category7" },
         { label: "Food Additives", link: "/products/category8" },
         { label: "Excipients", link: "/products/category9" },
         { label: "Other Products", link: "/products/category10" },
-
-    ]
+    ];
 
     return (
         <>
@@ -116,14 +139,12 @@ const Header = () => {
                                 </span>
 
                                 {/* Dropdown Content */}
-                                <div
-                                    className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
-                                >
+                                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                     <ul className="py-2">
                                         {menuItems.map((item, index) => (
                                             <li
                                                 key={index}
-                                                className="px-6 py-3 text-gray-800 flex items-center hover:bg-gray-100 transition-all duration-300 ease-in-out"
+                                                className="relative px-6 py-3 text-gray-800 flex items-center justify-between hover:bg-gray-100 transition-all duration-300 ease-in-out group"
                                                 onMouseEnter={() => setHoveredIndex(index)}
                                                 onMouseLeave={() => setHoveredIndex(null)}
                                             >
@@ -137,6 +158,33 @@ const Header = () => {
                                                     {hoveredIndex === index && <FaMinus />}
                                                     {item.label}
                                                 </NavLink>
+
+                                                {/* Submenu Dropdown */}
+                                                {item.submenu && hoveredIndex === index && (
+                                                    <div className="absolute top-0 left-full w-52 bg-white border border-gray-200 rounded-2xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                                        <ul className="py-2">
+                                                            {item.submenu.map((subItem, subIndex) => (
+                                                                <li
+                                                                    key={subIndex}
+                                                                    className="px-4 py-3 hover:bg-gray-100 transition flex items-center"
+                                                                    onMouseEnter={() => setSubhoveredIndex(subIndex)} // Track submenu hover
+                                                                    onMouseLeave={() => setSubhoveredIndex(null)}
+                                                                >
+                                                                    <NavLink
+                                                                        to={subItem.link}
+                                                                        className={({ isActive }) =>
+                                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"
+                                                                            }`
+                                                                        }
+                                                                    >
+                                                                        {subhoveredIndex === subIndex && <FaMinus />}
+                                                                        {subItem.label}
+                                                                    </NavLink>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>
