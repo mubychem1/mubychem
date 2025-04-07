@@ -101,3 +101,34 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail;
+
+
+
+// const mongoose = require('mongoose');
+
+// const productDescriptionSchema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         required: true,
+//     },
+//     medicinalUses: {
+//         type: String,
+//         required: true,
+//     },
+    // pharmaceuticalApplications: {
+    //     type: String,
+    //     required: true,
+    // },
+    // ecologicalImportance: {
+    //     type: String,
+    //     required: true,
+    // },
+    // traditionalUses: {
+    //     type: String,
+    //     required: true,
+    // }
+// });
+
+// const ProductDescription = mongoose.model('ProductDescription', productDescriptionSchema);
+
+// module.exports = ProductDescription;

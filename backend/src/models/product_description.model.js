@@ -19,38 +19,45 @@
 
 import mongoose from "mongoose";
 const product_descriptionSchema = new mongoose.Schema({
-  
-    name:{
-        type:String,
-        required:true,
-    },
-    casNo:{
-        type:String
-    },
-    dosageForm:{
-        type:String
-    },
-    therapeuticCategory:{
-        type:String
-    },
-    regulatoryFiling:{
-        type:String
-    },
-    productStatus:{
-        type:String
-    },
-    image:{
-        type:String,
-        required:true
-    },
-   
 
+    name: {
+        type: String,
+        required: true,
+    },
+    casNo: {
+        type: String
+    },
+    dosageForm: {
+        type: String
+    },
+    therapeuticCategory: {
+        type: String
+    },
+    regulatoryFiling: {
+        type: String
+    },
+    productStatus: {
+        type: String
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    medicinalUses: {
+        type: String
+    },
+    pharmaceuticalApplications: {
+        type: String,
+    },
+    ecologicalImportance: {
+        type: String,
+    },
+    traditionalUses: {
+        type: String,
+    }
 
-    // application: [{
-    //     title: String,
-    //     description: String
-    // }],
     
+
 })
 
 export const Product_description = mongoose.model("Product_description", product_descriptionSchema)

@@ -118,11 +118,14 @@ import background from '../../assets/background.png';
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; 
+
 
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
+       
+       <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
         <img
           src={product.img}
           alt={product.name}
@@ -138,6 +141,7 @@ const ProductCard = ({ product }) => {
           </h2>
         </div>
       </div>
+      
     </>
   );
 };
@@ -163,26 +167,30 @@ const Products = () => {
 
   return (
     <>
-      <div className='bg-[#ecf2ff]'>
-        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
+      <div className="bg-white p-6 md:p-12">
+        <div
+          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
+          style={{ backgroundImage: `url(${background})` }}
+        >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4">Product</h1>
-              <p className="text-white text-lg pl-5">Mubychem &gt; Product</p>
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+                Product
+              </h1>
+              <p className="text-white text-lg pl-5 ">Mubychem &gt; PRODUCT</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="p-6 bg-blue-100 min-h-screen">
-        <h1 className="text-center text-2xl font-bold text-gray-800 mb-6">Our Products</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+      {products.map((product) => (
+        <Link to={`/Simple/${product._id}`} key={product._id}>
+          <ProductCard product={product} />
+        </Link>
+      ))}
+    </div>
     </>
   );
 };

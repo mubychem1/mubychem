@@ -63,19 +63,19 @@ const Header = () => {
         {
             label: "Pharmaceuticals",
             link: "/products/category1",
-            submenu: [
-                { label: "category1", link: "/products/category1/" },
-                { label: "category2", link: "/products/category1/" },
-                { label: "category3", link: "/products/category1/" },
-            ]
+            // submenu: [
+            //     { label: "category1", link: "/products/category1/" },
+            //     { label: "category2", link: "/products/category1/" },
+            //     { label: "category3", link: "/products/category1/" },
+            // ]
         },
         {
             label: "Nutraceuticals",
             link: "/products/category2",
-            submenu: [
-                { label: "category1", link: "/products/category2/" },
-                { label: "category2", link: "/products/category2/" },
-            ]
+            // submenu: [
+            //     { label: "category1", link: "/products/category2/" },
+            //     { label: "category2", link: "/products/category2/" },
+            // ]
         },
         { label: "Speciality chemicals", link: "/products/" },
         { label: "Lab Chemicals", link: "/products/" },
@@ -233,17 +233,7 @@ const Header = () => {
                                     {currentTranslations.CONTACT_US}
                                 </NavLink>
                             </li>
-                            <li className='px-4 py-2'>
-                                <NavLink
-                                    to="/simple"
-                                    className={({ isActive }) =>
-                                        `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
-                                        }`
-                                    }
-                                >
-                                    sample
-                                </NavLink>
-                            </li>
+                           
                         </ul>
 
                         {/* Mobile Menu Button */}
