@@ -2,7 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { Product } from "../models/product.model.js";
-
+// import { Product_description } from "../models/product_description.model.js";
 
 export const productList = asyncHandler(async (req, res) => {
     const products = await Product.find(); // Fetch all products
@@ -13,6 +13,15 @@ export const productList = asyncHandler(async (req, res) => {
 
     res.status(200).json(new ApiResponse(200, products, "Product list fetched successfully"));
 });
+
+// export const product_description = asyncHandler(async (req, res) => {
+//     const product_descriptions = await Product_description.find()
+
+//     if (!product_descriptions || product_descriptions === 0) {
+//         throw new ApiError(404, "no products descriptions ")
+//     }
+//     res.status(200).json(new ApiResponse(200, products, "Product list fetched successfully"));
+// })
 
 // const productList = [
 //     {

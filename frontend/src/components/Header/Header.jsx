@@ -233,6 +233,17 @@ const Header = () => {
                                     {currentTranslations.CONTACT_US}
                                 </NavLink>
                             </li>
+                            <li className='px-4 py-2'>
+                                <NavLink
+                                    to="/simple"
+                                    className={({ isActive }) =>
+                                        `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
+                                        }`
+                                    }
+                                >
+                                    sample
+                                </NavLink>
+                            </li>
                         </ul>
 
                         {/* Mobile Menu Button */}

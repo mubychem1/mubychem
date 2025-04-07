@@ -14,6 +14,7 @@ import Products from './components/Products/Products.jsx';
 // import Homes from './components/Home/Homes.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import Page1 from './components/Blog/Page1.jsx';
+import Simple from './components/Products/Simple.jsx';
 
 
 
@@ -21,16 +22,21 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
-            <Route path="about" element={<AboutUs />} />
+      <Route path="about" element={<AboutUs />} />
       <Route path="products" element={<Products />}>
-        {/* Child Routes for Products */}
-        <Route path="category1" element={<Products />} />
-
+      {/* Child Routes for Products */}
+      <Route path="category1" element={<Products />} />
       </Route>
+
+      {/* <Route path="products" element={<Products />} />
+      <Route path="products/sucoferric-oxyhydroxide" element={<Simple />} /> */}
       <Route path="blogs" element={<Blog />} />
       <Route path="Page1" element={<Page1 />} />
       <Route path="contact" element={<ContactUs />} />
       <Route path="career" element={<Career />} />
+      <Route path="simple" element={<Simple />} />
+
+
     </Route>
   )
 );

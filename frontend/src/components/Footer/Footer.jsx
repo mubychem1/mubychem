@@ -6,11 +6,14 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import logo from '../../assets/logo-white.png'
+import logo from '../../assets/logo.png'
 import translations from '../translater/translations.js'
 import { useSelector } from "react-redux"
 
+
+
 const phoneNumber = "+912223770100";
+
 
 const Footer = () => {
   const language = useSelector((state) => state.language.language); // Get selected language from Redux

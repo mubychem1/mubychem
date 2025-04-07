@@ -3,6 +3,8 @@ import background from '../../assets/background.png';
 // import { useNavigate } from "react-router-dom";
 import Page1 from './Page1'
 import { Link } from 'react-router-dom'; 
+import translations from '../translater/translations.js'
+import { useSelector } from "react-redux"
 
 const data = [
   { title: "Essential Amino Acid – Its Uses and Benefits for our Body.", description: "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.", image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png" },
@@ -15,6 +17,10 @@ const data = [
 const ITEMS_PER_PAGE = 9;
 
 const Blog = () => {
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
@@ -32,8 +38,8 @@ const Blog = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">Blogs</h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; BLOGS</p>
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">{currentTranslations.BLOGS}</h1>
+              <p className="text-white text-lg pl-5 ">Mubychem &gt; {currentTranslations.BLOGS}</p>
             </div>
           </div>
         </div>

@@ -14,7 +14,10 @@ app.use(cookieParser())
 import userRouter from './routes/contact.route.js'
 import applyRouter from './routes/apply.route.js'
 import productRouter from './routes/product.route.js'
+import productdisRouter from './routes/productdes.route.js'
+
 
 app.use("/api", userRouter)
 app.use("/api",applyRouter)
 app.use("/api",productRouter)
+app.use("/api",productdisRouter)

@@ -1,6 +1,6 @@
 // import React from "react";
 // import background from '../../assets/productbg.jpg';
-
+// import { Link } from "react-router-dom";
 
 // const products = [
 //   {
@@ -52,10 +52,9 @@
 // ];
 
 // const ProductCard = ({ product }) => {
-//   return (
+//   const isSucoferric = product.name === "SUCOFERRIC OXYHYDROXIDE";
 
-
-
+//   const cardContent = (
 //     <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
 //       <img
 //         src={product.image}
@@ -79,12 +78,14 @@
 //       </div>
 //     </div>
 //   );
+
+//   return isSucoferric ? <Link to="/products/sucoferric-oxyhydroxide">{cardContent}</Link> : cardContent;
 // };
 
 // const Products = () => {
 //   return (
 //     <>
-//        <div className="bg-[#ecf2ff] p-6 md:p-12">
+//       <div className="bg-[#ecf2ff] p-6 md:p-12">
 //         <div
 //           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
 //           style={{ backgroundImage: `url(${background})` }}
@@ -121,18 +122,19 @@ import axios from "axios";
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
         <img
-          className="w-full h-40 object-cover"
-          src={product.image || "https://flagcdn.com/w40/gb.png"}
+          src={product.img}
           alt={product.name}
+          className='w-full h-68 object-cover rounded-md '
         />
-        <div className="p-4">
-          <p className="text-gray-700 text-sm font-semibold">CATEGORY: {product.category}</p>
-          <p className="text-gray-700 text-sm">CAS No: {product.casNo}</p>
-          {product.hsnCode && <p className="text-gray-700 text-sm">HSN Code: {product.hsnCode}</p>}
-          <h2 className="text-blue-600 font-bold text-lg mt-2 hover:underline cursor-pointer">
-            {product.name}
+        <div className='mt-4 text-center'>
+          <p className='text-gray-600 font-semibold mt-9 '>CATEGORY: {product.category}</p>
+          <hr className='border-t border-gray-300 mt-1 '/>
+          <p className='text-gray-800 font-medium '>CAS No:{product.cas_no}</p>
+          <hr className="border-t border-gray-300 mt-1"/>
+          <h2 className='mt-2 text-lg font-bold text-blue-600 border-b-2 border-blue-600 inline-block '>
+            {product.product_name}
           </h2>
         </div>
       </div>
@@ -161,7 +163,7 @@ const Products = () => {
 
   return (
     <>
-       <div className='bg-[#ecf2ff]'>
+      <div className='bg-[#ecf2ff]'>
         <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden mx-4 md:mx-10' style={{ backgroundImage: `url(${background})` }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
