@@ -277,9 +277,14 @@ import mission from "../../assets/mission.png";
 import quality from "../../assets/quality.png";
 import Value from "../../assets/Value.png";
 import excellance from "../../assets/Excellence.png";
-
+import translations from '../translater/translations.js';
+import { useSelector } from "react-redux";
 
 const VerticalTabs = () => {
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+
   const [activeTab, setActiveTab] = useState(0);
   const [visibleTabs, setVisibleTabs] = useState([]);
 
@@ -301,8 +306,13 @@ const VerticalTabs = () => {
 
   const content = [
     {
-      title: "Our Vision",
-      description: " To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
+      title:{
+        en : "Our Vision",
+        hi:"vision",
+      },
+      description: {
+        en: " To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
+      },
       img: Vision,
       
     },
@@ -366,7 +376,7 @@ const VerticalTabs = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
           <motion.img
             src={content[activeTab].img}
-            alt={content[activeTab].title}
+            alt={content[activeTab].title[language]}
             className="rounded-3xl w-full max-w-sm"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -374,10 +384,10 @@ const VerticalTabs = () => {
           />
           <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-8 text-center lg:text-left">
             <h3 className="text-2xl font-bold text-gray-900 ">
-              {content[activeTab].title}
+              {content[activeTab].title[language]}
             </h3>
             <p className="text-[#6a7391] mt-3">
-              {content[activeTab].description}
+              {content[activeTab].description[language]}
             </p>
             <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[

@@ -6,11 +6,9 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import logo from '../../assets/logo.png'
-import translations from '../translater/translations.js'
-import { useSelector } from "react-redux"
-
-
+import logo from '../../assets/logo.png';
+import translations from '../translater/translations.js';
+import { useSelector } from "react-redux";
 
 const phoneNumber = "+912223770100";
 

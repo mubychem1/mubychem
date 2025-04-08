@@ -51,6 +51,8 @@ const translations = {
     ourService: "OUR SERVICE",
     manufacturing: "Manufacturing Facilities",
     hello: "et your free  <br /> estimate!"
+
+
   },
   hi: {
     HOME: "मुख्य पृष्ठ",
@@ -263,6 +265,8 @@ const translations = {
     mubyChemDescription1: "Muby Chem은 의약품, 건강기능식품, 특수 화학물질, 식품 첨가물 등 다양한 산업 분야를 위한 고품질 화학 제품과 혁신적인 솔루션을 제공합니다. 49년 이상의 전문성을 바탕으로 가장 엄격한 품질 및 규제 기준을 충족하는 최첨단 제품을 제공합니다.",
     mubyChemDescription2: "우리는 전 세계 산업과 협력하여 건강, 웰빙 및 산업 성능을 향상시키는 뛰어난 제품 개발을 지원합니다. 맞춤형 화학 솔루션, 건강기능식품 원료 또는 특수 화학 제형이 필요하다면 Muby Chem이 신뢰할 수 있는 파트너입니다.",
   
+    
+
     apis: "API",
     apisDescription: "의학 연구는 건강 연구라고도 불립니다.",
     mineralActives: "미네랄 활성 성분",
