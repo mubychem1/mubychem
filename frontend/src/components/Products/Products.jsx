@@ -132,7 +132,7 @@ const ProductCard = ({ product }) => {
           className='w-full h-68 object-cover rounded-md '
         />
         <div className='mt-4 text-center'>
-          <p className='text-gray-600 font-semibold mt-9 '>CATEGORY: {product.category}</p>
+          <p className='text-gray-600 font-semibold mt-9 '>Molecural Formula: {product.molecural_formula}</p>
           <hr className='border-t border-gray-300 mt-1 '/>
           <p className='text-gray-800 font-medium '>CAS No:{product.cas_no}</p>
           <hr className="border-t border-gray-300 mt-1"/>
@@ -151,7 +151,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:9000/api/product")
+    axios.get("http://localhost:8000/api/product")
       .then((response) => {
         console.log("API Response:", response.data);
         if (Array.isArray(response.data.data)) {
@@ -178,13 +178,13 @@ const Products = () => {
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
                 Product
               </h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; PRODUCT</p>
+              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center mx-auto p-10">
       {products.map((product) => (
         <Link to={`/Simple/${product._id}`} key={product._id}>
           <ProductCard product={product} />

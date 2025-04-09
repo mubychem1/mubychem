@@ -1,206 +1,71 @@
-import React, { useState } from 'react';
-import background from '../../assets/carrerbg.png';
-import { FaMapMarkerAlt } from "react-icons/fa";
-import registration from '../../assets/registration.png';
-import { Dialog } from "@headlessui/react";
-import career from '../../assets/career.png'
+import React from "react";
+import { motion } from "framer-motion";
+import background from "../../assets/contactbg.png";
+import { Mail, MapPin, Phone, Calendar, ArrowUpRight } from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
+import { submitForm } from "../../redux/slice/formSlice.js"; // Ensure path is correct
+import * as Yup from "yup";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
-const jobs = [
-  {
-    id: 1,
-    title: "React Developer at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "The Area Sales Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
-    responsibility: ["Develop and execute sales plans to achieve revenue targets.", "Manage and motivate a team of sales representatives.", "Identify and develop new customers.", "Maintain and grow relationships with existing customers.", "Conduct market research and analysis.", "Represent the company at trade shows and industry events.", "Stay up-to-date on industry trends and regulations."],
-    qualification: ["Bachelor's degree in business, marketing, or a related field.", "5+ years of experience in the chemical industry.", "Strong sales and marketing skills.", "Excellent communication and interpersonal skills.", "Ability to work independently and as part of a team", "Ability to travel"],
-    experience: "Minimum 10 Years",
-  },
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
-  {
-    id: 2,
-    title: "Marketing Manager at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "The Marketing Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
-    responsibility: ["Primary key role as Sales, Marketing & Customer retention.", "To conduct regular follow-up of all the Prospective Clients through Phone Calls and Mails.", "To visit clients on a regular basis.", "Excellent in PPT presentation.", "Excellent in MIS preparation and circular timely.", "Must have Analytical Skills.", "Good command over English (Listening, Reading, Speaking)", "Excellent mail drafting skill.", "Should have Minimum 4 years’ experience in Pharmaceutical or Chemicals Industries.", "Coordination with other team members to create a good working atmosphere.", "Monitor market trends, analysis consumer markets activities to identify opportunities.", "Planning and implementing business strategies.", "Identifying key market opportunities", "Maintain a good relationship with both existing and prospective customers."],
-    qualification: ["Bachelor's degree in business, marketing, or a related field.", "3+ years of experience in sales, preferably in the chemical industry.", "Strong understanding of the API, Specialty Chemicals and Excipients industry.", "Excellent communication and interpersonal skills.", "Ability to work independently and as part of a team.", "Strong customer service skills.", "Proficient in Microsoft Office Suite."],
-    experience: " Minimum 8 Years",
-  },
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8 } },
+};
 
-  {
-    id: 3,
-    title: "R & D Executive at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are actively looking for credible team members in R&D who would be primarily responsible for:",
-    responsibility: ["Identifying techno commercially attractive and non infringing route for identified for commercialization in time bound manner.", "Develop & standardize industrially feasible processes and also meet long term cost targets.", "Identify & develop new products.", "Maintain and grow relationships with existing customers.", "Prepare feasibility report, cost analysis report, monthly progress report and TDR", "Demonstrate/validate the lab scale process up to commercial scale", "Lead a team of scientist and chemists for new products / process development and improvement of the existing products", "Knowledge and understanding of synthetic methods, analytical methods and relevant products.", "Excellent skills in interpretation of analytical data from UV, IR, NMR, GC, GCMS & HPLC, LCMS, MS and so on.", "Well versed with GLP, GMP and IMS guidelines.", "Understanding of literature/ patents.", "Understanding and accomplishment of Customer requirements."],
-    qualification: ["M.Sc. / Ph. D. with Organic Chemistry"],
-    experience: "Minimum 5 Years years of relevant experience in R&D",
-  },
+const ContactUs = () => {
+  const contactDetails = [
+    {
+      title: "Mail Us 24/7",
+      details: ["no-reply@mubychem.com", "support@MubyChem.com"],
+      icon: <Mail className="text-blue-500" size={32} />,
+      link: "mailto:support@MubyChem.com",
+    },
+    {
+      title: "Our Location",
+      details: ["Sandhrust road ", "Dongri  Mumbai  "],
+      icon: <MapPin className="text-blue-500" size={32} />,
+      link: "https://www.google.com/maps?q=Sandhurst+Road+Dongri+Mumbai",
+    },
+    {
+      title: "Call US 24/7",
+      details: ["Phone: +91 222 377 0100", "Mobile: +91 222 377 0100"],
+      icon: <Phone className="text-blue-500" size={32} />,
+      link: "tel:+912223770100",
+    },
+    {
+      title: "Working Days",
+      details: [
+        "Mon to Fri - 09:00am To 06:00pm",
+        "Saturday to Sunday - Closed",
+      ],
+      icon: <Calendar className="text-blue-500" size={32} />,
+      link: "#working-hours", // This could scroll to a section with more info
+    },
+  ];
 
-  {
-    id: 4,
-    title: "SEO Executive at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are looking for an SEO/SEM expert to manage all search engine optimization and marketing activities.",
-    responsibility: ["Execute tests, collect and analyze data and results, identify trends and insights in order to achieve maximum ROI in paid search campaigns.", "Track, report, and analyze website analytics and PPC initiatives and campaigns.", "Manage campaign expenses, staying on budget, estimating monthly costs and reconciling discrepancies.", "Optimize copy and landing pages for search engine marketing", "Perform ongoing keyword discovery, expansion and optimization.", "Research and implement search engine optimization recommendations.", "Research and analyze competitor advertising links.", "Develop and implement link building strategy.", "Work with the development team to ensure SEO best practices are properly implemented on newly developed code.", "Work with editorial and marketing teams to drive SEO in content creation and content programming.", "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords.", "Proven SEO experience", "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.", "Solid understanding of performance marketing, conversion, and online customer acquisition.", "In-depth experience with website analytics tools (e.g., Google Analytics, Net Insight, Omniture, Web Trends).", "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite).", "Experience with A/B and multivariate experiments", "Working knowledge of HTML, CSS, and JavaScript development and constraints", "Knowledge of ranking factors and search engine algorithms.", "Up-to-date with the latest trends and best practices in SEO and SEM.",],
-    qualification: ["BS/MS degree in a quantitative, test-driven field."],
-    experience: "E12-13 years of relevant experience in R & D,",
-  },
+  const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.form);
 
-  {
-    id: 5,
-    title: "Sr Accounts Executive at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are seeking a highly competent Senior Accounts Executive to independently manage various accounting activities on a daily, monthly, quarterly, and annual basis. The ideal candidate will coordinate with internal and external stakeholders to ensure completion of annual audits and maintain accurate financial records. Key responsibilities include:",
-    responsibility: ["Performing comprehensive accounting tasks, including but not limited to client payments, vouchers, bills, receipts, bank reconciliation, and reconciliation of sundry debtors & creditors.", "Handling all compliance activities proficiently, such as GST, TDS, PT, and Advance Tax.", "Reviewing closing entries in the system prior to preparing monthly financial reports.", "Analyzing and reporting on financial status, including income statement variances, and communicating results to management.", "Contributing to budget preparation and analysis.", "Identifying opportunities to improve systems and procedures and initiating corrective actions as necessary."],
-    qualification: ["B.Com or M.Com"],
-    experience: "4-5 years of work experience, preferably from a CA Firm.",
-  },
-
-  {
-    id: 6,
-    title: "Purchase Executive at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are seeking a dynamic Sourcing Executive with a minimum of 1.5 years of experience in the Chemicals & Pharmaceuticals industries. The ideal candidate will be responsible for the preparation and processing of purchase orders, sourcing new vendors, and maintaining effective communication with local vendors and traders. Key responsibilities include:",
-    responsibility: ["Identifying techno commercially attractive and non infringing route for identified for commercialization in time bound manner.", "Sourcing new vendors and evaluating their suitability for partnership.", "Following up with local vendors and traders to obtain competitive rates and samples of materials.", "Negotiating rates, quantities, and ensuring the quality of materials.", "Coordinating with suppliers and transporters to ensure timely delivery of materials."],
-    qualification: ["Minimum 1.5 years of experience in sourcing, preferably in API, Excipients, or Chemicals.", "Good English communication and written skills.", "Strong sales and marketing skills.", "Proficiency in MS Office."],
-    experience: "Minimum 3 Years",
-  },
-
-  {
-    id: 7,
-    title: "HR Executive at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions. The ideal candidate will possess knowledge of various job portals such as Naukri.com, Indeed, as well as proficiency in leveraging social media channels like Instagram, Facebook, etc., for sourcing top talent.",
-    responsibility: ["Conduct end-to-end recruitment activities for open positions within the organization.", "Utilize job portals like Naukri.com, Indeed, and social media platforms to actively source potential candidates.", "Create engaging job postings and ensure their visibility across all relevant portals and social media platforms.", "Establish effective communication with potential candidates, providing them with a brief introduction to the company and job description.", "Coordinate with external consultancies, campuses, and colleges to gather alumni details for potential candidates", "Screen resumes, conduct initial screenings, and schedule interviews for candidates matching the required criteria.", "Provide real-time feedback to interviewed candidates and maintain ongoing communication throughout the recruitment process.", "Facilitate offer roll-outs, negotiate salaries, and ensure smooth closures for successful onboarding."],
-    qualification: ["Bachelor's degree in Human Resources Management, Business Administration, or relevant field.", "Proven experience in end-to-end recruitment processes, preferably in a fast-paced environment.", "Strong familiarity with job portals such as Naukri.com, Indeed, and social media channels.", "Excellent communication skills with the ability to convey information effectively to candidates.", "Proficient in candidate sourcing, screening, and interview scheduling", "Negotiation skills and ability to manage offer roll-outs and closures effectively.", "Highly organized with attention to detail and ability to prioritize tasks efficiently."],
-    experience: "Minimum 3 Years",
-  },
-
-  {
-    id: 7,
-    title: "QA Asst Manager at MubyChem",
-    location: "Sandhurst",
-    color: "bg-[#7B3931]",
-    description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
-    responsibility: ["QA Executive shall verify documents and facility as per existing procedures, cGMP and GLP in company premises.", "To issue the Batch Manufacturing Record, Equipment cleaning record, Logbooks, Analytical Report for raw material, finish product and packing material or any other documents.", "SOP preparation of different departments/ preparation of draft SOPs.", "Line Clearance activities for Production department before start of the process.", "To issue the Change control form, deviation form, Out of Specification form, Customer complaint form etc. as required from relevant dept.", "Review of Batch Manufacturing Record, Analytical reports/records and filling. After verification of all documents and release of finish product.", "To verify Pest control activities on daily basis and record.", "Monitoring of Temperature and Humidity of Finish goods store/ Packing & Blending Area and record.", "Sampling activity of Finish product, stability, retained sample, In–process and Rejected material.", "To prepare/Review BMR, MFR as per regulatory requirements.", "Distribution, retrieval and control of SOPs, documents/records of all department.", "To participate in internal audits, customer audit, regulatory inspection.", "To Attend Quality Review meeting as per schedule.", "To prepare documents & records and monitoring of activities as per SOPs.", "To prepare protocol/Report Technology Transfer documents and Activity.", "To ensure data integrity as per procedure.", "To review Production, QC, QA, Store, Engineering and EHS activity.", "Data storage and gathering and trending of quality-related data for preparation of Annual Product Review.", "To prepare approved vendor list and maintain vendor qualification.", "To send samples to external agency or lab for testing.", "Conduct traceability Activity.", "Preparation and maintain CAPA log.", "To ensure that deviations, product recall, return goods and customer Complaints, OOS, OOT by CAPA and Root Cause analysis are investigated, fill up of report and log the same.", "To verify of process validation, cleaning validation and equipment qualification and to prepare protocol and report.", "To verify Analytical Method validation or verification.", "To investigate Returned Material and maintain the record.", "To investigate Product complaint and maintain the record.", "Ensuring compliance of the systems used for maintaining the equipment and calibrating equipment/instruments/preparation of schedule.", "To prepare a schedule and conduct training on cGMP, GLP and evaluation of the training.", "Providing training to all concerned on cGMP and on job specific or based on needs identified.", "Any other assignment/work allocated by Head QA.", "To ensure disposal of waste is carried out as per procedure.", "To Support the head of department in the environmental management work and reporting to the head of Department regarding how the environmental management work is continuing.", "Investigation of deviation/incident related to Environment management with co-ordination with head of department."],
-    qualification: ["BSC"],
-    experience: "Minimum 7 Years",
-  },
-
-  {
-    id: 8,
-    title: "QC Head at MubyChem",
-    location: "Taloja and Ankleshwar",
-    color: "bg-[#7B3931]",
-    description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
-    responsibility: ["Quality Control department functions for assuring the quality of all the batches manufactured, at every stage of manufacturing/processing excipients and drug products.", "Sampling, inspection & testing as per specifications of Raw material for release or rejection & its documentation.", "Sampling, inspection & testing as per specifications of packaging material for release or rejection & its documentation.", "Sampling, inspection & testing as per specifications of in-process product for release or rejection for further processing or reprocessing & its documentation.", "Sampling, inspection & testing as per specifications of finished products for release or rejection for further processing or re-processing & its documentation.", "Release or rejection of every batch of Drug Products for distribution and sale.", "Stability chamber handling, Stability testing and evaluation of shelf-life of products as per the stability interval planner.", "To prepare or review of stability testing protocol and report and summary report.", "Microbiological analysis of raw material, finished products, water and environmental bio-burden monitoring.", "To review of monthly trend prepared for physicochemical and microbiological trend data and it’s complying with the predefined specifications.", "Analytical investigation for complaints and product recalls.", "Analytical support for evaluating the Change Control proposals & Systems.", "Out of specification investigations for laboratory results.", "Investigation of deviations in the analysis.", "Analysis of Returned products (salvage and disposal).", "Internal Quality System Audits and Quality Review.", "Analysis for Control of non-conforming products.", "Reference standards, working standards, solution preparations.", "To plan and manage all the activities of the Quality Control Department To assure the quality of all products manufactured by the Company.", "To co-ordinate with manufacturing department in controlling their process and products at every stage of manufacturing to meet the established specifications through testing, auditing and reporting.", "To co-ordinate for development of specifications, the analytical procedure in coordination with Quality Assurance Department and R&D.", "To review the adequacy and relevance of specifications & analytical procedures in coordination with the Quality Assurance Department and R&D.", "To be responsible for instruments qualification as per the guideline and prepare protocols and reports accordingly.", "To ensure that audit trail system are implemented including systems for data integrity and data security.", "To co-ordinate technical audits of the Quality Control Laboratory to determine the analytical Quality Systems are yielding the highest quality information and to ensure that the analytical instrumentation is functioning properly and calibration and servicing is as per schedule.", "To be responsible for glassware cleaning protocol and report, also establish of cleaning procedures.", "To be responsible for the Quality Control functions and records, which shall include:", "Maintenance of Quality Control records, Control samples of raw materials and drug products/excipient each batch manufactured.", "Records of release, quarantine or rejection of components and finished products, containers, closures and labels based on Quality Control test results.", "To suggest and organize training programs for the development of technical and administrative skills of all the employees to meet with cGLP regulations on the continuous basis, which shall be done by co-ordination with Plant and Quality Heads.", "To establish guidelines and procedures on cGMP and Good Laboratory Practice — Standard Operating Procedures of overall Quality Control Activities. Protocols related to Method / Process/ Cleaning/ Analytical Method Validation etc.", "To evaluate the Change Control suggestions for overall reviews of non-conformances, failure investigations, analyzing the Quality trends, investigations of market complaints, batch failure investigations, deviations, verifications of change control procedures, updating the specifications, test procedures, manufacturing processes etc.", "Validation of analytical test procedures, specifications, standard operating procedures (both pharmacopeial and In-house).", "To follow the reporting system as per the company procedure."],
-    qualification: ["BSC"],
-    experience: "Minimum 7 Years",
-  },
-
-];
-
-
-const JobCard = ({ title, location, description, responsibility, qualification, experience, onOpen, onApply }) => (
-  <div className="bg-[#ecf2ff] rounded-2xl p-6 flex flex-col items-start w-full max-w-sm border border-gray-400 h-full">
-    <div className={`w-12 h-12 flex items-center justify-center rounded-full `}>
-      <img src={registration} alt="Badge Icon" className="w-10 h-10" />
-    </div>
-    <h3 className="mt-4 text-lg font-semibold text-gray-900">{title}</h3>
-    <p className="flex items-center text-gray-600 mt-2">
-      <FaMapMarkerAlt className="mr-2" /> {location}
-    </p>
-    <div className="mt-4 flex justify-between w-full">
-      <button onClick={() => onOpen(title, description, responsibility, qualification, experience)} className="px-6 py-2 text-yellow-900 border rounded-lg">
-        Job Description
-      </button>
-      <button onClick={() => onApply(title)} className="px-6 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-gray-700">
-        Apply Now
-      </button>
-    </div>
-  </div>
-);
-
-
-const Career = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedJob, setSelectedJob] = useState({ title: "", description: "", responsibility: [], qualification: [], experience: "" });
-  const [selectedPosition, setSelectedPosition] = useState("");
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", position: "", resume: null });
-
-  const openModal = (title, description, responsibility, qualification, experience) => {
-    setSelectedJob({ title, description, responsibility, qualification, experience });
-    setIsOpen(true);
-  };
-
-  const openForm = (position) => {
-    setFormData({ ...formData, position });
-    setIsFormOpen(true);
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, resume: e.target.files[0] });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("fullName", formData.fullName);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("phone", formData.phone);
-    formDataToSend.append("position", formData.position);
-    formDataToSend.append("resume", formData.resume);
-
-    try {
-      console.log("aayush");
-
-      const response = await fetch("http://localhost:9000/api/apply", {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      const data = await response.json();
-      console.log("Server Response:", data);
-
-      if (response.ok) {
-        alert("Application submitted successfully!");
-        setIsFormOpen(false);
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          position: "",
-          resume: null,
-        });
-      } else {
-        console.log("hello");
-
-        alert("Failed to submit application: " + data.message);
-      }
-    } catch (error) {
-      console.log("apple");
-
-      console.error("Error submitting form:", error);
-      alert("An error occurred. Please check the console.");
-    }
-  };
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    phone: Yup.string()
+      .matches(/^\d{10}$/, "Phone number must be exactly 10 digits")
+      .required("Phone number is required"),
+    subject: Yup.string(),
+    message: Yup.string(),
+  });
 
   return (
     <>
-    {/*-------------- Banner section ----------- */}
+      {/* -----------------Contact Us Banner --------------*/}
       <div className="bg-white p-6 md:p-12">
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
@@ -210,132 +75,168 @@ const Career = () => {
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                Career
+                Contact Us
               </h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; CAREER</p>
+              <p className="text-white text-lg pl-5 ">Mubychem &gt; CONTACT US</p>
             </div>
           </div>
         </div>
       </div>
-
-      <section className="p-10 bg-[#fff] min-h-screen">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Find jobs for every industry and role.
+      {/* -------------Contact Information -------------------*/}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-white">
+        {contactDetails.map((contact, index) => (
+          <a
+            key={index}
+            href={contact.link}
+            target={contact.link.startsWith("http") ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#9d916c] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                {contact.title}
+              </h3>
+              <div className="mt-2">
+                {contact.details.map((detail, idx) => (
+                  <p key={idx} className="text-gray-600 text-sm">
+                    {detail}
+                  </p>
+                ))}
+              </div>
+              <div className="flex justify-between items-center mt-6">
+                <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center">
+                  {contact.icon}
+                </div>
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
+                >
+                  <ArrowUpRight className="text-blue-500" size={20} />
+                </motion.div>
+              </div>
+            </motion.div>
+          </a>
+        ))}
+      </div>
+      {/* ---------------------- Contact Form Section ----------------- */}
+      <div className="w-full h-auto flex flex-col md:flex-row items-start justify-between bg-white px-4 md:px-6 lg:px-12 py-12 gap-y-6 md:gap-x-12">
+        {/* Left Side */}
+        <div className="w-full md:w-[50%] lg:w-[45%] text-center md:text-left flex-grow">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            Happy to Answer All Your Questions
           </h2>
-          <p className="text-xl text-gray-600 mt-2">Your next career move starts here.</p>
+          <p className="text-gray-600 mt-4 text-base md:text-lg">
+            We carefully screen all of our cleaners, so you can rest assured
+            that your home would receive the absolute highest quality of
+            service.
+          </p>
+          <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700 mx-auto md:mx-0">
+            More Details →
+          </button>
         </div>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {jobs.map((job) => (
-            <JobCard key={job.id} {...job} onOpen={openModal} onApply={openForm} />
-          ))}
+
+        {/* Right Side (Form) */}
+        <div className="w-full md:w-[50%] lg:w-[45%] p-6 md:p-8 bg-white rounded-3xl shadow-lg max-w-[95%] md:max-w-[80%] lg:max-w-[60%] flex-grow">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
+            Send a message to staff
+          </h3>
+          <p className="text-gray-500 text-sm text-center mt-2">
+            Your email address will not be published. Required fields are marked
+            *
+          </p>
+
+          <Formik
+            initialValues={{
+              name: "",
+              email: "",
+              phone: "",
+              subject: "",
+              message: "",
+            }}
+            validationSchema={validationSchema}
+            onSubmit={(values, { resetForm }) => {
+              dispatch(submitForm(values));
+              resetForm();
+            }}
+          >
+            {({ isSubmitting }) => (
+              <Form className="mt-6 space-y-4">
+                {/* Two Column Layout for Name & Email */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Field
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                </div>
+
+                {/* Two Column Layout for Phone & Subject */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Field
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                  <Field
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full p-3 border rounded-full bg-white"
+                  />
+                </div>
+
+                {/* Message Field */}
+                <Field
+                  as="textarea"
+                  name="message"
+                  placeholder="Message"
+                  className="w-full p-3 border rounded-3xl bg-white h-28"
+                />
+
+                {/* Checkbox */}
+                <div className="flex items-center space-x-2 text-gray-500 text-sm">
+                  <input type="checkbox" className="w-4 h-4 border-gray-400" />
+                  <span>Save my name, email, and website for next time.</span>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-48 py-3 bg-white text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
+                >
+                  {isSubmitting ? "Submitting..." : "Get Cost Estimate →"}
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </div>
+      </div>
+
+      {/*----------------- Map section --------------- */}
+      <section className="py-8 px-6 bg-white flex justify-center  ">
+        <div className="w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Google Map"
+            className="w-full h-[600px] rounded-2xl border border-black "
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.3316800082143!2d72.8368572751069!3d18.96095375557437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce39e004da3d%3A0xe68fe70feac03506!2sSandhurst%20Road!5e0!3m2!1sen!2sin!4v1741342335458!5m2!1sen!2sin"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
-
-      {/* ------- job Description ---------- */}
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10 max-h-[80vh] overflow-y-auto">
-          <div className="flex justify-end">
-            <button onClick={() => setIsOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]">✖</button>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedJob.title}</h3>
-          <p className="text-gray-900">{selectedJob.description}</p>
-          <h3 className="text-lg py-2">Responsibilities:</h3>
-          <ul className="text-gray-700 list-disc pl-5">
-            {selectedJob.responsibility.map((item, index) => <li key={index}>{item}</li>)}
-          </ul>
-          <h3 className="text-lg py-2">Qualifications:</h3>
-          <ul className="text-gray-700 list-disc pl-5">
-            {selectedJob.qualification.map((item, index) => <li key={index}>{item}</li>)}
-          </ul>
-          <h3 className="text-lg py-2">Experience:</h3>
-          <p className="text-gray-900">{selectedJob.experience}</p>
-        </div>
-      </Dialog>
-
-      {/* -------------- apply now --------- */}
-      <Dialog open={isFormOpen} onClose={() => setIsFormOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10 pb-10">
-          <div className="flex justify-end">
-            <button onClick={() => setIsFormOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]">
-              ✖
-            </button>
-          </div>
-
-          <img
-            src={career}// Replace with your image URL
-            alt="Job Application Banner"
-            className="w-full h-32 object-cover rounded-lg mb-4"
-          />
-
-          <h3 className="text-xl font-bold text-gray-900 mt-3 mb-5">Apply for {formData.position}</h3>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                className="w-full border border-gray-300 p-4 rounded-full bg-white"
-                onChange={handleChange}
-                value={formData.fullName}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="w-full border border-gray-300 p-4 rounded-full bg-white"
-                onChange={handleChange}
-                value={formData.email}
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                className="w-full border border-gray-300 p-4 rounded-full bg-white"
-                onChange={handleChange}
-                value={formData.phone}
-                required
-              />
-              <input
-                type="text"
-                name="position"
-                placeholder="Position"
-                className="w-full border border-gray-300 p-4 rounded-full bg-white"
-                onChange={handleChange}
-                value={formData.position}
-                required
-              />
-              {/* <select
-                name="position"
-                className="w-full border border-gray-300 p-4 rounded-full"
-                value={formData.position}
-                onChange={handleChange}
-                required
-              >
-                <option value="" disabled>
-                  Select a position
-                </option>
-                {jobs.map((job) => (
-                  <option key={job.id} value={job.title}>
-                    {job.title}
-                  </option>
-                ))}
-              </select> */}
-            </div>
-            <input type="file" name="resume" className="w-full p-2 border rounded-lg mb-3" onChange={handleFileChange} required />
-            <button type="submit" className="w-full bg-[#7B3931] text-white p-2 rounded-lg">
-              Submit
-            </button>
-          </form>
-        </div>
-      </Dialog>
     </>
   );
 };
 
-
-export default Career;
+export default ContactUs;

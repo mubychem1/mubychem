@@ -277,14 +277,9 @@ import mission from "../../assets/mission.png";
 import quality from "../../assets/quality.png";
 import Value from "../../assets/Value.png";
 import excellance from "../../assets/Excellence.png";
-import translations from '../translater/translations.js';
-import { useSelector } from "react-redux";
+
 
 const VerticalTabs = () => {
-
-  const language = useSelector((state) => state.language.language); // Get selected language from Redux
-  const currentTranslations = translations[language] || translations.en; // Fallback to English
-
   const [activeTab, setActiveTab] = useState(0);
   const [visibleTabs, setVisibleTabs] = useState([]);
 
@@ -306,13 +301,8 @@ const VerticalTabs = () => {
 
   const content = [
     {
-      title:{
-        en : "Our Vision",
-        hi:"vision",
-      },
-      description: {
-        en: " To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
-      },
+      title: "Our Vision",
+      description: " To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
       img: Vision,
       
     },
@@ -376,7 +366,7 @@ const VerticalTabs = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
           <motion.img
             src={content[activeTab].img}
-            alt={content[activeTab].title[language]}
+            alt={content[activeTab].title}
             className="rounded-3xl w-full max-w-sm"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -384,16 +374,16 @@ const VerticalTabs = () => {
           />
           <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-8 text-center lg:text-left">
             <h3 className="text-2xl font-bold text-gray-900 ">
-              {content[activeTab].title[language]}
+              {content[activeTab].title}
             </h3>
             <p className="text-[#6a7391] mt-3">
-              {content[activeTab].description[language]}
+              {content[activeTab].description}
             </p>
             <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
           {[
-             "Access Expert Advice For A Thriving Life",
-             "Benefits Of Health Conscious Living",
-             "Benefits Of Proactive Health Management",
+             "Customer Delight: Prioritizing customer needs to enhance productivity and plant performance.​",
+             "High-Performance Innovation: Engaging in continuous research and development to stay ahead in a dynamic global market.​",
+             "Value Creation: Through Time-Based Efficiency: Maximizing productivity through efficient program design and resource management.",
              "Countless Benefits Of Prioritizing Health",
            ].map((benefit, index) => (
              <li key={index} className="flex items-center text-gray-900">

@@ -60,19 +60,19 @@ const zoomIn = {
 };
 const reviews = [
   {
-    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
-    name: "Parsons William",
-    role: "Lab Specialist",
+    text: "Best experience with all products and services and also provided fast customers Support service. Highly recommended Muby Chem Private Limited. #One of the best Pharmaceutical & Speciality Chemicals. Company in India.",
+    name: "Anand Naikawadi",
+    role: "Mumbai",
   },
   {
-    text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples. Thank you all!",
-    name: "Evangeline Lee",
-    role: "Satisfied Client",
+    text: "I've been using chemicals for years, and the quality is consistently top-notch. They are reliable and always meet our strict specifications.",
+    name: "Komal Patil",
+    role: "Mumbai",
   },
   {
-    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
-    name: "Adeline wood ",
-    role: "Happy Customer ",
+    text: "Service is excellent. Turn-around times are met and sometimes we get results back quicker.",
+    name: "Gaurav Satre",
+    role: "Satara",
   },
   {
     text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples. Thank you all!",
@@ -145,10 +145,10 @@ const AboutUs = () => {
               <div className="absolute inset-0 flex items-center justify-left">
                 <div>
                   <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                  {currentTranslations.ABOUT_US}
+                  {currentTranslations.ABOUT}
                   </h1>
                   <p className="text-white text-lg pl-5 ">
-                    Muby chem &gt; {currentTranslations.ABOUT_US}
+                  Muby Chem Private Limited
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const AboutUs = () => {
         {/* Image Section */}
         <motion.div
           variants={zoomIn}
-          className="relative w-full p-10 md:w-1/2 flex justify-center md:justify-start h-[450px]"
+          className="relative w-full p-10 md:w-1/2 flex justify-center md:justify-start h-[560px]"
         >
           <img
             src={Aboutleft} // Replace with your image path
@@ -203,13 +203,7 @@ const AboutUs = () => {
           <p className="text-gray-600 mt-4">
             We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-6 px-6 py-3 border hover:bg-yellow-900 hover:text-white border-black rounded-full flex items-center gap-2 text-lg font-medium"
-          >
-            Enquire Now ➝
-          </motion.button>
+          
         </motion.div>
       </motion.div>
       {/*--------------------- 3 post ----------------- */}

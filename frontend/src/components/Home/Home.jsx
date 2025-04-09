@@ -28,109 +28,74 @@ import { useSelector } from "react-redux"
 
 const certification = [
   {
-    title: 'ISO 9001:2015 ',
-    bgImage: iso
-  },
-  {
-    title: 'STAR-K (Kosher Certified)',
-    bgImage: kstar
-  },
-  {
-    title: 'ALLERGEN Free',
-    bgImage: allergen
-  },
-  // {
-  //   title: 'FDCA (Food & Drugs Control ADMN)',
-  //   bgImage: fdca
-  // },
-  {
-    title: 'Fssai',
-    bgImage: fssai
-  },
-  {
-    title: 'FSSC 22000 (Food Safety System Certification)',
-    bgImage: fssc
-  },
-  {
-    title: 'GLP',
-    bgImage: glp
-  },
-  {
-    title: 'GMP (Good Manufacturing Practice)',
+    title: '',
     bgImage: gmp
   },
   {
-    title: 'Greate Place To Work (Sep 2024- Sep 2025) India',
-    bgImage: gptw
+    title: '',
+    bgImage: glp
   },
   {
-    title: 'HACCP Certified',
-    bgImage: haccp
+    title: '',
+    bgImage: fssc
   },
   {
-    title: 'HALAL India',
+    title: '',
+    bgImage: fssai
+  },
+  {
+    title: '',
+    bgImage: kstar
+  },
+  {
+    title: '',
     bgImage: halal
   },
   {
-    title: 'Glutten Free',
+    title: ' ',
+    bgImage: iso
+  },
+  
+  {
+    title: '',
+    bgImage: allergen
+  },
+  {
+    title: '',
+    bgImage: haccp
+  },
+ 
+  {
+    title: '',
     bgImage: glutten
+  },
+  {
+    title: '',
+    bgImage: gptw
   },
 ];
 
 const services = [
   {
-    title: {
-      en: "Pharmaceuticals",
-      fr: "Pharmaceutiques",
-      ru: "Фармацевтика",
-      ko: "의약품",
-      es: "Farmacéuticos",
-    },
-    description: {
-      en: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
-      ru: "Мы производим высококачественные активные фармацевтические ингредиенты (АФИ) и вспомогательные вещества, которые служат строительными блоками для фармацевтических формул. Наши продукты производятся тщательно в контролируемых условиях, чтобы гарантировать эффективность, чистоту и действенность.",
-      ko: "당사는 제약 제형의 빌딩 블록 역할을 하는 고품질 활성 제약 성분(API)과 부형제를 제조합니다. 당사의 제품은 효능, 순도 및 효능을 보장하기 위해 통제된 조건에서 신중하게 생산됩니다.",
-      es: "Fabricamos ingredientes farmacéuticos activos (API) y excipientes de alta calidad que sirven como componentes básicos para formulaciones farmacéuticas. Nuestros productos se elaboran cuidadosamente en condiciones controladas para garantizar su potencia, pureza y eficacia.",
-      fr: "Nous fabriquons des principes actifs pharmaceutiques (API) et des excipients de haute qualité qui servent de base aux formulations pharmaceutiques. Nos produits sont fabriqués avec soin dans des conditions contrôlées pour garantir leur efficacité, leur pureté et leur puissance.",
-    },
+    title: "Pharmaceuticals",
+    description: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
     icon: "🤖",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg",
   },
   {
-    title: {
-      en: "Speciality chemicals",
-      hi: "फार्मास्युटिकल्स",
-      fr: "Pharmaceutiques",
-      ru: "Фармацевтика",
-      ko: "의약품",
-      es: "Farmacéuticos",
-    },
+    title: "Speciality chemicals",
     description: "Tailored chemical solutions designed specifically for your needs, ensuring optimal results and seamless integration into your production processes.",
     icon: "🧠",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg",
   },
   {
-    title: {
-      en: "Nutraceuticals",
-      hi: "फार्मास्युटिकल्स",
-      fr: "Pharmaceutiques",
-      ru: "Фармацевтика",
-      ko: "의약품",
-      es: "Farmacéuticos",
-    },
+    title: "Nutraceuticals",
     description: "We specialize in the development and manufacturing. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
     icon: "⚛",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg",
   },
   {
-    title: {
-      en: "Mineral Fortifiers",
-      hi: "फार्मास्युटिकल्स",
-      fr: "Pharmaceutiques",
-      ru: "Фармацевтика",
-      ko: "의약품",
-      es: "Farmacéuticos",
-    },
+    title: "Mineral Fortifiers",
     description: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability.",
     icon: "🧬",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
@@ -158,7 +123,7 @@ const Home = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === certification.length ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [certification.length]);
   const [isOpen, setIsOpen] = useState(false);
@@ -192,7 +157,7 @@ const Home = () => {
     try {
       console.log("aayush");
 
-      const response = await axios.post("http://localhost:9000/api/contact", formData);
+      const response = await axios.post("http://localhost:8000/api/contact", formData);
       alert(response.data.message);
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
     } catch (error) {
@@ -211,7 +176,7 @@ const Home = () => {
         className="flex flex-col md:flex-row items-center
          bg-white p-6 md:p-12  h-auto md:h-[700px] gap-6 md:gap-12"
         style={{
-          fontFamily: "Times New Roman",
+          fontFamily: "Times New Roman ",
           fontWeight: "normal",
           fontSize: "15px",
           lineHeight: "1.6",
@@ -293,7 +258,7 @@ const Home = () => {
             {currentTranslations.qualityProducts}
           </h1><br />
 
-          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[20px] italic lg:text-[20px] font-graphik leading-tight mt-2 text-right">
+          <h2 className="text-[clamp(24px,5vw,50px)] md:text-[20px] italic lg:text-[20px] font-graphik leading-tight mt-2 text-left">
             {currentTranslations.whereChemistryMeets}
           </h2>
 
@@ -326,12 +291,12 @@ const Home = () => {
                 {service.icon}
               </div>
               <h2 className="text-[17px] font-semibold text-gray-900">
-                {service.title[language]}
+                {service.title}
               </h2>
             </div>
             <hr className="mt-3 p-3 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-0" />
             <p className="text-gray-600 text-sm ml-auto text-[15px] text-left">
-              {service.description[language]}
+              {service.description}
             </p>
             <button className="absolute table text-center bg-[#f7f4e9] px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-white border-8 transition-all duration-100 hover:text-[#773135]">
               <svg
@@ -407,7 +372,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            {currentTranslations.mubyChemDescription1}
+             {currentTranslations.mubyChemDescription1}
           </motion.p>
           <motion.p
             className="text-[15px] leading-[1.6] text-[#6a7391] normal-case not-italic mb-6"
@@ -433,49 +398,10 @@ const Home = () => {
               },
             }}
           >
-            {/* Feature 1 */}
-            <motion.div
-              className="flex items-center space-x-3 p-4 rounded-lg"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="p-3 bg-[#F8F2DE] rounded-full">
-                <IoMdFlask className="text-2xl text-[#773135]" />
-              </div>
-              <div className="text-left">
-                <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-                  {currentTranslations.apis}
-                </h4>
-                <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
-                  {currentTranslations.apisDescription}
-                </p>
-              </div>
-            </motion.div>
+            
 
             {/* Feature 2 */}
-            <motion.div
-              className="flex items-center space-x-3 p-4 rounded-lg"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="p-3 bg-[#F8F2DE] rounded-full">
-                <BsCheck2Circle className="text-2xl text-[#773135]" />
-              </div>
-              <div className="text-left">
-                <h4 className="text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-                  {currentTranslations.mineralActives}
-                </h4>
-                <p className="text-gray-600 text-sm pt-2" style={{ fontFamily: "Graphik" }}>
-                  {currentTranslations.mineralActivesDescription}
-                </p>
-              </div>
-            </motion.div>
+            
           </motion.div>
 
           {/* Button with Hover Animation */}
@@ -651,18 +577,18 @@ const Home = () => {
         </div>
 
         <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
-        <motion.div
-  className="flex space-x-6"
-  animate={{ x: `-${currentIndex * 320}px` }} // width + gap
-  transition={{ ease: "linear", duration: 1 }}
->
+          <motion.div
+            className="flex space-x-6 "
+            animate={{ x: `-${currentIndex * 320}px` }}
+            transition={{ ease: "linear", duration: 1 }}
+          >
             {certification.concat(certification, certification, certification).map((certification, index) => (
               <div
                 key={index}
-                className="group w-[290px] bg-[#773135] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#773135] relative overflow-hidden"
+                className="group w-[290px] bg-[] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] text-white hover:text-[#773135] relative overflow-hidden"
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-4 group-hover:opacity-100 transition duration-500"
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:opacity-100 transition duration-500"
                   style={{
                     backgroundImage: `url(${certification.bgImage})`,
                   }}
@@ -692,16 +618,16 @@ const Home = () => {
           <img
             src={homecontact}
             alt="Scientist working"
-            className="rounded-3xl  w-full h-[549px]"
+            className="rounded-3xl  w-full h-[588px]"
           />
         </div>
 
         {/* Form Section */}
         <div className="md:w-1/2 bg-[#773135] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
-            {currentTranslations.CONTACT_US}
+          {currentTranslations.CONTACT_US}
           </button>
-          <h2 className="text-[50px] leading-[60px] text-white mb-6">Get your free<br /> estimate!</h2>
+          <h2 className="  text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
 
           {/* Form Inputs */}
           <form onSubmit={handleSubmit}>
@@ -731,11 +657,8 @@ const Home = () => {
           </div> */}
         </div>
       </div>
-
     </>
   );
 };
 
 export default Home;
-
-// anmolchem20@gmail.com

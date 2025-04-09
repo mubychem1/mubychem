@@ -6,9 +6,13 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import logo from '../../assets/logo.png';
-import translations from '../translater/translations.js';
+// import logo from '../../assets/muby-logo.png'
+import translations from '../translater/translations.js'
 import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+
+
+
 
 const phoneNumber = "+912223770100";
 
@@ -25,7 +29,7 @@ const Footer = () => {
             {/* Logo & Description */}
             <div className="lg:col-span-4 col-span-12">
               <a href="/">
-                <img className="h-20 sm:h-15" src={logo} alt="logo" />
+                <img className="h-20 sm:h-15" src={''} alt="logo" />
               </a>
               <p
                 className="mt-6 text-gray-100"
@@ -46,11 +50,14 @@ const Footer = () => {
                 {currentTranslations.USEFUL_LINKS}
               </h5>
               <ul className="list-none mt-6 space-y-2" style={{ fontFamily: "Open_Sans, sans-serif" }}>
-                {["HOME", "ABOUT_US", "CAREER", "PRODUCT"].map((key) => (
+                {["HOME", "ABOUT", "CAREER", "PRODUCT"].map((key) => (
                   <li key={key}>
-                    <a href="#" className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out">
+                    <Link
+                      to={`/${key.toLowerCase()}`} // Dynamic route path
+                      className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
+                    >
                       {currentTranslations[key]}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,13 +65,13 @@ const Footer = () => {
 
             {/* Categories */}
             <div className="lg:col-span-3 md:col-span-4 col-span-12">
-              <h5 className="tracking-wide text-gray-100 font-bold text-center pr-8">
+              <h5 className="tracking-wide text-gray-100 font-bold text-left pr-8">
                 {currentTranslations.CATEGORIES}
               </h5>
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {[
-                  ["PHARMACEUTICALS", "FOOD_ADDITIVES", "ANALYTICAL_REAGENT", "AMINO_ACID", "SPECIALITY_CHEMICALS"],
-                  ["NUTRACEUTICALS", "API_INTERMEDIATES", "LAB_CHEMICALS", "MINERAL_FORTIFIERS", "EXCIPIENTS", "OTHER_PRODUCTS"]
+                  ["PHARMACEUTICALS", "SPECIALITY_CHEMICALS", "EXCIPIENTS", "API_INTERMEDIATES", "AMINO_ACID",],
+                  ["FINE CHEMICALS", "ANALYTICAL_REAGENT", "LAB_CHEMICALS", "NUTRACEUTICALS", "MINERAL_FORTIFIERS", "FOOD_ADDITIVES", "OTHER_PRODUCTS"]
                 ].map((column, i) => (
                   <div key={i}>
                     <ul className="list-none space-y-2 mt-6" style={{ fontFamily: "Open_Sans, sans-serif" }}>
@@ -86,22 +93,23 @@ const Footer = () => {
               <h5 className="tracking-wide text-gray-100 font-bold">
                 {currentTranslations.CONTACT_DETAILS}
               </h5>
-              <h3 className="pt-5 font-bold">Muby Chemicals</h3>
+              <h3 className="pt-5 font-bold">Muby Chem Private Limited
+              </h3>
               <p className="flex items-center space-x-2 text-white pt-2">
                 <FaEnvelope className="text-white" />
                 <a
-                  href="mailto:info@mubychem.in"
+                  href="mailto:info@mubychemicals.com"
                   className="hover:text-black cursor-pointer"
                 >
                   {currentTranslations.EMAIL}
                 </a>
               </p>
               <p className="flex items-center space-x-2 text-white mt-2">
-              <FaPhone className="text-white" />
-              <a href={`tel:${phoneNumber}`} className="text-lg hover:text-black">
-                {phoneNumber}
-              </a>
-            </p>
+                <FaPhone className="text-white" />
+                <a href={`tel:${phoneNumber}`} className="text-lg hover:text-black">
+                  {phoneNumber}
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -112,7 +120,7 @@ const Footer = () => {
             Copyright &copy;
             <a href="#" className="text-[#711d14] hover:underline font-bold">
               {" "}
-              Muby Chemicals{" "}
+              Muby Chem Private Limited{" "}
             </a>
             {currentTranslations.COPYRIGHT}
           </p>

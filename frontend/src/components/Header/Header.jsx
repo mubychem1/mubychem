@@ -61,37 +61,35 @@ const Header = () => {
 
     const menuItems = [
         {
-            label: "Pharmaceuticals",
+            label: "Pharmaceuticals Chemicals",
             link: "/products/category1",
-            // submenu: [
-            //     { label: "category1", link: "/products/category1/" },
-            //     { label: "category2", link: "/products/category1/" },
-            //     { label: "category3", link: "/products/category1/" },
-            // ]
+             submenu: [
+                { label: "Pharmaceuticals", link: "/products/category1/" },
+                { label: "Speciality Chemicals", link: "/products/category1/" },
+                { label: "Excipients", link: "/products/category1/" },
+            ]
         },
+        { label: "API/Intermediates", link: "/products/category2/" },
         {
-            label: "Nutraceuticals",
-            link: "/products/category2",
-            // submenu: [
-            //     { label: "category1", link: "/products/category2/" },
-            //     { label: "category2", link: "/products/category2/" },
-            // ]
+            label: "Fine Chemicals",
+            link: "/products/category3",
+            submenu: [
+                { label: "Analytical Reagent", link: "/products/category3/" },
+                { label: "Lab Chemicals", link: "/products/category3/" },
+            ]
         },
-        { label: "Speciality chemicals", link: "/products/" },
-        { label: "Lab Chemicals", link: "/products/" },
-        { label: "Analytical Reagent", link: "/products/" },
-        {
-            label: "Amino Acid",
-            link: "/products/category6",
-            // submenu: [
-            //     { label: "category1", link: "/products/category6/essential" },
-            //     { label: "category2", link: "/products/category6/non-essential" },
-            // ]
+        { label: "Nutraceuticals", link: "/products/category4" ,
+            submenu: [
+                {
+                    label: "Mineral Fortifiers", link: "/products/category4/"
+                },
+                {
+                    label: "Food Additives", link: "/products/category4/"
+                }
+            ]
         },
-        { label: "API/Intermediates", link: "/products/category7" },
-        { label: "Food Additives", link: "/products/category8" },
-        { label: "Excipients", link: "/products/category9" },
-        { label: "Other Products", link: "/products/category10" },
+        { label: "Amino Acid", link: "/products/category5" },
+        { label: "Other Products", link: "/products/category6" },
     ];
 
     return (
@@ -130,7 +128,7 @@ const Header = () => {
                                         }`
                                     }
                                 >
-                                    {currentTranslations.ABOUT_US}
+                                    {currentTranslations. ABOUT_US}
                                 </NavLink>
                             </li>
 
@@ -233,7 +231,7 @@ const Header = () => {
                                     {currentTranslations.CONTACT_US}
                                 </NavLink>
                             </li>
-                           
+                            
                         </ul>
 
                         {/* Mobile Menu Button */}
@@ -260,14 +258,16 @@ const Header = () => {
                                     {isProductsOpen && (
                                         <div className="pl-4">
                                             <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Pharmaceuticals</NavLink><br /><hr />
-                                            <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Nutraceuticals</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Speciality chemicals</NavLink><br /><hr />
+                                            <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Speciality chemicals </NavLink><br /><hr />
+                                            <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Excipients </NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}> API/Intermediates</NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Fine Chemicals</NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Analytical Reagent </NavLink><br /><hr />
                                             <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Lab Chemicals</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Analytical Reagent</NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Nutraceuticals </NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Mineral Fortifiers </NavLink><br /><hr />
+                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Food Additives </NavLink><br /><hr />
                                             <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Amino Acid</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>API/Intermediates</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Food Additives</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Excipients</NavLink><br /><hr />
                                             <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Other Products</NavLink><br /><hr />
                                         </div>
                                     )}
