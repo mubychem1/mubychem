@@ -1,7 +1,7 @@
 const translations = {
   en: {
     HOME: "HOME",
-    ABOUT_US: "ABOUT US",
+    ABOUT: "ABOUT US",
     PRODUCTS: "PRODUCTS",
     BLOGS: "BLOGS",
     CAREER: "CAREER",
@@ -9,7 +9,7 @@ const translations = {
     USEFUL_LINKS: "Useful Links",
 
     // -------------Footer Section ----------
-    PRODUCT: "Product",
+    PRODUCT: "PRODUCT",
     CATEGORIES: "Categories",
     PHARMACEUTICALS: "Pharmaceuticals",
     FOOD_ADDITIVES: "Food Additives",
@@ -23,8 +23,8 @@ const translations = {
     EXCIPIENTS: "Excipients",
     OTHER_PRODUCTS: "Other Products",
     CONTACT_DETAILS: "Contact Details",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "All Rights Reserved.",
 
     SPECIALTY_CHEMICALS:
@@ -201,7 +201,7 @@ const translations = {
     OTHER_PRODUCTS: "अन्य उत्पाद",
     CONTACT_DETAILS: "संपर्क विवरण",
     COMPANY_NAME: "म्युबी केमिकल्स",
-    EMAIL: "info@mubychem.in",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "सभी अधिकार सुरक्षित।", // <------ *Comma was missing here*
     CONTENT:
       "हम विशेष गुणवत्ता वाले विशेष रसायनों और सहायक पदार्थों के उत्पादन में विशेषज्ञ हैं। हमारे उत्पाद उनकी शुद्धता और प्रभावशीलता के लिए जाने जाते हैं, जो दुनियाभर के विभिन्न उद्योगों का समर्थन करते हैं।",
@@ -257,8 +257,8 @@ const translations = {
     EXCIPIENTS: "Excipients",
     OTHER_PRODUCTS: "Autres produits",
     CONTACT_DETAILS: "Coordonnées",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "Tous droits réservés.",
     SPECIALTY_CHEMICALS:
     "Nous sommes spécialisés dans la production de produits chimiques et d'excipients de spécialité de haute qualité. Nos produits sont connus pour leur pureté et leur efficacité, soutenant diverses industries dans le monde entier.",
@@ -449,8 +449,8 @@ const translations = {
     EXCIPIENTS: "Экципиенты",
     OTHER_PRODUCTS: "Другие продукты",
     CONTACT_DETAILS: "Контактные данные",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "Все права защищены.",
 
     SPECIALTY_CHEMICALS:
@@ -612,8 +612,8 @@ const translations = {
     EXCIPIENTS: "부형제",
     OTHER_PRODUCTS: "기타 제품",
     CONTACT_DETAILS: "연락처",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "판권 소유.",
 
     SPECIALTY_CHEMICALS:
@@ -780,8 +780,8 @@ const translations = {
     EXCIPIENTS: "Excipientes",
     OTHER_PRODUCTS: "Otros Productos",
     CONTACT_DETAILS: "Datos de Contacto",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "Todos los derechos reservados.",
 
     SPECIALTY_CHEMICALS:
@@ -955,8 +955,8 @@ const translations = {
     EXCIPIENTS: "المكونات الإضافية",
     OTHER_PRODUCTS: "منتجات أخرى",
     CONTACT_DETAILS: "تفاصيل الاتصال",
-    COMPANY_NAME: "Muby Chemicals",
-    EMAIL: "info@mubychem.in",
+    COMPANY_NAME: "Muby Chem Private Limited",
+    EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "جميع الحقوق محفوظة.",
     SPECIALTY_CHEMICALS:
       "نحن متخصصون في إنتاج المواد الكيميائية المتخصصة عالية الجودة والمكونات الإضافية. منتجاتنا معروفة بنقاوتها وفعاليتها، وتدعم العديد من الصناعات حول العالم.",

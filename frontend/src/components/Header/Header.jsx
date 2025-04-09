@@ -128,7 +128,7 @@ const Header = () => {
                                         }`
                                     }
                                 >
-                                    {currentTranslations. ABOUT_US}
+                                    {currentTranslations. ABOUT}
                                 </NavLink>
                             </li>
 

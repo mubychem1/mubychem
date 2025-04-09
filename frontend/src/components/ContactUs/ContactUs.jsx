@@ -77,7 +77,7 @@ const ContactUs = () => {
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
                 Contact Us
               </h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; CONTACT US</p>
+              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
             </div>
           </div>
         </div>

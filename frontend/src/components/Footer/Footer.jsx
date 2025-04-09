@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-// import logo from '../../assets/muby-logo.png'
+import logo from '../../assets/logo-white.png'
 import translations from '../translater/translations.js'
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ const Footer = () => {
             {/* Logo & Description */}
             <div className="lg:col-span-4 col-span-12">
               <a href="/">
-                <img className="h-20 sm:h-15" src={''} alt="logo" />
+                <img className="h-20 sm:h-15" src={logo} alt="logo" />
               </a>
               <p
                 className="mt-6 text-gray-100"

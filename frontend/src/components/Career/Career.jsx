@@ -4,6 +4,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import registration from '../../assets/registration.png';
 import { Dialog } from "@headlessui/react";
 import career from '../../assets/career.png'
+import translations from '../translater/translations.js'
+import { useSelector } from "react-redux"
 
 const jobs = [
   {
@@ -130,6 +132,10 @@ const JobCard = ({ title, location, description, responsibility, qualification, 
 
 
 const Career = () => {
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState({ title: "", description: "", responsibility: [], qualification: [], experience: "" });
   const [selectedPosition, setSelectedPosition] = useState("");
@@ -200,7 +206,7 @@ const Career = () => {
 
   return (
     <>
-    {/*-------------- Banner section ----------- */}
+      {/*-------------- Banner section ----------- */}
       <div className="bg-white p-6 md:p-12">
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
@@ -210,9 +216,9 @@ const Career = () => {
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                Career
+                {currentTranslations.CAREER}
               </h1>
-              <p className="text-white text-lg pl-5 ">Mubychem &gt; CAREER</p>
+              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited </p>
             </div>
           </div>
         </div>
