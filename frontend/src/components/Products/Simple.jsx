@@ -2,15 +2,20 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import background from '../../assets/background1.png';
 import glp from "../../assets/certificate.png";
+import { useParams } from 'react-router-dom';
+
 
 const Simple = () => {
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/productdes');
-        setProduct(response.data.data[0]);
+       
+
+        const response = await axios.get(`http://localhost:9000/api/productdes/${id}`);
+        setProduct(response.data.data);
         console.log("aayush");
 
       } catch (error) {
@@ -21,7 +26,7 @@ const Simple = () => {
     };
 
     fetchProduct();
-  }, []);
+  }, [id]);
   if (!product) return <div>Loading...</div>
 
 
@@ -56,31 +61,31 @@ const Simple = () => {
               <tr className="border-b border-gray-200">
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]" >CAS No:</span>
-                  <span className="pl-57 text-[#1a1a1a] text-[14px]">{product.casNo}</span>
+                  <span className="pl-54 text-[#1a1a1a] text-[14px]">{product.casNo}</span>
                 </td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Dosage Form:</span>
-                  <span className="pl-46 text-[#1a1a1a] text-[14px]">{product.dosageForm}</span>
+                  <span className="pl-45 text-[#1a1a1a] text-[14px]">{product.dosageForm}</span>
                 </td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Therapeutic Category:</span>
-                  <span className="pl-30 text-[#1a1a1a] text-[14px]">{product.therapeuticCategory}</span>
+                  <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.therapeuticCategory}</span>
                 </td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Regulatory Filing:</span>
-                  <span className="pl-40 text-[#1a1a1a] text-[14px]">{product.regulatoryFiling}</span>
+                  <span className="pl-38 text-[#1a1a1a] text-[14px]">{product.regulatoryFiling}</span>
                 </td>
               </tr>
               <tr>
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Muby Product Status:</span>
-                  <span className="pl-33 text-[#1a1a1a] text-[14px]">{product.productStatus}</span>
+                  <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.productStatus}</span>
                 </td>
               </tr>
             </tbody>

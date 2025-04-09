@@ -54,6 +54,10 @@ const product_descriptionSchema = new mongoose.Schema({
     },
     traditionalUses: {
         type: String,
+    },
+    commonId:{
+        type:String,
+        required:true
     }
 
     

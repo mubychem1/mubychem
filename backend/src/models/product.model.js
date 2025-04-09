@@ -14,13 +14,13 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    id: {
-        type: String,
-        required: true
-    },
     cas_no: {
         type: String,
         required: true
+    },
+    commonId:{
+        type:String,
+        required:true
     }
 })
 

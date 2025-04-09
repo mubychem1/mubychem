@@ -115,17 +115,16 @@
 
 
 import background from '../../assets/background.png';
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 
 const ProductCard = ({ product }) => {
   return (
     <>
-       
-       <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
+
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
         <img
           src={product.img}
           alt={product.name}
@@ -133,15 +132,15 @@ const ProductCard = ({ product }) => {
         />
         <div className='mt-4 text-center'>
           <p className='text-gray-600 font-semibold mt-9 '>Molecural Formula: {product.molecural_formula}</p>
-          <hr className='border-t border-gray-300 mt-1 '/>
+          <hr className='border-t border-gray-300 mt-1 ' />
           <p className='text-gray-800 font-medium '>CAS No:{product.cas_no}</p>
-          <hr className="border-t border-gray-300 mt-1"/>
+          <hr className="border-t border-gray-300 mt-1" />
           <h2 className='mt-2 text-lg font-bold text-blue-600 border-b-2 border-blue-600 inline-block '>
             {product.product_name}
           </h2>
         </div>
       </div>
-      
+
     </>
   );
 };
@@ -151,11 +150,11 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/product")
+    axios.get("http://localhost:9000/api/product")
       .then((response) => {
         console.log("API Response:", response.data);
         if (Array.isArray(response.data.data)) {
-          setProducts(response.data.data);  // Extracting the `data` array
+          setProducts(response.data.data);
         } else {
           console.error("Unexpected API response format:", response.data);
         }
@@ -164,6 +163,7 @@ const Products = () => {
         console.error("Error fetching products:", error);
       });
   }, []);
+
 
   return (
     <>
@@ -185,14 +185,15 @@ const Products = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center mx-auto p-10">
-      {products.map((product) => (
-        <Link to={`/Simple/${product._id}`} key={product._id}>
-          <ProductCard product={product} />
-        </Link>
-      ))}
-    </div>
+        {products.map((product) => (
+          <Link to={`/Simple/${product.commonId}`} key={product._id}>
+            <ProductCard product={product} />
+          </Link>
+        ))}
+      </div>
     </>
   );
 };
 
 export default Products;
+

@@ -322,6 +322,7 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
+                        
                         {/*----------- Language Selector -------------*/}
 
                         <div className="relative w-40">

@@ -157,7 +157,7 @@ const Home = () => {
     try {
       console.log("aayush");
 
-      const response = await axios.post("http://localhost:8000/api/contact", formData);
+      const response = await axios.post("http://localhost:9000/api/contact", formData);
       alert(response.data.message);
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
     } catch (error) {
