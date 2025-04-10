@@ -132,9 +132,7 @@ const ContactUs = () => {
             that your home would receive the absolute highest quality of
             service.
           </p>
-          <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700 mx-auto md:mx-0">
-            More Details →
-          </button>
+
         </div>
 
         {/* Right Side (Form) */}
@@ -203,19 +201,16 @@ const ContactUs = () => {
                   className="w-full p-3 border rounded-3xl bg-white h-28"
                 />
 
-                {/* Checkbox */}
-                <div className="flex items-center space-x-2 text-gray-500 text-sm">
-                  <input type="checkbox" className="w-4 h-4 border-gray-400" />
-                  <span>Save my name, email, and website for next time.</span>
-                </div>
+
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-48 py-3 bg-white text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
+                  className="w-40 py-3 bg-white text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 mx-auto md:ml-5 "
                 >
-                  {isSubmitting ? "Submitting..." : "Get Cost Estimate →"}
+                  {isSubmitting ? "Submitting..." : "Submit "}
                 </button>
+                {/* "Get Cost Estimate →" */}
               </Form>
             )}
           </Formik>

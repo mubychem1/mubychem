@@ -62,11 +62,11 @@ const Header = () => {
     const menuItems = [
         {
             label: "Pharmaceuticals Chemicals",
-            link: "/products/category1",
-             submenu: [
-                { label: "Pharmaceuticals", link: "/products/category1/" },
-                { label: "Speciality Chemicals", link: "/products/category1/" },
-                { label: "Excipients", link: "/products/category1/" },
+            link: "",
+            submenu: [
+                { label: "Pharmaceuticals", link: "/pharmaceuticals/category1" },
+                { label: "Speciality Chemicals", link: "/pharmaceuticals/category1" },
+                { label: "Excipients", link: "/pharmaceuticals/category1" },
             ]
         },
         { label: "API/Intermediates", link: "/products/category2/" },
@@ -78,7 +78,8 @@ const Header = () => {
                 { label: "Lab Chemicals", link: "/products/category3/" },
             ]
         },
-        { label: "Nutraceuticals", link: "/products/category4" ,
+        {
+            label: "Nutraceuticals", link: "/products/category4",
             submenu: [
                 {
                     label: "Mineral Fortifiers", link: "/products/category4/"
@@ -128,7 +129,7 @@ const Header = () => {
                                         }`
                                     }
                                 >
-                                    {currentTranslations. ABOUT}
+                                    {currentTranslations.ABOUT}
                                 </NavLink>
                             </li>
 
@@ -149,17 +150,25 @@ const Header = () => {
                                                 onMouseEnter={() => setHoveredIndex(index)}
                                                 onMouseLeave={() => setHoveredIndex(null)}
                                             >
-                                                <NavLink
-                                                    to={item.link}
-                                                    className={({ isActive }) =>
-                                                        `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"
-                                                        }`
-                                                    }
-                                                >
-                                                    {hoveredIndex === index && <FaMinus />}
-                                                    {item.label}
-                                                </NavLink>
-
+                                                {/* If submenu exists -> Don't navigate */}
+                                                {item.submenu ? (
+                                                    <span
+                                                        className="cursor-default text-[14px] flex items-center gap-2 text-black group-hover:text-[#773135] transition-all duration-300 ease-in-out"
+                                                    >
+                                                        {hoveredIndex === index && <FaMinus />}
+                                                        {item.label}
+                                                    </span>
+                                                ) : (
+                                                    <NavLink
+                                                        to={item.link}
+                                                        className={({ isActive }) =>
+                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
+                                                        }
+                                                    >
+                                                        {hoveredIndex === index && <FaMinus />}
+                                                        {item.label}
+                                                    </NavLink>
+                                                )}
 
                                                 {/* Submenu Dropdown */}
                                                 {item.submenu && hoveredIndex === index && (
@@ -169,14 +178,13 @@ const Header = () => {
                                                                 <li
                                                                     key={subIndex}
                                                                     className="px-4 py-3 hover:bg-gray-100 transition flex items-center"
-                                                                    onMouseEnter={() => setSubhoveredIndex(subIndex)} // Track submenu hover
+                                                                    onMouseEnter={() => setSubhoveredIndex(subIndex)}
                                                                     onMouseLeave={() => setSubhoveredIndex(null)}
                                                                 >
                                                                     <NavLink
                                                                         to={subItem.link}
                                                                         className={({ isActive }) =>
-                                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"
-                                                                            }`
+                                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
                                                                         }
                                                                     >
                                                                         {subhoveredIndex === subIndex && <FaMinus />}
@@ -192,6 +200,7 @@ const Header = () => {
                                     </ul>
                                 </div>
                             </li>
+
 
 
                             <li className='px-4 py-2'>
@@ -231,7 +240,7 @@ const Header = () => {
                                     {currentTranslations.CONTACT_US}
                                 </NavLink>
                             </li>
-                            
+
                         </ul>
 
                         {/* Mobile Menu Button */}
@@ -322,7 +331,7 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
-                        
+
                         {/*----------- Language Selector -------------*/}
 
                         <div className="relative w-40">

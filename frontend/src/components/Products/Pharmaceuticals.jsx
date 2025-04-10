@@ -145,7 +145,7 @@ const ProductCard = ({ product }) => {
   );
 };
 
-const Products = () => {
+const Pharmaceuticals = () => {
 
   const [products, setProducts] = useState([]);
 
@@ -176,7 +176,7 @@ const Products = () => {
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                Product
+                Pharmaceuticals
               </h1>
               <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
             </div>
@@ -186,7 +186,7 @@ const Products = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center mx-auto p-10">
         {products.map((product) => (
-          <Link to={`/Simple/${product.commonId}`} key={product._id}>
+          <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
             <ProductCard product={product} />
           </Link>
         ))}
@@ -195,5 +195,5 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Pharmaceuticals;
 

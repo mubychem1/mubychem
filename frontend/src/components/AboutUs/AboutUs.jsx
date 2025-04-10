@@ -75,16 +75,45 @@ const reviews = [
     role: "Satara",
   },
   {
-    text: "I greatly appreciate the communication on the very hard process, what we needed to do in terms of providing good samples. Thank you all!",
-    name: "Naomi Violet  ",
-    role: "Customer ",
+    text: "The customer service is exceptional. They are always responsive, knowledgeable, and go above and beyond to help us with our needs.",
+    name: "Mayuri Munagekar",
+    role: "Pune ",
   },
   {
-    text: "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!",
-    name: "Hazel Jenkins   ",
-    role: "Satisfied Client  ",
+    text: "We appreciate the fast and accurate quotes we receive which allows us to plan our projects effectively.",
+    name: "Aayush Shah",
+    role: "Gujarat",
   },
-];
+  {
+    text: "Timely delivery of chemicals expedites the research activities and provided very high quality products with high packing standards.",
+    name: "Parinaz Elavia",
+    role: "Gujarat",
+  },
+  {
+    text: "Muby Chem products are very helpful for our research and the result is excellent.",
+    name: "Sachin Mavale",
+    role: "Kalyan",
+  },
+  {
+    text: "Timely delivery of chemicals expedites the research activities and provided very high quality products with high packing standards.",
+    name: "Parinaz Elavia",
+    role: "Gujarat",
+  },
+  {
+    text: "I can confidently say that Muby Chem has become an integral part of our success story. Your contributions have helped us to better serve our customers.",
+    name: "Anna Parera",
+    role: "Mumbai",
+  },
+  {
+    text: "Your commitment to innovation and continuous improvement has been evident in the way you have adapted to our changing needs and industry trends. Muby Chem team willingness, to explore new solutions and technologies has helped us stay ahead of the curve",
+    name: "Sachin Mavale",
+    role: "Maharashtra",
+  },
+  {
+    text: "We are pleased with the quality of service Muby Chem provides. We sincerely appreciate their responsiveness and the way they connect business. We look forward to doing business with Muby Chem for years to come Thank You.",
+    name: "Ekansh Devlekar",
+    role: "Nashik",
+  }]
 const AboutUs = () => {
 
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
@@ -145,10 +174,10 @@ const AboutUs = () => {
               <div className="absolute inset-0 flex items-center justify-left">
                 <div>
                   <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                  {currentTranslations.ABOUT}
+                    {currentTranslations.ABOUT}
                   </h1>
                   <p className="text-white text-lg pl-5 ">
-                  Muby Chem Private Limited
+                    Muby Chem Private Limited
                   </p>
                 </div>
               </div>
@@ -203,7 +232,7 @@ const AboutUs = () => {
           <p className="text-gray-600 mt-4">
             We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
           </p>
-          
+
         </motion.div>
       </motion.div>
       {/*--------------------- 3 post ----------------- */}

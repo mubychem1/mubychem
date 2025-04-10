@@ -10,11 +10,11 @@ import Home from './components/Home/Home.jsx'
 import ContactUs from './components/ContactUs/ContactUs.jsx'
 import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Career from './components/Career/Career.jsx';
-import Products from './components/Products/Products.jsx';
+import Pharmaceuticals from './components/Products/Pharmaceuticals.jsx';
 // import Homes from './components/Home/Homes.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import Page1 from './components/Blog/Page1.jsx';
-import Simple from './components/Products/Simple.jsx';
+import PharmaceuticalsDes from './components/Products/PharmaceuticalsDes.jsx';
 
 
 
@@ -23,9 +23,9 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="products" element={<Products />}>
-      {/* Child Routes for Products */}
-      <Route path="category1" element={<Products />} />
+      <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
+        {/* Child Routes for Products */}
+        <Route path="category1" element={<Pharmaceuticals />} />
       </Route>
 
       {/* <Route path="products" element={<Products />} />
@@ -35,7 +35,8 @@ const router = createBrowserRouter(
       <Route path="contact" element={<ContactUs />} />
       <Route path="career" element={<Career />} />
       {/* <Route path="simple" element={<Simple />} /> */}
-      <Route path="simple/:id" element={<Simple />} />
+      <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes />} />
+
 
     </Route>
   )

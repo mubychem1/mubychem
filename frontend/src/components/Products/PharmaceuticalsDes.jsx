@@ -5,7 +5,7 @@ import glp from "../../assets/certificate.png";
 import { useParams } from 'react-router-dom';
 
 
-const Simple = () => {
+const PharmaceuticalsDes = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -125,4 +125,4 @@ const Simple = () => {
   )
 }
 
-export default Simple
+export default PharmaceuticalsDes
