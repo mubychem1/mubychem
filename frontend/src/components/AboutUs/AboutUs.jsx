@@ -11,9 +11,9 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import background from "../../assets/background.png";
 import { AnimatePresence } from "framer-motion";
-import VerticalTabs from '../Home/VerticalTabs';
-import translations from '../translater/translations.js'
-import { useSelector } from "react-redux"
+import VerticalTabs from "../Home/VerticalTabs";
+import translations from "../translater/translations.js";
+import { useSelector } from "react-redux";
 
 // const steps = [
 //   {
@@ -98,7 +98,6 @@ const reviews = [
   },
   {
     text: {
-
       en: "The customer service is exceptional. They are always responsive, knowledgeable, and go above and beyond to help us with our needs.",
       es: "El servicio al cliente es excepcional. Siempre responden rápidamente, son expertos y hacen todo lo posible para ayudarnos con nuestras necesidades.",
       ko: "고객 서비스는 탁월합니다. 항상 응답이 빠르고 지식이 풍부하며 우리의 요구를 충족시키기 위해 최선을 다합니다.",
@@ -117,7 +116,7 @@ const reviews = [
       ru: "Мы ценим быстрые и точные сметы, которые получаем, что позволяет нам эффективно планировать наши проекты.",
       fr: "Nous apprécions les devis rapides et précis que nous recevons, ce qui nous permet de planifier efficacement nos projets.",
       ar: "نحن نُقدّر السرعة والدقة في العروض التي نتلقاها، مما يساعدنا على تخطيط مشاريعنا بفعالية.",
-    } ,
+    },
     name: "Aayush Shah",
     role: "Gujarat",
   },
@@ -141,8 +140,7 @@ const reviews = [
       ru: "Продукция Muby Chem очень полезна для наших исследований, и результаты превосходные.",
       fr: "Les produits de Muby Chem sont très utiles pour nos recherches et les résultats sont excellents.",
       ar: "منتجات Muby Chem مفيدة جدًا لأبحاثنا، والنتائج ممتازة.",
-    }
-    ,
+    },
     name: "Sachin Mavale",
     role: "Kalyan",
   },
@@ -154,7 +152,7 @@ const reviews = [
       ru: "Я с уверенностью могу сказать, что Muby Chem стал неотъемлемой частью нашей истории успеха. Ваш вклад помог нам лучше обслуживать наших клиентов.",
       fr: "Je peux dire avec confiance que Muby Chem est devenu une partie intégrante de notre réussite. Vos contributions nous ont aidés à mieux servir nos clients.",
       ar: "يمكنني القول بثقة إن Muby Chem أصبحت جزءًا لا يتجزأ من قصة نجاحنا. لقد ساعدتنا مساهماتكم في خدمة عملائنا بشكل أفضل.",
-    } ,
+    },
     name: "Anna Parera",
     role: "Mumbai",
   },
@@ -166,7 +164,7 @@ const reviews = [
       ru: "Ваша приверженность инновациям и постоянному совершенствованию очевидна по тому, как вы адаптируетесь к меняющимся потребностям и тенденциям отрасли. Готовность команды Muby Chem исследовать новые решения и технологии помогла нам оставаться впереди.",
       fr: "Votre engagement envers l'innovation et l'amélioration continue est évident dans votre capacité à vous adapter à nos besoins changeants et aux tendances du secteur. La volonté de l'équipe de Muby Chem d'explorer de nouvelles solutions et technologies nous a permis de garder une longueur d'avance.",
       ar: "إن التزامكم بالابتكار والتحسين المستمر واضح في كيفية تكيّفكم مع احتياجاتنا المتغيرة واتجاهات الصناعة. إن استعداد فريق Muby Chem لاستكشاف حلول وتقنيات جديدة ساعدنا على البقاء في المقدمة.",
-    }  ,
+    },
     name: "Sachin Mavale",
     role: "Maharashtra",
   },
@@ -178,19 +176,15 @@ const reviews = [
       ru: "Мы довольны качеством обслуживания, которое предоставляет Muby Chem. Искренне благодарим за оперативность и профессиональный подход к бизнесу. С нетерпением ждём многолетнего сотрудничества с Muby Chem. Спасибо.",
       fr: "Nous sommes satisfaits de la qualité du service fourni par Muby Chem. Nous apprécions sincèrement leur réactivité et leur manière de gérer les affaires. Nous espérons continuer à travailler avec Muby Chem pendant de nombreuses années. Merci.",
       ar: "نحن راضون عن جودة الخدمة التي تقدمها شركة Muby Chem. نحن نُقدّر بصدق سرعة استجابتهم وطريقتهم في إدارة الأعمال. نتطلع إلى مواصلة التعامل مع Muby Chem لسنوات عديدة قادمة. شكرًا لكم.",
-    }
-    ,
+    },
     name: "Ekansh Devlekar",
     role: "Nashik",
   },
-
 ];
 const AboutUs = () => {
-
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
-  const selectedLang = "es"; // or use state: const [selectedLang, setSelectedLang] = useState("en");
-
+  // const reviews = currentTranslations.reviews || [];
 
   const [isOpen, setIsOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
@@ -265,9 +259,11 @@ const AboutUs = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-[#fff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]" style={{
+        className="bg-[#fff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]"
+        style={{
           fontFamily: "Times New Roman",
-        }}>
+        }}
+      >
         {/* Image Section */}
         <motion.div
           variants={zoomIn}
@@ -295,15 +291,21 @@ const AboutUs = () => {
             Who We Are
           </motion.span> */}
 
-          <h2 className="text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4" style={{ fontFamily: "Times New Roman" }}>
-            Welcome to Muby Chem<br />
+          <h2
+            className="text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4"
+            style={{ fontFamily: "Times New Roman" }}
+          >
+            Welcome to Muby Chem
+            <br />
             Private Limited
           </h2>
           <p className="text-gray-600 mt-4">
-          {currentTranslations.mubyChemDescription1}          </p><br />
+            {currentTranslations.mubyChemDescription1}{" "}
+          </p>
+          <br />
           <p className="text-gray-600 mt-4">
-          {currentTranslations.mubyChemDescription2}          </p>
-
+            {currentTranslations.mubyChemDescription2}{" "}
+          </p>
         </motion.div>
       </motion.div>
       {/*--------------------- 3 post ----------------- */}
@@ -322,12 +324,16 @@ const AboutUs = () => {
           />
           {/* Play Button */}
           <button
-            onClick={() => openModal("https://www.youtube.com/embed/buwI_49ZTp0")}
+            onClick={() =>
+              openModal("https://www.youtube.com/embed/buwI_49ZTp0")
+            }
             className="absolute bottom-4 right-1 p-0.5 rounded-full flex items-center 
                hover:scale-110  transition-transform duration-300 ease-in-out"
           >
             <FaPlay className="text-gray-900 text-lg" />
-            <span className="ml-1 text-sm font-semibold">{currentTranslations.watchVideo}</span>
+            <span className="ml-1 text-sm font-semibold">
+              {currentTranslations.watchVideo}
+            </span>
           </button>
         </div>
 
@@ -365,10 +371,10 @@ const AboutUs = () => {
         >
           {/* <span className="text-4xl font-bold text-white ml-2">20+</span> */}
           <p className="text-white text-l sm:text-sm leading-tight mt-3 ml-2">
-          {currentTranslations.Professional}
+            {currentTranslations.Professional}
             <br />
-            {currentTranslations.staff}  
-                    </p>
+            {currentTranslations.staff}
+          </p>
         </div>
 
         {/* Card 3 - National Science Day */}
@@ -381,16 +387,14 @@ const AboutUs = () => {
           }}
         >
           <h2 className="text-2xl text-white font-bold">
-          {currentTranslations.National}
-                    </h2>
+            {currentTranslations.National}
+          </h2>
           <p className=" text-white text-lg">25th Feb 2022</p>
           <div className="border-t border-white my-2  w-2/3 mx-30"></div>
           <p className=" text-white mt-2">{currentTranslations.Experts}</p>
         </div>
       </motion.div>
       {/*--------------------- Sample post ----------------- */}
-
-
 
       {/* <div className="bg-[#ecf2ff] p-2"> */}
       {/* <section
@@ -410,7 +414,6 @@ const AboutUs = () => {
               Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
             </h2>
           </div> */}
-
 
       {/* Steps Section */}
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -441,19 +444,23 @@ const AboutUs = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
-              <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
+              <span className="text-3xl sm:text-4xl font-bold text-white">
+                460+
+              </span>
               <p className="text-xs sm:text-sm">
-              {currentTranslations.Professional}
+                {currentTranslations.Professional}
                 <br />
                 {currentTranslations.staff}
-                              </p>
+              </p>
             </div>
           </div>
           <div className="p-8 flex flex-col justify-center">
-            <p className="text-sm uppercase font-semibold text-gray-400">              {currentTranslations.Client}
+            <p className="text-sm uppercase font-semibold text-gray-400">
+              {" "}
+              {currentTranslations.Client}
             </p>
             <h2 className="text-3xl font-bold my-2">
-            {currentTranslations.Trusted}
+              {currentTranslations.Trusted}
             </h2>
             <FaQuoteLeft className="text-3xl text-black mb-2" />
 
@@ -468,14 +475,19 @@ const AboutUs = () => {
                   transition={{ duration: 0.5 }}
                   className="text-lg mb-7 p-4 absolute w-full"
                 >
-{reviews[currentReview].text[selectedLang]}                </motion.p>
+                  {reviews[currentReview].text[language]}{" "}
+                </motion.p>
               </AnimatePresence>
             </div>
 
             <div className="flex items-center p-6 gap-3">
               <div>
-                <h4 className="text-lg font-semibold">{reviews[currentReview].name}</h4>
-                <h3 className="text-md text-black">{reviews[currentReview].role}</h3>
+                <h4 className="text-lg font-semibold">
+                  {reviews[currentReview].name}
+                </h4>
+                <h3 className="text-md text-black">
+                  {reviews[currentReview].role}
+                </h3>
               </div>
             </div>
 
