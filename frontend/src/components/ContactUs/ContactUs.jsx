@@ -22,12 +22,12 @@ const ContactUs = () => {
   const contactDetails = [
     {
       title: {
-        en:"Mail Us 24/7",
+        en: "Mail Us 24/7",
         fr: "Envoyez-nous un e-mail 24h/24 et 7j/7",
         ru: "Пишите нам 24/7",
         ko: "24/7로 메일을 보내주세요",
         es: "Envíenos un correo electrónico 24/7",
-        ar:"راسلنا على مدار الساعة طوال أيام الأسبوع",
+        ar: "راسلنا على مدار الساعة طوال أيام الأسبوع",
       },
       details:
         ["no-reply@mubychem.com", "support@MubyChem.com"],
@@ -36,32 +36,32 @@ const ContactUs = () => {
     },
     {
       title: {
-      en: "Our Location",
-      fr: "Notre emplacement",
-      ru: "Наше местоположение",
-      ko: "우리의 위치",
-      es: "Nuestra Ubicación",
-      ar:"موقعنا",
+        en: "Our Location",
+        fr: "Notre emplacement",
+        ru: "Наше местоположение",
+        ko: "우리의 위치",
+        es: "Nuestra Ubicación",
+        ar: "موقعنا",
       },
       details:
-         ["Sandhrust road ", "Dongri  Mumbai "],
-        // fr:["Route Sandrush", "Dongri Mumbai"],
-        // ru:["«Сандраш Роуд», «Донгри Мумбаи»"],        
-        // ko:["샌드러시 로드", "동리 뭄바이"],
-        // es:["Sandrush Road", "Dongri Mumbai"],
-        // ar:["طريق ساندراش", "دونغري مومباي"],
-      
+        ["Sandhrust road ", "Dongri  Mumbai "],
+      // fr:["Route Sandrush", "Dongri Mumbai"],
+      // ru:["«Сандраш Роуд», «Донгри Мумбаи»"],        
+      // ko:["샌드러시 로드", "동리 뭄바이"],
+      // es:["Sandrush Road", "Dongri Mumbai"],
+      // ar:["طريق ساندراش", "دونغري مومباي"],
+
       icon: <MapPin className="text-blue-500" size={32} />,
       link: "https://www.google.com/maps?q=Sandhurst+Road+Dongri+Mumbai",
     },
     {
       title: {
-        en:"Call US 24/7",
+        en: "Call US 24/7",
         fr: "Appelez-nous 24h/24 et 7j/7",
         ru: "Звоните нам 24/7",
         ko: "24시간 연중무휴로 전화주세요",
         es: "Llámanos 24/7",
-        ar:"اتصل بنا على مدار الساعة طوال أيام الأسبوع",
+        ar: "اتصل بنا على مدار الساعة طوال أيام الأسبوع",
       },
       details: ["Phone: +91 222 377 0100", "Mobile: +91 222 377 0100"],
       icon: <Phone className="text-blue-500" size={32} />,
@@ -69,12 +69,12 @@ const ContactUs = () => {
     },
     {
       title: {
-        en:"Working Days",
+        en: "Working Days",
         fr: "Jours ouvrables",
         ru: "Рабочие дни",
         ko: "근무일",
         es: "Días laborables",
-        ar:"أيام العمل",
+        ar: "أيام العمل",
       },
       details: [
         "Mon to Fri - 09:00am To 06:00pm",
@@ -91,7 +91,7 @@ const ContactUs = () => {
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
   // const contactDetails = currentTranslations.contactDetails;
-    // const contactDetails = currentTranslations.contactDetails || [];
+  // const contactDetails = currentTranslations.contactDetails || [];
 
 
   const validationSchema = Yup.object({
@@ -168,10 +168,10 @@ const ContactUs = () => {
         {/* Left Side */}
         <div className="w-full md:w-[50%] lg:w-[45%] text-center md:text-left flex-grow">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-          {currentTranslations.Questions}
+            {currentTranslations.Questions}
           </h2>
           <p className="text-gray-600 mt-4 text-base md:text-lg">
-          {currentTranslations.AnswerDescription}
+            {currentTranslations.AnswerDescription}
           </p>
           {/* <button className="mt-6 bg-[#7B3931] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700 mx-auto md:mx-0">
           {currentTranslations.Details}
@@ -181,10 +181,10 @@ const ContactUs = () => {
         {/* Right Side (Form) */}
         <div className="w-full md:w-[50%] lg:w-[45%] p-6 md:p-8 bg-white rounded-3xl shadow-xl max-w-[95%] md:max-w-[80%] lg:max-w-[60%] flex-grow">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
-          {currentTranslations.staff}
+            {currentTranslations.staff}
           </h3>
           <p className="text-gray-500 text-sm text-center mt-2">
-          {currentTranslations.message}
+            {currentTranslations.message}
           </p>
 
           <Formik

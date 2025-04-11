@@ -60,61 +60,137 @@ const zoomIn = {
 };
 const reviews = [
   {
-    text: "Best experience with all products and services and also provided fast customers Support service. Highly recommended Muby Chem Private Limited. #One of the best Pharmaceutical & Speciality Chemicals. Company in India.",
+    text: {
+      en: "Best experience with all products and services and also provided fast customers Support service. Highly recommended Muby Chem Private Limited. #One of the best Pharmaceutical & Speciality Chemicals. Company in India.",
+      es: "La mejor experiencia con todos los productos y servicios, y también brindaron un servicio de atención al cliente rápido. Altamente recomendada Muby Chem Private Limited. #Una de las mejores compañías de productos farmacéuticos y químicos especializados en India.",
+      ko: "모든 제품과 서비스에서 최고의 경험을 했으며 빠른 고객 지원도 제공되었습니다. Muby Chem Private Limited를 강력히 추천합니다. #인도 최고의 제약 및 특수 화학 회사 중 하나입니다.",
+      ru: "Лучший опыт со всеми продуктами и услугами, а также быстрая поддержка клиентов. Настоятельно рекомендую Muby Chem Private Limited. #Одна из лучших фармацевтических и специализированных химических компаний в Индии.",
+      fr: "Meilleure expérience avec tous les produits et services, avec un service client rapide. Muby Chem Private Limited est fortement recommandée. #L'une des meilleures entreprises de produits pharmaceutiques et chimiques spécialisés en Inde.",
+      ar: "أفضل تجربة مع جميع المنتجات والخدمات، وتم أيضًا تقديم خدمة دعم العملاء بسرعة. أوصي بشدة بشركة Muby Chem Private Limited. #واحدة من أفضل شركات الأدوية والمواد الكيميائية المتخصصة في الهند.",
+    },
+
     name: "Anand Naikawadi",
     role: "Mumbai",
   },
   {
-    text: "I've been using chemicals for years, and the quality is consistently top-notch. They are reliable and always meet our strict specifications.",
+    text: {
+      en: "I've been using chemicals for years, and the quality is consistently top-notch. They are reliable and always meet our strict specifications.",
+      es: "He estado usando productos químicos durante años y la calidad es siempre de primera. Son confiables y siempre cumplen con nuestras estrictas especificaciones.",
+      ko: "수년간 화학제품을 사용해 왔으며, 품질은 항상 최고 수준입니다. 신뢰할 수 있고 항상 우리의 엄격한 기준을 충족합니다.",
+      ru: "Я использую химикаты в течение многих лет, и их качество всегда на высшем уровне. Они надёжны и всегда соответствуют нашим строгим требованиям.",
+      fr: "J'utilise des produits chimiques depuis des années, et la qualité est toujours excellente. Ils sont fiables et respectent toujours nos spécifications strictes.",
+      ar: "لقد كنت أستخدم المواد الكيميائية لسنوات، والجودة دائمًا من الطراز الأول. إنهم موثوقون ويلبون دائمًا مواصفاتنا الصارمة.",
+    },
     name: "Komal Patil",
     role: "Mumbai",
   },
   {
-    text: "Service is excellent. Turn-around times are met and sometimes we get results back quicker.",
+    text: {
+      en: "Service is excellent. Turn-around times are met and sometimes we get results back quicker.",
+      es: "El servicio es excelente. Se cumplen los tiempos de entrega y, a veces, recibimos los resultados incluso más rápido.",
+      ko: "서비스가 훌륭합니다. 처리 시간이 지켜지며 때때로 더 빠르게 결과를 받기도 합니다.",
+      ru: "Сервис отличный. Сроки выполнения соблюдаются, а иногда мы получаем результаты даже быстрее.",
+      fr: "Le service est excellent. Les délais sont respectés et parfois nous recevons les résultats encore plus rapidement.",
+      ar: "الخدمة ممتازة. يتم الالتزام بأوقات التسليم، وأحيانًا نحصل على النتائج بشكل أسرع.",
+    },
     name: "Gaurav Satre",
     role: "Satara",
   },
   {
-    text: "The customer service is exceptional. They are always responsive, knowledgeable, and go above and beyond to help us with our needs.",
+    text: {
+
+      en: "The customer service is exceptional. They are always responsive, knowledgeable, and go above and beyond to help us with our needs.",
+      es: "El servicio al cliente es excepcional. Siempre responden rápidamente, son expertos y hacen todo lo posible para ayudarnos con nuestras necesidades.",
+      ko: "고객 서비스는 탁월합니다. 항상 응답이 빠르고 지식이 풍부하며 우리의 요구를 충족시키기 위해 최선을 다합니다.",
+      ru: "Обслуживание клиентов на высшем уровне. Они всегда быстро реагируют, компетентны и делают всё возможное, чтобы помочь нам с нашими потребностями.",
+      fr: "Le service client est exceptionnel. Ils sont toujours réactifs, compétents et vont au-delà de nos attentes pour répondre à nos besoins.",
+      ar: "خدمة العملاء استثنائية. إنهم دائمًا متجاوبون، على دراية، ويبذلون جهدًا إضافيًا لمساعدتنا في تلبية احتياجاتنا.",
+    },
     name: "Mayuri Munagekar",
     role: "Pune ",
   },
   {
-    text: "We appreciate the fast and accurate quotes we receive which allows us to plan our projects effectively.",
+    text: {
+      en: "We appreciate the fast and accurate quotes we receive which allows us to plan our projects effectively.",
+      es: "Agradecemos las cotizaciones rápidas y precisas que recibimos, lo que nos permite planificar nuestros proyectos de manera efectiva.",
+      ko: "우리는 빠르고 정확한 견적을 받을 수 있어 프로젝트를 효율적으로 계획할 수 있다는 점에 감사드립니다.",
+      ru: "Мы ценим быстрые и точные сметы, которые получаем, что позволяет нам эффективно планировать наши проекты.",
+      fr: "Nous apprécions les devis rapides et précis que nous recevons, ce qui nous permet de planifier efficacement nos projets.",
+      ar: "نحن نُقدّر السرعة والدقة في العروض التي نتلقاها، مما يساعدنا على تخطيط مشاريعنا بفعالية.",
+    } ,
     name: "Aayush Shah",
     role: "Gujarat",
   },
   {
-    text: "Timely delivery of chemicals expedites the research activities and provided very high quality products with high packing standards.",
+    text: {
+      en: "Timely delivery of chemicals expedites the research activities and provided very high quality products with high packing standards.",
+      es: "La entrega oportuna de productos químicos acelera las actividades de investigación y proporciona productos de muy alta calidad con altos estándares de embalaje.",
+      ko: "화학 제품의 적시 배송은 연구 활동을 촉진하며, 매우 높은 품질의 제품과 우수한 포장 기준을 제공합니다.",
+      ru: "Своевременная поставка химикатов ускоряет исследовательскую деятельность и обеспечивает продукцию высокого качества с высокими стандартами упаковки.",
+      fr: "La livraison ponctuelle des produits chimiques accélère les activités de recherche et fournit des produits de très haute qualité avec des normes d'emballage élevées.",
+      ar: "تُسهم التسليمات في الوقت المناسب للمواد الكيميائية في تسريع الأنشطة البحثية، وتوفر منتجات عالية الجودة بمعايير تغليف مرتفعة.",
+    },
     name: "Parinaz Elavia",
     role: "Gujarat",
   },
   {
-    text: "Muby Chem products are very helpful for our research and the result is excellent.",
+    text: {
+      en: "Muby Chem products are very helpful for our research and the result is excellent.",
+      es: "Los productos de Muby Chem son muy útiles para nuestra investigación y los resultados son excelentes.",
+      ko: "Muby Chem 제품은 우리의 연구에 매우 유용하며, 결과도 훌륭합니다.",
+      ru: "Продукция Muby Chem очень полезна для наших исследований, и результаты превосходные.",
+      fr: "Les produits de Muby Chem sont très utiles pour nos recherches et les résultats sont excellents.",
+      ar: "منتجات Muby Chem مفيدة جدًا لأبحاثنا، والنتائج ممتازة.",
+    }
+    ,
     name: "Sachin Mavale",
     role: "Kalyan",
   },
   {
-    text: "I can confidently say that Muby Chem has become an integral part of our success story. Your contributions have helped us to better serve our customers.",
+    text: {
+      en: "I can confidently say that Muby Chem has become an integral part of our success story. Your contributions have helped us to better serve our customers.",
+      es: "Puedo decir con confianza que Muby Chem se ha convertido en una parte integral de nuestra historia de éxito. Sus contribuciones nos han ayudado a servir mejor a nuestros clientes.",
+      ko: "Muby Chem은 우리 성공 스토리의 중요한 일부가 되었다고 자신 있게 말할 수 있습니다. 귀사의 기여는 우리가 고객에게 더 나은 서비스를 제공하는 데 큰 도움이 되었습니다.",
+      ru: "Я с уверенностью могу сказать, что Muby Chem стал неотъемлемой частью нашей истории успеха. Ваш вклад помог нам лучше обслуживать наших клиентов.",
+      fr: "Je peux dire avec confiance que Muby Chem est devenu une partie intégrante de notre réussite. Vos contributions nous ont aidés à mieux servir nos clients.",
+      ar: "يمكنني القول بثقة إن Muby Chem أصبحت جزءًا لا يتجزأ من قصة نجاحنا. لقد ساعدتنا مساهماتكم في خدمة عملائنا بشكل أفضل.",
+    } ,
     name: "Anna Parera",
     role: "Mumbai",
   },
   {
-    text: "Your commitment to innovation and continuous improvement has been evident in the way you have adapted to our changing needs and industry trends. Muby Chem team willingness, to explore new solutions and technologies has helped us stay ahead of the curve",
+    text: {
+      en: "Your commitment to innovation and continuous improvement has been evident in the way you have adapted to our changing needs and industry trends. Muby Chem team willingness, to explore new solutions and technologies has helped us stay ahead of the curve",
+      es: "Su compromiso con la innovación y la mejora continua ha sido evidente en la forma en que se han adaptado a nuestras necesidades cambiantes y a las tendencias de la industria. La disposición del equipo de Muby Chem para explorar nuevas soluciones y tecnologías nos ha ayudado a mantenernos a la vanguardia.",
+      ko: "혁신과 지속적인 개선에 대한 귀하의 헌신은 변화하는 우리의 요구와 업계 트렌드에 적응하는 방식에서 분명하게 드러났습니다. Muby Chem 팀의 새로운 솔루션과 기술을 탐색하려는 의지는 우리가 앞서 나가는 데 큰 도움이 되었습니다.",
+      ru: "Ваша приверженность инновациям и постоянному совершенствованию очевидна по тому, как вы адаптируетесь к меняющимся потребностям и тенденциям отрасли. Готовность команды Muby Chem исследовать новые решения и технологии помогла нам оставаться впереди.",
+      fr: "Votre engagement envers l'innovation et l'amélioration continue est évident dans votre capacité à vous adapter à nos besoins changeants et aux tendances du secteur. La volonté de l'équipe de Muby Chem d'explorer de nouvelles solutions et technologies nous a permis de garder une longueur d'avance.",
+      ar: "إن التزامكم بالابتكار والتحسين المستمر واضح في كيفية تكيّفكم مع احتياجاتنا المتغيرة واتجاهات الصناعة. إن استعداد فريق Muby Chem لاستكشاف حلول وتقنيات جديدة ساعدنا على البقاء في المقدمة.",
+    }  ,
     name: "Sachin Mavale",
     role: "Maharashtra",
   },
   {
-    text: "We are pleased with the quality of service Muby Chem provides. We sincerely appreciate their responsiveness and the way they connect business. We look forward to doing business with Muby Chem for years to come Thank You.",
+    text: {
+      en: "We are pleased with the quality of service Muby Chem provides. We sincerely appreciate their responsiveness and the way they connect business. We look forward to doing business with Muby Chem for years to come Thank You.",
+      es: "Estamos satisfechos con la calidad del servicio que ofrece Muby Chem. Agradecemos sinceramente su capacidad de respuesta y la forma en que gestionan los negocios. Esperamos seguir haciendo negocios con Muby Chem durante muchos años. Gracias.",
+      ko: "Muby Chem이 제공하는 서비스 품질에 만족합니다. 그들의 빠른 대응과 비즈니스를 연결하는 방식에 진심으로 감사드립니다. 앞으로도 Muby Chem과 오랫동안 비즈니스를 이어가길 기대합니다. 감사합니다.",
+      ru: "Мы довольны качеством обслуживания, которое предоставляет Muby Chem. Искренне благодарим за оперативность и профессиональный подход к бизнесу. С нетерпением ждём многолетнего сотрудничества с Muby Chem. Спасибо.",
+      fr: "Nous sommes satisfaits de la qualité du service fourni par Muby Chem. Nous apprécions sincèrement leur réactivité et leur manière de gérer les affaires. Nous espérons continuer à travailler avec Muby Chem pendant de nombreuses années. Merci.",
+      ar: "نحن راضون عن جودة الخدمة التي تقدمها شركة Muby Chem. نحن نُقدّر بصدق سرعة استجابتهم وطريقتهم في إدارة الأعمال. نتطلع إلى مواصلة التعامل مع Muby Chem لسنوات عديدة قادمة. شكرًا لكم.",
+    }
+    ,
     name: "Ekansh Devlekar",
     role: "Nashik",
-  },
+  },
 
 ];
 const AboutUs = () => {
 
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
+  const selectedLang = "es"; // or use state: const [selectedLang, setSelectedLang] = useState("en");
+
 
   const [isOpen, setIsOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
@@ -392,8 +468,7 @@ const AboutUs = () => {
                   transition={{ duration: 0.5 }}
                   className="text-lg mb-7 p-4 absolute w-full"
                 >
-                  {reviews[currentReview].text}
-                </motion.p>
+{reviews[currentReview].text[selectedLang]}                </motion.p>
               </AnimatePresence>
             </div>
 
