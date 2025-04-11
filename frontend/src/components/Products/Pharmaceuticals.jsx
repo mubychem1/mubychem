@@ -128,14 +128,14 @@ const ProductCard = ({ product }) => {
         <img
           src={product.img}
           alt={product.name}
-          className='w-full h-68 object-cover rounded-md '
+          className='w-full h-68 object-cover rounded-md transition-transform duration-300 ease-in-out hover:scale-110'
         />
         <div className='mt-4 text-center'>
-          <p className='text-gray-600 font-semibold mt-9 '>Molecural Formula: {product.molecural_formula}</p>
+          <p className='text-gray-600 font-semibold mt-9 '>Molecural Formula: {product.molecular_formula}</p>
           <hr className='border-t border-gray-300 mt-1 ' />
           <p className='text-gray-800 font-medium '>CAS No:{product.cas_no}</p>
           <hr className="border-t border-gray-300 mt-1" />
-          <h2 className='mt-2 text-lg font-bold text-blue-600 border-b-2 border-blue-600 inline-block '>
+          <h2 className='mt-2 text-lg font-bold text-[#7b3931] border-b-2 border-[#7b3931] inline-block '>
             {product.product_name}
           </h2>
         </div>

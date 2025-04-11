@@ -12,7 +12,7 @@ const PharmaceuticalsDes = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-       
+
 
         const response = await axios.get(`http://localhost:9000/api/productdes/${id}`);
         setProduct(response.data.data);
@@ -48,7 +48,8 @@ const PharmaceuticalsDes = () => {
 
       {/* ---------- main contain ------- */}
       <div className='max-w-screen-2xl mx-auto bg-white p-8 pt-20 flex justify-between' style={{
-          fontFamily: " 'Poppins',sans-serif"}}>
+        fontFamily: " 'Poppins',sans-serif"
+      }}>
         <div className='w-full pl-6'>
           <table className='w-full text-gray-300'>
             <tbody>
@@ -88,16 +89,26 @@ const PharmaceuticalsDes = () => {
                   <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.productStatus}</span>
                 </td>
               </tr>
+              <tr>
+                <td className="py-2">
+                  <button
+                    onClick={() => window.history.back()}
+                    className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer mt-2">
+                    BACK
+                  </button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
+
 
         {/* Right Side - Product Image (Pushed to Right) */}
         <div className="self-end pr-5 p-[30px]">
           <img
             src={product.img}
             alt="Milk Calcium Powder"
-            className="w-[550px] h-[250px] rounded-lg shadow-md"
+            className="w-[550px] h-[250px] rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
           />
         </div>
       </div>

@@ -15,35 +15,35 @@ import VerticalTabs from '../Home/VerticalTabs';
 import translations from '../translater/translations.js'
 import { useSelector } from "react-redux"
 
-const steps = [
-  {
-    id: "01",
-    title: "Sample Collection",
-    description: "Sometimes these types of samples can be collected at home.",
-    icon: "🔬", // Replace with an actual icon if needed
-  },
-  {
-    id: "02",
-    title: "Sample Processing",
-    description:
-      "The results of sample processing can provide crucial information and more.",
-    icon: "🧪",
-  },
-  {
-    id: "03",
-    title: "Accurate Test Results",
-    description:
-      "Laboratory test checks a sample of your blood, or other body fluid.",
-    icon: "🩸",
-  },
-  {
-    id: "04",
-    title: "Reports Delivered",
-    description:
-      "If you would like to request a special service, change your lab detail.",
-    icon: "⌛",
-  },
-];
+// const steps = [
+//   {
+//     id: "01",
+//     title: "Sample Collection",
+//     description: "Sometimes these types of samples can be collected at home.",
+//     icon: "🔬", // Replace with an actual icon if needed
+//   },
+//   {
+//     id: "02",
+//     title: "Sample Processing",
+//     description:
+//       "The results of sample processing can provide crucial information and more.",
+//     icon: "🧪",
+//   },
+//   {
+//     id: "03",
+//     title: "Accurate Test Results",
+//     description:
+//       "Laboratory test checks a sample of your blood, or other body fluid.",
+//     icon: "🩸",
+//   },
+//   {
+//     id: "04",
+//     title: "Reports Delivered",
+//     description:
+//       "If you would like to request a special service, change your lab detail.",
+//     icon: "⌛",
+//   },
+// ];
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -292,8 +292,8 @@ const AboutUs = () => {
             backgroundPosition: "center",
           }}
         >
-          <span className="text-4xl font-bold text-white ml-2">20+</span>
-          <p className="text-white text-l sm:text-xs leading-tight mt-3 ml-2">
+          {/* <span className="text-4xl font-bold text-white ml-2">20+</span> */}
+          <p className="text-white text-l sm:text-sm leading-tight mt-3 ml-2">
             Professional and Experienced <br /> staff ready to help you
           </p>
         </div>
