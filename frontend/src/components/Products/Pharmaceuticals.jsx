@@ -148,6 +148,8 @@ const ProductCard = ({ product }) => {
 const Pharmaceuticals = () => {
 
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9;
 
   useEffect(() => {
     axios.get("http://localhost:9000/api/product")
@@ -164,9 +166,17 @@ const Pharmaceuticals = () => {
       });
   }, []);
 
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const totalPages = Math.ceil(products.length / productsPerPage);
 
   return (
     <>
+      {/* Background Section */}
       <div className="bg-white p-6 md:p-12">
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
@@ -175,22 +185,46 @@ const Pharmaceuticals = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-left">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+              <h1 className="text-white text-5xl font-bold mb-4 pl-4">
                 Pharmaceuticals
               </h1>
-              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
+              <p className="text-white text-lg pl-5">Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center mx-auto p-10">
-        {products.map((product) => (
+        {currentProducts.map((product) => (
           <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
             <ProductCard product={product} />
           </Link>
         ))}
       </div>
+
+    {/* Pagination Controls */}
+<div className="flex justify-center items-center gap-4 mb-10">
+  <button
+    onClick={() => paginate(currentPage - 1)}
+    disabled={currentPage === 1}
+    className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50"
+  >
+    Previous
+  </button>
+
+  <span className="text-[#7b3931] font-medium">
+    Page {currentPage} of {totalPages}
+  </span>
+
+  <button
+    onClick={() => paginate(currentPage + 1)}
+    disabled={currentPage === totalPages}
+    className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50"
+  >
+    Next
+  </button>
+</div>
     </>
   );
 };
