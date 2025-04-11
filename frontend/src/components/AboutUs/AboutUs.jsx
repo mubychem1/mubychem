@@ -95,11 +95,6 @@ const reviews = [
     role: "Kalyan",
   },
   {
-    text: "Timely delivery of chemicals expedites the research activities and provided very high quality products with high packing standards.",
-    name: "Parinaz Elavia",
-    role: "Gujarat",
-  },
-  {
     text: "I can confidently say that Muby Chem has become an integral part of our success story. Your contributions have helped us to better serve our customers.",
     name: "Anna Parera",
     role: "Mumbai",
@@ -113,7 +108,9 @@ const reviews = [
     text: "We are pleased with the quality of service Muby Chem provides. We sincerely appreciate their responsiveness and the way they connect business. We look forward to doing business with Muby Chem for years to come Thank You.",
     name: "Ekansh Devlekar",
     role: "Nashik",
-  }]
+  },
+
+];
 const AboutUs = () => {
 
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
@@ -227,11 +224,9 @@ const AboutUs = () => {
             Private Limited
           </h2>
           <p className="text-gray-600 mt-4">
-            At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.
-          </p><br />
+          {currentTranslations.mubyChemDescription1}          </p><br />
           <p className="text-gray-600 mt-4">
-            We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.
-          </p>
+          {currentTranslations.mubyChemDescription2}          </p>
 
         </motion.div>
       </motion.div>
@@ -256,7 +251,7 @@ const AboutUs = () => {
                hover:scale-110  transition-transform duration-300 ease-in-out"
           >
             <FaPlay className="text-gray-900 text-lg" />
-            <span className="ml-1 text-sm font-semibold">Watch Video</span>
+            <span className="ml-1 text-sm font-semibold">{currentTranslations.watchVideo}</span>
           </button>
         </div>
 
@@ -294,8 +289,10 @@ const AboutUs = () => {
         >
           {/* <span className="text-4xl font-bold text-white ml-2">20+</span> */}
           <p className="text-white text-l sm:text-sm leading-tight mt-3 ml-2">
-            Professional and Experienced <br /> staff ready to help you
-          </p>
+          {currentTranslations.Professional}
+            <br />
+            {currentTranslations.staff}  
+                    </p>
         </div>
 
         {/* Card 3 - National Science Day */}
@@ -308,11 +305,11 @@ const AboutUs = () => {
           }}
         >
           <h2 className="text-2xl text-white font-bold">
-            National Science Day
-          </h2>
+          {currentTranslations.National}
+                    </h2>
           <p className=" text-white text-lg">25th Feb 2022</p>
           <div className="border-t border-white my-2  w-2/3 mx-30"></div>
-          <p className=" text-white mt-2">With The Best Experts In Science</p>
+          <p className=" text-white mt-2">{currentTranslations.Experts}</p>
         </div>
       </motion.div>
       {/*--------------------- Sample post ----------------- */}
@@ -370,14 +367,17 @@ const AboutUs = () => {
             <div className="absolute bottom-4 left-4 bg-opacity-80 pt-1 sm:p-8 md:p-8 md:ml-5 rounded-lg text-white">
               <span className="text-3xl sm:text-4xl font-bold text-white">460+</span>
               <p className="text-xs sm:text-sm">
-                Professional and <br /> Experienced Staff ready <br /> to help you
-              </p>
+              {currentTranslations.Professional}
+                <br />
+                {currentTranslations.staff}
+                              </p>
             </div>
           </div>
           <div className="p-8 flex flex-col justify-center">
-            <p className="text-sm uppercase font-semibold text-gray-400">Client Reviews</p>
+            <p className="text-sm uppercase font-semibold text-gray-400">              {currentTranslations.Client}
+            </p>
             <h2 className="text-3xl font-bold my-2">
-              Trusted by thousands of people & companies.
+            {currentTranslations.Trusted}
             </h2>
             <FaQuoteLeft className="text-3xl text-black mb-2" />
 

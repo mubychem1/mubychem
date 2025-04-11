@@ -17,11 +17,12 @@ const Header = () => {
 
     const options = [
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
-        { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
+        // { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
         { value: "fr", label: "Franch", flag: "https://flagcdn.com/w40/fr.png" },
         { value: "ru", label: "Russian", flag: "https://flagcdn.com/w40/ru.png" },
         { value: "ko", label: "Korean", flag: "https://flagcdn.com/w40/kr.png" },
-        { value: "es", label: "Spanish", flag: "https://flagcdn.com/w40/es.png" }
+        { value: "es", label: "Spanish", flag: "https://flagcdn.com/w40/es.png" },
+        { value: "ar", label: "Arabic", flag: "https://flagcdn.com/w40/sa.png" },
     ];
     const [selected, setSelected] = useState(options[0]);
     const [isOpe, setIsOpe] = useState(false);
@@ -654,4 +655,3 @@ export default Header;
 // };
 
 // export default Header;
-

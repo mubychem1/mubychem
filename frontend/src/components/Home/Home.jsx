@@ -21,6 +21,7 @@ import glp from "../../assets/logo/glp.png";
 import fssc from "../../assets/logo/fssc-22000.png";
 import fssai from "../../assets/logo/fssai.png";
 // import fdca from "../../assets/logo/fdca.png";
+import fami from "../../assets/logo/fami-qs.png";
 import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
 import translations from '../translater/translations.js'
@@ -39,9 +40,14 @@ const certification = [
     title: '',
     bgImage: fssc
   },
+
   {
     title: '',
     bgImage: fssai
+  },
+  {
+    title: '',
+    bgImage: fami
   },
   {
     title: '',
@@ -55,7 +61,7 @@ const certification = [
     title: ' ',
     bgImage: iso
   },
-  
+
   {
     title: '',
     bgImage: allergen
@@ -64,7 +70,7 @@ const certification = [
     title: '',
     bgImage: haccp
   },
- 
+
   {
     title: '',
     bgImage: glutten
@@ -77,26 +83,85 @@ const certification = [
 
 const services = [
   {
-    title: "Pharmaceuticals",
-    description: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
+    title: {
+      en: "Pharmaceuticals",
+      fr: "Pharmaceutiques",
+      ru: "Фармацевтика",
+      ko: "의약품",
+      es: "Farmacéuticos",
+      ar: "المستحضرات الصيدلانية",
+    },
+    description: {
+      en: "We manufacture high-quality active pharmaceutical ingredients (APIs) and Excipients that serve as the building blocks for pharmaceutical formulations. Our products are carefully produced under controlled conditions to ensure potency, purity, and efficacy.",
+      ru: "Мы производим высококачественные активные фармацевтические ингредиенты (АФИ) и вспомогательные вещества, которые служат строительными блоками для фармацевтических формул. Наши продукты производятся тщательно в контролируемых условиях, чтобы гарантировать эффективность, чистоту и действенность.",
+      ko: "당사는 제약 제형의 빌딩 블록 역할을 하는 고품질 활성 제약 성분(API)과 부형제를 제조합니다. 당사의 제품은 효능, 순도 및 효능을 보장하기 위해 통제된 조건에서 신중하게 생산됩니다.",
+      es: "Fabricamos ingredientes farmacéuticos activos (API) y excipientes de alta calidad que sirven como componentes básicos para formulaciones farmacéuticas. Nuestros productos se elaboran cuidadosamente en condiciones controladas para garantizar su potencia, pureza y eficacia.",
+      fr: "Nous fabriquons des principes actifs pharmaceutiques (API) et des excipients de haute qualité qui servent de base aux formulations pharmaceutiques. Nos produits sont fabriqués avec soin dans des conditions contrôlées pour garantir leur efficacité, leur pureté et leur puissance.",
+      ar: "نصنع مكونات صيدلانية فعالة (APIs) ومواد مساعدة عالية الجودة تُشكل اللبنات الأساسية للتركيبات الصيدلانية. تُنتج منتجاتنا بعناية فائقة في ظل ظروف مُراقبة لضمان الفعالية والنقاء والفعالية.",
+    },
     icon: "🤖",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg",
   },
   {
-    title: "Speciality chemicals",
-    description: "Tailored chemical solutions designed specifically for your needs, ensuring optimal results and seamless integration into your production processes.",
+    title: {
+      en: "Speciality chemicals",
+      hi: "फार्मास्युटिकल्स",
+      fr: "Produits chimiques spécialisés",
+      ru: "Специальные химикаты",
+      ko: "특수 화학물질",
+      es: "Productos químicos especiales",
+      ar: "المواد الكيميائية المتخصصة",
+    },
+    description: {
+      en: "Tailored chemical solutions designed specifically for your needs, ensuring optimal results and seamless integration into your production processes.",
+      fr: "Des solutions chimiques sur mesure conçues spécifiquement pour vos besoins, garantissant des résultats optimaux et une intégration transparente dans vos processus de production.",
+      ru: "«Индивидуальные химические решения, разработанные специально для ваших нужд, гарантирующие оптимальные результаты и бесшовную интеграцию в ваши производственные процессы».",
+      ko: "귀하의 요구 사항에 맞게 특별히 설계된 맞춤형 화학 솔루션으로 최적의 결과와 생산 프로세스에 대한 원활한 통합을 보장합니다.",
+      es: "Soluciones químicas a medida, diseñadas específicamente para sus necesidades, garantizando resultados óptimos y una integración perfecta en sus procesos de producción.",
+      ar: "حلول كيميائية مصممة خصيصًا لتلبية احتياجاتك، مما يضمن الحصول على نتائج مثالية والتكامل السلس في عمليات الإنتاج الخاصة بك.",
+    },
     icon: "🧠",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg",
   },
   {
-    title: "Nutraceuticals",
-    description: "We specialize in the development and manufacturing. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
+    title: {
+      en: "Nutraceuticals",
+      hi: "फार्मास्युटिकल्स",
+      fr: "Nutraceutiques",
+      ru: "Нутрицевтики",
+      ko: "건강기능식품",
+      es: "Nutracéuticos",
+      ar: "المكملات الغذائية",
+    },
+    description: {
+      en: "We specialize in the development and manufacturing. Our nutraceuticals combine the best of nature and science to offer advanced, effective solutions for a variety of health and dietary needs. Our commitment to quality ensures that every product we create meets the highest standards of safety, efficacy, and regulatory compliance.",
+      fr: "Nous sommes spécialisés dans le développement et la fabrication. Nos nutraceutiques allient le meilleur de la nature et de la science pour offrir des solutions avancées et efficaces répondant à une variété de besoins en matière de santé et d'alimentation. Notre engagement qualité garantit que chaque produit que nous créons répond aux normes les plus strictes en matière de sécurité, d'efficacité et de conformité réglementaire.",
+      ru: "Мы специализируемся на разработке и производстве. Наши нутрицевтики сочетают в себе лучшее от природы и науки, предлагая передовые, эффективные решения для различных потребностей в области здравоохранения и питания. Наша приверженность качеству гарантирует, что каждый созданный нами продукт соответствует самым высоким стандартам безопасности, эффективности и соответствия нормативным требованиям.",
+      ko: "저희는 개발 및 제조를 전문으로 합니다. 저희의 건강기능식품은 자연과 과학의 장점을 결합하여 다양한 건강 및 식단 요구에 대한 진보적이고 효과적인 솔루션을 제공합니다. 품질에 대한 저희의 헌신은 저희가 만드는 모든 제품이 가장 높은 수준의 안전성, 효능 및 규정 준수를 충족하도록 보장합니다.",
+      es: "Nos especializamos en el desarrollo y la fabricación. Nuestros nutracéuticos combinan lo mejor de la naturaleza y la ciencia para ofrecer soluciones avanzadas y eficaces para diversas necesidades de salud y nutrición. Nuestro compromiso con la calidad garantiza que cada producto que creamos cumpla con los más altos estándares de seguridad, eficacia y cumplimiento normativo.",
+      ar: "نحن متخصصون في التطوير والتصنيع. تجمع منتجاتنا من المكملات الغذائية بين أفضل ما توصلت إليه الطبيعة والعلوم لتقديم حلول متطورة وفعالة لمختلف الاحتياجات الصحية والغذائية. التزامنا بالجودة يضمن أن كل منتج نصنعه يفي بأعلى معايير السلامة والفعالية والامتثال للأنظمة.",
+    },
     icon: "⚛",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg",
   },
   {
-    title: "Mineral Fortifiers",
-    description: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability.",
+    title: {
+      en: "Mineral Fortifiers",
+      hi: "फार्मास्युटिकल्स",
+      fr: "Fortifiants minéraux",
+      ru: "Минеральные фортификаторы",
+      ko: "미네랄 강화제",
+      es: "Fortificantes minerales",
+      ar: "التحصينات المعدنية",
+    },
+    description: {
+      en: "Our mineral fortifiers are crafted to meet diverse nutritional needs, ensuring you get the right minerals in the right amounts. With our cutting-edge technology and commitment to quality, we provide mineral fortifiers that meet global standards for safety, effectiveness, and sustainability.",
+      fr: "Nos fortifiants minéraux sont conçus pour répondre à divers besoins nutritionnels, vous garantissant un apport optimal en minéraux. Grâce à notre technologie de pointe et à notre engagement qualité, nous proposons des fortifiants minéraux conformes aux normes internationales de sécurité, d'efficacité et de durabilité.",
+      ru: "Наши минеральные обогатители созданы для удовлетворения различных потребностей в питании, гарантируя, что вы получите нужные минералы в нужных количествах. Благодаря нашим передовым технологиям и приверженности качеству мы предоставляем минеральные обогатители, которые соответствуют мировым стандартам безопасности, эффективности и устойчивости.",
+      ko: "당사의 미네랄 강화제는 다양한 영양적 요구를 충족하도록 제작되어 적절한 양의 적절한 미네랄을 섭취할 수 있도록 보장합니다. 최첨단 기술과 품질에 대한 헌신으로 당사는 안전성, 효과성 및 지속 가능성에 대한 글로벌 표준을 충족하는 미네랄 강화제를 제공합니다.",
+      es: "Nuestros fortificantes minerales están elaborados para satisfacer diversas necesidades nutricionales, garantizando el aporte de minerales en las cantidades adecuadas. Gracias a nuestra tecnología de vanguardia y nuestro compromiso con la calidad, ofrecemos fortificantes minerales que cumplen con los estándares globales de seguridad, eficacia y sostenibilidad.",
+      ar: "مُقوِّياتنا المعدنية مُصمَّمة لتلبية احتياجاتك الغذائية المتنوعة، مما يضمن حصولك على المعادن المناسبة بالكميات المناسبة. بفضل تقنيتنا المتطورة والتزامنا بالجودة، نوفر مُقوِّيات معدنية تُلبي المعايير العالمية للسلامة والفعالية والاستدامة.",
+    },
     icon: "🧬",
     bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
   },
@@ -123,7 +188,7 @@ const Home = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === certification.length ? 0 : prevIndex + 1
       );
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [certification.length]);
   const [isOpen, setIsOpen] = useState(false);
@@ -291,12 +356,12 @@ const Home = () => {
                 {service.icon}
               </div>
               <h2 className="text-[17px] font-semibold text-gray-900">
-                {service.title}
+                {service.title[language]}
               </h2>
             </div>
             <hr className="mt-3 p-3 border-gray-200 border-t-2 w-full hover:w-full hover:border-gray-400 transition-all duration-100 m-0" />
             <p className="text-gray-600 text-sm ml-auto text-[15px] text-left">
-              {service.description}
+              {service.description[language]}
             </p>
             <button className="absolute table text-center bg-[#f7f4e9] px-[15px] py-[10px] bottom-[-10px] sm:bottom-[-15px] right-5 sm:right-10 rounded-full border-white border-8 transition-all duration-100 hover:text-[#773135]">
               <svg
@@ -372,7 +437,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-             {currentTranslations.mubyChemDescription1}
+            {currentTranslations.mubyChemDescription1}
           </motion.p>
           <motion.p
             className="text-[15px] leading-[1.6] text-[#6a7391] normal-case not-italic mb-6"
@@ -398,10 +463,10 @@ const Home = () => {
               },
             }}
           >
-            
+
 
             {/* Feature 2 */}
-            
+
           </motion.div>
 
           {/* Button with Hover Animation */}
@@ -425,7 +490,7 @@ const Home = () => {
           WHY CHOOSE US?
         </div> */}
         <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: "Times New Roman" }}>
-          Why Choose Muby Chem <br />Private Limited?
+          {currentTranslations.Featureheading}<br />{currentTranslations.Featureheading1}
         </h2>
 
         <div className="flex items-center mt-8 max-w-7xl w-full ">
@@ -559,10 +624,10 @@ const Home = () => {
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
             <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
-              OUR SERVICE
+              {currentTranslations.Service}
             </button>
             <h2 className="text-4xl mt-4 " style={{ fontFamily: "Times New Roman" }}>
-              Manufacturing Facilities</h2>
+              {currentTranslations.Manufacturing}</h2>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -625,9 +690,9 @@ const Home = () => {
         {/* Form Section */}
         <div className="md:w-1/2 bg-[#773135] text-white p-8 rounded-3xl " style={{ fontFamily: "Times New Roman" }}>
           <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 font-[Open_Sans]"  >
-          {currentTranslations.CONTACT_US}
+            {currentTranslations.CONTACT_US}
           </button>
-          <h2 className="  text-[50px] leading-[60px] text-white mb-6">Get your free  <br /> estimate!</h2>
+          <h2 className="  text-[50px] leading-[60px] text-white mb-6">{currentTranslations.Get}<br /> {currentTranslations.estimate}</h2>
 
           {/* Form Inputs */}
           <form onSubmit={handleSubmit}>
@@ -639,11 +704,11 @@ const Home = () => {
               <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} className="bg-transparent border border-white p-3 rounded-4xl text-gray-300"></textarea>
             </div>
 
-            <p className="text-white text-sm mt-4 italic">Submit this information and we will send <br /> you the cost for the service.</p>
+            <p className="text-white text-sm mt-4 italic">{currentTranslations.information}<br />{currentTranslations.information1}</p>
 
             <div className="mt-6 flex justify-end">
               <button type="submit" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-300 hover:text-black">
-                Submit →
+                {currentTranslations.submit}
               </button>
             </div>
           </form>
