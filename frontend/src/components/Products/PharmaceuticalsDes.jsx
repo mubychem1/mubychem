@@ -14,7 +14,7 @@ const PharmaceuticalsDes = () => {
       try {
 
 
-        const response = await axios.get(`http://localhost:9000/api/productdes/${id}`);
+        const response = await axios.get(`https://mubychem.onrender.com/api/productdes/${id}`);
         setProduct(response.data.data);
         console.log("aayush");
 
