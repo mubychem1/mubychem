@@ -3,7 +3,10 @@ import axios from 'axios';
 import background from '../../assets/background1.png';
 import glp from "../../assets/certificate.png";
 import { useParams } from 'react-router-dom';
+import { Loader2 } from 'lucide-react'; // If you're using lucide-react icons
+import { motion } from 'framer-motion';
 
+const BASE_URL = window.location.origin;
 
 const PharmaceuticalsDes = () => {
   const { id } = useParams();
@@ -27,8 +30,30 @@ const PharmaceuticalsDes = () => {
 
     fetchProduct();
   }, [id]);
-  if (!product) return <div>Loading...</div>
+  // if (!product) return <div>Loading...</div>
+  // if (!product) {
+  //   return (
+  //     <div className="flex flex-col items-center justify-center h-64">
+  //       <motion.div
+  //         animate={{ rotate: 360 }}
+  //         transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+  //         className="text-blue-500"
+  //       >
+  //         <Loader2 size={48} />
+  //       </motion.div>
+  //       {/* <p className="mt-4 text-lg font-medium text-gray-600">Hang tight, we're fetching the magic 🪄...</p> */}
+  //     </div>
+  //   );
+  // }
 
+  if (!product) {
+    return (
+      <div className="flex flex-col items-center justify-center h-64 text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        {/* <p className="mt-4 text-lg text-gray-700">Brewing your data potion... Please wait! 🧪</p> */}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -106,7 +131,7 @@ const PharmaceuticalsDes = () => {
         {/* Right Side - Product Image (Pushed to Right) */}
         <div className="self-end pr-5 p-[30px]">
           <img
-            src={product.img}
+            src={`${BASE_URL}${product.img}`}
             alt="Milk Calcium Powder"
             className="w-[550px] h-[250px] rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
           />
