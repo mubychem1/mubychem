@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import background from "../../assets/background.png";
+import background from "../../assets/Blog1.png";
 // import { useNavigate } from "react-router-dom";
 import Page1 from "./Page1";
 import { Link } from "react-router-dom";
@@ -47,7 +47,7 @@ const Blog = () => {
 
   return (
     <>
-      <div className="bg-[#ecf2ff] p-6 md:p-12">
+      <div className="bg-white p-6 md:p-12" style={{ fontFamily: "Times New Roman" }}>
         <div
           className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
@@ -66,12 +66,12 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="bg-[#ecf2ff] min-h-screen p-8 flex justify-center items-center flex-col">
+      <div className="bg-white  p-8 flex justify-center items-center flex-col " style={{ fontFamily: "Times New Roman" }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {currentItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-5 rounded-3xl hover:shadow-xl transition-all overflow-hidden h-[500px] md:h-[550px] flex flex-col"
+              className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-[500px] md:h-[550px] flex flex-col"
             >
               <img
                 src={item.image}

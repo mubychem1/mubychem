@@ -97,7 +97,7 @@ const Blog = () => {
   return (
     <>
       {/* Blog page details */}
-      <div className="flex flex-col">
+      <div className="flex flex-col" style={{ fontFamily: "Times New Roman" }}>
         {/* ----------Research Section  -------------- */}
         <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
           {/* Left Side - Image */}

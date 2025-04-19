@@ -3,14 +3,21 @@ const translations = {
     HOME: "HOME",
     ABOUT: "ABOUT US",
     PRODUCTS: "PRODUCTS",
-    BLOGS: "BLOGS",
-    CAREER: "CAREER",
+    BLOGS: "EVENTS",
+    CAREER: "CAREERS",
     CONTACT_US: "CONTACT US",
-    USEFUL_LINKS: "Useful Links",
+    USEFUL_LINKS: "USEFUL LINKS",
 
     // -------------Footer Section ----------
+    Home: "Home",
+    About: "About Us",
+    Product: "Our Products",
+    BLOGS: "EVENTS",
+    Events: "Events",
+    Career: "Careers",
+    Contact: "Contact Us",
     PRODUCT: "PRODUCT",
-    CATEGORIES: "Categories",
+    CATEGORIES: "CATEGORIES",
     PHARMACEUTICALS: "Pharmaceuticals",
     FOOD_ADDITIVES: "Food Additives",
     ANALYTICAL_REAGENT: "Analytical Reagent",
@@ -22,13 +29,13 @@ const translations = {
     MINERAL_FORTIFIERS: "Mineral Fortifiers",
     EXCIPIENTS: "Excipients",
     OTHER_PRODUCTS: "Other Products",
-    CONTACT_DETAILS: "Contact Details",
+    CONTACT_DETAILS: "CONTACT DETAILS",
     COMPANY_NAME: "Muby Chem Private Limited",
     EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "All Rights Reserved.",
 
     SPECIALTY_CHEMICALS:
-      "We specialize in producing high-quality specialty chemicals and excipientsOur products are known for their purity and effectiveness, supporting various industries worldwide.",
+      "We specialize in producing high-quality specialty chemicals, APIs and excipients. Our products are known for their purity and effectiveness, supporting various industries worldwide.",
 
 
     // -------Home Section ---------
@@ -38,13 +45,15 @@ const translations = {
     ourProducts: "Our Products",
     watchVideo: "Watch Video",
 
-    welcomeToMubyChem: "Welcome to Muby Chem Private Limited",
+    welcomeToMubyChem: "Muby Chem Private Limited",
     obsessedWithQuality: "Obsessed with Quality since 1976",
     mubyChemDescription1:
       "At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.",
     mubyChemDescription2:
       "We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.",
-
+      mubyChemDescription3:
+      "All products are manufactured following ICH Q7 Good Manufacturing Practices (cGMP) for active pharmaceutical ingredients and excipients, ensuring uncompromised quality and safety. We offer materials that meet or exceed the standards of USP, NF, BP, EP, JP, IP, FCC, and ACS compendia, depending on the requirement.",
+      mubyChemDescription4:"With state-of-the-art manufacturing facilities in India and comprehensive global regulatory documentation support, Muby Chem supplies to over 50 countries, consistently delivering quality, compliance, and value to some of the world’s most respected brands.",
     apis: "APIs",
     apisDescription:
       "Health research, sometimes referred to as medical research.",
@@ -54,8 +63,7 @@ const translations = {
     knowMore: "Know More",
 
     ourService: "OUR SERVICE",
-    manufacturing: "Manufacturing Facilities",
-    hello: "et your free  <br /> estimate!",
+    accre: "Accreditation",
     
 
 
@@ -75,18 +83,18 @@ const translations = {
     Manufacturing: "Manufacturing Facilities",
 
     /*-------estimate section--------------*/
-    Get: "Get your free",
-    estimate: "estimate!",
+    Get: "Inquiry &",
+    estimate: "Information Request",
     information: "Submit this information and we will send",
     information1: "you the cost for the service.",
     submit: "Submit →",
 
     /* -----------------About Us------------------ */
     mubyChemDescription1:
-      "At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.",
+      "Muby Chem is an USFDA-registered and FSSC 22000-certified leading manufacturer of high-purity pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals, serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally.",
     mubyChemDescription2:
-      "We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.",
-    welcomeToMubyChem: "Welcome to Muby Chem Private Limited",
+      "With over four decades of experience and a legacy of trust, we are recognized for our quality-first approach, consistent reliability, and customer-centric solutions.",
+    welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Watch Video",
     Professional: "Professional and Experienced",
     staff: "staff ready to help you",
@@ -462,7 +470,7 @@ Readmore:"Read More ➝",
       "Chez Muby Chem, nous nous engageons à faire progresser les industries en fournissant des produits chimiques de haute qualité et des solutions innovantes pour les produits pharmaceutiques, nutraceutiques, les produits chimiques spécialisés, les additifs alimentaires, et bien plus encore. Avec plus de 49 ans d’expertise, nous sommes fiers d’offrir des produits de pointe répondant aux normes de qualité et réglementaires les plus strictes.",
     mubyChemDescription2:
       "Nous travaillons avec des industries du monde entier pour soutenir le développement de produits exceptionnels qui améliorent la santé, le bien-être et la performance industrielle. Que vous ayez besoin de solutions chimiques personnalisées, d'ingrédients nutraceutiques ou de formulations chimiques spécialisées, Muby Chem est votre partenaire de confiance.",
-    welcomeToMubyChem: " Welcome to Muby Chem  Private Limited",
+    welcomeToMubyChem: "Muby Chem  Private Limited",
     watchVideo: "Regarder la vidéo",
     Professional: "Professionnel et expérimenté",
     staff: "personnel prêt à vous aider",

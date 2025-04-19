@@ -36,8 +36,6 @@ const router = createBrowserRouter(
       <Route path="career" element={<Career />} />
       {/* <Route path="simple" element={<Simple />} /> */}
       <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes />} />
-
-
     </Route>
   )
 );

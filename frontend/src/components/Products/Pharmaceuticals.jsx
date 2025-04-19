@@ -119,6 +119,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+const BASE_URL = window.location.origin; 
 
 const ProductCard = ({ product }) => {
   return (
@@ -126,7 +127,7 @@ const ProductCard = ({ product }) => {
 
       <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-95 p-4 h-125">
         <img
-          src={product.img}
+          src={`${BASE_URL}${product.img}`}
           alt={product.name}
           className='w-full h-68 object-cover rounded-md transition-transform duration-300 ease-in-out hover:scale-110'
         />
@@ -152,7 +153,7 @@ const Pharmaceuticals = () => {
   const productsPerPage = 9;
 
   useEffect(() => {
-    axios.get("http://localhost:9000/api/product")
+    axios.get("https://mubychem.onrender.com/api/product")
       .then((response) => {
         console.log("API Response:", response.data);
         if (Array.isArray(response.data.data)) {

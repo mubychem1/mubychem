@@ -18,7 +18,7 @@ const Header = () => {
     const options = [
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
         // { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
-        { value: "fr", label: "Franch", flag: "https://flagcdn.com/w40/fr.png" },
+        { value: "fr", label: "French", flag: "https://flagcdn.com/w40/fr.png" },
         { value: "ru", label: "Russian", flag: "https://flagcdn.com/w40/ru.png" },
         { value: "ko", label: "Korean", flag: "https://flagcdn.com/w40/kr.png" },
         { value: "es", label: "Spanish", flag: "https://flagcdn.com/w40/es.png" },
@@ -60,55 +60,67 @@ const Header = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [subhoveredIndex, setSubhoveredIndex] = useState(null);
 
-    const menuItems = [
+    const aboutMenuItems = [
         {
-            label: "Pharmaceuticals Chemicals",
+            label: "Company Overview",
             link: "",
-            submenu: [
-                { label: "Pharmaceuticals", link: "/pharmaceuticals/category1" },
-                { label: "Speciality Chemicals", link: "/pharmaceuticals/category1" },
-                { label: "Excipients", link: "/pharmaceuticals/category1" },
-            ]
         },
-        { label: "API/Intermediates", link: "/products/category2/" },
+        { label: "cGMP Manufacturing", link: "" },
         {
-            label: "Fine Chemicals",
-            link: "/products/category3",
-            submenu: [
-                { label: "Analytical Reagent", link: "/products/category3/" },
-                { label: "Lab Chemicals", link: "/products/category3/" },
-            ]
+            label: "Research & Development",
+            link: "",
         },
-        {
-            label: "Nutraceuticals", link: "/products/category4",
-            submenu: [
-                {
-                    label: "Mineral Fortifiers", link: "/products/category4/"
-                },
-                {
-                    label: "Food Additives", link: "/products/category4/"
-                }
-            ]
-        },
-        { label: "Amino Acid", link: "/products/category5" },
-        { label: "Other Products", link: "/products/category6" },
     ];
+
+    // const menuItems = [
+    //     {
+    //         label: "Pharmaceuticals Chemicals",
+    //         link: "",
+    //         submenu: [
+    //             { label: "Pharmaceuticals", link: "/pharmaceuticals/category1" },
+    //             { label: "Speciality Chemicals", link: "/pharmaceuticals/category1" },
+    //             { label: "Excipients", link: "/pharmaceuticals/category1" },
+    //         ]
+    //     },
+    //     { label: "API/Intermediates", link: "/products/category2/" },
+    //     {
+    //         label: "Fine Chemicals",
+    //         link: "/products/category3",
+    //         submenu: [
+    //             { label: "Analytical Reagent", link: "/products/category3/" },
+    //             { label: "Lab Chemicals", link: "/products/category3/" },
+    //         ]
+    //     },
+    //     {
+    //         label: "Nutraceuticals", link: "/products/category4",
+    //         submenu: [
+    //             {
+    //                 label: "Mineral Fortifiers", link: "/products/category4/"
+    //             },
+    //             {
+    //                 label: "Food Additives", link: "/products/category4/"
+    //             }
+    //         ]
+    //     },
+    //     { label: "Amino Acid", link: "/products/category5" },
+    //     { label: "Other Products", link: "/products/category6" },
+    // ];
 
     return (
         <>
             <div className='bg-[#773135] h-full flex flex-col'>
                 <nav className='bg-white py-4 px-4 md:py-6 md:px-6 flex justify-between items-center rounded-2xl mx-4 md:mx-6 lg:mx-8 my-4 md:my-6'>
                     {/* ----------- Logo Section -----------*/}
-                    <div className='flex items-center '>
+                    <div className='flex items-center'>
                         <Link to="/">
                             <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer pl-3 " />
                         </Link>
                     </div>
 
                     {/* ---------Navigation ---------- */}
-                    <div className="flex items-center space-x-4 flex-grow justify-center">
+                    <div className="flex items-center space-x-3 flex-grow justify-center">
                         {/* Desktop Navigation Menu */}
-                        <ul className="hidden md:flex items-center text-[12px] font-bold font-['Raleway',sans-serif] text-gray-700">
+                        <ul className="hidden md:flex items-center text-[12px] font-bold font-['Montserrat',sans-serif] text-gray-700">
                             <li className='px-4 py-2'>
                                 <NavLink
                                     to="/"
@@ -121,30 +133,13 @@ const Header = () => {
                                 </NavLink>
                             </li>
 
-
-                            <li className='px-4 py-2'>
-                                <NavLink
-                                    to="/about"
-                                    className={({ isActive }) =>
-                                        `cursor-pointer  hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
-                                        }`
-                                    }
-                                >
+                            <li className="relative group cursor-pointer flex items-center font-font-['Montserrat',sans-serif]">
+                            <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
                                     {currentTranslations.ABOUT}
-                                </NavLink>
-                            </li>
-
-
-                            <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]">
-                                {/* Dropdown Toggle */}
-                                <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
-                                    {currentTranslations.PRODUCTS}
                                 </span>
-
-                                {/* Dropdown Content */}
-                                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <div className="absolute top-full left-0 mt-2 w-65 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                     <ul className="py-2">
-                                        {menuItems.map((item, index) => (
+                                        {aboutMenuItems.map((item, index) => (
                                             <li
                                                 key={index}
                                                 className="relative px-6 py-3 text-gray-800 flex items-center justify-between hover:bg-gray-100 transition-all duration-300 ease-in-out group"
@@ -171,8 +166,63 @@ const Header = () => {
                                                     </NavLink>
                                                 )}
 
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li className='px-4 py-2'>
+                                <NavLink
+                                    to="/blogs"
+                                    className={({ isActive }) =>
+                                        `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
+                                        }`
+                                    }
+                                >
+                                    {currentTranslations.PRODUCTS}
+                                </NavLink>
+                            </li>
+
+
+                            {/* <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]"> */}
+                                {/* Dropdown Toggle */}
+                                {/* <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
+                                    {currentTranslations.PRODUCTS}
+                                </span> */}
+
+                                {/* Dropdown Content */}
+                                {/* <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                    <ul className="py-2">
+                                        {menuItems.map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className="relative px-6 py-3 text-gray-800 flex items-center justify-between hover:bg-gray-100 transition-all duration-300 ease-in-out group"
+                                                onMouseEnter={() => setHoveredIndex(index)}
+                                                onMouseLeave={() => setHoveredIndex(null)}
+                                            >
+                                                {/* If submenu exists -> Don't navigate */}
+                                                {/* {item.submenu ? (
+                                                    <span
+                                                        className="cursor-default text-[14px] flex items-center gap-2 text-black group-hover:text-[#773135] transition-all duration-300 ease-in-out"
+                                                    >
+                                                        {hoveredIndex === index && <FaMinus />}
+                                                        {item.label}
+                                                    </span>
+                                                ) : (
+                                                    <NavLink
+                                                        to={item.link}
+                                                        className={({ isActive }) =>
+                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
+                                                        }
+                                                    >
+                                                        {hoveredIndex === index && <FaMinus />}
+                                                        {item.label}
+                                                    </NavLink>
+                                                )} */} 
+
                                                 {/* Submenu Dropdown */}
-                                                {item.submenu && hoveredIndex === index && (
+                                                {/* {item.submenu && hoveredIndex === index && (
                                                     <div className="absolute top-0 left-full w-52 bg-white border border-gray-200 rounded-2xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                                         <ul className="py-2">
                                                             {item.submenu.map((subItem, subIndex) => (
@@ -200,7 +250,7 @@ const Header = () => {
                                         ))}
                                     </ul>
                                 </div>
-                            </li>
+                            </li> */}
 
 
 

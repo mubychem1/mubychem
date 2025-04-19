@@ -136,7 +136,7 @@ const ContactUs = () => {
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#9d916c] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
+              className="relative p-6 rounded-[30px] flex flex-col justify-between border border-gray-300 bg-[#f7f4e9] h-[300px] shadow-sm transition-all duration-300 ease-in-out transform"
             >
               <h3 className="text-xl font-semibold text-gray-900">
                 {contact.title[language]}
@@ -152,12 +152,12 @@ const ContactUs = () => {
                 <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center">
                   {contact.icon}
                 </div>
-                <motion.div
+                {/* <motion.div
                   whileHover={{ scale: 1.2 }}
                   className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
                 >
                   <ArrowUpRight className="text-blue-500" size={20} />
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           </a>

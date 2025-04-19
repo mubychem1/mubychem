@@ -226,6 +226,7 @@ const AboutUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
+          style={{ fontFamily: "Times New Roman" }}
         >
           {/* <img
             src={''} // Add your background image path here
@@ -234,7 +235,7 @@ const AboutUs = () => {
           /> */}
           <div className="bg-[#fff] p-6 md:p-12">
             <div
-              className="relative h-[500px] bg-cover rounded-4xl  overflow-hidden"
+              className="relative h-[200px] bg-cover rounded-4xl  overflow-hidden"
               style={{ backgroundImage: `url(${background})` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -260,21 +261,19 @@ const AboutUs = () => {
         viewport={{ once: true }}
         variants={fadeInUp}
         className="bg-[#fff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]"
-        style={{
-          fontFamily: "Times New Roman",
-        }}
+        style={{ fontFamily: "Times New Roman" }}
       >
         {/* Image Section */}
         <motion.div
           variants={zoomIn}
-          className="relative w-full p-10 md:w-1/2 flex justify-center md:justify-start h-[560px]"
+          className="relative w-full p-0 sm:px-6 md:px-10 md:w-1/2 flex justify-center md:justify-start h-auto md:h-[460px]"
         >
           <img
-            src={Aboutleft} // Replace with your image path
+            src={Aboutleft}
             alt="Scientist working in lab"
-            className="rounded-lg  w-full max-w-md md:max-w-lg "
+            className="rounded-lg w-full max-w-md md:max-w-lg"
           />
-        </motion.div>
+        </motion.div>
 
         {/* Text Content Section */}
         <motion.div
@@ -292,19 +291,26 @@ const AboutUs = () => {
           </motion.span> */}
 
           <h2
-            className="text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4"
+            className=" text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4"
             style={{ fontFamily: "Times New Roman" }}
           >
-            Welcome to Muby Chem
-            <br />
+            Muby Chem
             Private Limited
           </h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 mt-4 text-justify">
             {currentTranslations.mubyChemDescription1}{" "}
           </p>
-          <br />
-          <p className="text-gray-600 mt-4">
+         
+          <p className="text-gray-600 mt-4 text-justify">
             {currentTranslations.mubyChemDescription2}{" "}
+          </p>
+          
+          <p className="text-gray-600 mt-4 text-justify">
+            {currentTranslations.mubyChemDescription3}{" "}
+          </p>
+          
+          <p className="text-gray-600 mt-4 text-justify">
+            {currentTranslations.mubyChemDescription4}{" "}
           </p>
         </motion.div>
       </motion.div>
@@ -314,7 +320,7 @@ const AboutUs = () => {
         animate="visible"
         variants={fadeInUp}
         className=" bg-[#fff] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  p-6 sm:p-10 "
-      >
+        style={{ fontFamily: "Times New Roman" }}>
         {/* Card 1 - Watch Video with Curved Edge */}
         <div className="relative rounded-2xl overflow-hidden">
           <img
@@ -436,7 +442,7 @@ const AboutUs = () => {
 
       {/*--------------------- Sample post ----------------- */}
       <div className="bg-[#fff] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
-        <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-2xl overflow-hidden">
+        <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-4xl overflow-hidden" style={{ fontFamily: "Times New Roman" }}>
           <div className="relative">
             <img
               src={labtest}

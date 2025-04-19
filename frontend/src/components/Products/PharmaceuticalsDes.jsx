@@ -4,6 +4,7 @@ import background from '../../assets/background1.png';
 import glp from "../../assets/certificate.png";
 import { useParams } from 'react-router-dom';
 
+const BASE_URL = window.location.origin;
 
 const PharmaceuticalsDes = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const PharmaceuticalsDes = () => {
       try {
 
 
-        const response = await axios.get(`http://localhost:9000/api/productdes/${id}`);
+        const response = await axios.get(`https://mubychem.onrender.com/api/productdes/${id}`);
         setProduct(response.data.data);
         console.log("aayush");
 
@@ -106,7 +107,7 @@ const PharmaceuticalsDes = () => {
         {/* Right Side - Product Image (Pushed to Right) */}
         <div className="self-end pr-5 p-[30px]">
           <img
-            src={product.img}
+            src={`${BASE_URL}${product.img}`}
             alt="Milk Calcium Powder"
             className="w-[550px] h-[250px] rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
           />
