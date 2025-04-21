@@ -23,11 +23,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
+      {/* <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
         {/* Child Routes for Products */}
-        <Route path="category1" element={<Pharmaceuticals />} />
-      </Route>
-
+        {/* <Route path="category1" element={<Pharmaceuticals />} />
+      </Route> */} 
+        <Route path="allProducts" element={<Pharmaceuticals/>} />
       {/* <Route path="products" element={<Products />} />
       <Route path="products/sucoferric-oxyhydroxide" element={<Simple />} /> */}
       <Route path="blogs" element={<Blog />} />

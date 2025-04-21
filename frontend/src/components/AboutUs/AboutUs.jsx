@@ -9,7 +9,7 @@ import Simplebg from "../../assets/4Simplebg.png";
 import labtest from "../../assets/lab-test-img.png";
 import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import background from "../../assets/background.png";
+import background from "../../assets/background.jpg";
 import { AnimatePresence } from "framer-motion";
 import VerticalTabs from "../Home/VerticalTabs";
 import translations from "../translater/translations.js";
@@ -226,27 +226,26 @@ const AboutUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
-          style={{ fontFamily: "Times New Roman" }}
         >
           {/* <img
             src={''} // Add your background image path here
             alt="About Us Background"
             className="w-full h-full object-cover"
           /> */}
-          <div className="bg-[#fff] p-6 md:p-12">
+          <div className="bg-[#fff] p-6 pb-1 md:p-12">
             <div
-              className="relative h-[200px] bg-cover rounded-4xl  overflow-hidden"
+              className="relative h-[350px] bg-cover rounded-4xl  overflow-hidden"
               style={{ backgroundImage: `url(${background})` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
               <div className="absolute inset-0 flex items-center justify-left">
                 <div>
-                  <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                    {currentTranslations.ABOUT}
+                  <h1 className="text-white text-4xl font-bold mb-4 pl-4 ">
+                    Muby Chem – Trusted Since 1976
                   </h1>
-                  <p className="text-white text-lg pl-5 ">
+                  {/* <p className="text-white text-lg pl-5 ">
                     Muby Chem Private Limited
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -255,16 +254,19 @@ const AboutUs = () => {
       </motion.section>
 
       {/*--------------------- About Us Content----------------- */}
+
+
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-[#fff] p-10 flex flex-col md:flex-row items-center md:items-start  min-h-[600px]"
-        style={{ fontFamily: "Times New Roman" }}
+        className="bg-[#fff] p-12  pt-0 flex flex-col md:flex-row items-center md:items-start "
+
       >
         {/* Image Section */}
-        <motion.div
+        {/* <motion.div
           variants={zoomIn}
           className="relative w-full p-0 sm:px-6 md:px-10 md:w-1/2 flex justify-center md:justify-start h-auto md:h-[460px]"
         >
@@ -273,12 +275,13 @@ const AboutUs = () => {
             alt="Scientist working in lab"
             className="rounded-lg w-full max-w-md md:max-w-lg"
           />
-        </motion.div>
+        </motion.div> */}
 
         {/* Text Content Section */}
         <motion.div
           variants={fadeInUp}
-          className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10 text-center md:text-left"
+          className="w-full text-center md:text-left "
+        // md:w-1/2 mt-6 md:mt-0 md:pl-10
         >
           {/* <motion.span
             className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
@@ -289,47 +292,47 @@ const AboutUs = () => {
           >
             Who We Are
           </motion.span> */}
-
-          <h2
+          {/* 
+          < h1
             className=" text-4xl leading-[60px] tracking-[0] text-[#001837] mt-4"
-            style={{ fontFamily: "Times New Roman" }}
+             
           >
             Muby Chem
             Private Limited
-          </h2>
-          <p className="text-gray-600 mt-4 text-justify">
-            {currentTranslations.mubyChemDescription1}{" "}
+          </ h1> */}
+          <p className="text-gray-600 text-justify">
+            {currentTranslations.mubyChemDescription1}<b>{currentTranslations.muby}</b> {currentTranslations.mubysub}<b>{currentTranslations.chemicals} </b>{currentTranslations.weServe} <b>{currentTranslations.industries}</b> {currentTranslations.across}{" "}
           </p>
-         
+
           <p className="text-gray-600 mt-4 text-justify">
-            {currentTranslations.mubyChemDescription2}{" "}
+            {currentTranslations.mubyChemDescription2} <b>{currentTranslations.grades}</b> {currentTranslations.each}{" "}
           </p>
-          
+
           <p className="text-gray-600 mt-4 text-justify">
             {currentTranslations.mubyChemDescription3}{" "}
           </p>
-          
-          <p className="text-gray-600 mt-4 text-justify">
+
+          {/* <p className="text-gray-600 mt-4 text-justify">
             {currentTranslations.mubyChemDescription4}{" "}
-          </p>
+          </p> */}
         </motion.div>
       </motion.div>
       {/*--------------------- 3 post ----------------- */}
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
         className=" bg-[#fff] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  p-6 sm:p-10 "
-        style={{ fontFamily: "Times New Roman" }}>
-        {/* Card 1 - Watch Video with Curved Edge */}
-        <div className="relative rounded-2xl overflow-hidden">
+         > */}
+      {/* Card 1 - Watch Video with Curved Edge */}
+      {/* <div className="relative rounded-2xl overflow-hidden">
           <img
             src={Demo1} // Replace with your image path
             alt="Scientist working in lab"
             className="w-full h-full object-cover rounded-2xl"
-          />
-          {/* Play Button */}
-          <button
+          /> */}
+      {/* Play Button */}
+      {/* <button
             onClick={() =>
               openModal("https://www.youtube.com/embed/buwI_49ZTp0")
             }
@@ -341,22 +344,17 @@ const AboutUs = () => {
               {currentTranslations.watchVideo}
             </span>
           </button>
-        </div>
+        </div> */}
 
-        {/* Video Popup Modal */}
-        {isOpen && (
+      {/* Video Popup Modal */}
+      {/* {isOpen && (
           <div className="fixed inset-0 flex items-center justify-center border-5 border-white  z-50">
             <div className=" p-4 rounded-lg border-5 border-white relative w-10/12 md:w-3/4 lg:w-1/2 bg-opacity-60 bg-[#773135]">
-              <button
-                onClick={closeModal}
-                className="absolute top-2 right-2 text-white p-1 rounded-full"
-              >
-                ✖
-              </button>
+             
               <iframe
                 width="100%"
                 height="315"
-                src={videoUrl}
+                src="https://www.youtube.com/embed/buwI_49ZTp0"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -364,10 +362,10 @@ const AboutUs = () => {
               ></iframe>
             </div>
           </div>
-        )}
+        )} */}
 
-        {/* Card 2 - Staff Info */}
-        <div
+      {/* Card 2 - Staff Info */}
+      {/* <div
           className="bg-white p-6 sm:p-4 rounded-2xl shadow-md flex flex-col justify-center items-start w-full h-auto min-h-[300px] relative"
           style={{
             backgroundImage: `url(${fidbg})`,
@@ -376,15 +374,15 @@ const AboutUs = () => {
           }}
         >
           {/* <span className="text-4xl font-bold text-white ml-2">20+</span> */}
-          <p className="text-white text-l sm:text-sm leading-tight mt-3 ml-2">
+      {/* <p className="text-white text-l sm:text-sm leading-tight mt-3 ml-2">
             {currentTranslations.Professional}
             <br />
             {currentTranslations.staff}
-          </p>
-        </div>
+          </p> */}
+      {/* </div> */}
 
-        {/* Card 3 - National Science Day */}
-        <div
+      {/* Card 3 - National Science Day */}
+      {/* <div
           className="pr-6 sm:p-4 rounded-2xl shadow-lg flex flex-col justify-center  text-right bg-no-repeat w-full h-auto min-h-[300px]"
           style={{
             backgroundImage: `url(${Nationalbg})`,
@@ -392,57 +390,60 @@ const AboutUs = () => {
             backgroundPosition: "Center",
           }}
         >
-          <h2 className="text-2xl text-white font-bold">
+          < h1 className="text-2xl text-white font-bold">
             {currentTranslations.National}
-          </h2>
+          </ h1>
           <p className=" text-white text-lg">25th Feb 2022</p>
           <div className="border-t border-white my-2  w-2/3 mx-30"></div>
           <p className=" text-white mt-2">{currentTranslations.Experts}</p>
         </div>
-      </motion.div>
+      </motion.div> */}
       {/*--------------------- Sample post ----------------- */}
 
-      {/* <div className="bg-[#ecf2ff] p-2"> */}
-      {/* <section
-          className="bg-[#7B3931] rounded-2xl text-white py-16 px-6 sm:px-8 md:px-10 lg:px-12 bg-no-repeat"
-          style={{
-            backgroundImage: `url(${Simplebg})`,
-            backgroundSize: "60%",
-            backgroundPosition: "right",
-          }}
-        > */}
-      {/* Heading */}
-      {/* <div className="text-left mb-10">
-            <span className="text-sm font-semibold uppercase px-4 py-2 bg-black text-white rounded-full">
-              How It Works
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 leading-tight">
-              Get amazing cleaning in <br className="hidden md:block" /> 4 simple steps
-            </h2>
-          </div> */}
-
-      {/* Steps Section */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.id}
-                className="bg-[#7B3931] p-10 sm:p-10 md:p-12 lg:p-16 h-full rounded-xl shadow-lg flex flex-col justify-between text-center relative border border-white"
-              >
-                <div className="text-4xl sm:text-5xl">{step.icon}</div>
-                <h3 className="text-xl sm:text-2xl font-semibold mt-4">{step.title}</h3>
-                <p className="text-sm sm:text-base mt-1 text-gray-300">{step.description}</p>
-                <div className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
-                  {step.id}
-                </div>
-              </div>
-            ))}
+      <div className="flex items-center justify-center ">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="bg-white flex items-center justify-center"
+        >
+          <div className=" rounded-lg border-12 border-[#773135]">
+            <iframe
+              width="800"
+              height="350"
+              src="https://www.youtube.com/embed/buwI_49ZTp0?si=5cAs2dZBEgK7k5lp"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
-        </section>
-      </div> */}
+        </motion.div>
+      </div>
+
+      {/* --------------Feature Section --------- */}
+      <div className="bg-white flex flex-col items-center p-12">
+        {/* <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
+          fontFamily: "Times New Roman",
+        }}
+        >
+          WHY CHOOSE US?
+        </div>  */}
+        < h1 className="text-4xl text-center text-gray-900" style={{ fontFamily: " " }}>
+          {currentTranslations.Featureheading} ?
+        </ h1>
+
+        <div className="flex items-center mt-8 max-w-7xl w-full">
+          <VerticalTabs />
+        </div>
+
+
+      </div>
 
       {/*--------------------- Sample post ----------------- */}
-      <div className="bg-[#fff] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
-        <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-4xl overflow-hidden" style={{ fontFamily: "Times New Roman" }}>
+      {/* <div className="bg-[#fff] py-5 px-3 md:px-2 md:py-7 lg:px-3 flex items-center justify-center">
+        <div className="max-w-7xl w-full h-full grid grid-cols-1 md:grid-cols-2 bg-[#7B3931] text-white rounded-4xl overflow-hidden"  >
           <div className="relative">
             <img
               src={labtest}
@@ -465,13 +466,13 @@ const AboutUs = () => {
               {" "}
               {currentTranslations.Client}
             </p>
-            <h2 className="text-3xl font-bold my-2">
+            < h1 className="text-3xl font-bold my-2">
               {currentTranslations.Trusted}
-            </h2>
-            <FaQuoteLeft className="text-3xl text-black mb-2" />
+            </ h1>
+            <FaQuoteLeft className="text-3xl text-black mb-2" /> */}
 
-            {/* Animated Review Text */}
-            <div className="overflow-hidden h-32 relative">
+      {/* Animated Review Text */}
+      {/* <div className="overflow-hidden h-32 relative">
               <AnimatePresence initial={false} custom={direction}>
                 <motion.p
                   key={currentReview}
@@ -484,9 +485,9 @@ const AboutUs = () => {
                   {reviews[currentReview].text[language]}{" "}
                 </motion.p>
               </AnimatePresence>
-            </div>
+            </div> */}
 
-            <div className="flex items-center p-6 gap-3">
+      {/* <div className="flex items-center p-6 gap-3">
               <div>
                 <h4 className="text-lg font-semibold">
                   {reviews[currentReview].name}
@@ -495,10 +496,10 @@ const AboutUs = () => {
                   {reviews[currentReview].role}
                 </h3>
               </div>
-            </div>
+            </div> */}
 
-            {/* Navigation Buttons */}
-            <div className="flex justify-end items-center mt-6">
+      {/* Navigation Buttons */}
+      {/* <div className="flex justify-end items-center mt-6">
               <div className="flex space-x-2">
                 <button
                   onClick={prevReview}
@@ -513,10 +514,9 @@ const AboutUs = () => {
                   <IoIosArrowForward className="text-white text-lg" />
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> */}
+
+
     </>
   );
 };

@@ -209,7 +209,7 @@ const Career = () => {
     <>
       <div className="bg-white p-6 md:p-12">
         <div
-          className="relative h-[520px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>

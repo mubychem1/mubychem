@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
@@ -314,7 +315,7 @@ const Home = () => {
                     style={{ backgroundImage: `url(${homeImage})` }}
                   >
                     {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
-                    <div className="absolute inset-0 flex items-end bottom-7 pl-9 justify-left">
+                    {/* <div className="absolute inset-0 flex items-end bottom-7 pl-9 justify-left">
                       <div>
                         <h1 className="text-[#000] text-3xl font-bold mb-2  ">
                         Empowering Global Health & Industry
@@ -323,7 +324,7 @@ const Home = () => {
                         Leading Manufacturer of Specialty Chemicals, Pharmaceutical <br/>Excipients, APIs & Mineral Salts
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>
@@ -364,7 +365,7 @@ const Home = () => {
           </motion.span> */}
 
           {/* Heading */}
-          <motion.h2
+          <motion. h1
             className="text-[32px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full"
             style={{ fontFamily: "" }}
             initial={{ opacity: 0, y: 20 }}
@@ -373,7 +374,7 @@ const Home = () => {
           >
             {currentTranslations.welcomeToMubyChem}
             {/* Welcome to Muby Chem <br />Private Limited */}
-          </motion.h2>
+          </motion. h1>
           <motion.p className="mb-4" >{currentTranslations.obsessedWithQuality}</motion.p>
 
           {/* Description */}
@@ -384,7 +385,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            {currentTranslations.mubyChemDescription1}
+            {currentTranslations.mubyChemDescriptionMain}
           </motion.p>
           <motion.p
             className="text-justify text-[15px] leading-[1.6] text-[#000] normal-case not-italic mb-6"
@@ -393,7 +394,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            {currentTranslations.mubyChemDescription2}
+            {currentTranslations.mubyChemDescriptionMain2}
           </motion.p>
 
 
@@ -431,10 +432,10 @@ const Home = () => {
 
       {/* Product category section */}
       <div className="pt-6 pl-20 pr-20 md:pt-12">
-        <div className="bg-[#773135]  items-center justify-between md:px-12 pt-10 rounded-bl-[80px] rounded-tr-[80px] ">
+        <div className="bg-[#773135]  items-center justify-between md:px-12 pt-10 pb-5">
           <div className=" font-['Montserrat', sans-serif]">
             <h2
-              className="text-[30px] leading-[50px] font-bold tracking-[0]  font-['Montserrat', sans-serif] text-[#fff] normal-case not-italic w-full"
+              className="text-[30px] leading-[50px] font-bold tracking-[0] pl-2 font-['Montserrat', sans-serif] text-[#fff] normal-case not-italic w-full"
               // style={{ fontFamily: " " }}
             >
               Product Divisions
@@ -443,7 +444,7 @@ const Home = () => {
           <div className="bg-[#773135] items-center flex justify-between  pt-5 pb-5 text-center">
             {/* Left Side - Image */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -453,14 +454,14 @@ const Home = () => {
                 alt="Active Pharmaceutical Ingredients"
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
+              <h5 className="text-white font-bold justify-items-center mt-1 text-xl">
                 Active Pharmaceutical Ingredients
               </h5>
             </motion.div>
 
             {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -470,13 +471,13 @@ const Home = () => {
                 alt="Pharma Excipients"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
+              <h5 className="text-white font-bold justify-items-center mt-1 text-xl">
                 Pharma Excipients
               </h5>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -486,15 +487,15 @@ const Home = () => {
                 alt="Mineral Salts"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
+              <h5 className="text-white font-bold justify-items-center mt-1 text-xl">
                 Mineral Salts
               </h5>
             </motion.div>
           </div>
-          <div className="items-center flex justify-between  pt-5 pb-5 text-center">
+          <div className="items-center flex justify-between  pt-0.5 pb-5 text-center">
             {/* Left Side - Image */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -504,14 +505,14 @@ const Home = () => {
                 alt="Specialty Chemicals"
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
+              <h5 className="text-white font-bold justify-items-center mt-1 text-xl">
                 Specialty Chemicals
               </h5>
             </motion.div>
 
             {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -521,36 +522,36 @@ const Home = () => {
                 alt="Amino Acids"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
+              <h5 className="text-white font-bold justify-items-center mt-1 text-xl">
                 Amino Acids
               </h5>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
                 src={Fragrance}   
-                alt="Fragrance & Flavor Chemicals"
+                alt="Fragrance & Flavor Chemicals"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-white font-bold justify-items-center text-lg">
-                Fragrance & Flavor Chemicals
+              <h5 className="text-white font-bold justify-items-center text-xl">
+                Fragrance & Flavor Chemicals
               </h5>
             </motion.div>
           </div>
         </div>
- </div>
+      </div>
 
       {/* Markets section */}
       <div className="pt-6 pl-20 pr-20 md:pt-12">
-        <div className="bg-[#e7d1bc] items-center justify-between md:px-12 pt-10 rounded-bl-[80px] rounded-tr-[80px]">
+        <div className="bg-[#e7d1bc] items-center justify-between md:px-12 pt-10 pb-5 ">
           <div className="">
             <h2
-              className="text-[30px] leading-[50px] font-bold tracking-[0] text-[#773135] normal-case not-italic w-full"
+              className="text-[30px] leading-[50px] font-bold tracking-[0] pl-3 text-[#773135] normal-case not-italic w-full"
               style={{ fontFamily: " " }}
             >
               Markets We Serve
@@ -559,7 +560,7 @@ const Home = () => {
           <div className="bg-[#e7d1bc] items-center flex justify-between  pt-2 pb-5 text-center">
             {/* Left Side - Image */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -569,14 +570,14 @@ const Home = () => {
                 alt=" Pharmaceuticals"
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
                 Pharmaceuticals
               </h5>
             </motion.div>
 
             {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -586,13 +587,13 @@ const Home = () => {
                 alt="BioTech"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
-              BioTech
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
+              Biopharma
               </h5>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -602,15 +603,15 @@ const Home = () => {
                 alt="Nutraceuticals"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
                 Nutraceuticals 
               </h5>
             </motion.div>
           </div>
-          <div className=" items-center flex justify-between  pt-2 pb-5 text-center">
+          <div className=" items-center flex justify-between  pt-0.5 pb-5 text-center">
             {/* Left Side - Image */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -620,14 +621,14 @@ const Home = () => {
                 alt="Food & Beverages "
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
                  Food & Beverages 
               </h5>
             </motion.div>
 
             {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -637,31 +638,30 @@ const Home = () => {
                 alt="Lab Equipment"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
               Personal Care & Cosmetics 
               </h5>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-5"
+              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                src={Veterinary }
-                alt="Veterinary & Animal Health"
+                src={Veterinary }
+                alt="Veterinary & Animal Health"
 
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <h5 className="text-[#773135] font-bold justify-items-center text-lg">
-                 Veterinary & Animal Health
+              <h5 className="text-[#773135] font-bold justify-items-center text-xl">
+                 Veterinary & Animal Health
               </h5>
             </motion.div>
           </div>
         </div>
-      </div>
-
+      </div>
 
       {/* --------------Feature Section --------- */}
       {/* <div className="bg-white flex flex-col items-center py-12 px-3"> */}
@@ -671,9 +671,9 @@ const Home = () => {
         >
           WHY CHOOSE US?
         </div> */}
-      {/* <h2 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: " " }}>
+      {/* < h1 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: " " }}>
           {currentTranslations.Featureheading}<br />{currentTranslations.Featureheading1}
-        </h2>
+        </ h1>
 
         <div className="flex items-center mt-8 max-w-7xl w-full">
           <VerticalTabs />
@@ -686,10 +686,10 @@ const Home = () => {
       {/* <div className="bg-[#773135] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
-            <button className=" text-white border border-white px-4 py-2 rounded-full text-sm" style={{ fontFamily: "Times New Roman" }}>
+            <button className=" text-white border border-white px-4 py-2 rounded-full text-sm"  >
               Certifications
             </button>
-            <h2 className="text-4xl  mt-4" style={{ fontFamily: "Times New Roman" }}>Reliable & High Quality Service</h2>
+            < h1 className="text-4xl  mt-4"  >Reliable & High Quality Service</ h1>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -748,10 +748,10 @@ const Home = () => {
       {/* <div className="bg-[#773135] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
-            <button className="bg-[#773135] text-white border border-white px-4 py-2 rounded-full text-sm " style={{ fontFamily: "Times New Roman" }}>
+            <button className="bg-[#773135] text-white border border-white px-4 py-2 rounded-full text-sm "  >
               OUR SERVICE
             </button>
-            <h2 className="text-4xl  mt-4" style={{ fontFamily: "Times New Roman" }}>Reliable & High Quality Service</h2>
+            < h1 className="text-4xl  mt-4"  >Reliable & High Quality Service</ h1>
           </div>
 
           <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
@@ -804,11 +804,11 @@ const Home = () => {
 
       <div className="bg-[#fff] mt-10" >
         <div className="text-center">
-          <h2
+          < h1
             className="text-[35px] leading-[60px] font-bold tracking-[0] text-[#001837] normal-case not-italic w-full font-['Montserrat',sans-serif]"
           >
             {currentTranslations.accre}
-          </h2>
+          </ h1>
         </div>
         {/* <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center px-4 sm:px-15 space-y-4 sm:space-y-0"> */}
         {/* <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md self-start sm:self-auto">
@@ -828,7 +828,7 @@ const Home = () => {
           </div> */}
         {/*         </div> */}
 
-        <div className="overflow-hidden relative flex items-center mt-10 h-[200px] px-5 font-['Montserrat',sans-serif]">
+        <div className="overflow-hidden relative flex items-center h-[200px] px-5 font-['Montserrat',sans-serif]">
           <motion.div
             className="flex space-x-6 "
             animate={{ x: `-${currentIndex * 320}px` }}
@@ -874,70 +874,83 @@ const Home = () => {
 
         {/* Form Section */}
         {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
-        <div className="bg-[#773135] p-9 rounded-xl shadow-lg w-full max-w-md relative font-['Montserrat',sans-serif]">
-          {/* Title */}
-          <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
+        {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
+        <div className="bg-[#773135] p-9 rounded-xl shadow-lg w-full max-w-md relative">
+            {/* Close button */}
+            {/* <button className="absolute top-4 right-4 text-[#773135] text-2xl font-bold">
+              ×
+            </button> */}
+
+            {/* Title */}
+            <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
             {currentTranslations.Get} {currentTranslations.estimate}
-          </h2>
+            </h2>
 
-          {/* Form Fields */}
-          <form className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-[#fff]">
-                Name
-              </label>
-              <input
-                type="text"
-                className="w-full border-b-2 border-[#fff] focus:outline-none focus:border-[#fff] py-1"
-                required
-              />
-            </div>
+            {/* Form Fields */}
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-[#fff]">
+                   Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+                  required
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-[#fff]">
-                 Email ID
-              </label>
-              <input
-                type="email"
-                className="w-full border-b-2 border-[#fff] focus:outline-none focus:border-[#fff] py-1"
-                required
-              />
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-[#fff]">
+                   Email address
+                </label>
+                <input
+                  type="email"
+                  className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                  required
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-[#fff]">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                className="w-full border-b-2 border-[#fff] focus:outline-none focus:border-[#fff] py-1"
-                required
-              />
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-[#fff]">
+                   Phone Number
+                </label>
+                <input
+                  type="tel"
+                  className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                  required
+                />
+              </div>
 
-            <div className="relative">
-              <label className="block text-sm font-medium text-[#fff]">
-                Product
-              </label>
-              <input
-                type={"text"}
-                className="w-full border-b-2 border-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
-                required
-              />
-            </div>
+              <div className="relative">
+                <label className="block text-sm font-medium text-[#fff]">
+                   Product
+                </label>
+                 <input
+                  type={  "text"}
+                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
+                  required
+                />
+                {/* <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-0 top-6 text-[#773135]"
+                >
+                  👁
+                </button>  */}
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-[#fff]">
-                Message
-              </label>
-              <input
-                type="text" row="2"
-                className="w-full border-b-2 border-[#fff] focus:outline-none focus:border-[#fff] py-1"
-              />
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-[#fff]">
+                  Message
+                </label>
+                <input
+                  type="text"
+                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+                />
+              </div>
 
-            {/* Checkbox and Dummy Text */}
-            {/* <div className="flex items-start mt-2">
+              {/* Checkbox and Dummy Text */}
+              {/* <div className="flex items-start mt-2">
                 <input type="checkbox" className="mr-2 mt-1 text-[#773135]" />
                 <p className="text-xs text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -945,23 +958,24 @@ const Home = () => {
                 </p>
               </div> */}
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
-            >
-              Submit
-            </button>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
+              >
+               Submit
+              </button>
 
-            {/* Sign in link */}
-            {/* <p className="text-sm text-center text-gray-600 mt-4">
+              {/* Sign in link */}
+              {/* <p className="text-sm text-center text-gray-600 mt-4">
                 Already have an account?{" "}
                 <a href="#" className="text-[#773135] hover:underline">
                   Sing in
                 </a>
               </p> */}
-          </form>
-        </div>
+            </form>
+          </div>
+       
       </div>
       {/* </div> */}
     </>

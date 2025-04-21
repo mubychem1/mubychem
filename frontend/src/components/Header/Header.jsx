@@ -63,12 +63,12 @@ const Header = () => {
     const aboutMenuItems = [
         {
             label: "Company Overview",
-            link: "",
+            link: "about",
         },
-        { label: "cGMP Manufacturing", link: "" },
+        { label: "cGMP Manufacturing", link: "about" },
         {
             label: "Research & Development",
-            link: "",
+            link: "about",
         },
     ];
 
@@ -113,14 +113,14 @@ const Header = () => {
                     {/* ----------- Logo Section -----------*/}
                     <div className='flex items-center'>
                         <Link to="/">
-                            <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer pl-3 " />
+                            <img src={logo} alt="Logo" className="h-14 w-auto cursor-pointer pl-3" />
                         </Link>
                     </div>
 
                     {/* ---------Navigation ---------- */}
                     <div className="flex items-center space-x-3 flex-grow justify-center">
                         {/* Desktop Navigation Menu */}
-                        <ul className="hidden md:flex items-center text-[12px] font-bold font-['Montserrat',sans-serif] text-gray-700">
+                        <ul className="hidden md:flex items-center text-[14px] font-bold font-['Montserrat',sans-serif] text-gray-700">
                             <li className='px-4 py-2'>
                                 <NavLink
                                     to="/"
@@ -134,7 +134,7 @@ const Header = () => {
                             </li>
 
                             <li className="relative group cursor-pointer flex items-center font-font-['Montserrat',sans-serif]">
-                            <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
+                                <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
                                     {currentTranslations.ABOUT}
                                 </span>
                                 <div className="absolute top-full left-0 mt-2 w-65 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -174,7 +174,7 @@ const Header = () => {
 
                             <li className='px-4 py-2'>
                                 <NavLink
-                                    to="/blogs"
+                                    to="/allProducts"
                                     className={({ isActive }) =>
                                         `cursor-pointer hover:text-[#773135] font-semibold ${isActive ? "text-[#773135]" : "text-black"
                                         }`
@@ -186,13 +186,13 @@ const Header = () => {
 
 
                             {/* <li className="relative group cursor-pointer flex items-center space-x-2 font-['Raleway',sans-serif]"> */}
-                                {/* Dropdown Toggle */}
-                                {/* <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
+                            {/* Dropdown Toggle */}
+                            {/* <span className="px-4 py-2 rounded-md text-black hover:text-[#773135] font-semibold transition">
                                     {currentTranslations.PRODUCTS}
                                 </span> */}
 
-                                {/* Dropdown Content */}
-                                {/* <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            {/* Dropdown Content */}
+                            {/* <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-2xl shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                     <ul className="py-2">
                                         {menuItems.map((item, index) => (
                                             <li
@@ -202,7 +202,7 @@ const Header = () => {
                                                 onMouseLeave={() => setHoveredIndex(null)}
                                             >
                                                 {/* If submenu exists -> Don't navigate */}
-                                                {/* {item.submenu ? (
+                            {/* {item.submenu ? (
                                                     <span
                                                         className="cursor-default text-[14px] flex items-center gap-2 text-black group-hover:text-[#773135] transition-all duration-300 ease-in-out"
                                                     >
@@ -219,10 +219,10 @@ const Header = () => {
                                                         {hoveredIndex === index && <FaMinus />}
                                                         {item.label}
                                                     </NavLink>
-                                                )} */} 
+                                                )} */}
 
-                                                {/* Submenu Dropdown */}
-                                                {/* {item.submenu && hoveredIndex === index && (
+                            {/* Submenu Dropdown */}
+                            {/* {item.submenu && hoveredIndex === index && (
                                                     <div className="absolute top-0 left-full w-52 bg-white border border-gray-200 rounded-2xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                                         <ul className="py-2">
                                                             {item.submenu.map((subItem, subIndex) => (

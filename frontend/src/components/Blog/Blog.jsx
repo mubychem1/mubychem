@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import background from "../../assets/Blog1.png";
+import background from "../../assets/Blog1.jpg";
 // import { useNavigate } from "react-router-dom";
 import Page1 from "./Page1";
 import { Link } from "react-router-dom";
@@ -47,9 +47,9 @@ const Blog = () => {
 
   return (
     <>
-      <div className="bg-white p-6 md:p-12" style={{ fontFamily: "Times New Roman" }}>
+      <div className="bg-white p-6 md:p-12"  >
         <div
-          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -66,7 +66,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="bg-white  p-8 flex justify-center items-center flex-col " style={{ fontFamily: "Times New Roman" }}>
+      <div className="bg-white  p-8 flex justify-center items-center flex-col "  >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {currentItems.map((item, index) => (
             <div

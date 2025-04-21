@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-[#773135] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl" style={{ fontFamily: "Times New Roman" }}>
+      <footer className="bg-[#773135] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl"  >
         <div className="container mx-auto py-5 px-10 min-h-[350px] pt-7">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-7">
             {/* Logo & Description */}
@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
               <p
                 className="mt-2 text-gray-100"
-                style={{ fontFamily: "Times New Roman" }}
+                 
               >
                 {currentTranslations.SPECIALTY_CHEMICALS}
               </p>
@@ -52,7 +52,7 @@ const Footer = () => {
                   <li key={key}>
                     <Link
                       to={`/${key.toLowerCase()}`} // Dynamic route path
-                      className="text-gray-100 hover:text-black transition-all duration-500 ease-in-out"
+                      className="text-gray-100 transition-all duration-500 ease-in-out"
                     >
                       {currentTranslations[key]}
                     </Link>

@@ -1,18 +1,21 @@
+import background from "../../assets/Blog1.jpg";
+
+
 const translations = {
   en: {
-    HOME: "HOME",
-    ABOUT: "ABOUT US",
-    PRODUCTS: "PRODUCTS",
-    BLOGS: "EVENTS",
-    CAREER: "CAREERS",
-    CONTACT_US: "CONTACT US",
+    HOME: "Home",
+    ABOUT: "About Us",
+    PRODUCTS: "Products",
+    BLOGS: "Events",
+    CAREER: "Careers",
+    CONTACT_US: "Contact Us",
     USEFUL_LINKS: "USEFUL LINKS",
 
     // -------------Footer Section ----------
     Home: "Home",
     About: "About Us",
     Product: "Our Products",
-    BLOGS: "EVENTS",
+    BLOGS: "Events",
     Events: "Events",
     Career: "Careers",
     Contact: "Contact Us",
@@ -90,10 +93,23 @@ const translations = {
     submit: "Submit →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
+    mubyChemDescriptionMain:
       "Muby Chem is an USFDA-registered and FSSC 22000-certified leading manufacturer of high-purity pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals, serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally.",
-    mubyChemDescription2:
+    mubyChemDescriptionMain2:
       "With over four decades of experience and a legacy of trust, we are recognized for our quality-first approach, consistent reliability, and customer-centric solutions.",
+    mubyChemDescription1:
+      "Founded in 1976, ",
+      muby:"Muby Chem Pvt. Ltd.",
+       mubysub: "has grown into a trusted and customer-focused manufacturer of high-purity ",
+       chemicals:"pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals.",
+       weServe: "With decades of expertise and a commitment to global quality standards, we serve",
+       industries :"pharmaceutical, nutraceutical, food & beverages, personal care & cosmetics, veterinary & animal health and biopharma industries",
+        across:"across the world.",
+    mubyChemDescription2:
+      "Our manufacturing capabilities encompass a wide spectrum of grades, including ",
+      grades: "IP, BP, USP, Ph. Eur., FCC/Food Grade, Analytical Reagent, LR, Pure, and Technical grades",
+      each: "—each rigorously tested to meet global quality standards.",
+    mubyChemDescription3:"With a robust product portfolio of over 400 compounds, we are well-equipped to serve a diverse range of industries with precision and consistency.",
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Watch Video",
     Professional: "Professional and Experienced",
@@ -110,7 +126,21 @@ data: [
     
     title: "Essential Amino Acid – Its Uses and Benefits for our Body.",
     description:  "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+    image:background,
+
+  },
+  {
+    
+    title: "Essential Amino Acid – Its Uses and Benefits for our Body.",
+    description:  "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.",
+    image:     background,
+
+  },
+  {
+    
+    title: "Essential Amino Acid – Its Uses and Benefits for our Body.",
+    description:  "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.",
+    image:     background,
 
   },
 ],

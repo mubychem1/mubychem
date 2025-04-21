@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import background from "../../assets/contactbg.png";
 import { Mail, MapPin, Phone, Calendar, ArrowUpRight } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { submitForm } from "../../redux/slice/formSlice.js"; // Ensure path is correct
+// import { submitForm } from "../../redux/slice/formSlice.js"; // Ensure path is correct
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import translations from "../translater/translations.js";
@@ -111,7 +111,7 @@ const ContactUs = () => {
       {/* -----------------Contact Us Banner --------------*/}
       <div className="bg-white p-6 md:p-12">
         <div
-          className="relative h-[500px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>

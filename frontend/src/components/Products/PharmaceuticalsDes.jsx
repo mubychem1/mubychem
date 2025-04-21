@@ -3,8 +3,10 @@ import axios from 'axios';
 import background from '../../assets/background1.png';
 import glp from "../../assets/certificate.png";
 import { useParams } from 'react-router-dom';
+import { Loader2 } from 'lucide-react'; // If you're using lucide-react icons
+import { motion } from 'framer-motion';
 
-const BASE_URL = window.location.origin;
+
 
 const PharmaceuticalsDes = () => {
   const { id } = useParams();
@@ -15,7 +17,7 @@ const PharmaceuticalsDes = () => {
       try {
 
 
-        const response = await axios.get(`https://mubychem.onrender.com/api/productdes/${id}`);
+        const response = await axios.get(`http://localhost:8000/api/productdes/${id}`);
         setProduct(response.data.data);
         console.log("aayush");
 
@@ -28,15 +30,22 @@ const PharmaceuticalsDes = () => {
 
     fetchProduct();
   }, [id]);
-  if (!product) return <div>Loading...</div>
 
+
+  if (!product) {
+    return (
+      <div className="flex flex-col items-center justify-center h-64 text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
 
   return (
     <>
 
       {/* ------------ Baneer contain ----------- */}
       < div className='bg-white mt-10' >
-        <div className='relative h-[500px] bg-cover rounded-4xl overflow-hidden md:mx-10 max-w-screen-xl mx-auto' style={{ backgroundImage: `url(${background})` }}>
+        <div className='relative h-[350px] bg-cover rounded-4xl overflow-hidden md:mx-10 max-w-screen-xl mx-auto' style={{ backgroundImage: `url(${background})` }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-center fontFamily: 'Poppins',sans-serif">
             <div>
@@ -47,10 +56,16 @@ const PharmaceuticalsDes = () => {
         </div>
       </div >
 
+      <div className="px-4 md:px-8 lg:px-16 py-6">
+        <h1 className="text-3xl md:text-4xl font-semibold text-[#773135]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          {product.name}
+        </h1>
+      </div>
       {/* ---------- main contain ------- */}
-      <div className='max-w-screen-2xl mx-auto bg-white p-8 pt-20 flex justify-between' style={{
+      <div className='max-w-screen-2xl mx-auto bg-white p-8 pt-1 flex justify-between' style={{
         fontFamily: " 'Poppins',sans-serif"
       }}>
+
         <div className='w-full pl-6'>
           <table className='w-full text-gray-300'>
             <tbody>
@@ -72,18 +87,29 @@ const PharmaceuticalsDes = () => {
                   <span className="pl-45 text-[#1a1a1a] text-[14px]">{product.dosageForm}</span>
                 </td>
               </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-2">
-                  <span className="font-bold text-[#773135] text-[14px]">Therapeutic Category:</span>
-                  <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.therapeuticCategory}</span>
-                </td>
-              </tr>
-              <tr className="border-b border-gray-200">
+              {product.therapeuticCategory && (
+                <tr className="border-b border-gray-200">
+                  <td className="py-2">
+                    <span className="font-bold text-[#773135] text-[14px]">Therapeutic Category:</span>
+                    <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.therapeuticCategory}</span>
+                  </td>
+                </tr>
+              )}
+
+              {product.regulatoryFiling && (
+                <tr className="border-b border-gray-200">
+                  <td className="py-2">
+                    <span className="font-bold text-[#773135] text-[14px]">Regulatory Filing:</span>
+                    <span className="pl-31 text-[#1a1a1a] text-[14px]">{product.regulatoryFiling}</span>
+                  </td>
+                </tr>
+              )}
+              {/* <tr className="border-b border-gray-200">
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Regulatory Filing:</span>
                   <span className="pl-38 text-[#1a1a1a] text-[14px]">{product.regulatoryFiling}</span>
                 </td>
-              </tr>
+              </tr> */}
               <tr>
                 <td className="py-2">
                   <span className="font-bold text-[#773135] text-[14px]">Muby Product Status:</span>
@@ -91,13 +117,13 @@ const PharmaceuticalsDes = () => {
                 </td>
               </tr>
               <tr>
-                <td className="py-2">
+                {/* <td className="py-2">
                   <button
                     onClick={() => window.history.back()}
                     className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer mt-2">
                     BACK
                   </button>
-                </td>
+                </td> */}
               </tr>
             </tbody>
           </table>
@@ -107,28 +133,10 @@ const PharmaceuticalsDes = () => {
         {/* Right Side - Product Image (Pushed to Right) */}
         <div className="self-end pr-5 p-[30px]">
           <img
-            src={`${BASE_URL}${product.img}`}
+            src={product.img}
             alt="Milk Calcium Powder"
             className="w-[550px] h-[250px] rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110"
           />
-        </div>
-      </div>
-
-
-      {/* --------------- Design ------------ */}
-      <div className="flex items-center bg-white rounded-lg  md:mx-10 max-w-screen-2xl mx-auto min-h-[220px]">
-        {/* Single Image Section */}
-        <img
-          src={glp} // Change src as needed
-          alt="Certification"
-          className="w-[1000px] h-auto border-4 border-white "
-        />
-
-        {/* Text & Button Section */}
-        <div className="ml-6 text-2xl h-auto flex items-center text-[#773135]">
-
-          {/* Certifications */}
-          <span className="text-[#773135] font-semibold pt-4 "> Certifications </span>
         </div>
       </div>
 
