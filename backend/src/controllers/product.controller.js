@@ -4,15 +4,15 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 import { Product } from "../models/product.model.js";
 // import { Product_description } from "../models/product_description.model.js";
 
-export const productList = asyncHandler(async (req, res) => {
-    const products = await Product.find(); // Fetch all products
+// export const productList = asyncHandler(async (req, res) => {
+//     const products = await Product.find(); // Fetch all products
 
-    if (!products || products.length === 0) {
-        throw new ApiError(404, "No products found");
-    }
+//     if (!products || products.length === 0) {
+//         throw new ApiError(404, "No products found");
+//     }
 
-    res.status(200).json(new ApiResponse(200, products, "Product list fetched successfully"));
-});
+//     res.status(200).json(new ApiResponse(200, products, "Product list fetched successfully"));
+// });
 
 // export const product_description = asyncHandler(async (req, res) => {
 //     const product_descriptions = await Product_description.find()
@@ -59,3 +59,44 @@ export const productList = asyncHandler(async (req, res) => {
 //         throw new ApiError(500, "Error inserting predefined products");
 //     }
 // });
+
+export const productList = asyncHandler(async (req, res) => {
+    const page = parseInt(req.query.page) || 1; // Current page number, defaults to 1
+    const limit = parseInt(req.query.limit) || 10; // Number of products per page, defaults to 10
+    const skip = (page - 1) * limit; // Number of products to skip for pagination
+  
+    console.log("Fetching products:", { page, limit, skip });
+  
+    // Get total number of products
+    const total = await Product.countDocuments();
+    console.log("Total products:", total);
+  
+    // Fetch products with pagination
+    const products = await Product.find().skip(skip).limit(limit);
+  
+    // Check if products exist
+    if (!products || products.length === 0) {
+      return res.status(404).json({
+        statusCode: 404,
+        data: [],
+        message: "No products found."
+      });
+    }
+  
+    // Calculate total pages
+    const totalPages = Math.ceil(total / limit);
+  
+    console.log("Total pages:", totalPages);
+  
+    // Return response with product data and pagination metadata
+    res.status(200).json({
+      statusCode: 200,
+      data: products,
+      message: "Product list fetched successfully",
+      meta: {
+        total,
+        currentPage: page,
+        totalPages
+      }
+    });
+  });
