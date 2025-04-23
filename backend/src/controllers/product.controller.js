@@ -65,7 +65,7 @@ export const productList = asyncHandler(async (req, res) => {
     const limit = parseInt(req.query.limit) || 10; // Number of products per page, defaults to 10
     const skip = (page - 1) * limit; // Number of products to skip for pagination
   
-    console.log("Fetching products:", { page, limit, skip });
+    // console.log("Fetching products:", { page, limit, skip });
   
     // Get total number of products
     const total = await Product.countDocuments();
