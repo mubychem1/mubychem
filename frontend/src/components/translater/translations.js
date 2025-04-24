@@ -1,16 +1,30 @@
+import petfoodforum from "../../assets/petfood-forum.png"
+import csea from "../../assets/csea.jpg"
+import apm from "../../assets/apm.jpg"
+import apexpofarmam from "../../assets/expo-farma.png"
+import dcat from "../../assets/dcat.png"
+import cosmetics from "../../assets/in-cosmetics.png"
+
 const translations = {
   en: {
-    HOME: "HOME",
-    ABOUT: "ABOUT US",
-    PRODUCTS: "PRODUCTS",
-    BLOGS: "BLOGS",
-    CAREER: "CAREER",
-    CONTACT_US: "CONTACT US",
-    USEFUL_LINKS: "Useful Links",
+    HOME: "Home",
+    ABOUT: "About Us",
+    PRODUCTS: "Products",
+    BLOGS: "Events",
+    CAREER: "Careers",
+    CONTACT_US: "Contact Us",
+    USEFUL_LINKS: "USEFUL LINKS",
 
     // -------------Footer Section ----------
+    Home: "Home",
+    About: "About Us",
+    Product: "Our Products",
+    BLOGS: "Events",
+    Events: "Events",
+    Career: "Careers",
+    Contact: "Contact Us",
     PRODUCT: "PRODUCT",
-    CATEGORIES: "Categories",
+    CATEGORIES: "CATEGORIES",
     PHARMACEUTICALS: "Pharmaceuticals",
     FOOD_ADDITIVES: "Food Additives",
     ANALYTICAL_REAGENT: "Analytical Reagent",
@@ -22,13 +36,13 @@ const translations = {
     MINERAL_FORTIFIERS: "Mineral Fortifiers",
     EXCIPIENTS: "Excipients",
     OTHER_PRODUCTS: "Other Products",
-    CONTACT_DETAILS: "Contact Details",
+    CONTACT_DETAILS: "CONTACT DETAILS",
     COMPANY_NAME: "Muby Chem Private Limited",
     EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "All Rights Reserved.",
 
     SPECIALTY_CHEMICALS:
-      "We specialize in producing high-quality specialty chemicals and excipientsOur products are known for their purity and effectiveness, supporting various industries worldwide.",
+      "We specialize in producing high-quality specialty chemicals, APIs and excipients. Our products are known for their purity and effectiveness, supporting various industries worldwide.",
 
 
     // -------Home Section ---------
@@ -44,9 +58,9 @@ const translations = {
       "At Muby Chem, we are committed to advancing industries by providing high-quality chemicals and innovative solutions for pharmaceutical, nutraceutical, specialty chemicals, food additives, and more. With over 49 years of expertise, we pride ourselves on offering cutting-edge products that meet the most stringent quality and regulatory standards.",
     mubyChemDescription2:
       "We work with industries around the world, supporting the development of exceptional products that enhance health, wellness, and industrial performance. Whether you need customized chemical solutions, nutraceutical ingredients, or specialty chemical formulations, Muby Chem is your trusted partner.",
-      mubyChemDescription3:
+    mubyChemDescription3:
       "All products are manufactured following ICH Q7 Good Manufacturing Practices (cGMP) for active pharmaceutical ingredients and excipients, ensuring uncompromised quality and safety. We offer materials that meet or exceed the standards of USP, NF, BP, EP, JP, IP, FCC, and ACS compendia, depending on the requirement.",
-      mubyChemDescription4:"With state-of-the-art manufacturing facilities in India and comprehensive global regulatory documentation support, Muby Chem supplies to over 50 countries, consistently delivering quality, compliance, and value to some of the world’s most respected brands.",
+    mubyChemDescription4: "With state-of-the-art manufacturing facilities in India and comprehensive global regulatory documentation support, Muby Chem supplies to over 50 countries, consistently delivering quality, compliance, and value to some of the world’s most respected brands.",
     apis: "APIs",
     apisDescription:
       "Health research, sometimes referred to as medical research.",
@@ -57,9 +71,6 @@ const translations = {
 
     ourService: "OUR SERVICE",
     accre: "Accreditation",
-    hello: "et your free  <br /> estimate!",
-    
-
 
     //--------------VerticalTabs-----------
     Vision: "Our Vision",
@@ -77,17 +88,30 @@ const translations = {
     Manufacturing: "Manufacturing Facilities",
 
     /*-------estimate section--------------*/
-    Get: "Get your free",
-    estimate: "estimate!",
+    Get: "Inquiry &",
+    estimate: "Information Request",
     information: "Submit this information and we will send",
     information1: "you the cost for the service.",
     submit: "Submit →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
+    mubyChemDescriptionMain:
       "Muby Chem is an USFDA-registered and FSSC 22000-certified leading manufacturer of high-purity pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals, serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally.",
-    mubyChemDescription2:
+    mubyChemDescriptionMain2:
       "With over four decades of experience and a legacy of trust, we are recognized for our quality-first approach, consistent reliability, and customer-centric solutions.",
+    mubyChemDescription1:
+      "was established in 1976 ",
+    muby: "Muby Chem Pvt. Ltd.",
+    mubysub: "and has grown into a reputable, customer-focused manufacturer of high-purity ",
+    chemicals: "pharmaceutical components, mineral salts, excipients, and specialty chemicals.",
+    weServe: "With decades of experience and a commitment to international quality standards, we provide services to the",
+    industries: "pharmaceutical, nutraceutical, food and beverage, personal care & cosmetics, veterinary & animal health, and biopharma",
+    across: "industries globally.",
+    mubyChemDescription2:
+      "Our production capabilities encompass a wide range of grades, including ",
+    grades: "IP, BP, USP, Ph. Eur. JP, CP, FCC/Food Grade, Analytical Reagent, LR, Pure, and Technical grades, ",
+    each: "all of which have undergone rigorous testing to meet international quality requirements.",
+    mubyChemDescription3: "With more than 400 compounds in our extensive product portfolio, we are prepared to provide accurate and reliable services to a wide range of sectors.",
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Watch Video",
     Professional: "Professional and Experienced",
@@ -98,17 +122,50 @@ const translations = {
     Trusted: "Trusted by thousands of people & companies.",
     Client: "Client Reviews",
 
-//-----------------Page1--------
-data: [
-  {
-    
-    title: "Essential Amino Acid – Its Uses and Benefits for our Body.",
-    description:  "Essential Amino Acids (EAAs) are the building blocks of proteins that our body cannot produce on its own. We must obtain them from our diet through protein-rich foods like meat, eggs, dairy, and plant-based sources like quinoa and soy.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+   //-----------------Page1--------
+   data: [
+    {
+      title: " Petfood Forum",
+      description:
+        "Booth #2509 ,<br>April 28–30 2025, <br>Kansas City Convention Center Kansas City,<br> Missouri, USA",
+      image: petfoodforum,
+    },
+    {
+      title: "Arab Pharma Manufacturer",
+      description:
+        "Booth # 1129,<br> July 08-09 2025 ,<br>Jordan International Exhibition Center (JIEC),<br> Amman, Jordan",
+      image: apm,
+    },
+    {
+      title: "CPHI South East Asia",
+      description:
+        "Booth # L17,<br> July 16-18 2025 ,<br>MITEC, <br>Kuala Lumpur, Malaysia",
+      image: csea,
+    },
+  ],
 
-  },
-],
-Readmore:"Read More ➝",
+  dataT :[
+    {
+      title: " In Cosmetics",
+      description:
+        "Booth # EU10 & EU11,<br> April 08 - 10, 2025,<br> Amsterdam, Netherlands",
+      image: cosmetics,
+    },
+    {
+      title: "Expo Farma",
+      description:
+        "Booth No. 1064,<br> April 02 - 04, 2025,<br> C.P. 03810, Mexico",
+      image: apexpofarmam,
+    },
+    {
+      title: "DCAT",
+      description:
+        "Suite No. 1109,<br> Mar 17 - 20, 2025,<br> The Benjamin Royal Sonesta,<br> NY, USA",
+      image: dcat,
+    },
+  ],
+
+  Readmore: "Read More ➝",
     //--------Blogs---------
 
     Uploaded: "Uploaded By: admin | 12th August 2024",
@@ -168,10 +225,9 @@ Readmore:"Read More ➝",
     supplements: "We can even take essential amino acid supplements if needed.",
     Social: "Follow us on Social Media :",
 
-
     // -------Career Section ---------
     heading: "Your next career move starts here.",
-    heading1: "Find jobs for every industry and role.",
+    heading1: "One Company, Many Roles – See Where You Fit In.",
     jobDescription: "Job Description",
     applyNow: "Apply Now",
     at: "at",
@@ -284,10 +340,7 @@ Readmore:"Read More ➝",
         qualification: ["BSC"],
         experience: "Minimum 7 Years",
       },
-
     ],
-
-
 
 
     /* -----------------Contact Us  --------------*/
@@ -299,15 +352,12 @@ Readmore:"Read More ➝",
     message:
       "Your email address will not be published. Required fields are marked *",
     message1: "Save my name, email, and website for next time.",
-
     Questions: "Have Questions?",
     AnswerDescription: "Our team is ready to help. Reach out any time!",
     Details: "More Details",
     staff: "Speak to Our Staff",
     message: "Fill out the form below and we'll get back to you.",
     message1: "I agree to the terms and conditions",
-
-
   },
   // hi: {
   //   HOME: "मुख्य पृष्ठ",
@@ -473,17 +523,17 @@ Readmore:"Read More ➝",
     Experts: "Avec les meilleurs experts scientifiques",
     Trusted: "Approuvé par des milliers de personnes et d'entreprises.",
     Client: "Avis clients",
-//-----------------Page1--------
-data: [
-  {
-    
-    title: "Acide aminé essentiel – Ses utilisations et bienfaits pour notre corps.",
-    description:  "Les acides aminés essentiels (AAE) sont les éléments constitutifs des protéines que notre corps ne peut produire lui-même. Nous devons les obtenir par l'alimentation, notamment par des aliments riches en protéines comme la viande, les œufs, les produits laitiers et les sources végétales comme le quinoa et le soja.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+    //-----------------Page1--------
+    data: [
+      {
 
-  },
-],
-Readmore:"Lire la suite ➝",
+        title: "Acide aminé essentiel – Ses utilisations et bienfaits pour notre corps.",
+        description: "Les acides aminés essentiels (AAE) sont les éléments constitutifs des protéines que notre corps ne peut produire lui-même. Nous devons les obtenir par l'alimentation, notamment par des aliments riches en protéines comme la viande, les œufs, les produits laitiers et les sources végétales comme le quinoa et le soja.",
+        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+
+      },
+    ],
+    Readmore: "Lire la suite ➝",
 
     //--------Blogs---------
 
@@ -771,16 +821,16 @@ Readmore:"Lire la suite ➝",
     Client: "Отзывы клиентов",
 
     //-----------------Page1--------
-data: [
-  {
-    
-    title: "Незаменимая аминокислота – ее применение и польза для нашего организма.",
-    description:  "Незаменимые аминокислоты (EAA) являются строительными блоками белков, которые наш организм не может производить самостоятельно. Мы должны получать их из нашего рациона через богатые белком продукты, такие как мясо, яйца, молочные продукты, а также растительные источники, такие как киноа и соя.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+    data: [
+      {
 
-  },
-],
-Readmore:"Подробнее ➝",
+        title: "Незаменимая аминокислота – ее применение и польза для нашего организма.",
+        description: "Незаменимые аминокислоты (EAA) являются строительными блоками белков, которые наш организм не может производить самостоятельно. Мы должны получать их из нашего рациона через богатые белком продукты, такие как мясо, яйца, молочные продукты, а также растительные источники, такие как киноа и соя.",
+        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+
+      },
+    ],
+    Readmore: "Подробнее ➝",
 
     //--------Blogs---------
 
@@ -1099,16 +1149,16 @@ Readmore:"Подробнее ➝",
     Client: "고객 리뷰",
 
     //-----------------Page1--------
-data: [
-  {
-    
-    title: "필수 아미노산 – 우리 몸에 대한 용도 및 이점.",
-    description:  "필수 아미노산(EAA)은 우리 몸이 스스로 생성할 수 없는 단백질의 구성 요소입니다. 우리는 고기, 계란, 유제품, 그리고 퀴노아와 콩과 같은 식물성 식품과 같은 단백질이 풍부한 음식을 통해 필수 아미노산을 섭취해야 합니다.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+    data: [
+      {
 
-  },
-],
-Readmore:"더 읽기 ➝",
+        title: "필수 아미노산 – 우리 몸에 대한 용도 및 이점.",
+        description: "필수 아미노산(EAA)은 우리 몸이 스스로 생성할 수 없는 단백질의 구성 요소입니다. 우리는 고기, 계란, 유제품, 그리고 퀴노아와 콩과 같은 식물성 식품과 같은 단백질이 풍부한 음식을 통해 필수 아미노산을 섭취해야 합니다.",
+        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+
+      },
+    ],
+    Readmore: "더 읽기 ➝",
 
     //--------Blogs---------
 
@@ -1573,16 +1623,16 @@ Readmore:"더 읽기 ➝",
     Client: "Reseñas de clientes",
 
     //-----------------Page1--------
-data: [
-  {
-    
-    title:"Aminoácidos esenciales: sus usos y beneficios para nuestro organismo",
-    description:"Los aminoácidos esenciales (AAE) son los componentes básicos de las proteínas que nuestro cuerpo no puede producir por sí solo. Debemos obtenerlos de nuestra dieta a través de alimentos ricos en proteínas como la carne, los huevos, los lácteos y fuentes vegetales como la quinoa y la soja.",
-    image:     "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+    data: [
+      {
 
-  },
-],
-Readmore:"Leer más ➝",
+        title: "Aminoácidos esenciales: sus usos y beneficios para nuestro organismo",
+        description: "Los aminoácidos esenciales (AAE) son los componentes básicos de las proteínas que nuestro cuerpo no puede producir por sí solo. Debemos obtenerlos de nuestra dieta a través de alimentos ricos en proteínas como la carne, los huevos, los lácteos y fuentes vegetales como la quinoa y la soja.",
+        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+
+      },
+    ],
+    Readmore: "Leer más ➝",
 
     //--------Blogs---------
 
@@ -1796,7 +1846,7 @@ Readmore:"Leer más ➝",
         ],
         qualification: ["B.Com o M.Com"],
         experience: "4-5 años de experiencia laboral, preferiblemente en una firma de contadores públicos."
-      },      
+      },
 
       {
         id: 6,
@@ -1854,7 +1904,7 @@ Readmore:"Leer más ➝",
         location: "Sandhurst",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes.",
-      
+
         responsibility: [
           "Verificar documentos e instalaciones según los procedimientos existentes, cGMP y GLP en las instalaciones de la empresa.",
           "Emitir el Registro de Fabricación por Lote, registro de limpieza de equipos, libros de registro, informe analítico de materia prima, producto terminado y material de empaque, entre otros documentos.",
@@ -1891,7 +1941,7 @@ Readmore:"Leer más ➝",
           "Apoyar al jefe del departamento en la gestión ambiental y reportar su progreso.",
           "Investigar desviaciones/incidentes relacionados con la gestión ambiental en coordinación con el jefe del departamento."
         ],
-      
+
         qualification: ["Licenciatura en Ciencias (B.Sc)"],
         experience: "Mínimo 7 años"
       },
@@ -1902,7 +1952,7 @@ Readmore:"Leer más ➝",
         location: "Taloja y Ankleshwar",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes.",
-      
+
         responsibility: [
           "Supervisar las funciones del departamento de Control de Calidad para asegurar la calidad de todos los lotes fabricados, en cada etapa de procesamiento de excipientes y productos farmacéuticos.",
           "Muestreo, inspección y prueba de materias primas según especificaciones, con documentación correspondiente.",
@@ -1939,10 +1989,10 @@ Readmore:"Leer más ➝",
           "Validación de métodos de prueba, especificaciones y SOPs (farmacopeicos e internos).",
           "Seguir el sistema de reporte según procedimiento de la empresa."
         ],
-      
+
         qualification: ["Licenciatura en Ciencias (B.Sc)"],
         experience: "Mínimo 7 años"
-      }      
+      }
     ],
 
 
@@ -1962,7 +2012,7 @@ Readmore:"Leer más ➝",
     staff: "Hable con nuestro personal",
     message: "Complete el formulario a continuación y nos comunicaremos con usted.",
     message1: "Acepto los términos y condiciones",
-    
+
 
   },
   ar: {
@@ -2059,18 +2109,18 @@ Readmore:"Leer más ➝",
     Client: "مراجعات العملاء",
 
     //-----------------Page1--------
-data: [
-  {
-    
-    title:"الأحماض الأمينية الأساسية - استخداماتها وفوائدها لجسمنا.",
+    data: [
+      {
 
-    description:"الأحماض الأمينية الأساسية (EAAs) هي اللبنات الأساسية للبروتينات التي لا يستطيع جسمنا إنتاجها بمفرده. يجب أن نحصل عليها من نظامنا الغذائي من خلال الأطعمة الغنية بالبروتين مثل اللحوم والبيض ومنتجات الألبان، بالإضافة إلى المصادر النباتية مثل الكينوا والصويا.",
-    image:
-       "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+        title: "الأحماض الأمينية الأساسية - استخداماتها وفوائدها لجسمنا.",
 
-  },
-],
-Readmore:"اقرأ المزيد ➝",
+        description: "الأحماض الأمينية الأساسية (EAAs) هي اللبنات الأساسية للبروتينات التي لا يستطيع جسمنا إنتاجها بمفرده. يجب أن نحصل عليها من نظامنا الغذائي من خلال الأطعمة الغنية بالبروتين مثل اللحوم والبيض ومنتجات الألبان، بالإضافة إلى المصادر النباتية مثل الكينوا والصويا.",
+        image:
+          "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
+
+      },
+    ],
+    Readmore: "اقرأ المزيد ➝",
 
     //--------Blogs---------
 
@@ -2148,273 +2198,273 @@ Readmore:"اقرأ المزيد ➝",
     submit: "إرسال",
     applyFor: "قدّم لوظيفة",
     jobs: [
-        {
-          id: 1,
-          title: "مطور React في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "مدير المبيعات الإقليمي مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
-          responsibility: [
-            "تطوير وتنفيذ خطط المبيعات لتحقيق أهداف الإيرادات.",
-            "إدارة وتحفيز فريق من مندوبي المبيعات.",
-            "تحديد وتطوير عملاء جدد.",
-            "الحفاظ على العلاقات مع العملاء الحاليين وتنميتها.",
-            "إجراء أبحاث السوق والتحليل.",
-            "تمثيل الشركة في المعارض التجارية والفعاليات الصناعية.",
-            "البقاء على اطلاع باتجاهات الصناعة والتنظيمات."
-          ],
-          qualification: [
-            "درجة البكالوريوس في إدارة الأعمال أو التسويق أو مجال ذي صلة.",
-            "خبرة 5 سنوات أو أكثر في صناعة الكيماويات.",
-            "مهارات قوية في المبيعات والتسويق.",
-            "مهارات تواصل وعلاقات عامة ممتازة.",
-            "القدرة على العمل بشكل مستقل وضمن فريق.",
-            "القدرة على السفر."
-          ],
-          experience: "خبرة لا تقل عن 10 سنوات"
-        },
-        {
-          id: 2,
-          title: "مدير تسويق في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "مدير التسويق مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
-          responsibility: [
-            "دور أساسي في المبيعات، التسويق والحفاظ على العملاء.",
-            "إجراء متابعات منتظمة مع العملاء المحتملين عبر الهاتف والبريد الإلكتروني.",
-            "زيارة العملاء بشكل منتظم.",
-            "إتقان تقديم العروض باستخدام PowerPoint.",
-            "إعداد تقارير إدارة المعلومات (MIS) في الوقت المحدد.",
-            "امتلاك مهارات تحليلية قوية.",
-            "إجادة اللغة الإنجليزية (استماع، قراءة، تحدث).",
-            "مهارات ممتازة في صياغة الرسائل الإلكترونية.",
-            "خبرة لا تقل عن 4 سنوات في الصناعات الدوائية أو الكيماوية.",
-            "التعاون مع أعضاء الفريق لخلق بيئة عمل إيجابية.",
-            "مراقبة وتحليل اتجاهات السوق وأنشطة المستهلكين لتحديد الفرص.",
-            "التخطيط وتنفيذ استراتيجيات العمل.",
-            "تحديد الفرص الرئيسية في السوق.",
-            "الحفاظ على علاقات جيدة مع العملاء الحاليين والمحتملين."
-          ],
-          qualification: [
-            "درجة البكالوريوس في إدارة الأعمال أو التسويق أو مجال ذي صلة.",
-            "خبرة 3 سنوات أو أكثر في المبيعات، ويفضل في صناعة الكيماويات.",
-            "فهم قوي لصناعة المواد الكيميائية النشطة، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية.",
-            "مهارات تواصل وعلاقات عامة ممتازة.",
-            "القدرة على العمل بشكل مستقل وضمن فريق.",
-            "مهارات قوية في خدمة العملاء.",
-            "إجادة استخدام Microsoft Office."
-          ],
-          experience: "خبرة لا تقل عن 8 سنوات"
-        },
-        {
-          id: 3,
-          title: "تنفيذي البحث والتطوير في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نحن نبحث بنشاط عن أعضاء فريق موثوقين في قسم البحث والتطوير، والذين سيكونون مسؤولين بشكل أساسي عن:",
-          responsibility: [
-            "تحديد مسارات جذابة تقنيًا وتجاريًا وغير منتهكة للتصنيع في إطار زمني محدد.",
-            "تطوير وتوحيد عمليات صناعية قابلة للتطبيق مع تحقيق أهداف التكلفة طويلة الأجل.",
-            "تحديد وتطوير منتجات جديدة.",
-            "الحفاظ على علاقات العملاء الحاليين وتنميتها.",
-            "إعداد تقارير الجدوى، وتحليل التكاليف، والتقارير الشهرية، وتقارير التطوير الفني (TDR).",
-            "إثبات/تحقيق العمليات المختبرية حتى المستوى التجاري.",
-            "قيادة فريق من العلماء والكيميائيين لتطوير منتجات جديدة وتحسين المنتجات الحالية.",
-            "المعرفة والفهم لطرق التركيب الكيميائي، والطرق التحليلية، والمنتجات ذات الصلة.",
-            "مهارات ممتازة في تفسير البيانات التحليلية من UV، IR، NMR، GC، GCMS، HPLC، LCMS، MS وغيرها.",
-            "الإلمام بإرشادات GLP، GMP، وIMS.",
-            "فهم ومراجعة الأدبيات والبراءات.",
-            "فهم وتلبية متطلبات العملاء."
-          ],
-          qualification: [
-            "ماجستير أو دكتوراه في الكيمياء العضوية."
-          ],
-          experience: "خبرة لا تقل عن 5 سنوات في البحث والتطوير"
-        },
-      
-        {
-          id: 4,
-          title: "تنفيذي تحسين محركات البحث (SEO) في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن خبير SEO/SEM لإدارة جميع أنشطة تحسين محركات البحث والتسويق.",
-          responsibility: [
-            "تنفيذ الاختبارات، جمع وتحليل البيانات والنتائج، تحديد الاتجاهات والرؤى لتحقيق أقصى عائد استثمار في حملات البحث المدفوعة.",
-            "تتبع، إعداد تقارير وتحليل تحليلات الموقع الإلكتروني ومبادرات الحملات المدفوعة.",
-            "إدارة نفقات الحملة، والبقاء ضمن الميزانية، وتقدير التكاليف الشهرية وتسوية الفروقات.",
-            "تحسين المحتوى وصفحات الهبوط لمحركات البحث.",
-            "أداء مهام مستمرة لاكتشاف الكلمات الرئيسية وتوسيعها وتحسينها.",
-            "البحث وتنفيذ توصيات تحسين محركات البحث.",
-            "تحليل روابط الإعلانات المنافسة.",
-            "تطوير وتنفيذ استراتيجية بناء الروابط.",
-            "العمل مع فريق التطوير لضمان تنفيذ أفضل ممارسات SEO في الكود الجديد.",
-            "العمل مع الفرق التحريرية والتسويقية لتعزيز المحتوى وفقاً لـ SEO.",
-            "اقتراح تغييرات على هيكل الموقع، والمحتوى، والروابط لتحسين ترتيب الكلمات الرئيسية.",
-            "خبرة مثبتة في SEO.",
-            "خبرة مثبتة في SEM وإدارة الحملات المدفوعة على Google وYahoo وBing.",
-            "فهم متين للتسويق القائم على الأداء وتحويل الزوار واكتساب العملاء عبر الإنترنت.",
-            "خبرة متعمقة في أدوات تحليل المواقع مثل Google Analytics وغيرها.",
-            "خبرة في أدوات إدارة العروض مثل Marin، Kenshoo، إلخ.",
-            "خبرة في اختبارات A/B والتجارب متعددة المتغيرات.",
-            "معرفة عملية بـ HTML وCSS وJavaScript.",
-            "معرفة بعوامل الترتيب وخوارزميات محركات البحث.",
-            "متابعة أحدث الاتجاهات وأفضل الممارسات في SEO وSEM."
-          ],
-          qualification: ["درجة بكالوريوس أو ماجستير في مجال رقمي أو تحليلي."],
-          experience: "12-13 سنة من الخبرة ذات الصلة في البحث والتطوير"
-        },        
+      {
+        id: 1,
+        title: "مطور React في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "مدير المبيعات الإقليمي مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
+        responsibility: [
+          "تطوير وتنفيذ خطط المبيعات لتحقيق أهداف الإيرادات.",
+          "إدارة وتحفيز فريق من مندوبي المبيعات.",
+          "تحديد وتطوير عملاء جدد.",
+          "الحفاظ على العلاقات مع العملاء الحاليين وتنميتها.",
+          "إجراء أبحاث السوق والتحليل.",
+          "تمثيل الشركة في المعارض التجارية والفعاليات الصناعية.",
+          "البقاء على اطلاع باتجاهات الصناعة والتنظيمات."
+        ],
+        qualification: [
+          "درجة البكالوريوس في إدارة الأعمال أو التسويق أو مجال ذي صلة.",
+          "خبرة 5 سنوات أو أكثر في صناعة الكيماويات.",
+          "مهارات قوية في المبيعات والتسويق.",
+          "مهارات تواصل وعلاقات عامة ممتازة.",
+          "القدرة على العمل بشكل مستقل وضمن فريق.",
+          "القدرة على السفر."
+        ],
+        experience: "خبرة لا تقل عن 10 سنوات"
+      },
+      {
+        id: 2,
+        title: "مدير تسويق في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "مدير التسويق مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
+        responsibility: [
+          "دور أساسي في المبيعات، التسويق والحفاظ على العملاء.",
+          "إجراء متابعات منتظمة مع العملاء المحتملين عبر الهاتف والبريد الإلكتروني.",
+          "زيارة العملاء بشكل منتظم.",
+          "إتقان تقديم العروض باستخدام PowerPoint.",
+          "إعداد تقارير إدارة المعلومات (MIS) في الوقت المحدد.",
+          "امتلاك مهارات تحليلية قوية.",
+          "إجادة اللغة الإنجليزية (استماع، قراءة، تحدث).",
+          "مهارات ممتازة في صياغة الرسائل الإلكترونية.",
+          "خبرة لا تقل عن 4 سنوات في الصناعات الدوائية أو الكيماوية.",
+          "التعاون مع أعضاء الفريق لخلق بيئة عمل إيجابية.",
+          "مراقبة وتحليل اتجاهات السوق وأنشطة المستهلكين لتحديد الفرص.",
+          "التخطيط وتنفيذ استراتيجيات العمل.",
+          "تحديد الفرص الرئيسية في السوق.",
+          "الحفاظ على علاقات جيدة مع العملاء الحاليين والمحتملين."
+        ],
+        qualification: [
+          "درجة البكالوريوس في إدارة الأعمال أو التسويق أو مجال ذي صلة.",
+          "خبرة 3 سنوات أو أكثر في المبيعات، ويفضل في صناعة الكيماويات.",
+          "فهم قوي لصناعة المواد الكيميائية النشطة، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية.",
+          "مهارات تواصل وعلاقات عامة ممتازة.",
+          "القدرة على العمل بشكل مستقل وضمن فريق.",
+          "مهارات قوية في خدمة العملاء.",
+          "إجادة استخدام Microsoft Office."
+        ],
+        experience: "خبرة لا تقل عن 8 سنوات"
+      },
+      {
+        id: 3,
+        title: "تنفيذي البحث والتطوير في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نحن نبحث بنشاط عن أعضاء فريق موثوقين في قسم البحث والتطوير، والذين سيكونون مسؤولين بشكل أساسي عن:",
+        responsibility: [
+          "تحديد مسارات جذابة تقنيًا وتجاريًا وغير منتهكة للتصنيع في إطار زمني محدد.",
+          "تطوير وتوحيد عمليات صناعية قابلة للتطبيق مع تحقيق أهداف التكلفة طويلة الأجل.",
+          "تحديد وتطوير منتجات جديدة.",
+          "الحفاظ على علاقات العملاء الحاليين وتنميتها.",
+          "إعداد تقارير الجدوى، وتحليل التكاليف، والتقارير الشهرية، وتقارير التطوير الفني (TDR).",
+          "إثبات/تحقيق العمليات المختبرية حتى المستوى التجاري.",
+          "قيادة فريق من العلماء والكيميائيين لتطوير منتجات جديدة وتحسين المنتجات الحالية.",
+          "المعرفة والفهم لطرق التركيب الكيميائي، والطرق التحليلية، والمنتجات ذات الصلة.",
+          "مهارات ممتازة في تفسير البيانات التحليلية من UV، IR، NMR، GC، GCMS، HPLC، LCMS، MS وغيرها.",
+          "الإلمام بإرشادات GLP، GMP، وIMS.",
+          "فهم ومراجعة الأدبيات والبراءات.",
+          "فهم وتلبية متطلبات العملاء."
+        ],
+        qualification: [
+          "ماجستير أو دكتوراه في الكيمياء العضوية."
+        ],
+        experience: "خبرة لا تقل عن 5 سنوات في البحث والتطوير"
+      },
 
-        {
-          id: 5,
-          title: "تنفيذي أول للحسابات في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن تنفيذي أول للحسابات ذو كفاءة عالية لإدارة مختلف الأنشطة المحاسبية بشكل مستقل على أساس يومي، شهري، ربع سنوي وسنوي. سيتعاون المرشح المثالي مع أصحاب المصلحة لضمان استكمال التدقيق السنوي والحفاظ على سجلات مالية دقيقة.",
-          responsibility: [
-            "أداء المهام المحاسبية الشاملة مثل مدفوعات العملاء، الفواتير، الإيصالات، التسويات البنكية، وتسويات المدينين والدائنين.",
-            "إدارة جميع أنشطة الامتثال مثل GST وTDS وPT والضريبة المقدمة.",
-            "مراجعة إدخالات الإقفال في النظام قبل إعداد التقارير المالية الشهرية.",
-            "تحليل الوضع المالي والتقارير على الفروقات في بيان الدخل، وإبلاغ النتائج للإدارة.",
-            "المساهمة في إعداد وتحليل الميزانية.",
-            "تحديد فرص تحسين الأنظمة والإجراءات وبدء إجراءات تصحيحية حسب الحاجة."
-          ],
-          qualification: ["بكالوريوس أو ماجستير في التجارة (B.Com أو M.Com)."],
-          experience: "خبرة عمل من 4 إلى 5 سنوات، ويفضل من مكتب محاسب قانوني (CA Firm)."
-        },
-        
-        {
-          id: 6,
-          title: "تنفيذي مشتريات في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن تنفيذي توريد ديناميكي لديه خبرة لا تقل عن 1.5 سنة في صناعات الكيماويات والأدوية. سيكون مسؤولًا عن إعداد ومعالجة أوامر الشراء، والبحث عن موردين جدد، والحفاظ على التواصل الفعال مع الموردين المحليين.",
-          responsibility: [
-            "تحديد مسارات إنتاج تجارية جذابة من الناحية التقنية والتجارية وخالية من الانتهاكات في الوقت المناسب.",
-            "البحث عن موردين جدد وتقييم مدى ملاءمتهم للشراكة.",
-            "متابعة الموردين المحليين للحصول على عروض أسعار وعيّنات.",
-            "التفاوض على الأسعار والكميات وضمان جودة المواد.",
-            "التنسيق مع الموردين وشركات النقل لضمان التسليم في الوقت المحدد."
-          ],
-          qualification: [
-            "خبرة لا تقل عن 1.5 سنة في التوريد، ويفضل في API أو الإكسبيسيبيانت أو المواد الكيميائية.",
-            "مهارات تواصل كتابية وشفهية جيدة باللغة الإنجليزية.",
-            "مهارات قوية في المبيعات والتسويق.",
-            "إجادة استخدام Microsoft Office."
-          ],
-          experience: "خبرة لا تقل عن 3 سنوات"
-        },
-        {
-          id: 7,
-          title: "تنفيذي الموارد البشرية في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية. يجب أن يكون لدى المرشح المثالي معرفة بمنصات التوظيف مثل Naukri.com وIndeed، بالإضافة إلى الكفاءة في استخدام قنوات التواصل الاجتماعي مثل Instagram وFacebook لاستقطاب أفضل المواهب.",
-          responsibility: [
-            "إجراء أنشطة التوظيف الشاملة للوظائف المفتوحة داخل المنظمة.",
-            "استخدام بوابات التوظيف مثل Naukri.com وIndeed ومنصات التواصل الاجتماعي لاستقطاب المرشحين.",
-            "إنشاء إعلانات وظائف جذابة وضمان ظهورها في جميع المنصات المناسبة.",
-            "إقامة تواصل فعال مع المرشحين المحتملين وتقديم مقدمة عن الشركة والوصف الوظيفي.",
-            "التنسيق مع مكاتب التوظيف الخارجية والجامعات للحصول على بيانات خريجين محتملين.",
-            "فرز السير الذاتية، إجراء المقابلات الأولية، وتحديد مواعيد المقابلات للمرشحين المؤهلين.",
-            "تقديم تغذية راجعة فورية للمرشحين والحفاظ على التواصل المستمر معهم.",
-            "تنفيذ العروض الوظيفية، التفاوض على الرواتب، وضمان إتمام عملية التوظيف بنجاح."
-          ],
-          qualification: [
-            "درجة البكالوريوس في إدارة الموارد البشرية، إدارة الأعمال أو مجال ذي صلة.",
-            "خبرة مثبتة في عمليات التوظيف الشاملة، ويفضل في بيئة سريعة الإيقاع.",
-            "إلمام قوي بمنصات التوظيف مثل Naukri.com وIndeed وقنوات التواصل الاجتماعي.",
-            "مهارات تواصل ممتازة وقدرة على إيصال المعلومات بفعالية.",
-            "كفاءة في استقطاب وفرز المرشحين وتحديد مواعيد المقابلات.",
-            "مهارات تفاوض وقدرة على إدارة العروض والإغلاقات بكفاءة.",
-            "تنظيم عالي والانتباه للتفاصيل والقدرة على ترتيب الأولويات."
-          ],
-          experience: "خبرة لا تقل عن 3 سنوات"
-        },
-        
+      {
+        id: 4,
+        title: "تنفيذي تحسين محركات البحث (SEO) في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن خبير SEO/SEM لإدارة جميع أنشطة تحسين محركات البحث والتسويق.",
+        responsibility: [
+          "تنفيذ الاختبارات، جمع وتحليل البيانات والنتائج، تحديد الاتجاهات والرؤى لتحقيق أقصى عائد استثمار في حملات البحث المدفوعة.",
+          "تتبع، إعداد تقارير وتحليل تحليلات الموقع الإلكتروني ومبادرات الحملات المدفوعة.",
+          "إدارة نفقات الحملة، والبقاء ضمن الميزانية، وتقدير التكاليف الشهرية وتسوية الفروقات.",
+          "تحسين المحتوى وصفحات الهبوط لمحركات البحث.",
+          "أداء مهام مستمرة لاكتشاف الكلمات الرئيسية وتوسيعها وتحسينها.",
+          "البحث وتنفيذ توصيات تحسين محركات البحث.",
+          "تحليل روابط الإعلانات المنافسة.",
+          "تطوير وتنفيذ استراتيجية بناء الروابط.",
+          "العمل مع فريق التطوير لضمان تنفيذ أفضل ممارسات SEO في الكود الجديد.",
+          "العمل مع الفرق التحريرية والتسويقية لتعزيز المحتوى وفقاً لـ SEO.",
+          "اقتراح تغييرات على هيكل الموقع، والمحتوى، والروابط لتحسين ترتيب الكلمات الرئيسية.",
+          "خبرة مثبتة في SEO.",
+          "خبرة مثبتة في SEM وإدارة الحملات المدفوعة على Google وYahoo وBing.",
+          "فهم متين للتسويق القائم على الأداء وتحويل الزوار واكتساب العملاء عبر الإنترنت.",
+          "خبرة متعمقة في أدوات تحليل المواقع مثل Google Analytics وغيرها.",
+          "خبرة في أدوات إدارة العروض مثل Marin، Kenshoo، إلخ.",
+          "خبرة في اختبارات A/B والتجارب متعددة المتغيرات.",
+          "معرفة عملية بـ HTML وCSS وJavaScript.",
+          "معرفة بعوامل الترتيب وخوارزميات محركات البحث.",
+          "متابعة أحدث الاتجاهات وأفضل الممارسات في SEO وSEM."
+        ],
+        qualification: ["درجة بكالوريوس أو ماجستير في مجال رقمي أو تحليلي."],
+        experience: "12-13 سنة من الخبرة ذات الصلة في البحث والتطوير"
+      },
 
-        {
-          id: 8,
-          title: "مساعد مدير ضمان الجودة في شركة ميوبي كيم الخاصة المحدودة",
-          location: "ساندهيرست",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",
-          responsibility: [
-            "التحقق من المستندات والمرافق حسب الإجراءات المعتمدة، ومبادئ التصنيع الجيد (cGMP) والممارسات المخبرية الجيدة (GLP).",
-            "إصدار سجلات التصنيع، وسجلات تنظيف المعدات، ودفاتر السجلات، وتقارير التحليل للمواد الخام والمنتجات النهائية ومواد التعبئة.",
-            "إعداد إجراءات التشغيل القياسية SOP لجميع الأقسام أو إعداد المسودات.",
-            "أنشطة تصريح بدء خط الإنتاج.",
-            "إصدار نماذج التغيير، الانحراف، المواصفات الخارجة، وشكاوى العملاء حسب الحاجة.",
-            "مراجعة سجلات التصنيع والتقارير التحليلية والتحقق منها قبل إصدار المنتج النهائي.",
-            "التحقق من أنشطة مكافحة الآفات يوميًا وتوثيقها.",
-            "مراقبة درجة الحرارة والرطوبة في مناطق التخزين والتعبئة والتوثيق.",
-            "أخذ عينات من المنتجات النهائية والعينات المرجعية، والعينات قيد الاستقرار والرفض.",
-            "إعداد/مراجعة سجلات BMR، MFR وفقًا للمتطلبات التنظيمية.",
-            "توزيع واسترجاع ومراقبة SOPs وجميع المستندات.",
-            "المشاركة في التدقيق الداخلي وتفتيشات العملاء والجهات التنظيمية.",
-            "المشاركة في اجتماعات مراجعة الجودة.",
-            "إعداد ومراجعة المستندات والأنشطة حسب SOPs.",
-            "إعداد تقارير نقل التكنولوجيا وتوثيق الأنشطة.",
-            "ضمان تكامل البيانات حسب الإجراءات.",
-            "مراجعة أنشطة الإنتاج، الجودة، المخازن، الهندسة، والصحة والسلامة.",
-            "جمع وتحليل بيانات الجودة لإعداد تقرير المراجعة السنوي.",
-            "إعداد قائمة الموردين المعتمدين والحفاظ على تأهيلهم.",
-            "إرسال العينات للجهات الخارجية للاختبار.",
-            "تنفيذ وتتبع الأنشطة المرتبطة بالتتبع والجودة.",
-            "الحفاظ على سجل التصحيحات والإجراءات الوقائية (CAPA).",
-            "التحقيق في الانحرافات، عمليات السحب، المرتجعات، الشكاوى، المواصفات الخارجة والتحقيق في الأسباب الجذرية.",
-            "التحقق من صحة العمليات والتنظيف وتأهيل المعدات، وإعداد البروتوكولات والتقارير.",
-            "التحقق من صحة طرق التحليل.",
-            "التحقيق في المواد المرتجعة وشكاوى المنتجات والحفاظ على السجلات.",
-            "ضمان توافق الأنظمة الخاصة بالصيانة والمعايرة حسب الجدول.",
-            "إعداد وتنفيذ برامج تدريب على cGMP وGLP.",
-            "دعم إدارة البيئة والتحقيق في الحوادث البيئية بالتعاون مع القسم."
-          ],
-          qualification: ["بكالوريوس في العلوم (B.Sc)."],
-          experience: "خبرة لا تقل عن 7 سنوات"
-        },        
+      {
+        id: 5,
+        title: "تنفيذي أول للحسابات في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن تنفيذي أول للحسابات ذو كفاءة عالية لإدارة مختلف الأنشطة المحاسبية بشكل مستقل على أساس يومي، شهري، ربع سنوي وسنوي. سيتعاون المرشح المثالي مع أصحاب المصلحة لضمان استكمال التدقيق السنوي والحفاظ على سجلات مالية دقيقة.",
+        responsibility: [
+          "أداء المهام المحاسبية الشاملة مثل مدفوعات العملاء، الفواتير، الإيصالات، التسويات البنكية، وتسويات المدينين والدائنين.",
+          "إدارة جميع أنشطة الامتثال مثل GST وTDS وPT والضريبة المقدمة.",
+          "مراجعة إدخالات الإقفال في النظام قبل إعداد التقارير المالية الشهرية.",
+          "تحليل الوضع المالي والتقارير على الفروقات في بيان الدخل، وإبلاغ النتائج للإدارة.",
+          "المساهمة في إعداد وتحليل الميزانية.",
+          "تحديد فرص تحسين الأنظمة والإجراءات وبدء إجراءات تصحيحية حسب الحاجة."
+        ],
+        qualification: ["بكالوريوس أو ماجستير في التجارة (B.Com أو M.Com)."],
+        experience: "خبرة عمل من 4 إلى 5 سنوات، ويفضل من مكتب محاسب قانوني (CA Firm)."
+      },
 
-        {
-          id: 9,
-          title: "رئيس قسم مراقبة الجودة في شركة ميوبي كيم الخاصة المحدودة",
-          location: "تالوجا وأنكليشوار",
-          color: "bg-[#7B3931]",
-          description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",
-          responsibility: [
-            "إدارة جميع أنشطة قسم مراقبة الجودة لضمان جودة جميع الدُفعات المصنعة.",
-            "أخذ العينات، التفتيش، والتحليل للمواد الخام حسب المواصفات وتوثيق النتائج.",
-            "فحص وتحليل مواد التعبئة والتغليف.",
-            "تحليل المنتج أثناء التصنيع وقبل المعالجة اللاحقة.",
-            "التحقق من المنتج النهائي وتوثيق التحاليل لإطلاقه أو رفضه.",
-            "إطلاق أو رفض جميع دفعات المنتجات الدوائية.",
-            "إدارة غرف الثبات وتحليل العمر الافتراضي للمنتجات.",
-            "إعداد ومراجعة بروتوكولات وتقارير اختبارات الثبات.",
-            "التحليل الميكروبيولوجي للمواد الخام، المنتجات، المياه ومراقبة البيئة.",
-            "تحليل الاتجاهات الشهرية للبيانات الفيزيائية والميكروبيولوجية.",
-            "التحقيق التحليلي في الشكاوى وسحب المنتجات.",
-            "دعم تحليل التغييرات والضبط الداخلي.",
-            "التحقيق في نتائج التحاليل الخارجة عن المواصفات.",
-            "تحقيقات الانحرافات أثناء التحليل.",
-            "تحليل المنتجات المرتجعة واتخاذ القرار بشأن التخلص منها.",
-            "إجراء التدقيقات الداخلية والمراجعات النوعية.",
-            "تحليل المنتجات غير المطابقة ومعالجة الوضع.",
-            "إدارة العينات المرجعية والمعايير.",
-            "تنسيق الأنشطة مع قسم التصنيع لضمان جودة العمليات.",
-            "تطوير المواصفات والإجراءات التحليلية بالتنسيق مع QA وR&D.",
-            "المراجعة والتحديث الدوري للمواصفات والإجراءات التحليلية.",
-            "تأهيل الأجهزة التحليلية حسب البروتوكولات.",
-            "ضمان تنفيذ نظام تتبع البيانات ونزاهتها.",
-            "إجراء التدقيقات الفنية على نظام المختبر.",
-            "وضع بروتوكولات وإجراءات تنظيف المعدات الزجاجية.",
-            "الحفاظ على سجلات قسم الجودة والعينات.",
-            "اقتراح وتنظيم برامج تدريبية منتظمة للامتثال مع cGLP.",
-            "إعداد إجراءات التشغيل القياسية (SOPs) الشاملة.",
-            "مراجعة التغييرات والتحقيقات وتحليل الاتجاهات والمشكلات السوقية.",
-            "التحقق من صحة طرق التحليل والإجراءات.",
-            "اتباع نظام التقارير حسب معايير الشركة."
-          ],
-          qualification: ["بكالوريوس في العلوم (B.Sc)."],
-          experience: "خبرة لا تقل عن 7 سنوات"
-        },
+      {
+        id: 6,
+        title: "تنفيذي مشتريات في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن تنفيذي توريد ديناميكي لديه خبرة لا تقل عن 1.5 سنة في صناعات الكيماويات والأدوية. سيكون مسؤولًا عن إعداد ومعالجة أوامر الشراء، والبحث عن موردين جدد، والحفاظ على التواصل الفعال مع الموردين المحليين.",
+        responsibility: [
+          "تحديد مسارات إنتاج تجارية جذابة من الناحية التقنية والتجارية وخالية من الانتهاكات في الوقت المناسب.",
+          "البحث عن موردين جدد وتقييم مدى ملاءمتهم للشراكة.",
+          "متابعة الموردين المحليين للحصول على عروض أسعار وعيّنات.",
+          "التفاوض على الأسعار والكميات وضمان جودة المواد.",
+          "التنسيق مع الموردين وشركات النقل لضمان التسليم في الوقت المحدد."
+        ],
+        qualification: [
+          "خبرة لا تقل عن 1.5 سنة في التوريد، ويفضل في API أو الإكسبيسيبيانت أو المواد الكيميائية.",
+          "مهارات تواصل كتابية وشفهية جيدة باللغة الإنجليزية.",
+          "مهارات قوية في المبيعات والتسويق.",
+          "إجادة استخدام Microsoft Office."
+        ],
+        experience: "خبرة لا تقل عن 3 سنوات"
+      },
+      {
+        id: 7,
+        title: "تنفيذي الموارد البشرية في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية. يجب أن يكون لدى المرشح المثالي معرفة بمنصات التوظيف مثل Naukri.com وIndeed، بالإضافة إلى الكفاءة في استخدام قنوات التواصل الاجتماعي مثل Instagram وFacebook لاستقطاب أفضل المواهب.",
+        responsibility: [
+          "إجراء أنشطة التوظيف الشاملة للوظائف المفتوحة داخل المنظمة.",
+          "استخدام بوابات التوظيف مثل Naukri.com وIndeed ومنصات التواصل الاجتماعي لاستقطاب المرشحين.",
+          "إنشاء إعلانات وظائف جذابة وضمان ظهورها في جميع المنصات المناسبة.",
+          "إقامة تواصل فعال مع المرشحين المحتملين وتقديم مقدمة عن الشركة والوصف الوظيفي.",
+          "التنسيق مع مكاتب التوظيف الخارجية والجامعات للحصول على بيانات خريجين محتملين.",
+          "فرز السير الذاتية، إجراء المقابلات الأولية، وتحديد مواعيد المقابلات للمرشحين المؤهلين.",
+          "تقديم تغذية راجعة فورية للمرشحين والحفاظ على التواصل المستمر معهم.",
+          "تنفيذ العروض الوظيفية، التفاوض على الرواتب، وضمان إتمام عملية التوظيف بنجاح."
+        ],
+        qualification: [
+          "درجة البكالوريوس في إدارة الموارد البشرية، إدارة الأعمال أو مجال ذي صلة.",
+          "خبرة مثبتة في عمليات التوظيف الشاملة، ويفضل في بيئة سريعة الإيقاع.",
+          "إلمام قوي بمنصات التوظيف مثل Naukri.com وIndeed وقنوات التواصل الاجتماعي.",
+          "مهارات تواصل ممتازة وقدرة على إيصال المعلومات بفعالية.",
+          "كفاءة في استقطاب وفرز المرشحين وتحديد مواعيد المقابلات.",
+          "مهارات تفاوض وقدرة على إدارة العروض والإغلاقات بكفاءة.",
+          "تنظيم عالي والانتباه للتفاصيل والقدرة على ترتيب الأولويات."
+        ],
+        experience: "خبرة لا تقل عن 3 سنوات"
+      },
+
+
+      {
+        id: 8,
+        title: "مساعد مدير ضمان الجودة في شركة ميوبي كيم الخاصة المحدودة",
+        location: "ساندهيرست",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",
+        responsibility: [
+          "التحقق من المستندات والمرافق حسب الإجراءات المعتمدة، ومبادئ التصنيع الجيد (cGMP) والممارسات المخبرية الجيدة (GLP).",
+          "إصدار سجلات التصنيع، وسجلات تنظيف المعدات، ودفاتر السجلات، وتقارير التحليل للمواد الخام والمنتجات النهائية ومواد التعبئة.",
+          "إعداد إجراءات التشغيل القياسية SOP لجميع الأقسام أو إعداد المسودات.",
+          "أنشطة تصريح بدء خط الإنتاج.",
+          "إصدار نماذج التغيير، الانحراف، المواصفات الخارجة، وشكاوى العملاء حسب الحاجة.",
+          "مراجعة سجلات التصنيع والتقارير التحليلية والتحقق منها قبل إصدار المنتج النهائي.",
+          "التحقق من أنشطة مكافحة الآفات يوميًا وتوثيقها.",
+          "مراقبة درجة الحرارة والرطوبة في مناطق التخزين والتعبئة والتوثيق.",
+          "أخذ عينات من المنتجات النهائية والعينات المرجعية، والعينات قيد الاستقرار والرفض.",
+          "إعداد/مراجعة سجلات BMR، MFR وفقًا للمتطلبات التنظيمية.",
+          "توزيع واسترجاع ومراقبة SOPs وجميع المستندات.",
+          "المشاركة في التدقيق الداخلي وتفتيشات العملاء والجهات التنظيمية.",
+          "المشاركة في اجتماعات مراجعة الجودة.",
+          "إعداد ومراجعة المستندات والأنشطة حسب SOPs.",
+          "إعداد تقارير نقل التكنولوجيا وتوثيق الأنشطة.",
+          "ضمان تكامل البيانات حسب الإجراءات.",
+          "مراجعة أنشطة الإنتاج، الجودة، المخازن، الهندسة، والصحة والسلامة.",
+          "جمع وتحليل بيانات الجودة لإعداد تقرير المراجعة السنوي.",
+          "إعداد قائمة الموردين المعتمدين والحفاظ على تأهيلهم.",
+          "إرسال العينات للجهات الخارجية للاختبار.",
+          "تنفيذ وتتبع الأنشطة المرتبطة بالتتبع والجودة.",
+          "الحفاظ على سجل التصحيحات والإجراءات الوقائية (CAPA).",
+          "التحقيق في الانحرافات، عمليات السحب، المرتجعات، الشكاوى، المواصفات الخارجة والتحقيق في الأسباب الجذرية.",
+          "التحقق من صحة العمليات والتنظيف وتأهيل المعدات، وإعداد البروتوكولات والتقارير.",
+          "التحقق من صحة طرق التحليل.",
+          "التحقيق في المواد المرتجعة وشكاوى المنتجات والحفاظ على السجلات.",
+          "ضمان توافق الأنظمة الخاصة بالصيانة والمعايرة حسب الجدول.",
+          "إعداد وتنفيذ برامج تدريب على cGMP وGLP.",
+          "دعم إدارة البيئة والتحقيق في الحوادث البيئية بالتعاون مع القسم."
+        ],
+        qualification: ["بكالوريوس في العلوم (B.Sc)."],
+        experience: "خبرة لا تقل عن 7 سنوات"
+      },
+
+      {
+        id: 9,
+        title: "رئيس قسم مراقبة الجودة في شركة ميوبي كيم الخاصة المحدودة",
+        location: "تالوجا وأنكليشوار",
+        color: "bg-[#7B3931]",
+        description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",
+        responsibility: [
+          "إدارة جميع أنشطة قسم مراقبة الجودة لضمان جودة جميع الدُفعات المصنعة.",
+          "أخذ العينات، التفتيش، والتحليل للمواد الخام حسب المواصفات وتوثيق النتائج.",
+          "فحص وتحليل مواد التعبئة والتغليف.",
+          "تحليل المنتج أثناء التصنيع وقبل المعالجة اللاحقة.",
+          "التحقق من المنتج النهائي وتوثيق التحاليل لإطلاقه أو رفضه.",
+          "إطلاق أو رفض جميع دفعات المنتجات الدوائية.",
+          "إدارة غرف الثبات وتحليل العمر الافتراضي للمنتجات.",
+          "إعداد ومراجعة بروتوكولات وتقارير اختبارات الثبات.",
+          "التحليل الميكروبيولوجي للمواد الخام، المنتجات، المياه ومراقبة البيئة.",
+          "تحليل الاتجاهات الشهرية للبيانات الفيزيائية والميكروبيولوجية.",
+          "التحقيق التحليلي في الشكاوى وسحب المنتجات.",
+          "دعم تحليل التغييرات والضبط الداخلي.",
+          "التحقيق في نتائج التحاليل الخارجة عن المواصفات.",
+          "تحقيقات الانحرافات أثناء التحليل.",
+          "تحليل المنتجات المرتجعة واتخاذ القرار بشأن التخلص منها.",
+          "إجراء التدقيقات الداخلية والمراجعات النوعية.",
+          "تحليل المنتجات غير المطابقة ومعالجة الوضع.",
+          "إدارة العينات المرجعية والمعايير.",
+          "تنسيق الأنشطة مع قسم التصنيع لضمان جودة العمليات.",
+          "تطوير المواصفات والإجراءات التحليلية بالتنسيق مع QA وR&D.",
+          "المراجعة والتحديث الدوري للمواصفات والإجراءات التحليلية.",
+          "تأهيل الأجهزة التحليلية حسب البروتوكولات.",
+          "ضمان تنفيذ نظام تتبع البيانات ونزاهتها.",
+          "إجراء التدقيقات الفنية على نظام المختبر.",
+          "وضع بروتوكولات وإجراءات تنظيف المعدات الزجاجية.",
+          "الحفاظ على سجلات قسم الجودة والعينات.",
+          "اقتراح وتنظيم برامج تدريبية منتظمة للامتثال مع cGLP.",
+          "إعداد إجراءات التشغيل القياسية (SOPs) الشاملة.",
+          "مراجعة التغييرات والتحقيقات وتحليل الاتجاهات والمشكلات السوقية.",
+          "التحقق من صحة طرق التحليل والإجراءات.",
+          "اتباع نظام التقارير حسب معايير الشركة."
+        ],
+        qualification: ["بكالوريوس في العلوم (B.Sc)."],
+        experience: "خبرة لا تقل عن 7 سنوات"
+      },
 
     ],
 
