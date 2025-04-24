@@ -15,7 +15,8 @@ import Pharmaceuticals from './components/Products/Pharmaceuticals.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import Page1 from './components/Blog/Page1.jsx';
 import PharmaceuticalsDes from './components/Products/PharmaceuticalsDes.jsx';
-
+import CgmpManufacturing from './components/AboutUs/CgmpManufacturing.jsx';
+import ResearchAndDevelopment from './components/AboutUs/ResearchAndDevelopment.jsx';
 
 
 const router = createBrowserRouter(
@@ -23,19 +24,21 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
+      <Route path="/about-us/cgmp-manufacturing" element={<CgmpManufacturing/>} />
+      <Route path="/about-us/research-development" element={<ResearchAndDevelopment/>} />
+      {/* <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
         {/* Child Routes for Products */}
-        <Route path="category1" element={<Pharmaceuticals />} />
-      </Route>
-
+        {/* <Route path="category1" element={<Pharmaceuticals />} />
+      </Route> */} 
+        <Route path="allProducts" element={<Pharmaceuticals/>}/>
       {/* <Route path="products" element={<Products />} />
-      <Route path="products/sucoferric-oxyhydroxide" element={<Simple />} /> */}
-      <Route path="blogs" element={<Blog />} />
-      <Route path="Page1" element={<Page1 />} />
-      <Route path="contact" element={<ContactUs />} />
-      <Route path="career" element={<Career />} />
+      <Route path="products/sucoferric-oxyhydroxide" element={<Simple />} />*/}
+      <Route path="blogs" element={<Blog/>}/>
+      <Route path="Page1" element={<Page1/>}/>
+      <Route path="contact" element={<ContactUs/>}/>
+      <Route path="career" element={<Career/>}/>
       {/* <Route path="simple" element={<Simple />} /> */}
-      <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes />} />
+      <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes/>} />
     </Route>
   )
 );

@@ -6,6 +6,8 @@ import { Dialog } from "@headlessui/react";
 import career from '../../assets/career.png'
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
+import { ChevronDown } from "lucide-react";
+
 
 // const jobs = [
 //   {
@@ -109,6 +111,46 @@ import { useSelector } from "react-redux";
 
 // ];
 
+const Dropdown = ({ label, options }) => {
+  const [selected, setSelected] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="relative w-60">
+      <label className="text-gray-700 text-sm block mb-1">{label}</label>
+
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center border-b-2 border-[#773135] py-2 cursor-pointer"
+      >
+        <span className="text-sm text-gray-700">
+          {selected || `Select ${label} `}
+        </span>
+        <ChevronDown className="h-4 w-4 text-[#773135]" />
+      </div>
+
+      {isOpen && (
+        <ul className="absolute bg-white z-10 mt-1 w-full rounded shadow border border-gray-200">
+          {options.map((option, index) => (
+            <li
+              key={index}
+              onClick={() => {
+                setSelected(option);
+                setIsOpen(false);
+              }}
+              className="px-4 py-2 text-sm text-gray-700 hover:bg-purple-100 cursor-pointer"
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+
+
 
 const JobCard = ({ title, location, description, responsibility, qualification, experience, onOpen, onApply, buttonLabels = { jobDescription: "Job Description", applyNow: "Apply Now" } }) => (
 
@@ -209,11 +251,11 @@ const Career = () => {
     <>
       <div className="bg-white p-6 md:p-12">
         <div
-          className="relative h-[520px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-left">
+          <div className="absolute inset-0 flex items-center justify-left ">
             <div>
               <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
                 {currentTranslations.CAREER}
@@ -224,13 +266,23 @@ const Career = () => {
         </div>
       </div>
 
-      <section className="p-10 bg-[#fff] min-h-screen">
+     <section className="p-10 bg-[#fff] min-h-screen">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">
             {currentTranslations.heading1}
           </h2>
-          <p className="text-xl text-gray-600 mt-2">{currentTranslations.heading}</p>
+          <p className="text-xl text-gray-600 mt-2 pb-3">{currentTranslations.heading}</p>
         </div>
+        <div className="flex justify-center items-center gap-10">
+      <Dropdown
+        label="Business Unit"
+        options={["Sales", "Marketing", "Engineering", "Finance"]}
+      />
+      <Dropdown
+        label="Location"
+        options={["Mumbai", "Pune", "Bangalore", "Hyderabad"]}
+      />
+    </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {jobs.map((job) => (
             <JobCard key={job.id} {...job} onOpen={openModal} onApply={openForm} />

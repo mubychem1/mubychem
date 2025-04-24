@@ -37,16 +37,16 @@
 
 //       {/* Right Section */}
 //       <div className="w-full lg:w-1/2 px-6">
-//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
+//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: " " }}>
 //           Our Vision
 //         </h3>
-//         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+//         <p className="text-[#6a7391] mt-3" style={{fontFamily: " ",
 //           }
 //           }>
 //           Our vision is to contribute to a healthier, more sustainable future by advancing pharmaceuticals, nutraceuticals, specialty chemicals, and food additives that promote better health, improve quality of life, and foster environmental responsibility.
 //         </p>
 
-//         <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
+//         <ul className="mt-4 space-y-2" style={{fontFamily: " " }}>
 //           {[
 //             "Access Expert Advice For A Thriving Life",
 //             "Benefits Of Health Conscious Living",
@@ -80,15 +80,15 @@
 
 //       {/* Right Section */}
 //       <div className="w-full lg:w-1/2 px-6">
-//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
+//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: " " }}>
 //           Our Mission
 //         </h3>
-//         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+//         <p className="text-[#6a7391] mt-3" style={{fontFamily: " ",
 //           }
 //           }>
 //           Our mission is to be the partner of choice for businesses worldwide, offering products and services that drive success, support innovation, and help improve the quality of life for people across the globe.
 //         </p>
-//         <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
+//         <ul className="mt-4 space-y-2" style={{fontFamily: " " }}>
 //           {[
 //             "Access Expert Advice For A Thriving Life",
 //             "Benefits Of Health Conscious Living",
@@ -121,17 +121,17 @@
 
 //       {/* Right Section */}
 //       <div className="w-full lg:w-1/2 px-6">
-//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
+//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: " " }}>
 //           Our Quality
 //         </h3>
-//         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+//         <p className="text-[#6a7391] mt-3" style={{fontFamily: " ",
 //           }
 //           }>
 //        At Muby Chem, quality is at the heart of everything we do. We are dedicated to providing our clients with exceptional products that meet the highest standards of safety, performance, and regulatory compliance. Our rigorous commitment to quality ensures that each product we produce is reliable, effective, and consistently exceeds expectations.<br/>
 //         <br/>
 //         </p>
 
-//         <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
+//         <ul className="mt-4 space-y-2" style={{fontFamily: " " }}>
 //           {[
 //             "Access Expert Advice For A Thriving Life",
 //             "Benefits Of Health Conscious Living",
@@ -166,14 +166,14 @@
 
 //       {/* Right Section */}
 //       <div className="w-full lg:w-1/2 px-6">
-//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}> Values</h3>
-//         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik",
+//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: " " }}> Values</h3>
+//         <p className="text-[#6a7391] mt-3" style={{fontFamily: " ",
 //           }
 //           }>
 //           Our core values drive every aspect of our business. We are committed to maintaining the highest ethical standards, fostering innovation, and creating meaningful partnerships with our customers, employees, and communities. Our values form the foundation of our work culture and guide our actions as we strive to make a positive impact on industries and lives around the world.
 //         </p>
 
-//         <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
+//         <ul className="mt-4 space-y-2" style={{fontFamily: " " }}>
 //           {[
 //             "Access Expert Advice For A Thriving Life",
 //             "Benefits Of Health Conscious Living",
@@ -207,14 +207,14 @@
 
 //       {/* Right Section */}
 //       <div className="w-full lg:w-1/2 px-6">
-//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: "Graphik" }}>
+//         <h3 className="text-2xl font-bold text-gray-900" style={{fontFamily: " " }}>
 //         Excellence
 //         </h3>
-//         <p className="text-[#6a7391] mt-3" style={{fontFamily: "Graphik" }}>
+//         <p className="text-[#6a7391] mt-3" style={{fontFamily: " " }}>
 //         We continuously strive for excellence in everything we do. Our dedication to high standards of performance, attention to detail, and a relentless pursuit of improvement ensures that we remain leaders in the industry, delivering the best products and services to our customers.
 //         </p>
 
-//         <ul className="mt-4 space-y-2" style={{fontFamily: "Graphik" }}>
+//         <ul className="mt-4 space-y-2" style={{fontFamily: " " }}>
 //           {[
 //             "Access Expert Advice For A Thriving Life",
 //             "Benefits Of Health Conscious Living",
@@ -296,17 +296,7 @@ const VerticalTabs = () => {
   }, []);
 
   const tabs = [
-    {
-      key: "vision",
-      label: {
-        en: "Our Vision",
-        fr: "Notre vision",
-        ru: "Наше видение",
-        ko: "우리의 비전",
-        es: "Nuestra Visión",
-        ar: "رؤيتنا",// Add more languages here
-      },
-    },
+    
     {
       key: "mission",
       label: {
@@ -319,14 +309,14 @@ const VerticalTabs = () => {
       },
     },
     {
-      key: "quality",
+      key: "vision",
       label: {
-        en: "Our Quality",
-        fr: "Notre qualité",
-        ru: "Наше качество",
-        ko: "우리의 품질",
-        es: "Nuestra Calidad",
-        ar: "الجودة لدينا",
+        en: "Our Vision",
+        fr: "Notre vision",
+        ru: "Наше видение",
+        ko: "우리의 비전",
+        es: "Nuestra Visión",
+        ar: "رؤيتنا",// Add more languages here
       },
     },
     {
@@ -341,6 +331,18 @@ const VerticalTabs = () => {
       },
     },
     {
+      key: "quality",
+      label: {
+        en: "Our Quality",
+        fr: "Notre qualité",
+        ru: "Наше качество",
+        ko: "우리의 품질",
+        es: "Nuestra Calidad",
+        ar: "الجودة لدينا",
+      },
+    },
+    
+    {
       key: "excellence",
       label: {
         en: "Our Excellence",
@@ -354,25 +356,6 @@ const VerticalTabs = () => {
   ];
 
   const content = [
-    {
-      title: {
-        en: "Our Vision",
-        fr: "Notre vision",
-        ru: "Наше видение",
-        ko: "우리의 비전",
-        es: "Nuestra Visión",
-        ar: "رؤيتنا",
-      },
-      description: {
-        en: " To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
-        fr: "Être reconnu mondialement comme une source authentique de produits chimiques de spécialité, d'actifs pharmaceutiques, d'excipients, d'additifs alimentaires, de parfums et d'arômes avec des références internationales.",
-        ru: "Быть признанным во всем мире как подлинный источник специальных химикатов, фармацевтических активных веществ, вспомогательных веществ, пищевых добавок, отдушек и ароматизаторов, соответствующий международным стандартам».",
-        ko: "국제적 기준을 통해 특수 화학물질, 제약 활성제, 부형제, 식품 첨가물, 향료 및 풍미제의 정통한 공급원으로 전 세계적으로 인정받고자 합니다.",
-        es: "Ser reconocidos globalmente como una fuente auténtica de productos químicos especializados, activos farmacéuticos, excipientes, aditivos alimentarios, fragancias y sabores con puntos de referencia internacionales.",
-        ar: "أن نكون معترفًا بنا عالميًا كمصدر أصيل للمواد الكيميائية المتخصصة والمواد الصيدلانية والمواد المساعدة والمواد المضافة للأغذية والعطور والنكهات وفقًا للمعايير الدولية.",
-      },
-      img: Vision,
-    },
     {
       title: {
         en: "Our Mission",
@@ -394,22 +377,22 @@ const VerticalTabs = () => {
     },
     {
       title: {
-        en: "Our Quality",
-        fr: "Notre qualité",
-        ru: "Наше качество",
-        ko: "우리의 품질",
-        es: "Nuestra Calidad",
-        ar: "الجودة لدينا",
+        en: "Our Vision",
+        fr: "Notre vision",
+        ru: "Наше видение",
+        ko: "우리의 비전",
+        es: "Nuestra Visión",
+        ar: "رؤيتنا",
       },
       description: {
-        en: "At Muby Chem, quality is at the heart of everything we do. We are dedicated to providing our clients with exceptional products that meet the highest standards of safety, performance, and regulatory compliance. Our rigorous commitment to quality ensures that each product we produce is reliable, effective, and consistently exceeds expectations.",
-        fr: "Chez Muby Chem, la qualité est au cœur de toutes nos activités. Nous nous engageons à fournir à nos clients des produits exceptionnels répondant aux normes les plus strictes en matière de sécurité, de performance et de conformité réglementaire. Notre engagement rigoureux en matière de qualité garantit que chaque produit que nous fabriquons est fiable, efficace et dépasse systématiquement les attentes.",
-        ru: "В Muby Chem качество лежит в основе всего, что мы делаем. Мы стремимся предоставлять нашим клиентам исключительные продукты, которые отвечают самым высоким стандартам безопасности, производительности и соответствия нормативным требованиям. Наша строгая приверженность качеству гарантирует, что каждый производимый нами продукт надежен, эффективен и неизменно превосходит ожидания.",
-        ko: "Muby Chem에서 품질은 우리가 하는 모든 일의 핵심입니다. 우리는 고객에게 최고 수준의 안전, 성능 및 규정 준수를 충족하는 뛰어난 제품을 제공하는 데 전념합니다. 품질에 대한 엄격한 헌신은 우리가 생산하는 각 제품이 신뢰할 수 있고 효과적이며 지속적으로 기대치를 초과하도록 보장합니다.",
-        es: "En Muby Chem, la calidad es la base de todo lo que hacemos. Nos dedicamos a ofrecer a nuestros clientes productos excepcionales que cumplen con los más altos estándares de seguridad, rendimiento y cumplimiento normativo. Nuestro riguroso compromiso con la calidad garantiza que cada producto que fabricamos sea confiable, eficaz y supere constantemente las expectativas.",
-        ar: "في موبي كيم، الجودة هي جوهر كل ما نقوم به. نلتزم بتزويد عملائنا بمنتجات استثنائية تلبي أعلى معايير السلامة والأداء والامتثال للأنظمة. التزامنا الصارم بالجودة يضمن أن يكون كل منتج ننتجه موثوقًا وفعالًا ويتجاوز التوقعات باستمرار.",
+        en: "To be globally recognized as an authentic source of Speciality Chemicals, Pharmaceutical Actives, Excipients, Food Additives, Fragrance, and Flavors with international benchmarks.",
+        fr: "Être reconnu mondialement comme une source authentique de produits chimiques de spécialité, d'actifs pharmaceutiques, d'excipients, d'additifs alimentaires, de parfums et d'arômes avec des références internationales.",
+        ru: "Быть признанным во всем мире как подлинный источник специальных химикатов, фармацевтических активных веществ, вспомогательных веществ, пищевых добавок, отдушек и ароматизаторов, соответствующий международным стандартам».",
+        ko: "국제적 기준을 통해 특수 화학물질, 제약 활성제, 부형제, 식품 첨가물, 향료 및 풍미제의 정통한 공급원으로 전 세계적으로 인정받고자 합니다.",
+        es: "Ser reconocidos globalmente como una fuente auténtica de productos químicos especializados, activos farmacéuticos, excipientes, aditivos alimentarios, fragancias y sabores con puntos de referencia internacionales.",
+        ar: "أن نكون معترفًا بنا عالميًا كمصدر أصيل للمواد الكيميائية المتخصصة والمواد الصيدلانية والمواد المساعدة والمواد المضافة للأغذية والعطور والنكهات وفقًا للمعايير الدولية.",
       },
-      img: quality,
+      img: Vision,
     },
     {
       title: {
@@ -430,6 +413,26 @@ const VerticalTabs = () => {
       },
       img: Value,
     },
+    {
+      title: {
+        en: "Our Quality",
+        fr: "Notre qualité",
+        ru: "Наше качество",
+        ko: "우리의 품질",
+        es: "Nuestra Calidad",
+        ar: "الجودة لدينا",
+      },
+      description: {
+        en: "At Muby Chem, quality is at the heart of everything we do. We are dedicated to providing our clients with exceptional products that meet the highest standards of safety, performance, and regulatory compliance. Our rigorous commitment to quality ensures that each product we produce is reliable, effective, and consistently exceeds expectations.",
+        fr: "Chez Muby Chem, la qualité est au cœur de toutes nos activités. Nous nous engageons à fournir à nos clients des produits exceptionnels répondant aux normes les plus strictes en matière de sécurité, de performance et de conformité réglementaire. Notre engagement rigoureux en matière de qualité garantit que chaque produit que nous fabriquons est fiable, efficace et dépasse systématiquement les attentes.",
+        ru: "В Muby Chem качество лежит в основе всего, что мы делаем. Мы стремимся предоставлять нашим клиентам исключительные продукты, которые отвечают самым высоким стандартам безопасности, производительности и соответствия нормативным требованиям. Наша строгая приверженность качеству гарантирует, что каждый производимый нами продукт надежен, эффективен и неизменно превосходит ожидания.",
+        ko: "Muby Chem에서 품질은 우리가 하는 모든 일의 핵심입니다. 우리는 고객에게 최고 수준의 안전, 성능 및 규정 준수를 충족하는 뛰어난 제품을 제공하는 데 전념합니다. 품질에 대한 엄격한 헌신은 우리가 생산하는 각 제품이 신뢰할 수 있고 효과적이며 지속적으로 기대치를 초과하도록 보장합니다.",
+        es: "En Muby Chem, la calidad es la base de todo lo que hacemos. Nos dedicamos a ofrecer a nuestros clientes productos excepcionales que cumplen con los más altos estándares de seguridad, rendimiento y cumplimiento normativo. Nuestro riguroso compromiso con la calidad garantiza que cada producto que fabricamos sea confiable, eficaz y supere constantemente las expectativas.",
+        ar: "في موبي كيم، الجودة هي جوهر كل ما نقوم به. نلتزم بتزويد عملائنا بمنتجات استثنائية تلبي أعلى معايير السلامة والأداء والامتثال للأنظمة. التزامنا الصارم بالجودة يضمن أن يكون كل منتج ننتجه موثوقًا وفعالًا ويتجاوز التوقعات باستمرار.",
+      },
+      img: quality,
+    },
+   
     {
       title: {
         en: "Our Excellence",
@@ -501,8 +504,8 @@ const VerticalTabs = () => {
 
   return (
     <div
-      className="flex flex-col md:flex-row items-start max-w-7xl mx-auto p-4"
-      style={{ fontFamily: "Graphik" }}
+      className="flex flex-col md:flex-row items-start max-w-7xl mx-auto"
+      style={{ fontFamily: "" }}
     >
       {/* Tabs */}
       <div className="w-full md:w-1/4 mb-4 md:mb-0">
@@ -549,10 +552,10 @@ const VerticalTabs = () => {
             <h3 className="text-2xl font-bold text-gray-900 ">
               {content[activeTab].title[language]}
             </h3>
-            <p className="text-[#6a7391] mt-3">
+            <p className="text-[#6a7391]  text-justify mt-3">
               {content[activeTab].description[language]}
             </p>
-            <ul className="mt-4 space-y-2" style={{ fontFamily: "Graphik" }}>
+            <ul className="mt-4 text-justify space-y-2" style={{ fontFamily: " " }}>
               {benefitsList[language].map((benefit, index) => (
                 <li key={index} className="flex items-center text-gray-900">
                   <span className="text-yellow-900 text-lg">&#10003;</span>

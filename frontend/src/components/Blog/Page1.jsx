@@ -97,7 +97,7 @@ const Blog = () => {
   return (
     <>
       {/* Blog page details */}
-      <div className="flex flex-col">
+      <div className="flex flex-col"  >
         {/* ----------Research Section  -------------- */}
         <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-20 pt-10 pb-5">
           {/* Left Side - Image */}
@@ -115,7 +115,7 @@ const Blog = () => {
                 className="w-auto rounded-xl  h-full"
                 sizes="(max-width: 647px) 100vw, 647px"
               />
-              <p style={{ fontFamily: "Times New Roman" }}>
+              <p  >
                 {currentTranslations.Uploaded}
               </p>
             </div>
@@ -131,7 +131,7 @@ const Blog = () => {
             {/* Heading */}
             <motion.h2
               className="text-4xl leading-[60px] tracking-[0] text-[#000] normal-case not-italic w-full"
-              style={{ fontFamily: "Times New Roman" }}
+               
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -200,7 +200,7 @@ const Blog = () => {
         >
           <motion.h2
             className="text-4xl leading-[60px] tracking-[0] text-[#000] normal-case not-italic w-full"
-            style={{ fontFamily: "Times New Roman" }}
+             
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -224,7 +224,7 @@ const Blog = () => {
           </motion.p>
           <motion.h2
             className="text-4xl leading-[60px] tracking-[0] text-[#000] normal-case not-italic w-full"
-            style={{ fontFamily: "Times New Roman" }}
+             
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -488,7 +488,7 @@ const Blog = () => {
           <div className="flex flex-col py-6 px-3">
             <motion.h2
               className="text-4xl leading-[60px] tracking-[0] text-[#000] normal-case not-italic w-full"
-              style={{ fontFamily: "Times New Roman" }}
+               
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
