@@ -48,7 +48,7 @@ const Footer = () => {
               <ul
                 className="list-none mt-6 space-y-2"
               >
-                {["Home", "About", "Product", "Events", "Career", "Contact"].map((key) => (
+                {["HOME", "ABOUT", "Product", "BLOGS", "CAREER"].map((key) => (
                   <li key={key}>
                     <Link
                       to={`/${key.toLowerCase()}`} // Dynamic route path
@@ -111,10 +111,10 @@ const Footer = () => {
                 {currentTranslations.CONTACT_DETAILS}
               </h5>
               <h3 className="pt-6 font-bold">Muby Chem Private Limited</h3>
-              <h3 className="pt-3 font-bold">Corporate Office:</h3>
-              <p className="flex items-center space-x-2 text-white pt-1">S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009</p>
-              <h3 className="pt-3 font-bold">Manufacturing Plant:</h3>
-              <p className="flex items-center space-x-2 text-white pt-1">Plot No. 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002</p>
+              <h3 className="pt-3 font-bold">{currentTranslations.CorporateOffice}</h3>
+              <p className="flex items-center space-x-2 text-white pt-1">{currentTranslations.CorporateOfficeAddress}</p>
+              <h3 className="pt-3 font-bold">{currentTranslations.ManufacturingPlant}</h3>
+              <p className="flex items-center space-x-2 text-white pt-1">{currentTranslations.ManufacturingPlantAddress}</p>
               <p className="flex items-center space-x-2 text-white pt-3">
                 <FaEnvelope className="text-white" />
                 <a

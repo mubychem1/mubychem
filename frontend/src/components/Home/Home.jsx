@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import { motion } from 'framer-motion';
-import { FaArrowRight, FaPlay, FaArrowLeft } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaArrowRight, FaPlay, FaArrowLeft } from "react-icons/fa";
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
 import { BsCheck2Circle } from "react-icons/bs";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import microscopeImage from '../../assets/welcomeImg.png';
-import pattern from '../../assets/Pattern.png';
-import demo1 from '../../assets/demo-1.png';
-import VerticalTabs from './VerticalTabs';
+import microscopeImage from "../../assets/welcomeImg.png";
+import pattern from "../../assets/Pattern.png";
+import demo1 from "../../assets/demo-1.png";
+import VerticalTabs from "./VerticalTabs";
 import homecontact from "../../assets/home-contact.png";
 import iso from "../../assets/logo/ISO.png";
 import kstar from "../../assets/logo/kstar.png";
@@ -25,70 +25,69 @@ import fssai from "../../assets/logo/fssai.png";
 import fami from "../../assets/logo/fami-qs.png";
 import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
-import translations from '../translater/translations.js'
+import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
 import homeImage from "../../assets/home-image.png";
-import Pharmaceutical from"../../assets/Pharmaceutical.jpg";
-import Nutraceutical from"../../assets/Nutraceutical.jpg";
-import biotech from"../../assets/biotech.jpg";
-import FoodBeverages from"../../assets/FoodBeverages.jpg";
-import PersonalCare from"../../assets/PersonalCare.jpg";
-import Veterinary  from"../../assets/Veterinary .jpg";
-import ActivePharmaceuticalIngredients from"../../assets/ActivePharmaceuticalIngredients.jpg";
-import PharmaExcipients from"../../assets/PharmaExcipients.jpg";
-import MineralSalts from"../../assets/MineralSalts.jpg";
-import SpecialtyChemicals from"../../assets/SpecialtyChemicals.jpg";
-import AminoAcids from"../../assets/AminoAcids.jpg";
-import Fragrance from"../../assets/Fragrance.jpg";
-
+import Pharmaceutical from "../../assets/Pharmaceutical.jpg";
+import Nutraceutical from "../../assets/Nutraceutical.jpg";
+import biotech from "../../assets/biotech.jpg";
+import FoodBeverages from "../../assets/FoodBeverages.jpg";
+import PersonalCare from "../../assets/PersonalCare.jpg";
+import Veterinary from "../../assets/Veterinary .jpg";
+import ActivePharmaceuticalIngredients from "../../assets/ActivePharmaceuticalIngredients.jpg";
+import PharmaExcipients from "../../assets/PharmaExcipients.jpg";
+import MineralSalts from "../../assets/MineralSalts.jpg";
+import SpecialtyChemicals from "../../assets/SpecialtyChemicals.jpg";
+import AminoAcids from "../../assets/AminoAcids.jpg";
+import Fragrance from "../../assets/Fragrance.jpg";
 
 const certification = [
   {
-    title: '',
-    bgImage: gmp
+    title: "",
+    bgImage: gmp,
   },
   {
-    title: '',
-    bgImage: glp
+    title: "",
+    bgImage: glp,
   },
   {
-    title: '',
-    bgImage: fssc
-  },
-
-  {
-    title: '',
-    bgImage: fssai
-  },
-  {
-    title: '',
-    bgImage: fami
-  },
-  {
-    title: '',
-    bgImage: kstar
-  },
-  {
-    title: '',
-    bgImage: halal
-  },
-  {
-    title: ' ',
-    bgImage: iso
+    title: "",
+    bgImage: fssc,
   },
 
   {
-    title: '',
-    bgImage: allergen
+    title: "",
+    bgImage: fssai,
   },
   {
-    title: '',
-    bgImage: haccp
+    title: "",
+    bgImage: fami,
+  },
+  {
+    title: "",
+    bgImage: kstar,
+  },
+  {
+    title: "",
+    bgImage: halal,
+  },
+  {
+    title: " ",
+    bgImage: iso,
   },
 
   {
-    title: '',
-    bgImage: glutten
+    title: "",
+    bgImage: allergen,
+  },
+  {
+    title: "",
+    bgImage: haccp,
+  },
+
+  {
+    title: "",
+    bgImage: glutten,
   },
   // {
   //   title: '',
@@ -115,7 +114,8 @@ const services = [
       ar: "نصنع مكونات صيدلانية فعالة (APIs) ومواد مساعدة عالية الجودة تُشكل اللبنات الأساسية للتركيبات الصيدلانية. تُنتج منتجاتنا بعناية فائقة في ظل ظروف مُراقبة لضمان الفعالية والنقاء والفعالية.",
     },
     icon: "🤖",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg",
+    bgImage:
+      "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/demo1-slider.jpg",
   },
   {
     title: {
@@ -136,7 +136,8 @@ const services = [
       ar: "نحن متخصصون في التطوير والتصنيع. تجمع منتجاتنا من المكملات الغذائية بين أفضل ما توصلت إليه الطبيعة والعلوم لتقديم حلول متطورة وفعالة لمختلف الاحتياجات الصحية والغذائية. التزامنا بالجودة يضمن أن كل منتج نصنعه يفي بأعلى معايير السلامة والفعالية والامتثال للأنظمة.",
     },
     icon: "⚛",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg",
+    bgImage:
+      "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-04-415x530.jpg",
   },
   {
     title: {
@@ -157,7 +158,8 @@ const services = [
       ar: "حلول كيميائية مصممة خصيصًا لتلبية احتياجاتك، مما يضمن الحصول على نتائج مثالية والتكامل السلس في عمليات الإنتاج الخاصة بك.",
     },
     icon: "🧠",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg",
+    bgImage:
+      "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-01-415x530.jpg",
   },
 
   {
@@ -179,7 +181,8 @@ const services = [
       ar: "مُقوِّياتنا المعدنية مُصمَّمة لتلبية احتياجاتك الغذائية المتنوعة، مما يضمن حصولك على المعادن المناسبة بالكميات المناسبة. بفضل تقنيتنا المتطورة والتزامنا بالجودة، نوفر مُقوِّيات معدنية تُلبي المعايير العالمية للسلامة والفعالية والاستدامة.",
     },
     icon: "🧬",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
+    bgImage:
+      "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
   },
   {
     title: {
@@ -200,7 +203,8 @@ const services = [
       ar: "مُقوِّياتنا المعدنية مُصمَّمة لتلبية احتياجاتك الغذائية المتنوعة، مما يضمن حصولك على المعادن المناسبة بالكميات المناسبة. بفضل تقنيتنا المتطورة والتزامنا بالجودة، نوفر مُقوِّيات معدنية تُلبي المعايير العالمية للسلامة والفعالية والاستدامة.",
     },
     icon: "🧬",
-    bgImage: "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
+    bgImage:
+      "https://xleb-demo.pbminfotech.com/demo1/wp-content/uploads/sites/2/2024/11/service-img-05-415x530.jpg",
   },
 ];
 
@@ -220,14 +224,12 @@ const zoomIn = {
 };
 
 const Home = () => {
-
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [showPassword, setShowPassword] = useState(false);
-
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? services.length - 1 : prev - 1));
@@ -276,7 +278,10 @@ const Home = () => {
     try {
       console.log("aayush");
 
-      const response = await axios.post("http://mubychem.onrender.com/api/contact", formData);
+      const response = await axios.post(
+        "http://mubychem.onrender.com/api/contact",
+        formData
+      );
       alert(response.data.message);
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
     } catch (error) {
@@ -286,49 +291,50 @@ const Home = () => {
     }
   };
 
-
-
   return (
     <>
       {/* ----------------- Banner------------------ */}
 
-       <motion.section
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              className="relative bg-[#fff] "
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px]"
-              >
-                {/* <img
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="relative bg-[#fff] "
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px]"
+        >
+          {/* <img
                   src={''} // Add your background image path here
                   alt="About Us Background"
                   className="w-full h-full object-cover"
                 /> */}
-                <div className="bg-[#fff] p-6 md:p-12">
-                  <div
-                    className="relative h-[340px] bg-cover rounded-bl-[80px] rounded-tr-[80px] overflow-hidden"
-                    style={{ backgroundImage: `url(${homeImage})` }}
-                  >
-                    {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
-                    <div className="absolute inset-0 flex items-end bottom-7 pl-2 justify-left">
-                      <div>
-                        <h1 className="text-[#773135] text-2xl  mb-2  ">
-                        Empowering Global Health & Industry
-                        </h1>
-                        <p className="text-black text-3xl  leading-6 pb-14">
-                        Leading Manufacturer of <br/>Specialty Chemicals, Pharmaceutical Excipients,<br/>  Active Pharmaceutical Ingredients APIs & Mineral Salts
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+          <div className="bg-[#fff] p-6 md:p-12">
+            <div
+              className="relative h-[340px] bg-cover rounded-bl-[80px] rounded-tr-[80px] overflow-hidden"
+              style={{ backgroundImage: `url(${homeImage})` }}
+            >
+              {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
+              <div className="absolute inset-0 flex items-end bottom-7 pl-2 justify-left">
+                <div>
+                  <h1 className="text-[#773135] text-2xl  mb-2  ">
+                    {currentTranslations.Empowering}
+                  </h1>
+                  <p className="text-black text-3xl  leading-6 pb-14">
+                    {currentTranslations.Leading} <br />
+                    {currentTranslations.Specialty}
+                    <br /> {currentTranslations.Active}
+                  </p>
                 </div>
-              </motion.div>
-            </motion.section>
+                          
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.section>
 
       {/* ----------Research Section  -------------- */}
       <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20 font-['Montserrat',sans-serif]">
@@ -375,7 +381,9 @@ const Home = () => {
             {currentTranslations.welcomeToMubyChem}
             {/* Welcome to Muby Chem <br />Private Limited */}
           </motion>
-          <motion.p className="mb-4" >{currentTranslations.obsessedWithQuality}</motion.p>
+          <motion.p className="mb-4">
+            {currentTranslations.obsessedWithQuality}
+          </motion.p>
 
           {/* Description */}
           <motion.p
@@ -397,7 +405,6 @@ const Home = () => {
             {currentTranslations.mubyChemDescriptionMain2}
           </motion.p>
 
-
           {/* Features Section */}
           <motion.div
             className="flex flex-col sm:flex-row gap-6 mb-6 border-t pt-3 border-gray-400"
@@ -411,10 +418,7 @@ const Home = () => {
               },
             }}
           >
-
-
             {/* Feature 2 */}
-
           </motion.div>
 
           {/* Button with Hover Animation */}
@@ -424,8 +428,9 @@ const Home = () => {
             style={{ fontFamily: "" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          ><a href="/about">
-              {currentTranslations.knowMore} </a><FaArrowRight />
+          >
+            <a href="/about">{currentTranslations.knowMore} </a>
+            <FaArrowRight />
           </motion.button>
         </motion.div>
       </div>
@@ -438,7 +443,7 @@ const Home = () => {
               className="text-[30px] leading-[50px] font-bold tracking-[0] pl-2 font-['Montserrat', sans-serif] text-[#fff] normal-case not-italic w-full"
               // style={{ fontFamily: " " }}
             >
-              Product Divisions
+              {currentTranslations.Product1}{" "}
             </h2>
           </div>
           <div className="bg-[#773135] items-center flex justify-between  pt-5 pb-5 text-center">
@@ -450,12 +455,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                 src={ActivePharmaceuticalIngredients}
+                src={ActivePharmaceuticalIngredients}
                 alt="Active Pharmaceutical Ingredients"
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center mt-2 text-2xl ">
-                Active Pharmaceutical Ingredients
+                {currentTranslations.ActivePharmaceuticalIngredients}{" "}
               </p>
             </motion.div>
 
@@ -472,7 +477,7 @@ const Home = () => {
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                Pharma Excipients
+                {currentTranslations.PharmaExcipients}{" "}
               </p>
             </motion.div>
 
@@ -483,12 +488,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                 src={ MineralSalts }
+                src={MineralSalts}
                 alt="Mineral Salts"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                Mineral Salts
+                {currentTranslations.MineralSalts}{" "}
               </p>
             </motion.div>
           </div>
@@ -506,7 +511,7 @@ const Home = () => {
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                Specialty Chemicals
+                {currentTranslations.SpecialtyChemicals}{" "}
               </p>
             </motion.div>
 
@@ -523,7 +528,7 @@ const Home = () => {
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                Amino Acids
+                {currentTranslations.AminoAcids}{" "}
               </p>
             </motion.div>
 
@@ -534,12 +539,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                src={Fragrance}   
+                src={Fragrance}
                 alt="Fragrance & Flavor Chemicals"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold justify-items-center text-2xl mt-2">
-                Fragrance & Flavor Chemicals
+                {currentTranslations.FragranceFlavorChemicals}{" "}
               </p>
             </motion.div>
           </div>
@@ -554,7 +559,7 @@ const Home = () => {
               className="text-[30px] leading-[50px] font-bold tracking-[0] pl-3 text-[#773135] normal-case not-italic w-full"
               style={{ fontFamily: " " }}
             >
-              Markets We Serve
+              {currentTranslations.MarketsWeServe}{" "}
             </h2>
           </div>
           <div className="bg-[#e7d1bc] items-center flex justify-between  pt-2 pb-5 text-center">
@@ -566,12 +571,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                 src={Pharmaceutical}
+                src={Pharmaceutical}
                 alt=" Pharmaceuticals"
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                Pharmaceuticals
+                {currentTranslations.Pharmaceuticals}
               </p>
             </motion.div>
 
@@ -588,7 +593,7 @@ const Home = () => {
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-              Biopharma
+                {currentTranslations.Biopharma}
               </p>
             </motion.div>
 
@@ -604,7 +609,7 @@ const Home = () => {
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                Nutraceuticals 
+                {currentTranslations.Nutraceuticals}
               </p>
             </motion.div>
           </div>
@@ -622,7 +627,7 @@ const Home = () => {
                 className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                 Food & Beverages 
+                {currentTranslations.FoodBeverages}{" "}
               </p>
             </motion.div>
 
@@ -634,12 +639,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                src={PersonalCare}  
+                src={PersonalCare}
                 alt="Lab Equipment"
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-              Personal Care & Cosmetics 
+                {currentTranslations.PersonalCareCosmetics}{" "}
               </p>
             </motion.div>
 
@@ -650,13 +655,12 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
-                src={Veterinary }
+                src={Veterinary}
                 alt="Veterinary & Animal Health"
-
                 className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                 Veterinary & Animal Health
+                {currentTranslations.VeterinaryAnimalHealth}{" "}
               </p>
             </motion.div>
           </div>
@@ -744,7 +748,6 @@ const Home = () => {
         </div>
       </div> */}
 
-
       {/* <div className="bg-[#773135] text-white  py-16">
         <div className="flex justify-between items-center px-15">
           <div className="text-left">
@@ -801,14 +804,11 @@ const Home = () => {
         </div>
       </div> */}
 
-
-      <div className="bg-[#fff] mt-10" >
+      <div className="bg-[#fff] mt-10">
         <div className="text-center">
-          < h2
-            className="text-[35px] leading-[60px] font-bold tracking-[0] text-[#001837] normal-case not-italic w-full font-['Montserrat',sans-serif]"
-          >
+          <h2 className="text-[35px] leading-[60px] font-bold tracking-[0] text-[#001837] normal-case not-italic w-full font-['Montserrat',sans-serif]">
             {currentTranslations.accre}
-          </ h2>
+          </h2>
         </div>
         {/* <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center px-4 sm:px-15 space-y-4 sm:space-y-0"> */}
         {/* <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md self-start sm:self-auto">
@@ -834,32 +834,35 @@ const Home = () => {
             animate={{ x: `-${currentIndex * 320}px` }}
             transition={{ ease: "linear", duration: 1 }}
           >
-            {certification.concat(certification, certification, certification).map((certification, index) => (
-              <div
-                key={index}
-                className="group w-[200px] bg-[] p-6 rounded-4xl flex-shrink-0 border border-white h-[200px] text-white hover:text-[#773135] relative overflow-hidden"
-              >
+            {certification
+              .concat(certification, certification, certification)
+              .map((certification, index) => (
                 <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:opacity-100 transition duration-500 h-auto"
-                  style={{
-                    backgroundImage: `url(${certification.bgImage})`,
-                  }}
-                ></div>
+                  key={index}
+                  className="group w-[200px] bg-[] p-6 rounded-4xl flex-shrink-0 border border-white h-[200px] text-white hover:text-[#773135] relative overflow-hidden"
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:opacity-100 transition duration-500 h-auto"
+                    style={{
+                      backgroundImage: `url(${certification.bgImage})`,
+                    }}
+                  ></div>
 
-                <h3 className="text-2xl relative text-Black text-center pt-70 font-['Montserrat',sans-serif]" >{certification.title}</h3>
+                  <h3 className="text-2xl relative text-Black text-center pt-70 font-['Montserrat',sans-serif]">
+                    {certification.title}
+                  </h3>
 
-                {/* 
+                  {/* 
                 <div className="mt-4 relative">
                   <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
                     ➜
                   </button>
                 </div> */}
-              </div>
-            ))}
+                </div>
+              ))}
           </motion.div>
         </div>
       </div>
-
 
       {/* {------------estimate section--------------} */}
       <div className="flex flex-col md:flex-row items-center justify-center bg-white p-6 font-['Montserrat',sans-serif]">
@@ -876,81 +879,81 @@ const Home = () => {
         {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
         {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
         <div className="bg-[#773135] p-9 rounded-xl shadow-lg w-full max-w-md relative">
-            {/* Close button */}
-            {/* <button className="absolute top-4 right-4 text-[#773135] text-2xl font-bold">
+          {/* Close button */}
+          {/* <button className="absolute top-4 right-4 text-[#773135] text-2xl font-bold">
               ×
             </button> */}
 
-            {/* Title */}
-            <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
+          {/* Title */}
+          <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
             {currentTranslations.Get} {currentTranslations.estimate}
-            </h2>
+          </h2>
 
-            {/* Form Fields */}
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-[#fff]">
-                   Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
-                  required
-                />
-              </div>
+          {/* Form Fields */}
+          <form className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-[#fff]">
+                {currentTranslations.Name}
+              </label>
+              <input
+                type="text"
+                className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+                required
+              />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-[#fff]">
-                   Email address
-                </label>
-                <input
-                  type="email"
-                  className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
-                  required
-                />
-              </div>
+            <div>
+              <label className="block text-sm font-medium text-[#fff]">
+                {currentTranslations.EmailID}
+              </label>
+              <input
+                type="email"
+                className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                required
+              />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-[#fff]">
-                   Phone Number
-                </label>
-                <input
-                  type="tel"
-                  className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
-                  required
-                />
-              </div>
+            <div>
+              <label className="block text-sm font-medium text-[#fff]">
+                {currentTranslations.PhoneNumber}
+              </label>
+              <input
+                type="tel"
+                className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                required
+              />
+            </div>
 
-              <div className="relative">
-                <label className="block text-sm font-medium text-[#fff]">
-                   Product
-                </label>
-                 <input
-                  type={  "text"}
-                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
-                  required
-                />
-                {/* <button
+            <div className="relative">
+              <label className="block text-sm font-medium text-[#fff]">
+                {currentTranslations.Product}
+              </label>
+              <input
+                type={"text"}
+                className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
+                required
+              />
+              {/* <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-0 top-6 text-[#773135]"
                 >
                   👁
                 </button>  */}
-              </div>
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-[#fff]">
-                  Message
-                </label>
-                <textarea
-                  type="text"
-                  className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
-                />
-              </div>
+            <div>
+              <label className="block text-sm font-medium text-[#fff]">
+                {currentTranslations.Message}
+              </label>
+              <textarea
+                type="text"
+                className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+              />
+            </div>
 
-              {/* Checkbox and Dummy Text */}
-              {/* <div className="flex items-start mt-2">
+            {/* Checkbox and Dummy Text */}
+            {/* <div className="flex items-start mt-2">
                 <input type="checkbox" className="mr-2 mt-1 text-[#773135]" />
                 <p className="text-xs text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -958,24 +961,23 @@ const Home = () => {
                 </p>
               </div> */}
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
-              >
-               Submit
-              </button>
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
+            >
+              {currentTranslations.Submit}
+            </button>
 
-              {/* Sign in link */}
-              {/* <p className="text-sm text-center text-gray-600 mt-4">
+            {/* Sign in link */}
+            {/* <p className="text-sm text-center text-gray-600 mt-4">
                 Already have an account?{" "}
                 <a href="#" className="text-[#773135] hover:underline">
                   Sing in
                 </a>
               </p> */}
-            </form>
-          </div>
-       
+          </form>
+        </div>
       </div>
       {/* </div> */}
     </>
@@ -983,6 +985,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-

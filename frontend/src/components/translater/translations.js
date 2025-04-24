@@ -20,7 +20,7 @@ const translations = {
     About: "About Us",
     Product: "Our Products",
     BLOGS: "Events",
-    Events: "Events",
+    // Events: "Events",
     Career: "Careers",
     Contact: "Contact Us",
     PRODUCT: "PRODUCT",
@@ -43,8 +43,11 @@ const translations = {
 
     SPECIALTY_CHEMICALS:
       "We specialize in producing high-quality specialty chemicals, APIs and excipients. Our products are known for their purity and effectiveness, supporting various industries worldwide.",
-
-
+     
+      CorporateOffice:"Corporate Office:",
+      CorporateOfficeAddress:"S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
+      ManufacturingPlant:"Manufacturing Plant:",
+      ManufacturingPlantAddress:"Plot No. 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
     // -------Home Section ---------
     qualityChemicals: "Quality Chemicals Worldwide - Since 1976",
     qualityProducts: "Quality Products",
@@ -70,8 +73,34 @@ const translations = {
     knowMore: "Know More",
 
     ourService: "OUR SERVICE",
-    accre: "Accreditation",
+    accre: "Accreditations",
+Product1:"Product Division",
+    Empowering:"Empowering Global Health & Industry",
+    Leading:"Leading Manufacturer of ",
+    Specialty:"Specialty Chemicals, Pharmaceutical Excipients,",
+    Active:" Active Pharmaceutical Ingredients APIs & Mineral Salts",
+    Product:"Product Divisions",
+    ActivePharmaceuticalIngredients:" Active Pharmaceutical Ingredients",
+    PharmaExcipients :" Pharma Excipients",
+    MineralSalts :"Mineral Salts",
+    SpecialtyChemicals :"Specialty Chemicals",
+    AminoAcids :"Amino Acids",
+    FragranceFlavorChemicals:"Fragrance & Flavor Chemicals",
 
+    MarketsWeServe:"Markets We Serve",
+    Pharmaceuticals:"Pharmaceuticals",
+    Biopharma:" Biopharma",
+    Nutraceuticals:"Nutraceuticals",
+    FoodBeverages:" Food & Beverages ",
+    PersonalCareCosmetics :"Personal Care & Cosmetics", 
+    VeterinaryAnimalHealth:"Veterinary & Animal Health",
+
+    Name:"Name",
+    EmailID:" Email ID",
+    PhoneNumber:"Phone Number",
+    Product:"Product",
+    Message:"Message",
+    Submit:"Submit",
     //--------------VerticalTabs-----------
     Vision: "Our Vision",
     Mission: "Our Mission",
@@ -121,8 +150,35 @@ const translations = {
     Experts: "With The Best Experts In Science",
     Trusted: "Trusted by thousands of people & companies.",
     Client: "Client Reviews",
+ AboutusHeading:"Muby Chem – Trusted Since 1976",
 
+ //--------------Manufacturing Overview-----------
+ ManufacturingOverview:"Manufacturing Overview",
+ ManufacturingDesc:"Our current facility has the capability to manufacture a broad range of pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals . The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and Good Manufacturing Practices (GMP).",
+  ManufacturingDesc1:" This USFDA-registered, state-of-the-art facility, located in Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal, and Kosher standards .",
+  ManufacturingDesc2:"With modern production techniques, flexible processes, and procedures, we offer efficient services for both small batches and large orders.",
+  ManufacturingDesc3:" Explore Our State-of-the-Art Manufacturing Facility:", 
+
+//-------------Research & Development----------
+ResearchDevelopment:"Research & Development",
+Researchdesc:" At Muby Chem, innovation is powered by expertise. Our R&D professionals bring together decades of cumulative industry experience in pharmaceutical, nutraceutical, food, and specialty chemical development.",
+ Researchdesc1:" We take pride in developing high-purity, performance-driven products that consistently meet global quality and regulatory expectations. Whether it’s excipients, APIs, or mineral salts — our team works relentlessly to research, refine, and reimagine chemical manufacturing for evolving industry needs.",
+ Researchdesc2:" * Custom product development, process optimization, validation & scale-up. ",
+ Researchdesc3: "* Granulation, encapsulation, milling (wet/dry), and particle size optimization (powder to ultrafine grades). ",
+ Researchdesc4: "* Inorganic, organic, organometallic synthesis & process chemistry. ",
+ Researchdesc4: "* Advanced chemical engineering, design & technology transfer. ",
+ Researchdesc5: "* Analytical method development & validation. ",
+ Researchdesc6: "* Compliance with USP, EP, BP, IP, FCC, ACS, JP, CP and Ph. Eur. standards.",
+ Researchdesc7: "* cGMP and GLP-compliant product design and support. ",
+ Researchdesc8: "* Formulation support for solid, semi-solid & injectable applications.",
+ Researchdesc9: "* Robust technical support & documentation (TDS, MSDS, CoA, stability data). ",
+ Researchdesc10: "*  Custom solutions for encapsulation, free-flowing grades, and anti-caking systems.",
+ Researchdesc11: "* eCTD and DMF Support and Documentations available.",
+ Researchdesc12:"* Documents and Support for eCTD and DMF are available.",                  
    //-----------------Page1--------
+
+   Blogs:"Up Coming Events & Exhibition",
+   Blogs1:"Past Events & Exhibition",
    data: [
     {
       title: " Petfood Forum",
@@ -143,29 +199,27 @@ const translations = {
       image: csea,
     },
   ],
-
-  dataT :[
+  dataT:[
     {
-      title: " In Cosmetics",
-      description:
-        "Booth # EU10 & EU11,<br> April 08 - 10, 2025,<br> Amsterdam, Netherlands",
-      image: cosmetics,
-    },
-    {
-      title: "Expo Farma",
-      description:
-        "Booth No. 1064,<br> April 02 - 04, 2025,<br> C.P. 03810, Mexico",
-      image: apexpofarmam,
-    },
-    {
-      title: "DCAT",
-      description:
-        "Suite No. 1109,<br> Mar 17 - 20, 2025,<br> The Benjamin Royal Sonesta,<br> NY, USA",
-      image: dcat,
-    },
+        title: " In Cosmetics",
+        description:
+          "Booth # EU10 & EU11,<br> April 08 - 10, 2025,<br> Amsterdam, Netherlands",
+        image: cosmetics,
+      },
+      {
+        title: "Expo Farma",
+        description:
+          "Booth No. 1064,<br> April 02 - 04, 2025,<br> C.P. 03810, Mexico",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description:
+          "Suite No. 1109,<br> Mar 17 - 20, 2025,<br> The Benjamin Royal Sonesta,<br> NY, USA",
+        image: dcat,
+      },
   ],
-
-  Readmore: "Read More ➝",
+  Readmore: "Schedule Meeting ➝",
     //--------Blogs---------
 
     Uploaded: "Uploaded By: admin | 12th August 2024",
@@ -225,9 +279,10 @@ const translations = {
     supplements: "We can even take essential amino acid supplements if needed.",
     Social: "Follow us on Social Media :",
 
+
     // -------Career Section ---------
     heading: "Your next career move starts here.",
-    heading1: "One Company, Many Roles – See Where You Fit In.",
+    heading1: "One Company, Many Roles – See Where You Fit In.",
     jobDescription: "Job Description",
     applyNow: "Apply Now",
     at: "at",
@@ -340,7 +395,10 @@ const translations = {
         qualification: ["BSC"],
         experience: "Minimum 7 Years",
       },
+
     ],
+
+
 
 
     /* -----------------Contact Us  --------------*/
@@ -352,12 +410,15 @@ const translations = {
     message:
       "Your email address will not be published. Required fields are marked *",
     message1: "Save my name, email, and website for next time.",
+
     Questions: "Have Questions?",
     AnswerDescription: "Our team is ready to help. Reach out any time!",
     Details: "More Details",
     staff: "Speak to Our Staff",
     message: "Fill out the form below and we'll get back to you.",
     message1: "I agree to the terms and conditions",
+
+
   },
   // hi: {
   //   HOME: "मुख्य पृष्ठ",
@@ -417,7 +478,7 @@ const translations = {
     HOME: "ACCUEIL",
     ABOUT: "À PROPOS DE NOUS",
     PRODUCTS: "PRODUITS",
-    BLOGS: "BLOGUES",
+    BLOGS: "Événements",
     CAREER: "CARRIÈRE",
     CONTACT_US: "CONTACTEZ-NOUS",
     USEFUL_LINKS: "Liens utiles",
@@ -426,6 +487,7 @@ const translations = {
     HOME: "Accueil",
     ABOUT: "À propos de nous",
     CAREER: "Carrière",
+    BLOGS:"Événements",
     PRODUCT: "Produit",
     CATEGORIES: "Catégories",
     PHARMACEUTICALS: "Pharmaceutiques",
@@ -445,7 +507,10 @@ const translations = {
     COPYRIGHT: "Tous droits réservés.",
     SPECIALTY_CHEMICALS:
       "Nous sommes spécialisés dans la production de produits chimiques et d'excipients de spécialité de haute qualité. Nos produits sont connus pour leur pureté et leur efficacité, soutenant diverses industries dans le monde entier.",
-
+      CorporateOffice: "Siège social :",
+      CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
+      ManufacturingPlant: "Usine de fabrication :",
+      ManufacturingPlantAddress: "Parcelle n° 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
     //---------- Home Section ---------
     qualityChemicals:
       "Produits chimiques de qualité dans le monde entier - Depuis 1976",
@@ -479,10 +544,40 @@ const translations = {
     mineralActivesDescription:
       "L'analyse précise est un laboratoire de test absolu.",
     knowMore: "En savoir plus",
-
+    mubyChemDescriptionMain: 
+    "Muby Chem est un fabricant de premier plan, enregistré auprès de la FDA américaine et certifié FSSC 22000, spécialisé dans les excipients pharmaceutiques de haute pureté, les ingrédients pharmaceutiques actifs (API), les sels minéraux et les produits chimiques spécialisés. Nous servons les industries pharmaceutique, nutraceutique, alimentaire & boissons, ainsi que cosmétique & soins personnels à l’échelle mondiale.",
+  
+  mubyChemDescriptionMain2:
+    "Avec plus de quatre décennies d'expérience et un héritage de confiance, nous sommes reconnus pour notre approche axée sur la qualité, notre fiabilité constante et nos solutions centrées sur le client.",
+  
     ourService: "Notre Service",
     manufacturing: "Installations de Fabrication",
-
+    accre: "Accréditations",
+    Empowering: "Renforcer la santé mondiale et l'industrie",
+    Leading: "Fabricant de premier plan de ",
+    Specialty: "Produits chimiques spécialisés, excipients pharmaceutiques,",
+    Active: " Ingrédients pharmaceutiques actifs (API) et sels minéraux",
+    Product: "Divisions de produits",
+    ActivePharmaceuticalIngredients: " Ingrédients pharmaceutiques actifs",
+    PharmaExcipients: " Excipients pharmaceutiques",
+    MineralSalts: " Sels minéraux",
+    SpecialtyChemicals: " Produits chimiques spécialisés",
+    AminoAcids: " Acides aminés",
+    FragranceFlavorChemicals: " Produits chimiques pour parfums et arômes",
+  
+    MarketsWeServe: "Marchés que nous desservons",
+    Pharmaceuticals: "Produits pharmaceutiques",
+    Biopharma: " Biopharmaceutique",
+    Nutraceuticals: "Nutraceutiques",
+    FoodBeverages: " Aliments et boissons ",
+    PersonalCareCosmetics: "Soins personnels et cosmétiques",
+    VeterinaryAnimalHealth: "Santé vétérinaire et animale",
+    Name: "Nom",
+    EmailID: "Adresse e-mail",
+    PhoneNumber: "Numéro de téléphone",
+    Product: "Produit",
+    Message: "Message",
+    Submit:"soumettre",
     //--------------VerticalTabs-----------
     tabs: [
       "Наше видение",
@@ -510,30 +605,93 @@ const translations = {
 
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
-      "Chez Muby Chem, nous nous engageons à faire progresser les industries en fournissant des produits chimiques de haute qualité et des solutions innovantes pour les produits pharmaceutiques, nutraceutiques, les produits chimiques spécialisés, les additifs alimentaires, et bien plus encore. Avec plus de 49 ans d’expertise, nous sommes fiers d’offrir des produits de pointe répondant aux normes de qualité et réglementaires les plus strictes.",
-    mubyChemDescription2:
-      "Nous travaillons avec des industries du monde entier pour soutenir le développement de produits exceptionnels qui améliorent la santé, le bien-être et la performance industrielle. Que vous ayez besoin de solutions chimiques personnalisées, d'ingrédients nutraceutiques ou de formulations chimiques spécialisées, Muby Chem est votre partenaire de confiance.",
-    welcomeToMubyChem: "Muby Chem  Private Limited",
+    mubyChemDescriptionMain: "Muby Chem est un fabricant de premier plan, enregistré auprès de la FDA américaine et certifié FSSC 22000, de produits pharmaceutiques de haute pureté, d'ingrédients pharmaceutiques actifs (API), de sels minéraux et de produits chimiques spécialisés, desservant les industries pharmaceutique, nutraceutique, alimentaire, cosmétique et de soins personnels dans le monde entier.",
+    mubyChemDescriptionMain2: "Avec plus de quatre décennies d'expérience et un héritage de confiance, nous sommes reconnus pour notre approche axée sur la qualité, notre fiabilité constante et nos solutions centrées sur le client.",
+    mubyChemDescription1: "a été fondée en 1976",
+    muby: "Muby Chem Pvt. Ltd.",
+    mubysub: "et est devenue un fabricant réputé et orienté client de haute pureté de",
+    chemicals: "composants pharmaceutiques, sels minéraux, excipients et produits chimiques spécialisés.",
+    weServe: "Forts de décennies d’expérience et d’un engagement envers les normes de qualité internationales, nous fournissons des services à l’industrie",
+    industries: "pharmaceutique, nutraceutique, alimentaire et boissons, soins personnels et cosmétiques, santé animale et biopharmaceutique",
+    across: "dans le monde entier.",
+    mubyChemDescription2: "Nos capacités de production couvrent une large gamme de grades, y compris",
+    grades: "IP, BP, USP, Ph. Eur., JP, CP, FCC/Qualité alimentaire, réactif analytique, LR, Pure et qualité technique,",
+    each: "tous rigoureusement testés pour répondre aux exigences de qualité internationales.",
+    mubyChemDescription3: "Avec plus de 400 composés dans notre portefeuille de produits, nous sommes prêts à fournir des services précis et fiables à de nombreux secteurs.",
+    welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Regarder la vidéo",
-    Professional: "Professionnel et expérimenté",
-    staff: "personnel prêt à vous aider",
+    Professional: "Professionnels et expérimentés",
+    staff: "équipe prête à vous aider",
     National: "Journée nationale de la science",
-    Enquire: "Renseignez-vous maintenant ➝",
+    Enquire: "Demander maintenant ➝",
     Experts: "Avec les meilleurs experts scientifiques",
-    Trusted: "Approuvé par des milliers de personnes et d'entreprises.",
-    Client: "Avis clients",
+    Trusted: "Fiable pour des milliers de personnes et d’entreprises.",
+    Client: "Avis des clients",
+    AboutusHeading: "Muby Chem – De confiance depuis 1976",
+    Product1: "Division de Produits",
+    
+
+//--------------Manufacturing Overview-----------
+    ManufacturingOverview: "Aperçu de la fabrication",
+ManufacturingDesc: "Notre installation actuelle est capable de fabriquer une large gamme d'ingrédients pharmaceutiques, d'excipients, de sels minéraux et de produits chimiques spécialisés. L'installation est conçue et équipée de machines et de technologies avancées pour produire des produits de haute qualité conformes aux réglementations environnementales et aux Bonnes Pratiques de Fabrication (BPF).",
+ManufacturingDesc1: "Cette installation ultramoderne enregistrée auprès de l'USFDA, située à Ankleshwar, Gujarat, Inde, est certifiée cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal et Casher.",
+ManufacturingDesc2: "Grâce à des techniques de production modernes, des processus et des procédures flexibles, nous offrons des services efficaces tant pour les petites séries que pour les grandes commandes.",
+ManufacturingDesc3: "Découvrez notre installation de fabrication ultramoderne :",
+
+//-------------Research & Development----------
+ResearchDevelopment: "Recherche & Développement",
+Researchdesc: "Chez Muby Chem, l’innovation est portée par l’expertise. Nos professionnels de la R&D cumulent des décennies d’expérience dans les secteurs pharmaceutique, nutraceutique, alimentaire et des produits chimiques spécialisés.",
+Researchdesc1: "Nous sommes fiers de développer des produits de haute pureté et axés sur la performance, répondant constamment aux attentes de qualité et de réglementation internationales. Qu’il s’agisse d’excipients, d’API ou de sels minéraux — notre équipe travaille sans relâche pour rechercher, affiner et réinventer la fabrication chimique selon les besoins évolutifs de l’industrie.",
+Researchdesc2: "* Développement de produits sur mesure, optimisation des procédés, validation et mise à l’échelle.",
+Researchdesc3: "* Granulation, encapsulation, broyage (humide/sec), et optimisation de la taille des particules (de poudre à qualité ultrafine).",
+Researchdesc4: "* Synthèse inorganique, organique, organométallique et chimie des procédés.",
+Researchdesc5: "* Génie chimique avancé, conception et transfert de technologie.",
+Researchdesc6: "* Développement et validation de méthodes analytiques.",
+Researchdesc7: "* Conformité aux normes USP, EP, BP, IP, FCC, ACS, JP, CP et Ph. Eur.",
+Researchdesc8: "* Conception de produits conforme aux cGMP et GLP.",
+Researchdesc9: "* Support en formulation pour les applications solides, semi-solides et injectables.",
+Researchdesc10: "* Support technique robuste et documentation (TDS, MSDS, CoA, données de stabilité).",
+Researchdesc11: "* Solutions sur mesure pour l'encapsulation, les qualités à écoulement libre et les systèmes anti-agglomérants.",
+Researchdesc12: "* Documents et support disponibles pour eCTD et DMF.",
+    
     //-----------------Page1--------
+    Blogs: "Événements et expositions à venir",
+    Blogs1: "Événements et expositions passés",
+  
     data: [
       {
-
-        title: "Acide aminé essentiel – Ses utilisations et bienfaits pour notre corps.",
-        description: "Les acides aminés essentiels (AAE) sont les éléments constitutifs des protéines que notre corps ne peut produire lui-même. Nous devons les obtenir par l'alimentation, notamment par des aliments riches en protéines comme la viande, les œufs, les produits laitiers et les sources végétales comme le quinoa et le soja.",
-        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
-
+        title: "Forum sur les aliments pour animaux de compagnie",
+        description: "Stand n°2509,<br>28–30 avril 2025,<br>Centre des congrès de Kansas City,<br>Kansas City, Missouri, États-Unis",
+        image: petfoodforum,
+      },
+      {
+        title: "Fabricant pharmaceutique arabe",
+        description: "Stand n°1129,<br>8–9 juillet 2025,<br>Centre d'exposition international de Jordanie (JIEC),<br>Amman, Jordanie",
+        image: apm,
+      },
+      {
+        title: "CPHI Asie du Sud-Est",
+        description: "Stand n°L17,<br>16–18 juillet 2025,<br>MITEC,<br>Kuala Lumpur, Malaisie",
+        image: csea,
+      },],
+      dataT:[
+      {
+        title: "En Cosmétique",
+        description: "Stand n°EU10 & EU11,<br>8–10 avril 2025,<br>Amsterdam, Pays-Bas",
+        image: cosmetics,
+      },
+      {
+        title: "Ferme d'exposition",
+        description: "Stand n°1064,<br>2–4 avril 2025,<br>Mexico, Mexique",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description: "Suite n°1109,<br>17–20 mars 2025,<br>The Benjamin Royal Sonesta,<br>New York, États-Unis",
+        image: dcat,
       },
     ],
-    Readmore: "Lire la suite ➝",
+    Readmore: "Planifier une réunion ➝",
 
     //--------Blogs---------
 
@@ -736,7 +894,7 @@ const translations = {
     HOME: "ГЛАВНАЯ",
     ABOUT: "О НАС",
     PRODUCTS: "ПРОДУКТЫ",
-    BLOGS: "БЛОГИ",
+    BLOGS: "События",
     CAREER: "КАРЬЕРА",
     CONTACT_US: "СВЯЗАТЬСЯ С НАМИ",
     USEFUL_LINKS: "Полезные ссылки",
@@ -762,7 +920,11 @@ const translations = {
 
     SPECIALTY_CHEMICALS:
       "Мы специализируемся на производстве высококачественных специальных химикатов и вспомогательных веществ. Наша продукция известна своей чистотой и эффективностью и находит применение в различных отраслях промышленности по всему миру.",
-
+      CorporateOffice: "Головной офис:",
+      CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Мумбаи, Махараштра 400009",
+      ManufacturingPlant: "Производственный завод:",
+      ManufacturingPlantAddress: "Участок № 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Гуджарат 393002",
+      
     // -------Home Section ---------
     qualityChemicals: "Качественная химия по всему миру — с 1976 года",
     qualityProducts: "Качественная продукция",
@@ -788,7 +950,37 @@ const translations = {
     ourService: "НАШИ УСЛУГИ",
     manufacturing: "Производственные мощности",
     hello: "получите бесплатную <br /> оценку!",
+    mubyChemDescriptionMain:  
+  "Muby Chem — ведущий производитель высокочистых фармацевтических эксципиентов, активных фармацевтических ингредиентов (API), минеральных солей и специальных химических веществ. Зарегистрирован в USFDA и сертифицирован по стандарту FSSC 22000. Мы обслуживаем фармацевтическую, нутрицевтическую, пищевую и косметическую промышленность по всему миру.",
 
+mubyChemDescriptionMain2:
+  "С более чем сорокалетним опытом и наследием доверия, мы признаны за наш подход, ориентированный на качество, стабильную надежность и клиентоориентированные решения.",
+
+Empowering: "Укрепляем глобальное здравоохранение и промышленность",
+Leading: "Ведущий производитель",
+Specialty: "Специальные химикаты, фармацевтические эксципиенты,",
+Active: " Активные фармацевтические ингредиенты (API) и минеральные соли",
+Product: "Продуктовые направления",
+ActivePharmaceuticalIngredients: " Активные фармацевтические ингредиенты",
+PharmaExcipients: " Фармацевтические эксципиенты",
+MineralSalts: "Минеральные соли",
+SpecialtyChemicals: "Специальные химикаты",
+AminoAcids: "Аминокислоты",
+FragranceFlavorChemicals: "Ароматические и вкусовые химикаты",
+accre: "Аккредитации",
+MarketsWeServe: "Рынки, которые мы обслуживаем",
+Pharmaceuticals: "Фармацевтика",
+Biopharma: "Биофармацевтика",
+Nutraceuticals: "Нутрицевтика",
+FoodBeverages: "Пищевая и напитки",
+PersonalCareCosmetics: "Личная гигиена и косметика", 
+VeterinaryAnimalHealth: "Ветеринария и здоровье животных",
+Name: "Имя",
+EmailID: "Электронная почта",
+PhoneNumber: "Номер телефона",
+Product: "Продукт",
+Message: "Сообщение",
+submit:"представлять на рассмотрение",
     //--------------VerticalTabs-----------
     Vision: "Наше видение",
     Mission: "Our Mission",
@@ -812,25 +1004,91 @@ const translations = {
     submit: "Представлять на рассмотрение →",
 
     /* -----------------About Us------------------ */
-    Professional: "Профессионал и опытный",
+    mubyChemDescriptionMain: "Muby Chem — ведущий производитель высокочистых фармацевтических эксципиентов, активных фармацевтических ингредиентов (API), минеральных солей и специальных химикатов, зарегистрированный в USFDA и сертифицированный по FSSC 22000. Мы обслуживаем фармацевтическую, нутрицевтическую, пищевую, косметическую и личную гигиену по всему миру.",
+    mubyChemDescriptionMain2: "С более чем сорокалетним опытом и наследием доверия, нас признают за наш приоритет качества, стабильную надежность и ориентированные на клиента решения.",
+    mubyChemDescription1: "была основана в 1976 году",
+    muby: "Muby Chem Pvt. Ltd.",
+    mubysub: "и превратилась в уважаемого производителя, ориентированного на клиента, с высокой степенью чистоты",
+    chemicals: "фармацевтических компонентов, минеральных солей, эксципиентов и специальных химикатов.",
+    weServe: "Имея десятилетия опыта и приверженность международным стандартам качества, мы обслуживаем",
+    industries: "фармацевтическую, нутрицевтическую, пищевую, косметическую, ветеринарную и биофармацевтическую отрасли",
+    across: "по всему миру.",
+    mubyChemDescription2: "Наши производственные мощности охватывают широкий спектр стандартов, включая",
+    grades: "IP, BP, USP, Ph. Eur., JP, CP, FCC/Пищевой, аналитический реагент, LR, чистый и технический классы,",
+    each: "все они проходят строгие испытания на соответствие международным требованиям качества.",
+    mubyChemDescription3: "С более чем 400 соединениями в нашем обширном портфеле продукции мы готовы предоставить точные и надежные услуги для различных отраслей.",
+    welcomeToMubyChem: "Muby Chem Private Limited",
+    watchVideo: "Смотреть видео",
+    Professional: "Профессиональный и опытный",
     staff: "персонал, готовый помочь вам",
     National: "Национальный день науки",
-    Enquire: "Запросить сейчас ➝",
+    Enquire: "Запросить ➝",
     Experts: "С лучшими экспертами в области науки",
-    Trusted: "Доверие тысяч людей и компаний.",
+    Trusted: "Доверяют тысячи людей и компаний.",
     Client: "Отзывы клиентов",
+    AboutusHeading: "Muby Chem – Надёжность с 1976 года",
+    Product1: "Продуктовое подразделение",
+    
+//--------------Manufacturing Overview-----------
+    ManufacturingOverview: "Обзор производства",
+ManufacturingDesc: "Наше текущее предприятие имеет возможность производить широкий спектр фармацевтических ингредиентов, эксципиентов, минеральных солей и специализированных химикатов. Объект спроектирован и оснащен передовым оборудованием и технологиями для производства высококачественной продукции в соответствии с экологическими нормами и надлежащей производственной практикой (GMP).",
+ManufacturingDesc1: "Это современное предприятие, зарегистрированное в USFDA и расположенное в Анкле́шваре, Гуджарат, Индия, сертифицировано по стандартам cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Халяль и Кошер.",
+ManufacturingDesc2: "Благодаря современным производственным технологиям, гибким процессам и процедурам мы предоставляем эффективные услуги как для малых партий, так и для крупных заказов.",
+ManufacturingDesc3: "Познакомьтесь с нашим современным производственным предприятием:",
+
+//-------------Research & Development----------
+ResearchDevelopment: "Научные исследования и разработки",
+Researchdesc: "В Muby Chem инновации движимы опытом. Наши специалисты в области НИОКР объединяют десятилетия опыта в фармацевтической, нутрицевтической, пищевой и химической промышленности.",
+Researchdesc1: "Мы гордимся разработкой высокочистых, ориентированных на эффективность продуктов, которые постоянно соответствуют мировым стандартам качества и нормативным требованиям. Независимо от того, идет ли речь об эксципиентах, API или минеральных солях — наша команда неустанно трудится над исследованием, совершенствованием и переосмыслением химического производства.",
+Researchdesc2: "* Индивидуальная разработка продуктов, оптимизация процессов, валидация и масштабирование.",
+Researchdesc3: "* Гранулирование, инкапсуляция, измельчение (мокрое/сухое) и оптимизация размеров частиц (от порошка до ультратонких форм).",
+Researchdesc4: "* Неорганический, органический, органометаллический синтез и процессная химия.",
+Researchdesc5: "* Передовые химические технологии, проектирование и трансфер технологий.",
+Researchdesc6: "* Разработка и валидация аналитических методов.",
+Researchdesc7: "* Соответствие стандартам USP, EP, BP, IP, FCC, ACS, JP, CP и Ph. Eur.",
+Researchdesc8: "* Разработка продуктов в соответствии с требованиями cGMP и GLP.",
+Researchdesc9: "* Поддержка формулировок для твердых, полутвердых и инъекционных форм.",
+Researchdesc10: "* Надежная техническая поддержка и документация (TDS, MSDS, CoA, данные стабильности).",
+Researchdesc11: "* Индивидуальные решения для инкапсуляции, сыпучих форм и систем против слеживания.",
+Researchdesc12: "* Поддержка и документация для eCTD и DMF доступны.",
 
     //-----------------Page1--------
+    Blogs: "Предстоящие события и выставки",
+    Blogs1: "Прошедшие события и выставки",
     data: [
       {
-
-        title: "Незаменимая аминокислота – ее применение и польза для нашего организма.",
-        description: "Незаменимые аминокислоты (EAA) являются строительными блоками белков, которые наш организм не может производить самостоятельно. Мы должны получать их из нашего рациона через богатые белком продукты, такие как мясо, яйца, молочные продукты, а также растительные источники, такие как киноа и соя.",
-        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
-
+        title: "Форум по кормам для домашних животных",
+        description: "Стенд №2509,<br>28–30 апреля 2025 г.,<br>Конференц-центр Канзас-Сити,<br>Канзас-Сити, Миссури, США",
+        image: petfoodforum,
+      },
+      {
+        title: "Арабский фармацевтический производитель",
+        description: "Стенд №1129,<br>8–9 июля 2025 г.,<br>Международный выставочный центр Иордании (JIEC),<br>Амман, Иордания",
+        image: apm,
+      },
+      {
+        title: "CPHI Юго-Восточная Азия",
+        description: "Стенд №L17,<br>16–18 июля 2025 г.,<br>MITEC,<br>Куала-Лумпур, Малайзия",
+        image: csea,
+      },],
+      dataT:[
+      {
+        title: "В косметике",
+        description: "Стенд №EU10 и EU11,<br>8–10 апреля 2025 г.,<br>Амстердам, Нидерланды",
+        image: cosmetics,
+      },
+      {
+        title: "Экспо Ферма",
+        description: "Стенд №1064,<br>2–4 апреля 2025 г.,<br>Мехико, Мексика",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description: "Сьют №1109,<br>17–20 марта 2025 г.,<br>The Benjamin Royal Sonesta,<br>Нью-Йорк, США",
+        image: dcat,
       },
     ],
-    Readmore: "Подробнее ➝",
+    Readmore: "Назначить встречу ➝",
 
     //--------Blogs---------
 
@@ -1060,7 +1318,7 @@ const translations = {
     HOME: "홈",
     ABOUT: "회사 소개",
     PRODUCTS: "제품",
-    BLOGS: "블로그",
+    BLOGS: "이벤트",
     CAREER: "채용",
     CONTACT_US: "문의하기",
     USEFUL_LINKS: "유용한 링크",
@@ -1086,7 +1344,10 @@ const translations = {
 
     SPECIALTY_CHEMICALS:
       "당사는 고품질 특수 화학물질 및 부형제 생산을 전문으로 합니다. 당사 제품은 순도와 효과로 유명하며 전 세계 다양한 산업을 지원하고 있습니다.",
-
+      CorporateOffice: "본사:",
+      CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, 뭄바이, 마하라슈트라 400009",
+      ManufacturingPlant: "제조 공장:",
+      ManufacturingPlantAddress: "부지 번호 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, 구자라트 393002",
     // -------Home Section ---------
     qualityChemicals: "1976년부터 전 세계에 고품질 화학물질 공급",
     qualityProducts: "고품질 제품",
@@ -1110,10 +1371,41 @@ const translations = {
     ourService: "우리의 서비스",
     manufacturing: "제조 시설",
     hello: "무료 <br /> 견적 받기!",
-
+    mubyChemDescriptionMain:  
+    "Muby Chem은 USFDA에 등록되고 FSSC 22000 인증을 받은 고순도 제약 부형제, 활성 약물 성분(API), 미네랄 솔트 및 특수 화학물질의 선도적인 제조업체로, 전 세계 제약, 건강기능식품, 식음료, 화장품 및 퍼스널 케어 산업에 서비스를 제공합니다.",
+  
+  mubyChemDescriptionMain2:
+    "40년 이상의 경험과 신뢰의 유산을 바탕으로, 우리는 품질 우선 접근 방식, 일관된 신뢰성 및 고객 중심 솔루션으로 인정받고 있습니다.",
+  
+  Empowering: "글로벌 보건 및 산업 강화",
+  Leading: "선도적인 제조업체",
+  Specialty: "특수 화학물질, 제약 부형제,",
+  Active: " 활성 약물 성분(API) 및 미네랄 솔트",
+  Product: "제품 부문",
+  ActivePharmaceuticalIngredients: " 활성 약물 성분(API)",
+  PharmaExcipients: " 제약 부형제",
+  MineralSalts: "미네랄 솔트",
+  SpecialtyChemicals: "특수 화학물질",
+  AminoAcids: "아미노산",
+  FragranceFlavorChemicals: "향료 및 풍미 화학물질",
+  
+  MarketsWeServe: "우리가 제공하는 시장",
+  Pharmaceuticals: "제약",
+  Biopharma: "바이오제약",
+  Nutraceuticals: "건강기능식품",
+  FoodBeverages: "식음료",
+  PersonalCareCosmetics: "퍼스널 케어 및 화장품",
+  VeterinaryAnimalHealth: "수의학 및 동물 건강",
+  accre: "인증",
+  Name: "이름",
+EmailID: "이메일 주소",
+PhoneNumber: "전화번호",
+Product: "제품",
+Message: "메시지",
+Submit:"제출하다",
     //--------------VerticalTabs-----------
     Vision: "우리의 비전",
-    Mission: "Our Mission",
+    Mission: "우리의 사명",
     Quality: "Our Quality",
     Values: "Our Values",
     Excellence: "Our Excellence",
@@ -1134,31 +1426,92 @@ const translations = {
     submit: "제출하다 →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
-      "Muby Chem에서는 제약, 뉴트라슈티컬, 전문 화학물질, 식품 첨가물 등 다양한 산업을 위한 고품질 화학물질과 혁신적인 솔루션을 제공하여 산업의 발전을 도모하고 있습니다. 49년 이상의 경험을 자랑하며, 가장 엄격한 품질 및 규제 기준을 충족하는 첨단 제품을 제공하는 것을 자랑스럽게 생각합니다.",
-    mubyChemDescription2:
-      "저희는 전 세계 산업들과 협력하여 건강, 웰빙, 산업 성능을 향상시키는 뛰어난 제품의 개발을 지원하고 있습니다. 맞춤형 화학 솔루션, 뉴트라슈티컬 성분, 전문 화학물질 배합이 필요하다면 Muby Chem이 신뢰할 수 있는 파트너입니다.",
-    welcomeToMubyChem: "Muby Chem Private Limited에 오신 것을 환영합니다",
+    mubyChemDescriptionMain: "Muby Chem은 USFDA에 등록되고 FSSC 22000 인증을 받은 고순도 의약 부형제, 원료의약품(API), 미네랄 솔트 및 특수 화학물질의 선도 제조업체로서, 전 세계 제약, 건강기능식품, 식음료, 화장품 및 개인 위생 산업에 서비스를 제공합니다.",
+    mubyChemDescriptionMain2: "40년 이상의 경험과 신뢰의 유산을 바탕으로, 우리는 품질 우선 접근 방식, 일관된 신뢰성 및 고객 중심 솔루션으로 인정받고 있습니다.",
+    mubyChemDescription1: "는 1976년에 설립되었습니다",
+    muby: "Muby Chem Pvt. Ltd.",
+    mubysub: "는 고순도의 신뢰받는 고객 중심 제조업체로 성장했습니다",
+    chemicals: "의약 성분, 미네랄 솔트, 부형제 및 특수 화학물질을 제공합니다.",
+    weServe: "수십 년간의 경험과 국제 품질 기준에 대한 헌신으로, 우리는",
+    industries: "제약, 건강기능식품, 식음료, 퍼스널케어 및 화장품, 동물 건강 및 바이오제약",
+    across: "산업 전반에 걸쳐 서비스를 제공합니다.",
+    mubyChemDescription2: "당사의 생산 능력은 다음을 포함한 다양한 등급을 포괄합니다",
+    grades: "IP, BP, USP, Ph. Eur., JP, CP, FCC/식품 등급, 분석용 시약, LR, 순도 및 기술 등급",
+    each: "모두 국제 품질 요건을 충족하기 위해 엄격한 테스트를 거쳤습니다.",
+    mubyChemDescription3: "400개 이상의 화합물이 포함된 광범위한 제품 포트폴리오를 통해 다양한 산업에 정확하고 신뢰할 수 있는 서비스를 제공합니다.",
+    welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "영상 보기",
-    Professional: "전문적이고 경험이 풍부한",
-    staff: "도와드릴 준비가 된 직원",
+    Professional: "전문적이고 경험 있는",
+    staff: "직원이 도와드립니다",
     National: "국가 과학의 날",
     Enquire: "지금 문의하기 ➝",
-    Experts: "과학의 최고 전문가들",
-    Trusted: "수천 명의 사람들과 기업들이 신뢰합니다.",
-    Client: "고객 리뷰",
+    Experts: "과학 최고의 전문가와 함께",
+    Trusted: "수천 명의 고객 및 기업의 신뢰를 받았습니다.",
+    Client: "고객 후기",
+    AboutusHeading: "Muby Chem – 1976년부터 신뢰받는 브랜드",
+    Product1: "제품 부문",
+    
+//--------------Manufacturing Overview-----------
+    ManufacturingOverview: "제조 개요",
+ManufacturingDesc: "당사의 현재 시설은 다양한 종류의 의약 원료, 부형제, 미네랄 솔트 및 특수 화학 물질을 제조할 수 있는 능력을 갖추고 있습니다. 이 시설은 첨단 기계 및 기술로 설계되고 장비되어 환경 규정 및 우수 제조 기준(GMP)을 준수하는 고품질 제품을 생산합니다.",
+ManufacturingDesc1: "이 최첨단 시설은 인도 구자라트주의 안클레슈와르에 위치하고 있으며, USFDA 등록 및 cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, 할랄 및 코셔 인증을 받았습니다.",
+ManufacturingDesc2: "현대적인 생산 기술과 유연한 공정 및 절차를 통해 소량 생산부터 대량 주문까지 효율적인 서비스를 제공합니다.",
+ManufacturingDesc3: "최첨단 제조 시설을 확인해보세요:",
+
+//-------------Research & Development----------
+ResearchDevelopment: "연구 및 개발",
+Researchdesc: "Muby Chem에서는 전문 지식을 바탕으로 혁신을 추구합니다. 당사의 연구개발(R&D) 전문가들은 제약, 건강기능식품, 식품, 특수 화학 산업에서 수십 년간의 경험을 보유하고 있습니다.",
+Researchdesc1: "우리는 고순도, 성능 중심 제품을 개발하며, 항상 전 세계적인 품질 및 규제 기준을 충족하는 것을 자랑스럽게 생각합니다. 부형제, API, 미네랄 솔트 등 어떤 분야이든 업계의 변화에 맞춰 끊임없이 연구하고 개선하며 화학 제조를 재창조합니다.",
+Researchdesc2: "* 맞춤형 제품 개발, 공정 최적화, 검증 및 확장.",
+Researchdesc3: "* 과립화, 캡슐화, 분쇄(습식/건식), 입자 크기 최적화(파우더~초미세 등급).",
+Researchdesc4: "* 무기, 유기, 유기금속 합성 및 공정 화학.",
+Researchdesc5: "* 고급 화학 공학, 설계 및 기술 이전.",
+Researchdesc6: "* 분석 방법 개발 및 검증.",
+Researchdesc7: "* USP, EP, BP, IP, FCC, ACS, JP, CP 및 Ph. Eur. 기준 준수.",
+Researchdesc8: "* cGMP 및 GLP 준수 제품 설계 및 지원.",
+Researchdesc9: "* 고형제, 반고형제, 주사제용 제형 지원.",
+Researchdesc10: "* 강력한 기술 지원 및 문서 (TDS, MSDS, CoA, 안정성 데이터).",
+Researchdesc11: "* 캡슐화, 자유 유동 등급 및 응결 방지 시스템을 위한 맞춤형 솔루션.",
+Researchdesc12: "* eCTD 및 DMF 문서 및 지원 제공.",
 
     //-----------------Page1--------
+    Blogs: "예정된 행사 및 전시회",
+    Blogs1: "지난 행사 및 전시회",
     data: [
       {
-
-        title: "필수 아미노산 – 우리 몸에 대한 용도 및 이점.",
-        description: "필수 아미노산(EAA)은 우리 몸이 스스로 생성할 수 없는 단백질의 구성 요소입니다. 우리는 고기, 계란, 유제품, 그리고 퀴노아와 콩과 같은 식물성 식품과 같은 단백질이 풍부한 음식을 통해 필수 아미노산을 섭취해야 합니다.",
-        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
-
+        title: "펫푸드 포럼",
+        description: "부스 번호: #2509,<br>2025년 4월 28일–30일,<br>캔자스시티 컨벤션 센터,<br>미주리주 캔자스시티, 미국",
+        image: petfoodforum,
+      },
+      {
+        title: "아랍 제약 제조업체",
+        description: "부스 번호: #1129,<br>2025년 7월 8일–9일,<br>요르단 국제 전시 센터 (JIEC),<br>암만, 요르단",
+        image: apm,
+      },
+      {
+        title: "CPHI 동남아시아",
+        description: "부스 번호: #L17,<br>2025년 7월 16일–18일,<br>MITEC,<br>쿠알라룸푸르, 말레이시아",
+        image: csea,
+      },],
+      dataT:[
+      {
+        title: "화장품에서",
+        description: "부스 번호: #EU10 & EU11,<br>2025년 4월 8일–10일,<br>암스테르담, 네덜란드",
+        image: cosmetics,
+      },
+      {
+        title: "엑스포 농장",
+        description: "부스 번호: #1064,<br>2025년 4월 2일–4일,<br>멕시코시티, 멕시코",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description: "스위트 번호: #1109,<br>2025년 3월 17일–20일,<br>더 벤자민 로열 소네스타,<br>뉴욕, 미국",
+        image: dcat,
       },
     ],
-    Readmore: "더 읽기 ➝",
+    Readmore: "미팅 예약하기 ➝",
+    
 
     //--------Blogs---------
 
@@ -1532,7 +1885,7 @@ const translations = {
     HOME: "INICIO",
     ABOUT: "SOBRE NOSOTROS",
     PRODUCTS: "PRODUCTOS",
-    BLOGS: "BLOGS",
+    BLOGS: "Eventos",
     CAREER: "CARRERA",
     CONTACT_US: "CONTÁCTENOS",
     USEFUL_LINKS: "Enlaces Útiles",
@@ -1558,7 +1911,11 @@ const translations = {
 
     SPECIALTY_CHEMICALS:
       "Nos especializamos en la producción de productos químicos y excipientes especiales de alta calidad. Nuestros productos son conocidos por su pureza y eficacia y respaldan a diversas industrias en todo el mundo.",
-
+      CorporateOffice: "Oficina Corporativa:",
+      CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
+      ManufacturingPlant: "Planta de Fabricación:",
+      ManufacturingPlantAddress: "Parcela No. 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
+      
     // -------Home Section ---------
     qualityChemicals: "Químicos de calidad en todo el mundo - Desde 1976",
     qualityProducts: "Productos de Calidad",
@@ -1584,7 +1941,38 @@ const translations = {
     ourService: "NUESTRO SERVICIO",
     manufacturing: "Instalaciones de Producción",
     hello: "¡Obtén tu <br /> estimación gratuita!",
+    mubyChemDescriptionMain:  
+  "Muby Chem es un fabricante líder registrado por la USFDA y certificado por FSSC 22000 de excipientes farmacéuticos de alta pureza, ingredientes farmacéuticos activos (API), sales minerales y productos químicos especializados, que presta servicios a las industrias farmacéutica, nutracéutica, de alimentos y bebidas, y de cuidado personal y cosmética a nivel mundial.",
 
+mubyChemDescriptionMain2:
+  "Con más de cuatro décadas de experiencia y un legado de confianza, somos reconocidos por nuestro enfoque orientado a la calidad, fiabilidad constante y soluciones centradas en el cliente.",
+
+Empowering: "Impulsando la salud global y la industria",
+Leading: "Fabricante líder de",
+Specialty: "Productos químicos especializados, excipientes farmacéuticos,",
+Active: " Ingredientes farmacéuticos activos (API) y sales minerales",
+Product: "Divisiones de productos",
+ActivePharmaceuticalIngredients: " Ingredientes farmacéuticos activos",
+PharmaExcipients: " Excipientes farmacéuticos",
+MineralSalts: "Sales minerales",
+SpecialtyChemicals: "Productos químicos especializados",
+AminoAcids: "Aminoácidos",
+FragranceFlavorChemicals: "Productos químicos de fragancia y sabor",
+
+MarketsWeServe: "Mercados a los que servimos",
+Pharmaceuticals: "Farmacéutica",
+Biopharma: "Biofarmacéutica",
+Nutraceuticals: "Nutracéuticos",
+FoodBeverages: "Alimentos y bebidas",
+PersonalCareCosmetics: "Cuidado personal y cosmética",
+VeterinaryAnimalHealth: "Veterinaria y salud animal",
+accre: "Acreditaciones",
+Name: "Nombre",
+EmailID: "Correo electrónico",
+PhoneNumber: "Número de teléfono",
+Product: "Producto",
+Message: "Mensaje",
+Submit:"entregar",
     //--------------VerticalTabs-----------
     Vision: "Nuestra Visión",
     Mission: "Our Mission",
@@ -1608,31 +1996,91 @@ const translations = {
     submit: "Entregar →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
-      "En Muby Chem, nos comprometemos a impulsar las industrias proporcionando productos químicos de alta calidad y soluciones innovadoras para las industrias farmacéutica, nutracéutica, química especializada, aditivos alimentarios y más. Con más de 49 años de experiencia, nos enorgullecemos de ofrecer productos de vanguardia que cumplen con los más estrictos estándares de calidad y regulatorios.",
-    mubyChemDescription2:
-      "Trabajamos con industrias de todo el mundo, apoyando el desarrollo de productos excepcionales que mejoran la salud, el bienestar y el rendimiento industrial. Ya sea que necesite soluciones químicas personalizadas, ingredientes nutracéuticos o formulaciones químicas especializadas, Muby Chem es su socio de confianza.",
-    welcomeToMubyChem: " Bienvenido a Muby Chem Private Limited",
-    watchVideo: "Ver vídeo",
-    Professional: "Profesional y experimentado",
-    staff: "Personal listo para ayudarle",
+    mubyChemDescriptionMain: "Muby Chem es un fabricante líder registrado por la USFDA y certificado por FSSC 22000, especializado en excipientes farmacéuticos de alta pureza, ingredientes farmacéuticos activos (APIs), sales minerales y productos químicos especiales, que presta servicios a las industrias farmacéutica, nutracéutica, alimentaria, cosmética y de cuidado personal a nivel mundial.",
+    mubyChemDescriptionMain2: "Con más de cuatro décadas de experiencia y un legado de confianza, somos reconocidos por nuestro enfoque en la calidad, fiabilidad constante y soluciones centradas en el cliente.",
+    mubyChemDescription1: "fue fundada en 1976",
+    muby: "Muby Chem Pvt. Ltd.",
+    mubysub: "y se ha convertido en un fabricante confiable y centrado en el cliente de alta pureza de",
+    chemicals: "componentes farmacéuticos, sales minerales, excipientes y productos químicos especializados.",
+    weServe: "Con décadas de experiencia y un compromiso con los estándares internacionales de calidad, brindamos servicios a las industrias de",
+    industries: "farmacéutica, nutracéutica, alimentos y bebidas, cuidado personal y cosméticos, salud veterinaria y biotecnología",
+    across: "en todo el mundo.",
+    mubyChemDescription2: "Nuestras capacidades de producción abarcan una amplia gama de grados, incluidos",
+    grades: "IP, BP, USP, Ph. Eur., JP, CP, FCC/Grado alimenticio, reactivo analítico, LR, puro y grado técnico,",
+    each: "todos ellos rigurosamente probados para cumplir con los requisitos internacionales de calidad.",
+    mubyChemDescription3: "Con más de 400 compuestos en nuestro extenso portafolio de productos, estamos preparados para brindar servicios precisos y confiables a una amplia gama de sectores.",
+    welcomeToMubyChem: "Muby Chem Private Limited",
+    watchVideo: "Ver video",
+    Professional: "Profesionales con experiencia",
+    staff: "equipo listo para ayudarte",
     National: "Día Nacional de la Ciencia",
-    Enquire: "Preguntar ahora ➝",
-    Experts: "Con las mejores expertas en ciencia",
-    Trusted: "Miles de personas y empresas confían en nosotros.",
-    Client: "Reseñas de clientes",
+    Enquire: "Consultar ahora ➝",
+    Experts: "Con los mejores expertos en ciencia",
+    Trusted: "Con la confianza de miles de personas y empresas.",
+    Client: "Opiniones de los clientes",
+    AboutusHeading: "Muby Chem – De confianza desde 1976",
+    Product1: "División de Productos",
+    
+//--------------Manufacturing Overview-----------
+    ManufacturingOverview: "Resumen de Fabricación",
+ManufacturingDesc: "Nuestra instalación actual tiene la capacidad de fabricar una amplia gama de ingredientes farmacéuticos, excipientes, sales minerales y productos químicos especializados. La instalación está diseñada y equipada con maquinaria y tecnología avanzada para producir productos de alta calidad cumpliendo con las regulaciones ambientales y las Buenas Prácticas de Manufactura (BPM).",
+ManufacturingDesc1: "Esta instalación de última generación registrada por la USFDA, ubicada en Ankleshwar, Gujarat, India, está certificada bajo normas cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal y Kosher.",
+ManufacturingDesc2: "Con técnicas modernas de producción, procesos y procedimientos flexibles, ofrecemos servicios eficientes para pequeños lotes y grandes pedidos.",
+ManufacturingDesc3: "Explore nuestra instalación de fabricación de última generación:",
+
+//-------------Research & Development----------
+ResearchDevelopment: "Investigación y Desarrollo",
+Researchdesc: "En Muby Chem, la innovación está impulsada por la experiencia. Nuestros profesionales de I+D aportan décadas de experiencia acumulada en las industrias farmacéutica, nutracéutica, alimentaria y química especializada.",
+Researchdesc1: "Nos enorgullecemos de desarrollar productos de alta pureza y rendimiento que cumplen consistentemente con los estándares globales de calidad y regulación. Ya sean excipientes, API o sales minerales, nuestro equipo trabaja incansablemente para investigar, perfeccionar y reinventar la fabricación química según las necesidades del sector.",
+Researchdesc2: "* Desarrollo de productos personalizados, optimización de procesos, validación y escalado.",
+Researchdesc3: "* Granulación, encapsulación, molienda (húmeda/seca) y optimización del tamaño de partículas (de polvo a grado ultrafino).",
+Researchdesc4: "* Síntesis inorgánica, orgánica, organometálica y química de procesos.",
+Researchdesc5: "* Ingeniería química avanzada, diseño y transferencia de tecnología.",
+Researchdesc6: "* Desarrollo y validación de métodos analíticos.",
+Researchdesc7: "* Cumplimiento con las normas USP, EP, BP, IP, FCC, ACS, JP, CP y Ph. Eur.",
+Researchdesc8: "* Diseño y soporte de productos conforme a cGMP y GLP.",
+Researchdesc9: "* Apoyo en formulaciones para aplicaciones sólidas, semisólidas e inyectables.",
+Researchdesc10: "* Soporte técnico sólido y documentación (TDS, MSDS, CoA, datos de estabilidad).",
+Researchdesc11: "* Soluciones personalizadas para encapsulación, grados de flujo libre y sistemas antiaglomerantes.",
+Researchdesc12: "* Documentos y soporte disponibles para eCTD y DMF.",
 
     //-----------------Page1--------
+    Blogs: "Próximos eventos y exposiciones",
+  Blogs1: "Eventos y exposiciones pasados",
     data: [
       {
-
-        title: "Aminoácidos esenciales: sus usos y beneficios para nuestro organismo",
-        description: "Los aminoácidos esenciales (AAE) son los componentes básicos de las proteínas que nuestro cuerpo no puede producir por sí solo. Debemos obtenerlos de nuestra dieta a través de alimentos ricos en proteínas como la carne, los huevos, los lácteos y fuentes vegetales como la quinoa y la soja.",
-        image: "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
-
+        title: "Foro de alimentos para mascotas",
+        description: "Stand n.º 2509,<br>28–30 de abril de 2025,<br>Centro de Convenciones de Kansas City,<br>Kansas City, Missouri, EE. UU.",
+        image: petfoodforum,
+      },
+      {
+        title: "Fabricante farmacéutico árabe",
+        description: "Stand n.º 1129,<br>8–9 de julio de 2025,<br>Centro Internacional de Exposiciones de Jordania (JIEC),<br>Amán, Jordania",
+        image: apm,
+      },
+      {
+        title: "CPHI Sudeste Asiático",
+        description: "Stand n.º L17,<br>16–18 de julio de 2025,<br>MITEC,<br>Kuala Lumpur, Malasia",
+        image: csea,
+      },],
+      dataT:[
+      {
+        title: "En Cosmética",
+        description: "Stand n.º EU10 & EU11,<br>8–10 de abril de 2025,<br>Ámsterdam, Países Bajos",
+        image: cosmetics,
+      },
+      {
+        title: "Granja Expo",
+        description: "Stand n.º 1064,<br>2–4 de abril de 2025,<br>Ciudad de México, México",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description: "Suite n.º 1109,<br>17–20 de marzo de 2025,<br>The Benjamin Royal Sonesta,<br>Nueva York, EE. UU.",
+        image: dcat,
       },
     ],
-    Readmore: "Leer más ➝",
+    Readmore: "Programar reunión ➝",
 
     //--------Blogs---------
 
@@ -2019,7 +2467,7 @@ const translations = {
     HOME: "الرئيسية",
     ABOUT: "من نحن",
     PRODUCTS: "المنتجات",
-    BLOGS: "المدونات",
+    BLOGS: "الأحداث",
     CAREER: "فرص العمل",
     CONTACT_US: "اتصل بنا",
     USEFUL_LINKS: "روابط مفيدة",
@@ -2044,7 +2492,10 @@ const translations = {
     COPYRIGHT: "جميع الحقوق محفوظة.",
     SPECIALTY_CHEMICALS:
       "نحن متخصصون في إنتاج المواد الكيميائية المتخصصة عالية الجودة والمكونات الإضافية. منتجاتنا معروفة بنقاوتها وفعاليتها، وتدعم العديد من الصناعات حول العالم.",
-
+      CorporateOffice: "المكتب الرئيسي:",
+      CorporateOfficeAddress: "S-8، قصر سريفة، الطريق الثاني، تشينشباندر، ماندفي، مومباي، ماهاراشترا 400009",
+      ManufacturingPlant: "مصنع التصنيع:",
+      ManufacturingPlantAddress: "قطعة رقم 2900/46، 47، 162، 164، 164، 165، 166، 167، منطقة GIDC أنكليشوار، بهروتش، غوجارات 393002",
     //---------- Home Section ---------
     qualityChemicals:
       "مواد كيميائية عالية الجودة في جميع أنحاء العالم - منذ 1976",
@@ -2070,7 +2521,38 @@ const translations = {
     ourService: "خدماتنا",
     manufacturing: "مرافق التصنيع",
     hello: "احصل على تقديرك المجاني <br /> الآن!",
-
+    mubyChemDescriptionMain:  
+    "موبي كيم هي شركة مصنّعة رائدة مسجلة لدى إدارة الغذاء والدواء الأمريكية (USFDA) وحاصلة على شهادة FSSC 22000، متخصصة في إنتاج المواد المساعدة الصيدلانية عالية النقاء، والمكونات الدوائية الفعالة (APIs)، والأملاح المعدنية، والمواد الكيميائية المتخصصة، وتخدم الصناعات الصيدلانية، والمكملات الغذائية، والأغذية والمشروبات، ومستحضرات التجميل والعناية الشخصية عالميًا.",
+  
+  mubyChemDescriptionMain2:
+    "بخبرة تتجاوز أربعة عقود وإرث من الثقة، نحن معروفون بنهجنا المرتكز على الجودة، والموثوقية المستمرة، والحلول التي تركز على العميل.",
+  
+  Empowering: "تمكين الصحة العالمية والصناعة",
+  Leading: "الشركة الرائدة في تصنيع",
+  Specialty: "المواد الكيميائية المتخصصة، والمواد المساعدة الصيدلانية،",
+  Active: "المكونات الدوائية الفعالة (APIs) والأملاح المعدنية",
+  Product: "أقسام المنتجات",
+  ActivePharmaceuticalIngredients: "المكونات الدوائية الفعالة",
+  PharmaExcipients: "المواد المساعدة الصيدلانية",
+  MineralSalts: "الأملاح المعدنية",
+  SpecialtyChemicals: "المواد الكيميائية المتخصصة",
+  AminoAcids: "الأحماض الأمينية",
+  FragranceFlavorChemicals: "المواد الكيميائية للروائح والنكهات",
+  
+  MarketsWeServe: "الأسواق التي نخدمها",
+  Pharmaceuticals: "الصناعات الدوائية",
+  Biopharma: "البيوفارما",
+  Nutraceuticals: "المكملات الغذائية",
+  FoodBeverages: "الأغذية والمشروبات",
+  PersonalCareCosmetics: "العناية الشخصية ومستحضرات التجميل",
+  VeterinaryAnimalHealth: "الطب البيطري وصحة الحيوان",
+  accre: "الاعتمادات",
+  Name: "الاسم",
+EmailID: "البريد الإلكتروني",
+PhoneNumber: "رقم الهاتف",
+Product: "المنتج",
+Message: "الرسالة",
+Submit:"يُقدِّم",
     //--------------VerticalTabs-----------
     Vision: "رؤيتنا",
     Mission: "Our Mission",
@@ -2094,33 +2576,93 @@ const translations = {
     submit: "يُقدِّم →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescription1:
-      "في Muby Chem، نحن ملتزمون بتقدم الصناعات من خلال توفير المواد الكيميائية عالية الجودة والحلول المبتكرة في مجالات الأدوية، المكملات الغذائية، المواد الكيميائية المتخصصة، الإضافات الغذائية والمزيد. مع أكثر من 49 عامًا من الخبرة، نفخر بتقديم منتجات مبتكرة تلبي أعلى معايير الجودة والتنظيم.",
-    mubyChemDescription2:
-      "نحن نعمل مع صناعات في جميع أنحاء العالم، وندعم تطوير منتجات استثنائية تعزز الصحة والرفاهية والأداء الصناعي. سواء كنت بحاجة إلى حلول كيميائية مخصصة، أو مكونات غذائية مكملة، أو تركيبات كيميائية متخصصة، فإن Muby Chem هو شريكك الموثوق.",
-    welcomeToMubyChem: "مرحبًا بكم في Muby Chem Private Limited",
-    watchVideo: "شاهد الفيديو",
-    Professional: "محترف وذو خبرة",
-    staff: "الطاقم جاهز لمساعدتك",
-    National: "يوم العلوم الوطني",
-    Enquire: "استفسر الآن ➝",
-    Experts: "مع أفضل الخبراء في العلوم",
-    Trusted: "موثوق من قبل الآلاف من الأشخاص والشركات.",
-    Client: "مراجعات العملاء",
+    mubyChemDescriptionMain: "Muby Chem هي شركة رائدة مسجلة لدى إدارة الغذاء والدواء الأمريكية (USFDA) ومعتمدة من FSSC 22000، متخصصة في تصنيع المواد المساعدة الصيدلانية عالية النقاء، والمكونات الصيدلانية الفعالة (APIs)، والأملاح المعدنية، والمواد الكيميائية المتخصصة، وتخدم الصناعات الدوائية، والتغذية، والأغذية والمشروبات، ومستحضرات التجميل والعناية الشخصية عالميًا.",
+mubyChemDescriptionMain2: "بأكثر من أربعة عقود من الخبرة وإرث من الثقة، نحن معروفون بنهجنا الذي يركز على الجودة، والموثوقية المتسقة، والحلول التي تركز على العميل.",
+mubyChemDescription1: "تأسست في عام 1976",
+muby: "شركة موبي كيم الخاصة المحدودة",
+mubysub: "ونمت لتصبح شركة تصنيع موثوقة تركز على العملاء وتنتج منتجات عالية النقاء مثل",
+chemicals: "المكونات الصيدلانية، الأملاح المعدنية، المواد المساعدة، والمواد الكيميائية المتخصصة.",
+weServe: "مع عقود من الخبرة والالتزام بالمعايير الدولية للجودة، نخدم",
+industries: "صناعات الأدوية، والتغذية، والأغذية والمشروبات، والعناية الشخصية والتجميل، وصحة الحيوانات البيطرية، والبيوفارما",
+across: "في جميع أنحاء العالم.",
+mubyChemDescription2: "تشمل قدراتنا الإنتاجية مجموعة واسعة من الدرجات، بما في ذلك",
+grades: "IP، BP، USP، Ph. Eur.، JP، CP، FCC/درجة غذائية، كاشف تحليلي، LR، نقي، ودرجة فنية",
+each: "جميعها تم اختبارها بدقة لتلبية متطلبات الجودة الدولية.",
+mubyChemDescription3: "مع أكثر من 400 مركب في محفظة منتجاتنا الواسعة، نحن مستعدون لتقديم خدمات دقيقة وموثوقة لمجموعة واسعة من القطاعات.",
+welcomeToMubyChem: "موبي كيم برايفت ليميتد",
+watchVideo: "شاهد الفيديو",
+Professional: "فريق محترف وذو خبرة",
+staff: "جاهز لمساعدتك",
+National: "اليوم الوطني للعلوم",
+Enquire: "استفسر الآن ➝",
+Experts: "مع أفضل الخبراء في العلوم",
+Trusted: "موثوق به من قبل الآلاف من الأشخاص والشركات.",
+Client: "آراء العملاء",
+AboutusHeading: "موبي كيم – موثوق به منذ عام 1976",
+Product1: "قسم المنتجات",
+
+//--------------Manufacturing Overview-----------
+    ManufacturingOverview: "نظرة عامة على التصنيع",
+ManufacturingDesc: "تمتلك منشأتنا الحالية القدرة على تصنيع مجموعة واسعة من المكونات الدوائية والمكونات المساعدة والأملاح المعدنية والمواد الكيميائية المتخصصة. تم تصميم المنشأة وتجهيزها بآلات وتقنيات متقدمة لإنتاج منتجات عالية الجودة وفقًا للوائح البيئية وممارسات التصنيع الجيدة (GMP).",
+ManufacturingDesc1: "تقع هذه المنشأة الحديثة المسجلة في إدارة الغذاء والدواء الأمريكية (USFDA) في أنكليشوار، غوجارات، الهند، وهي معتمدة بمعايير cGMP و GLP و ISO 9001 و FSSC 22000 و FSSAI و حلال و كوشير.",
+ManufacturingDesc2: "من خلال تقنيات الإنتاج الحديثة والعمليات والإجراءات المرنة، نقدم خدمات فعالة للدفعات الصغيرة والطلبات الكبيرة.",
+ManufacturingDesc3: "استكشف منشأتنا الحديثة للتصنيع:",
+
+//-------------Research & Development----------
+ResearchDevelopment: "البحث والتطوير",
+Researchdesc: "في شركة موبي كيم، الابتكار قائم على الخبرة. يجمع خبراؤنا في البحث والتطوير عقودًا من الخبرة في مجالات الأدوية، والمكملات الغذائية، والأغذية، والمواد الكيميائية المتخصصة.",
+Researchdesc1: "نفخر بتطوير منتجات عالية النقاء وفعالة تلبي باستمرار توقعات الجودة والمعايير التنظيمية العالمية. سواء كانت المواد المساعدة، أو المكونات الصيدلانية النشطة، أو الأملاح المعدنية — يعمل فريقنا بلا كلل على البحث والتحسين وإعادة تصور عمليات التصنيع الكيميائي لتلبية احتياجات الصناعة المتطورة.",
+Researchdesc2: "* تطوير منتجات مخصصة، تحسين العمليات، التحقق والتوسيع.",
+Researchdesc3: "* التحبيب، التغليف، الطحن (الرطب/الجاف)، وتحسين حجم الجسيمات (من مسحوق إلى درجات فائقة النعومة).",
+Researchdesc4: "* التخليق غير العضوي والعضوي والعضوي المعدني وكيمياء العمليات.",
+Researchdesc5: "* الهندسة الكيميائية المتقدمة، التصميم، ونقل التكنولوجيا.",
+Researchdesc6: "* تطوير وتحقق من طرق التحليل.",
+Researchdesc7: "* الامتثال لمعايير USP، EP، BP، IP، FCC، ACS، JP، CP وPh. Eur.",
+Researchdesc8: "* تصميم المنتجات ودعمها بما يتوافق مع cGMP وGLP.",
+Researchdesc9: "* دعم التكوين للتطبيقات الصلبة ونصف الصلبة والحقن.",
+Researchdesc10: "* دعم تقني قوي وتوثيق (TDS، MSDS، CoA، بيانات الاستقرار).",
+Researchdesc11: "* حلول مخصصة للتغليف، الدرجات السائلة الحرة، وأنظمة مقاومة التكتل.",
+Researchdesc12: "* تتوفر الوثائق والدعم لـ eCTD وDMF.",
+
 
     //-----------------Page1--------
+     Blogs: "الفعاليات والمعارض القادمة",
+  Blogs1: "الفعاليات والمعارض السابقة",
     data: [
       {
-
-        title: "الأحماض الأمينية الأساسية - استخداماتها وفوائدها لجسمنا.",
-
-        description: "الأحماض الأمينية الأساسية (EAAs) هي اللبنات الأساسية للبروتينات التي لا يستطيع جسمنا إنتاجها بمفرده. يجب أن نحصل عليها من نظامنا الغذائي من خلال الأطعمة الغنية بالبروتين مثل اللحوم والبيض ومنتجات الألبان، بالإضافة إلى المصادر النباتية مثل الكينوا والصويا.",
-        image:
-          "https://anmolchem.org/assets/images/blog/Untitled-2.psdessential-amino-acids-in.png",
-
+        title: "منتدى أغذية الحيوانات الأليفة",
+        description: "الجناح رقم #2509،<br>28–30 أبريل 2025،<br>مركز مؤتمرات كانساس سيتي،<br>كانساس سيتي، ميزوري، الولايات المتحدة",
+        image: petfoodforum,
+      },
+      {
+        title: "الشركة العربية فارما",
+        description: "الجناح رقم #1129،<br>8–9 يوليو 2025،<br>مركز المعارض الدولي الأردني (JIEC)،<br>عمّان، الأردن",
+        image: apm,
+      },
+      {
+        title: "CPHI جنوب شرق آسيا",
+        description: "الجناح رقم #L17،<br>16–18 يوليو 2025،<br>MITEC،<br>كوالالمبور، ماليزيا",
+        image: csea,
+      },],
+      dataT:[
+      {
+        title: "في مستحضرات التجميل",
+        description: "الجناح رقم #EU10 و EU11،<br>8–10 أبريل 2025،<br>أمستردام، هولندا",
+        image: cosmetics,
+      },
+      {
+        title: "مزرعة اكسبو",
+        description: "الجناح رقم #1064،<br>2–4 أبريل 2025،<br>مدينة مكسيكو، المكسيك",
+        image: apexpofarmam,
+      },
+      {
+        title: "DCAT",
+        description: "الجناح رقم #1109،<br>17–20 مارس 2025،<br>فندق ذا بنجامين رويال سونيستا،<br>نيويورك، الولايات المتحدة",
+        image: dcat,
       },
     ],
-    Readmore: "اقرأ المزيد ➝",
+    Readmore: "جدولة اجتماع ➝",
+    
 
     //--------Blogs---------
 

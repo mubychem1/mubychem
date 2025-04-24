@@ -39,49 +39,48 @@ const Blog = () => {
   const currentTranslations = translations[language] || translations.en; // Fallback to English
   const data = currentTranslations.data || [];
   const [currentPage, setCurrentPage] = useState(1);
-
   const dataT = currentTranslations.dataT || [];
-
   const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
   const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
   const indexOfLastItemT = currentPage * ITEMS_PER_PAGE;
   const indexOfFirstItemT = indexOfLastItemT - ITEMS_PER_PAGE;
-  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
   const currentItemsT = dataT.slice(indexOfFirstItemT, indexOfLastItemT);
-  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
 
   return (
     <>
-      <div className="bg-white p-6 md:p-12"  >
+      <div className="bg-[#fff] p-4 sm:p-6 md:p-12">
         <div
-          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[250px] sm:h-[350px] md:h-[350px] bg-cover bg-center rounded-4xl overflow-hidden"
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-left">
+          <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
                 {currentTranslations.BLOGS}
               </h1>
-              <p className="text-white text-lg pl-5 ">
-                Muby Chem Private Limited{" "}
+              <p className="text-white text-base sm:text-lg md:text-lg">
+                Muby Chem Private Limited
               </p>
             </div>
           </div>
         </div>
       </div>
+
       <div>
-      <h1 className="text-black text-5xl font-bold mb-4 pl-4 text-center">
-                {currentTranslations.BLOGS} 
-              </h1>
+        <h1 className="text-black text-5xl font-bold mb-4 pl-4 text-center">
+          {currentTranslations.Blogs}
+        </h1>
       </div>
 
-      <div className="bg-white  p-8 flex justify-center items-center flex-col "  >
+      <div className="bg-white  p-8 flex justify-center items-center flex-col ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {currentItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-[500px] md:h-[550px] flex flex-col"
+              className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-auto flex flex-col"
             >
               <img
                 src={item.image}
@@ -94,7 +93,7 @@ const Blog = () => {
               </h3>
               <hr className="border-t border-gray-300 mt-2" />
               <p className="text-gray-600 mt-2 text-sm flex-grow">
-                {item.description.split('<br>').map((line, index) => (
+                {item.description.split("<br>").map((line, index) => (
                   <span key={index}>
                     {line.trim()}
                     <br />
@@ -115,49 +114,51 @@ const Blog = () => {
             </div>
           ))}
         </div>
-        
       </div>
+      <div>
+  <h1 className="text-black text-5xl font-bold mb-4 text-center">
+    {currentTranslations.Blogs1}
+  </h1>
+</div>
 
-      <div className="bg-white  p-8 flex justify-center items-center flex-col">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {currentItemsT.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-[500px] md:h-[550px] flex flex-col"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-64 object-cover rounded-xl mb-4"
-              />
-              {/* <p className="text-[#7B3931] font-semibold text-sm mt-3">{item.category}</p> */}
-              <h3 className="text-xl font-bold text-gray-800 mt-1">
-                {item.title}
-              </h3>
-              <hr className="border-t border-gray-300 mt-2" />
-              <p className="text-gray-600 mt-2 text-sm flex-grow">
-                {item.description.split('<br>').map((line, index) => (
-                  <span key={index}>
-                    {line.trim()}
-                    <br/>
-                  </span>
-                ))}
-              </p>
-              {/* <div className="mt-4 flex justify-end">
-                <button className="p-2 bg-[#7B3931] text-white rounded-full hover:bg-blue-700 transition-all">&#10140;</button>
-              </div> */}
-
-              <div className="mt-4 ml-1 flex justify-start">
-                <Link to="/Page1">
-                  <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
-                    {currentTranslations.Readmore}
-                  </button>
-                </Link>
-              </div>
-            </div>
-          ))}
+<div className="bg-white px-4 py-8 flex justify-center">
+  <div className="w-full h max-w-screen-xl">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {currentItemsT.map((item, index) => (
+        <div
+          key={index}
+          className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-auto flex flex-col"
+        >
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-64 object-cover rounded-xl mb-4"
+          />
+          <h3 className="text-xl font-bold text-gray-800 mt-1">
+            {item.title}
+          </h3>
+          <hr className="border-t border-gray-300 mt-2" />
+          <p className="text-gray-600 mt-2 text-sm flex-grow">
+            {item.description.split('<br>').map((line, idx) => (
+              <span key={idx}>
+                {line.trim()}
+                <br />
+              </span>
+            ))}
+          </p>
+          <div className="mt-4 ml-1 flex justify-start">
+            <Link to="/Page1">
+              <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
+                {currentTranslations.Readmore}
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
     </>
   );
 };

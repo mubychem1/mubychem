@@ -72,7 +72,7 @@ const CgmpManufacturing = () => {
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                     
                   >
-                    Manufacturing Overview
+                    {currentTranslations.ManufacturingOverview}
                   </h1>
                 </div>
               </div>
@@ -96,26 +96,17 @@ const CgmpManufacturing = () => {
           className="w-full text-center md:text-left "
         >
           <p className="text-gray-600 text-justify">
-            Our current facility has the capability to manufacture a broad range
-            of pharmaceutical ingredients, excipients, mineral salts, and
-            specialty chemicals . The facility is designed and equipped with
-            advanced machinery and technology to produce top-quality products in
-            compliance with environmental regulations and Good Manufacturing
-            Practices (GMP).
+          {currentTranslations.ManufacturingDesc}
           </p>
           <p className="text-gray-600 mt-4 text-justify">
-            This USFDA-registered, state-of-the-art facility, located in
-            Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001,
-            FSSC 22000, FSSAI, Halal, and Kosher standards .
+          {currentTranslations.ManufacturingDesc1}
           </p>          
           <p className="text-gray-600 mt-4 text-justify">
-            With modern production techniques, flexible processes, and
-            procedures, we offer efficient services for both small batches and
-            large orders.
+          {currentTranslations.ManufacturingDesc2}
           </p>
           <h5
               className="text-[20px] leading-[50px] font-bold tracking-[0]  normal-case not-italic w-full">
-            Explore Our State-of-the-Art Manufacturing Facility:
+           {currentTranslations.ManufacturingDesc3}
           </h5>
 
            <div className="flex items-center justify-center mt-4">

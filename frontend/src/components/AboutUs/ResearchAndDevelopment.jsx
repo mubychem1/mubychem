@@ -71,7 +71,7 @@ const ResearchAndDevelopment = () => {
                     className="text-white text-4xl font-bold mb-4 pl-4 "
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                   >
-                    Research & Development
+                    {currentTranslations.ResearchDevelopment}
                   </h1>
                 </div>
               </div>
@@ -95,43 +95,26 @@ const ResearchAndDevelopment = () => {
           className="w-full text-center md:text-left "
         >
           <p className="text-gray-600 text-justify">
-            At Muby Chem, innovation is powered by expertise. Our R&D
-            professionals bring together decades of cumulative industry
-            experience in pharmaceutical, nutraceutical, food, and specialty
-            chemical development.
+          {currentTranslations.Researchdesc}
           </p>
-
+          
           <p className="text-gray-600 mt-4 text-justify">
-            We take pride in developing high-purity, performance-driven products
-            that consistently meet global quality and regulatory expectations.
-            Whether it’s excipients, APIs, or mineral salts — our team works
-            relentlessly to research, refine, and reimagine chemical
-            manufacturing for evolving industry needs.
+          {currentTranslations.Researchdesc1}
           </p><br/>
           <h5 className="font-bold"> What Our R&D Team Offers: </h5>
           <p className="text-gray-600 mt-4 text-justify">
            
-            * Custom product development, process optimization, validation &
-            scale-up <br />
-            * Granulation, encapsulation, milling (wet/dry), and particle size
-            optimization (powder to ultrafine grades)
-            <br />* Inorganic, organic, organometallic synthesis & process
-            chemistry <br />
-            * Advanced chemical engineering, design & technology transfer
-            <br />
-            * Analytical method development & validation <br />
-            * Compliance with USP, EP, BP, IP, FCC, ACS, JP, CP and Ph. Eur. standards{" "}
-            <br />
-            * cGMP and GLP-compliant product design and support <br />
-            * Formulation support for solid, semi-solid & injectable
-            applications
-            <br />
-            * Robust technical support & documentation (TDS, MSDS, CoA,
-            stability data)
-            <br />* Custom solutions for encapsulation, free-flowing grades, and
-            anti-caking systems
-            <br />* eCTD and DMF Support and Documentations Available.
-            <br />* Documents and Support for eCTD and DMF Are Available
+          {currentTranslations.Researchdesc2}<br/>
+          {currentTranslations.Researchdesc3}<br/>
+          {currentTranslations.Researchdesc4}<br/>
+          {currentTranslations.Researchdesc5}<br/>
+          {currentTranslations.Researchdesc6}<br/>
+          {currentTranslations.Researchdesc7}<br/>
+          {currentTranslations.Researchdesc8}<br/>
+          {currentTranslations.Researchdesc9}<br/>
+          {currentTranslations.Researchdesc10}<br/>
+          {currentTranslations.Researchdesc11}<br/>
+          {currentTranslations.Researchdesc12}
           </p>
         </motion.div>
       </motion.div>

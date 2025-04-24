@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import background from '../../assets/carrerbg.png';
+import React, { useState } from "react";
+import background from "../../assets/carrerbg.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import registration from '../../assets/registration.png';
+import registration from "../../assets/registration.png";
 import { Dialog } from "@headlessui/react";
-import career from '../../assets/career.png'
+import career from "../../assets/career.png";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
 import { ChevronDown } from "lucide-react";
@@ -46,11 +46,17 @@ const Dropdown = ({ label, options }) => {
   );
 };
 
-
-
-
-const JobCard = ({ title, location, description, responsibility, qualification, experience, onOpen, onApply, buttonLabels = { jobDescription: "Job Description", applyNow: "Apply Now" } }) => (
-
+const JobCard = ({
+  title,
+  location,
+  description,
+  responsibility,
+  qualification,
+  experience,
+  onOpen,
+  onApply,
+  buttonLabels = { jobDescription: "Job Description", applyNow: "Apply Now" },
+}) => (
   <div className="bg-[#ecf2ff] rounded-2xl p-6 flex flex-col items-start w-full max-w-sm border border-gray-400 h-full">
     <div className={`w-12 h-12 flex items-center justify-center rounded-full `}>
       <img src={registration} alt="Badge Icon" className="w-10 h-10" />
@@ -60,30 +66,61 @@ const JobCard = ({ title, location, description, responsibility, qualification, 
       <FaMapMarkerAlt className="mr-2" /> {location}
     </p>
     <div className="mt-4 flex justify-between w-full">
-      <button onClick={() => onOpen(title, description, responsibility, qualification, experience)} className="px-6 py-2 text-yellow-900 border rounded-lg">
+      <button
+        onClick={() =>
+          onOpen(title, description, responsibility, qualification, experience)
+        }
+        className="px-6 py-2 text-yellow-900 border rounded-lg"
+      >
         {buttonLabels.jobDescription}
       </button>
-      <button onClick={() => onApply(title)} className="px-6 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-gray-700">
+      <button
+        onClick={() => onApply(title)}
+        className="px-6 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-gray-700"
+      >
         {buttonLabels.applyNow}
       </button>
     </div>
   </div>
 );
 
-
 const Career = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedJob, setSelectedJob] = useState({ title: "", description: "", responsibility: [], qualification: [], experience: "" });
+  const [selectedJob, setSelectedJob] = useState({
+    title: "",
+    description: "",
+    responsibility: [],
+    qualification: [],
+    experience: "",
+  });
   const [selectedPosition, setSelectedPosition] = useState("");
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", position: "", resume: null });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    resume: null,
+  });
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
   // const jobs = currentTranslations.jobs;
   const jobs = currentTranslations.jobs || [];
 
-  const openModal = (title, description, responsibility, qualification, experience) => {
-    setSelectedJob({ title, description, responsibility, qualification, experience });
+  const openModal = (
+    title,
+    description,
+    responsibility,
+    qualification,
+    experience
+  ) => {
+    setSelectedJob({
+      title,
+      description,
+      responsibility,
+      qualification,
+      experience,
+    });
     setIsOpen(true);
   };
 
@@ -148,61 +185,95 @@ const Career = () => {
     <>
       <div className="bg-white p-6 md:p-12">
         <div
-          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
+          className="relative h-[250px] sm:h-[350px] md:h-[350px] bg-cover bg-center rounded-4xl overflow-hidden"
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-left ">
+          <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
             <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
+              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
                 {currentTranslations.CAREER}
               </h1>
-              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
+              <p className="text-white text-sm sm:text-base md:text-lg ">Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
       </div>
 
-     <section className="p-10 bg-[#fff] min-h-screen">
+
+      <section className="p-10 pt-0 bg-[#fff] ">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">
             {currentTranslations.heading1}
           </h2>
-          <p className="text-xl text-gray-600 mt-2 pb-3">{currentTranslations.heading}</p>
+          <p className="text-xl text-gray-600 mt-2">
+            {currentTranslations.heading}
+          </p>
         </div>
+        <br />
         <div className="flex justify-center items-center gap-10">
-      <Dropdown
-        label="Business Unit"
-        options={["Sales", "Marketing", "Engineering", "Finance"]}
-      />
-      <Dropdown
-        label="Location"
-        options={["Mumbai", "Pune", "Bangalore", "Hyderabad"]}
-      />
-    </div>
+          <Dropdown
+            label="Business Unit"
+            options={[
+              "Sales & Marketing",
+              "Business Development",
+              "Purchase",
+              "R&D",
+              "QA / QC",
+              " Regulatory Affairs",
+              "HR",
+            ]}
+          />
+          <Dropdown
+            label="Location"
+            options={["Mumbai", "Ankleshwar", "Bangalore"]}
+          />
+        </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {jobs.map((job) => (
-            <JobCard key={job.id} {...job} onOpen={openModal} onApply={openForm} />
+            <JobCard
+              key={job.id}
+              {...job}
+              onOpen={openModal}
+              onApply={openForm}
+            />
           ))}
         </div>
       </section>
 
       {/* ------- job Description ---------- */}
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="fixed inset-0 flex items-center justify-center z-50"
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10 max-h-[80vh] overflow-y-auto">
           <div className="flex justify-end">
-            <button onClick={() => setIsOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]">✖</button>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]"
+            >
+              ✖
+            </button>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedJob.title}</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            {selectedJob.title}
+          </h3>
           <p className="text-gray-900">{selectedJob.description}</p>
-          <h3 className="text-lg py-2">{currentTranslations.responsibilities}</h3>
+          <h3 className="text-lg py-2">
+            {currentTranslations.responsibilities}
+          </h3>
           <ul className="text-gray-700 list-disc pl-5">
-            {selectedJob.responsibility.map((item, index) => <li key={index}>{item}</li>)}
+            {selectedJob.responsibility.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <h3 className="text-lg py-2">{currentTranslations.qualifications}</h3>
           <ul className="text-gray-700 list-disc pl-5">
-            {selectedJob.qualification.map((item, index) => <li key={index}>{item}</li>)}
+            {selectedJob.qualification.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <h3 className="text-lg py-2">{currentTranslations.experience}</h3>
           <p className="text-gray-900">{selectedJob.experience}</p>
@@ -210,22 +281,31 @@ const Career = () => {
       </Dialog>
 
       {/* -------------- apply now --------- */}
-      <Dialog open={isFormOpen} onClose={() => setIsFormOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
+      <Dialog
+        open={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        className="fixed inset-0 flex items-center justify-center z-50"
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10 pb-10">
           <div className="flex justify-end">
-            <button onClick={() => setIsFormOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]">
+            <button
+              onClick={() => setIsFormOpen(false)}
+              className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931]"
+            >
               ✖
             </button>
           </div>
 
           <img
-            src={career}// Replace with your image URL
+            src={career} // Replace with your image URL
             alt="Job Application Banner"
             className="w-full h-32 object-cover rounded-lg mb-4"
           />
 
-          <h3 className="text-xl font-bold text-gray-900 mt-3 mb-5">Apply for {formData.position}</h3>
+          <h3 className="text-xl font-bold text-gray-900 mt-3 mb-5">
+            Apply for {formData.position}
+          </h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
               <input
@@ -281,8 +361,17 @@ const Career = () => {
                 ))}
               </select> */}
             </div>
-            <input type="file" name="resume" className="w-full p-2 border rounded-lg mb-3" onChange={handleFileChange} required />
-            <button type="submit" className="w-full bg-[#7B3931] text-white p-2 rounded-lg">
+            <input
+              type="file"
+              name="resume"
+              className="w-full p-2 border rounded-lg mb-3"
+              onChange={handleFileChange}
+              required
+            />
+            <button
+              type="submit"
+              className="w-full bg-[#7B3931] text-white p-2 rounded-lg"
+            >
               Submit
             </button>
           </form>
@@ -291,6 +380,5 @@ const Career = () => {
     </>
   );
 };
-
 
 export default Career;

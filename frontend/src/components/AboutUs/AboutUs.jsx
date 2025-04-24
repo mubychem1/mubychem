@@ -241,7 +241,7 @@ const AboutUs = () => {
               <div className="absolute inset-0 flex items-center justify-left">
                 <div>
                   <h1 className="text-white text-4xl font-bold mb-4 pl-4 ">
-                    Muby Chem – Trusted Since 1976
+                    {currentTranslations.AboutusHeading}
                   </h1>
                   {/* <p className="text-white text-lg pl-5 ">
                     Muby Chem Private Limited

@@ -10,11 +10,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from '../../redux/slice/languageSlice.js'
 import translations from '../translater/translations.js';
 import { ChevronDown } from "lucide-react";
-
-
+import { AiOutlineDownload } from "react-icons/ai";
 
 const Header = () => {
-
     const options = [
         { value: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
         // { value: "hi", label: "Hindi", flag: "https://flagcdn.com/w40/in.png" },
@@ -39,7 +37,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isTap, setIsTap] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isProductsOpen, setIsProductsOpen] = useState(false);
+    const [isAboutOpen, setIsAboutOpen] = useState(false);
 
     const dropdownRef = useRef(null);
 
@@ -266,7 +264,6 @@ const Header = () => {
                                 </NavLink>
                             </li>
 
-
                             <li className='px-4 py-2'>
                                 <NavLink
                                     to="/career"
@@ -278,7 +275,6 @@ const Header = () => {
                                     {currentTranslations.CAREER}
                                 </NavLink>
                             </li> 
-
 
                             <li className='px-4 py-2'>
                                 <NavLink
@@ -312,27 +308,19 @@ const Header = () => {
                                     <IoClose className="text-3xl" />
                                 </button>
                                 <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
-                                <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</NavLink>
                                 <div>
-                                    <button onClick={() => setIsProductsOpen(!isProductsOpen)} className="w-full text-left">PRODUCTS</button>
-                                    {isProductsOpen && (
+                                    <button onClick={() => setIsAboutOpen(!isAboutOpen)} className="w-full text-left">About us</button>
+                                    {isAboutOpen && (
                                         <div className="pl-4">
-                                            <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Pharmaceuticals</NavLink><br /><hr />
-                                            <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Speciality chemicals </NavLink><br /><hr />
-                                            <NavLink to="/products/category4" onClick={() => setIsMobileMenuOpen(false)}>Excipients </NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}> API/Intermediates</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Fine Chemicals</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Analytical Reagent </NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Lab Chemicals</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Nutraceuticals </NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Mineral Fortifiers </NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Food Additives </NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Amino Acid</NavLink><br /><hr />
-                                            <NavLink to="/products/category5" onClick={() => setIsMobileMenuOpen(false)}>Other Products</NavLink><br /><hr />
+                                            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>Company Overview</NavLink><br /><hr />
+                                            <NavLink to="/about-us/cgmp-manufacturing" onClick={() => setIsMobileMenuOpen(false)}>Manufacturing Overview </NavLink><br /><hr />
+                                            <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>Research & Development </NavLink><br/><hr/>
                                         </div>
                                     )}
                                 </div>
-                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>BLOGS</NavLink>
+                                <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>Products</NavLink>
+                               
+                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Events</NavLink>
                                 <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>CAREER</NavLink>
                                 <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
                             </motion.div>
@@ -341,14 +329,10 @@ const Header = () => {
 
                     {/* Contact Section (Phone & Email Aligned to Right) */}
                     <div className="hidden md:flex items-center space-x-6 ml-auto">
-                        {/*-------------- Phone Section --------------- */}
-                        <div className="flex items-center space-x-2 bg-[#773135] p-3 rounded-full">
-                            <FaPhoneAlt className="text-white transition duration-300 text-2xl" />
-                        </div>
 
-                        {/*------------ Search Icon Section ---------- */}
+                          {/*------------ Search Icon Section ---------- */}
 
-                        <div>
+                          <div>
                             {/* Search Icon Button */}
                             <div
                                 className="flex items-center space-x-3 bg-[#773135] p-3 rounded-full cursor-pointer"
@@ -382,7 +366,19 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
-
+                    <button
+                                // onClick={() => ()}
+                                className="bg-[#773135] h-12 rounded-full text-sm font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                            >
+                                <div className="flex items-center gap-2">
+                                <AiOutlineDownload 
+                                className="text-white text-2xl mr-1" />
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <h2>Download Broucher</h2>
+                                </div>
+                            </button>
+                      
                         {/*----------- Language Selector -------------*/}
 
                         <div className="relative w-40">
@@ -444,7 +440,7 @@ export default Header;
 //     const [isOpen, setIsOpen] = useState(false);
 //     const [isTap, setIsTap] = useState(false);
 //     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-//     const [isProductsOpen, setIsProductsOpen] = useState(false);
+//     const [isAboutOpen, setIsAboutOpen] = useState(false);
 
 //     const dropdownRef = useRef(null);
 
@@ -628,9 +624,9 @@ export default Header;
 //                             <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
 //                             <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</NavLink>
 //                             <div>
-//                                 <button onClick={() => setIsProductsOpen(!isProductsOpen)}
+//                                 <button onClick={() => setIsAboutOpen(!isAboutOpen)}
 //                                  className="w-full text-left">PRODUCTS</button>
-//                                 {isProductsOpen && (
+//                                 {isAboutOpen && (
 //                                     <div className="pl-4">
 //                                         <NavLink to="/products/category1" onClick={() => setIsMobileMenuOpen(false)}>Pharmaceuticals</NavLink><br /><hr />
 //                                         {/* Nested Products */}
