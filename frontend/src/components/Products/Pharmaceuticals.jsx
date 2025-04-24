@@ -59,7 +59,7 @@ function Pharmaceuticals() {
       {/* Background Section */}
       <div className="bg-white p-6 md:p-12">
         <div
-          className="relative h-[300px] bg-cover rounded-4xl overflow-hidden"
+          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden"
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -86,9 +86,9 @@ function Pharmaceuticals() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 p-4">
         {/* Filter Sidebar */}
-        <div className="lg:col-span-1 space-y-6 sticky top-4 self-start h-fit ml-12">
+        <div className="lg:col-span-4 space-y-6 sticky top-4 self-start h-fit ml-12">
           <div className="border p-4 rounded shadow-sm">
             <h2 className="font-bold text-lg mb-3">Industry</h2>
             <div className="space-y-2">
@@ -116,7 +116,7 @@ function Pharmaceuticals() {
 
         {/* Product List */}
         <div
-          className="lg:col-span-3 space-y-6 mr-13"
+          className="lg:col-span-8 space-y-6 mr-13"
           style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           {products.map((product, index) => (

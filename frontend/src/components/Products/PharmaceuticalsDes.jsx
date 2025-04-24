@@ -63,11 +63,9 @@ const PharmaceuticalsDes = () => {
     try {
       const response = await axios.post('https://mubychem.onrender.com/api/productForm', formData);
 
-      const data = response.data.data;
-
       setSubmissionResult({
         success: true,
-        message: data.message || 'Thank you for your message. We will get back to you soon!',
+        message: 'Thank you for your message. We will get back to you soon!',
       });
 
       setFormData({
@@ -78,7 +76,6 @@ const PharmaceuticalsDes = () => {
         companyName: '',
         message: '',
       });
-      console.log("aaysuh");
 
     } catch (error) {
       console.error('Submission error:', error);
@@ -93,7 +90,8 @@ const PharmaceuticalsDes = () => {
     } finally {
       setIsSubmitting(false);
     }
-  }
+  };
+
 
   return (
     <>
@@ -185,7 +183,7 @@ const PharmaceuticalsDes = () => {
         <div className="lg:w-1/2 text-gray-800 space-y-10 -ml-2 lg:-ml-6">
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Mechanism Of Action</h2>
-            <p className='text-justify'>Acacia, also known as Gum Arabic, forms a soothing film over mucous membranes, helping relieve throat and gastric irritation. Its natural polysaccharides reduce inflammation, while its polyphenols offer mild antibacterial action.
+            <p className='text-justify'>{product.mechanismOfAction}
             </p>
           </div>
           <div>
@@ -197,6 +195,26 @@ const PharmaceuticalsDes = () => {
               <li>Acts as a natural stabilizer and emulsifier in pharmaceutical and nutraceutical preparations</li>
               <li>Incorporated in lozenges, syrups, and suspensions for its soothing and protective properties</li>
             </ul>
+
+            {/* <ul className="list-disc pl-5 space-y-2">
+            {product.indication?.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul> */}
+
+            {/* {
+              "data": {
+              "mechanismOfAction": "Acacia, also known as Gum Arabic, forms a soothing film...",
+            "indication": [
+            "Relief of irritation and inflammation in the throat...",
+            "Used in formulations for cough, sore throat...",
+            ...
+            ],
+            "expertise": "Headquartered in Mumbai, India, Muby Chem is one of the leading..."
+  }
+} */}
+
+
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Muby Chem Expertise</h2>
