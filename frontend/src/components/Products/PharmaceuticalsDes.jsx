@@ -111,7 +111,7 @@ const PharmaceuticalsDes = () => {
       <button
         onClick={() => window.history.back()}
         className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer mt-5 ml-14">
-        Back To Product
+        Back To Products
       </button>
 
       <div className=" ml-13 mt-10">

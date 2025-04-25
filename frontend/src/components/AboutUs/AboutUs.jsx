@@ -301,7 +301,7 @@ const AboutUs = () => {
             Private Limited
           </ h1> */}
           <p className="text-gray-600 text-justify">
-          <b>{currentTranslations.muby}</b> {currentTranslations.mubyChemDescription1}{currentTranslations.mubysub}<b>{currentTranslations.chemicals} </b>{currentTranslations.weServe} <b>{currentTranslations.industries}</b> {currentTranslations.across}{" "}
+            <b>{currentTranslations.muby}</b> {currentTranslations.mubyChemDescription1}{currentTranslations.mubysub}<b>{currentTranslations.chemicals} </b>{currentTranslations.weServe} <b>{currentTranslations.industries}</b> {currentTranslations.across}{" "}
           </p>
 
           <p className="text-gray-600 mt-4 text-justify">
@@ -488,15 +488,27 @@ const AboutUs = () => {
             </div> */}
 
       {/* <div className="flex items-center p-6 gap-3">
-              <div>
-                <h4 className="text-lg font-semibold">
-                  {reviews[currentReview].name}
-                </h4>
-                <h3 className="text-md text-black">
-                  {reviews[currentReview].role}
-                </h3>
-              </div>
-            </div> */}
+        <div>
+          <h4 className="text-lg font-semibold">
+            {reviews[currentReview].name}
+          </h4>
+          <h3 className="text-md text-black">
+            {reviews[currentReview].role}
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center p-6 gap-3">
+        <div>
+          <h4 className="text-lg font-semibold">
+            {reviews[currentReview].name}
+          </h4>
+          <h3 className="text-md text-black">
+            {reviews[currentReview].role}
+          </h3>
+        </div>
+      </div> */}
+
 
       {/* Navigation Buttons */}
       {/* <div className="flex justify-end items-center mt-6">

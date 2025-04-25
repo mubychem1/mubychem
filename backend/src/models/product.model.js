@@ -18,9 +18,14 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    commonId:{
-        type:String,
+    therapeuticCategory:{
+        type: String,
         required:true
+    },
+    
+    commonId: {
+        type: String,
+        required: true
     }
 })
 

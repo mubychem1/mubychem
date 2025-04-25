@@ -116,9 +116,9 @@ const Header = () => {
                     </div>
 
                     {/* ---------Navigation ---------- */}
-                    <div className="flex items-center space-x-3 flex-grow justify-center">
+                    <div className="flex items-center flex-grow justify-center">
                         {/* Desktop Navigation Menu */}
-                        <ul className="hidden md:flex items-center text-[14px] font-bold font-['Montserrat',sans-serif] text-gray-700">
+                        <ul className="hidden md:flex items-center text-[14px] sm:text-[12px] font-bold font-['Montserrat',sans-serif] text-gray-700">
                             <li className='px-4 py-2'>
                                 <NavLink
                                     to="/"
@@ -274,7 +274,7 @@ const Header = () => {
                                 >
                                     {currentTranslations.CAREER}
                                 </NavLink>
-                            </li> 
+                            </li>
 
                             <li className='px-4 py-2'>
                                 <NavLink
@@ -314,31 +314,31 @@ const Header = () => {
                                         <div className="pl-4">
                                             <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>Company Overview</NavLink><br /><hr />
                                             <NavLink to="/about-us/cgmp-manufacturing" onClick={() => setIsMobileMenuOpen(false)}>Manufacturing Overview </NavLink><br /><hr />
-                                            <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>Research & Development </NavLink><br/><hr/>
+                                            <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>Research & Development </NavLink><br /><hr />
                                         </div>
                                     )}
                                 </div>
-                                <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>Products</NavLink>
-                               
+                                <NavLink to="/allProducts" onClick={() => setIsMobileMenuOpen(false)}>Products</NavLink>
                                 <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Events</NavLink>
                                 <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>CAREER</NavLink>
                                 <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
                             </motion.div>
+                            
                         )}
                     </div>
 
                     {/* Contact Section (Phone & Email Aligned to Right) */}
-                    <div className="hidden md:flex items-center space-x-6 ml-auto">
+                    <div className="hidden md:flex items-center space-x-2 ml-auto">
 
-                          {/*------------ Search Icon Section ---------- */}
+                        {/*------------ Search Icon Section ---------- */}
 
-                          <div>
+                        <div>
                             {/* Search Icon Button */}
                             <div
                                 className="flex items-center space-x-3 bg-[#773135] p-3 rounded-full cursor-pointer"
                                 onClick={() => setIsTap(true)}
                             >
-                                <IoMdSearch className="text-white transition duration-300 text-2xl" />
+                                <IoMdSearch className="text-white transition duration-300 text-2xl sm:text-xl" />
                             </div>
 
                             {/* Search Popup */}
@@ -347,14 +347,14 @@ const Header = () => {
                                     <div className="relative w-full max-w-2xl px-6 h-[40vh] min-h-[250px] flex flex-col justify-center">
                                         {/* Close Button */}
                                         <button
-                                            className="absolute top-5 right-5 text-white text-3xl"
+                                            className="absolute top-5 right-5 text-white text-3xl sm:text-2xl"
                                             onClick={() => setIsTap(false)}
                                         >
                                             <IoClose />
                                         </button>
 
                                         {/* Search Box */}
-                                        <div className="bg-transparent border-b border-gray-300 text-white text-2xl p-4 flex items-center w-full">
+                                        <div className="bg-transparent border-b border-gray-300 text-white text-2xl sm:text-xl p-4 flex items-center w-full">
                                             <input
                                                 type="text"
                                                 placeholder="Search ..."
@@ -366,25 +366,25 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
-                    <button
-                                // onClick={() => ()}
-                                className="bg-[#773135] h-12 rounded-full text-sm font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
-                            >
-                                <div className="flex items-center gap-2">
-                                <AiOutlineDownload 
-                                className="text-white text-2xl mr-1" />
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <h2>Download Broucher</h2>
-                                </div>
-                            </button>
-                      
+                        <button
+                            // onClick={() => ()}
+                            className="bg-[#773135] h-12 rounded-full text-[10px] sm:text-[10px] font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                        >
+                            <div className="flex items-center gap-2 mr-2">
+                                <p className="sm:text-[10px]">{currentTranslations.DownloadBrochure}</p>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <AiOutlineDownload
+                                    className="text-white text-2xl mr-1" />
+                            </div>
+                        </button>
+
                         {/*----------- Language Selector -------------*/}
 
                         <div className="relative w-40">
                             <button
                                 onClick={() => setIsOpe(!isOpe)}
-                                className="bg-[#773135] w-full h-12 rounded-full text-sm font-semibold text-white flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                                className="bg-[#773135] w-full h-12 rounded-full text-sm sm:text-sm font-semibold text-white flex justify-between items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
                             >
                                 <div className="flex items-center gap-2">
                                     <img src={selected.flag} alt={selected.label} className="w-5 h-5 rounded-full" />

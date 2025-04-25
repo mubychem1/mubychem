@@ -305,31 +305,30 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px]"
+          className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px] "
         >
           {/* <img
                   src={''} // Add your background image path here
                   alt="About Us Background"
                   className="w-full h-full object-cover"
                 /> */}
-          <div className="bg-[#fff] p-6 md:p-12">
+          <div className="bg-[#fff] p-6 md:p-12 sm:p-2">
             <div
               className="relative h-[340px] bg-cover rounded-bl-[80px] rounded-tr-[80px] overflow-hidden"
               style={{ backgroundImage: `url(${homeImage})` }}
             >
               {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
-              <div className="absolute inset-0 flex items-end bottom-7 pl-2 justify-left">
+              <div className="absolute inset-0 flex items-end  bottom-7 pl-2 justify-left">
                 <div>
-                  <h1 className="text-[#773135] text-2xl  mb-2  ">
+                  <h1 className="text-[#773135] text-2xl  mb-4 normal-case not-italic">
                     {currentTranslations.Empowering}
                   </h1>
-                  <p className="text-black text-3xl  leading-6 pb-14">
+                  <p className="text-black text-3xl normal-case not-italic leading-6 pb-19">
                     {currentTranslations.Leading} <br />
                     {currentTranslations.Specialty}
                     <br /> {currentTranslations.Active}
                   </p>
                 </div>
-                          
               </div>
             </div>
           </div>
@@ -337,7 +336,7 @@ const Home = () => {
       </motion.section>
 
       {/* ----------Research Section  -------------- */}
-      <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20 font-['Montserrat',sans-serif]">
+      <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20">
         {/* Left Side - Image */}
         <motion.div
           className="w-full sm:w-3/4 md:w-1/2 flex justify-center"
