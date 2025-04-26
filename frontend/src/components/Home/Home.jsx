@@ -305,30 +305,31 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px] "
+          className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px]"
         >
           {/* <img
                   src={''} // Add your background image path here
                   alt="About Us Background"
                   className="w-full h-full object-cover"
                 /> */}
-          <div className="bg-[#fff] p-6 md:p-12 sm:p-2">
+          <div className="bg-[#fff] p-6 md:p-12">
             <div
-              className="relative h-[340px] bg-cover rounded-bl-[80px] rounded-tr-[80px] overflow-hidden"
+              className="relative h-[250px] sm:h-[300px] md:h-[340px] bg-cover bg-center rounded-bl-[40px] sm:rounded-bl-[60px] md:rounded-bl-[80px] rounded-tr-[40px] sm:rounded-tr-[60px] md:rounded-tr-[80px] overflow-hidden"
               style={{ backgroundImage: `url(${homeImage})` }}
             >
               {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
-              <div className="absolute inset-0 flex items-end  bottom-7 pl-2 justify-left">
+              <div className="absolute inset-0 flex items-end bottom-7 pl-2 justify-left">
                 <div>
-                  <h1 className="text-[#773135] text-2xl  mb-4 normal-case not-italic">
+                  <h1 className="text-[#773135] text-2xl  mb-4  ">
                     {currentTranslations.Empowering}
                   </h1>
-                  <p className="text-black text-3xl normal-case not-italic leading-6 pb-19">
+                  <p className="text-black text-3xl  leading-6 pb-19">
                     {currentTranslations.Leading} <br />
                     {currentTranslations.Specialty}
                     <br /> {currentTranslations.Active}
                   </p>
                 </div>
+                          
               </div>
             </div>
           </div>
@@ -336,10 +337,10 @@ const Home = () => {
       </motion.section>
 
       {/* ----------Research Section  -------------- */}
-      <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20">
+      <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20 font-['Montserrat',sans-serif]">
         {/* Left Side - Image */}
         <motion.div
-          className="w-full sm:w-3/4 md:w-1/2 flex justify-center"
+          className="w-full sm:w-3/4 md:w-1/2  px-4 sm:px-6 md:px-0 flex justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -353,41 +354,29 @@ const Home = () => {
 
         {/* Right Side - Content */}
         <motion.div
-          className="w-full md:w-2/5 text-gray-800 max-w-lg mt-[-1px] md:mt-[-1px] text-center md:text-left"
+          className="w-full md:w-2/5 text-gray-800 max-w-lg mt-4 md:mt-[-1px] text-center md:text-left px-4 md:px-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          {/* Badge */}
-          {/* <motion.span
-            className="inline-block px-4 py-1 text-[11px] leading-[22px] tracking-[0] text-[#001837] 
-      font-[Open_Sans] font-bold border border-[#001837] rounded-full uppercase mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            Who We Are
-          </motion.span> */}
-
           {/* Heading */}
-          <motion
-            className="text-[29px] leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full"
-            style={{ fontFamily: "" }}
+          <motion.h2
+            className="text-[24px] sm:text-[26px] md:text-[29px] leading-[36px] sm:leading-[44px] md:leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             {currentTranslations.welcomeToMubyChem}
-            {/* Welcome to Muby Chem <br />Private Limited */}
-          </motion>
-          <motion.p className="mb-4">
+          </motion.h2>
+
+          {/* Subheading */}
+          <motion.p className="mb-4 text-sm sm:text-base">
             {currentTranslations.obsessedWithQuality}
           </motion.p>
 
           {/* Description */}
           <motion.p
-            className="text-justify text-[15px] leading-[1.6] text-[#000] normal-case not-italic mb-6"
-            style={{ fontFamily: "" }}
+            className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -395,8 +384,7 @@ const Home = () => {
             {currentTranslations.mubyChemDescriptionMain}
           </motion.p>
           <motion.p
-            className="text-justify text-[15px] leading-[1.6] text-[#000] normal-case not-italic mb-6"
-            style={{ fontFamily: "" }}
+            className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -417,38 +405,36 @@ const Home = () => {
               },
             }}
           >
-            {/* Feature 2 */}
+            {/* Add features here */}
           </motion.div>
 
-          {/* Button with Hover Animation */}
+          {/* Button */}
           <motion.button
-            className=" h-14 mt-4 px-6 py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full  
-            flex items-center gap-2 hover:bg-[#773135] hover:text-white transition "
-            style={{ fontFamily: "" }}
+            className="h-12 sm:h-14 mt-4 px-6 py-2 sm:py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full  
+    flex items-center justify-center gap-2 hover:bg-[#773135] hover:text-white transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/about">{currentTranslations.knowMore} </a>
+            <a href="/about">{currentTranslations.knowMore}</a>
             <FaArrowRight />
           </motion.button>
         </motion.div>
       </div>
 
       {/* Product category section */}
-      <div className="pt-6 pl-20 pr-20 md:pt-12">
-        <div className="bg-[#773135]  items-center justify-between md:px-12 pt-10 pb-5">
-          <div className=" font-['Montserrat', sans-serif]">
-            <h2
-              className="text-[30px] leading-[50px] font-bold tracking-[0] pl-2 font-['Montserrat', sans-serif] text-[#fff] normal-case not-italic w-full"
-              // style={{ fontFamily: " " }}
-            >
-              {currentTranslations.Product1}{" "}
+      <div className="pt-6 px-4 md:pt-12 md:px-20">
+        <div className="bg-[#773135] flex flex-col items-center justify-between md:px-12 pt-10 pb-5">
+          <div className="font-['Montserrat',sans-serif] w-full text-center md:text-left">
+            <h2 className="text-[24px] md:text-[30px] leading-[36px] md:leading-[50px] font-bold text-white pl-2">
+              {currentTranslations.Product1}
             </h2>
           </div>
-          <div className="bg-[#773135] items-center flex justify-between  pt-5 pb-5 text-center">
-            {/* Left Side - Image */}
+
+          {/* First Row */}
+          <div className="bg-[#773135] flex flex-col md:flex-row items-center justify-center pt-5 pb-5 gap-4 w-full">
+            {/* Each Item */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -456,16 +442,15 @@ const Home = () => {
               <img
                 src={ActivePharmaceuticalIngredients}
                 alt="Active Pharmaceutical Ingredients"
-                className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center mt-2 text-2xl ">
-                {currentTranslations.ActivePharmaceuticalIngredients}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.ActivePharmaceuticalIngredients}
               </p>
             </motion.div>
 
-            {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -473,15 +458,15 @@ const Home = () => {
               <img
                 src={PharmaExcipients}
                 alt="Pharma Excipients"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                {currentTranslations.PharmaExcipients}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.PharmaExcipients}
               </p>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -489,17 +474,18 @@ const Home = () => {
               <img
                 src={MineralSalts}
                 alt="Mineral Salts"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                {currentTranslations.MineralSalts}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.MineralSalts}
               </p>
             </motion.div>
           </div>
-          <div className="items-center flex justify-between  pt-0.5 pb-5 text-center">
-            {/* Left Side - Image */}
+
+          {/* Second Row */}
+          <div className="flex flex-col md:flex-row items-center justify-center pt-5 gap-4 w-full">
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -507,16 +493,15 @@ const Home = () => {
               <img
                 src={SpecialtyChemicals}
                 alt="Specialty Chemicals"
-                className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                {currentTranslations.SpecialtyChemicals}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.SpecialtyChemicals}
               </p>
             </motion.div>
 
-            {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -524,15 +509,15 @@ const Home = () => {
               <img
                 src={AminoAcids}
                 alt="Amino Acids"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center mt-2 text-2xl">
-                {currentTranslations.AminoAcids}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.AminoAcids}
               </p>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 text-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -540,10 +525,10 @@ const Home = () => {
               <img
                 src={Fragrance}
                 alt="Fragrance & Flavor Chemicals"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
-              <p className="text-white font-bold justify-items-center text-2xl mt-2">
-                {currentTranslations.FragranceFlavorChemicals}{" "}
+              <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
+                {currentTranslations.FragranceFlavorChemicals}
               </p>
             </motion.div>
           </div>
@@ -551,37 +536,32 @@ const Home = () => {
       </div>
 
       {/* Markets section */}
-      <div className="pt-6 pl-20 pr-20 md:pt-12">
-        <div className="bg-[#e7d1bc] items-center justify-between md:px-12 pt-10 pb-5 ">
-          <div className="">
-            <h2
-              className="text-[30px] leading-[50px] font-bold tracking-[0] pl-3 text-[#773135] normal-case not-italic w-full"
-              style={{ fontFamily: " " }}
-            >
-              {currentTranslations.MarketsWeServe}{" "}
-            </h2>
-          </div>
-          <div className="bg-[#e7d1bc] items-center flex justify-between  pt-2 pb-5 text-center">
-            {/* Left Side - Image */}
+      <div className="pt-6 px-4 md:px-20 md:pt-12">
+        <div className="bg-[#e7d1bc] p-4 md:px-12 pt-10 pb-5">
+          <h2 className="text-2xl md:text-[30px] leading-[40px] md:leading-[50px] font-bold pl-3 text-[#773135]">
+            {currentTranslations.MarketsWeServe}
+          </h2>
+
+          {/* First Row */}
+          <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
                 src={Pharmaceutical}
-                alt=" Pharmaceuticals"
-                className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                alt="Pharmaceuticals"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
+              <p className="text-[#773135] font-bold text-xl mt-2">
                 {currentTranslations.Pharmaceuticals}
               </p>
             </motion.div>
 
-            {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -589,15 +569,15 @@ const Home = () => {
               <img
                 src={biotech}
                 alt="BioTech"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
+              <p className="text-[#773135] font-bold text-xl mt-2">
                 {currentTranslations.Biopharma}
               </p>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -605,61 +585,61 @@ const Home = () => {
               <img
                 src={Nutraceutical}
                 alt="Nutraceuticals"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
+              <p className="text-[#773135] font-bold text-xl mt-2">
                 {currentTranslations.Nutraceuticals}
               </p>
             </motion.div>
           </div>
-          <div className=" items-center flex justify-between  pt-0.5 pb-5 text-center">
-            {/* Left Side - Image */}
+
+          {/* Second Row */}
+          <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 items-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
                 src={FoodBeverages}
-                alt="Food & Beverages "
-                className="w-full max-w-sm h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                alt="Food & Beverages"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                {currentTranslations.FoodBeverages}{" "}
+              <p className="text-[#773135] font-bold text-xl mt-2">
+                {currentTranslations.FoodBeverages}
               </p>
             </motion.div>
 
-            {/* Right Side - Content */}
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
                 src={PersonalCare}
-                alt="Lab Equipment"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                alt="Personal Care"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                {currentTranslations.PersonalCareCosmetics}{" "}
+              <p className="text-[#773135] font-bold text-xl mt-2">
+                {currentTranslations.PersonalCareCosmetics}
               </p>
             </motion.div>
 
             <motion.div
-              className="w-full sm:w-3/4 md:w-1/2 justify-center text-center m-2 md:m-3"
+              className="w-full md:w-1/3 m-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <img
                 src={Veterinary}
-                alt="Veterinary & Animal Health"
-                className="w-full max-w-md h-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                alt="Veterinary"
+                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
-              <p className="text-[#773135] font-bold justify-items-center text-2xl mt-2">
-                {currentTranslations.VeterinaryAnimalHealth}{" "}
+              <p className="text-[#773135] font-bold text-xl mt-2">
+                {currentTranslations.VeterinaryAnimalHealth}
               </p>
             </motion.div>
           </div>
