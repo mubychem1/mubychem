@@ -118,13 +118,13 @@ const PharmaceuticalsDes = () => {
     
       <button
         onClick={() => window.history.back()}
-        className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer mt-5 ml-14 sm:ml-8 lg:ml-14 xl:ml-16"
+        className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer ml-12 sm:ml-8 lg:ml-12 xl:ml-12 mt-10"
       >
         Back To Products
       </button>
 
-      <div className="ml-13 mt-10 sm:ml-8 lg:ml-14 xl:ml-16">
-        <p className="text-lg text-gray-700 sm:text-base md:text-lg lg:text-xl">
+      <div className="py-5 p-12">
+        <p className="text-lg text-gray-700 sm:text-base md:text-lg lg:text-xl text-justify">
           Muby Chem is a leading manufacturer and supplier of <strong>{product.name}</strong> <strong>{product.casNo}</strong> , offering high-purity [API/Excipients/Specialty Chemical ]. As a USFDA-registered and GMP-certified company, Muby Chem supports customers with comprehensive documentation and ensures the highest standards in pharmaceutical manufacturing.
         </p>
       </div>
@@ -198,7 +198,7 @@ const PharmaceuticalsDes = () => {
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Indication</h2>
-            <ul className="list-disc pl-5 space-y-2">
+            <ul className="list-disc pl-5 space-y-2 text-justify">
               <li>Relief of irritation and inflammation in the throat, mouth, and gastrointestinal tract</li>
               <li>Used in formulations for cough, sore throat, and gastritis</li>
               <li>Supportive treatment for oral ulcers and periodontal health</li>

@@ -57,20 +57,19 @@ const CgmpManufacturing = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
+          className="relative w-full h-auto overflow-hidden rounded-xl"
         >
-          <div className="bg-[#fff] p-6 pb-1 md:p-12">
+          <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
             <div
-              className="relative h-[350px] bg-cover rounded-4xl  overflow-hidden"
-              style={{ backgroundImage: `url(${background})` }}
+              className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
+              style={{ backgroundImage: `url(${background}) `}}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute inset-0 flex items-center justify-left">
+              <div className="absolute inset-0 flex items-center justify-left sm:justify-left">
                 <div>
                   <h1
-                    className="text-white text-4xl font-bold mb-4 pl-4 "
+                    className="text-white text-3xl sm:text-4xl font-bold mb-4 pl-4"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
-                    
                   >
                     {currentTranslations.ManufacturingOverview}
                   </h1>
@@ -109,18 +108,18 @@ const CgmpManufacturing = () => {
            {currentTranslations.ManufacturingDesc3}
           </h5>
 
-           <div className="flex items-center justify-center mt-4">
+          
+                <div className="flex items-center justify-center px-6">
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeInUp}
-                    className="bg-white flex items-center justify-center"
+                    className="bg-white flex items-center justify-center w-full"
                   >
-                    <div className=" rounded-lg border-12 border-[#773135]">
+                    <div className="w-full max-w-4xl aspect-video rounded-lg border-4 border-[#773135] overflow-hidden">
                       <iframe
-                        width="800"
-                        height="350"
+                        className="w-full h-full"
                         src="https://www.youtube.com/embed/buwI_49ZTp0?si=5cAs2dZBEgK7k5lp"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

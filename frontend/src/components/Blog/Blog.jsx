@@ -50,14 +50,14 @@ const Blog = () => {
 
   return (
     <>
-      <div className="bg-[#fff] p-4 sm:p-6 md:p-12">
+      <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
-          className="relative h-[250px] sm:h-[350px] md:h-[350px] bg-cover bg-center rounded-4xl overflow-hidden"
+          className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
-            <div>
+            <div style={{ fontFamily: "Montserrat, sans-serif" }}>
               <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
                 {currentTranslations.BLOGS}
               </h1>
@@ -68,9 +68,9 @@ const Blog = () => {
           </div>
         </div>
       </div>
-
+      <br />
       <div>
-        <h1 className="text-black text-5xl font-bold mb-4 pl-4 text-center">
+        <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">
           {currentTranslations.Blogs}
         </h1>
       </div>
@@ -116,49 +116,49 @@ const Blog = () => {
         </div>
       </div>
       <div>
-  <h1 className="text-black text-5xl font-bold mb-4 text-center">
-    {currentTranslations.Blogs1}
-  </h1>
-</div>
+        <br />
+        <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">
+          {currentTranslations.Blogs1}
+        </h1>
+      </div>
 
-<div className="bg-white px-4 py-8 flex justify-center">
-  <div className="w-full h max-w-screen-xl">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {currentItemsT.map((item, index) => (
-        <div
-          key={index}
-          className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-auto flex flex-col"
-        >
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-64 object-cover rounded-xl mb-4"
-          />
-          <h3 className="text-xl font-bold text-gray-800 mt-1">
-            {item.title}
-          </h3>
-          <hr className="border-t border-gray-300 mt-2" />
-          <p className="text-gray-600 mt-2 text-sm flex-grow">
-            {item.description.split('<br>').map((line, idx) => (
-              <span key={idx}>
-                {line.trim()}
-                <br />
-              </span>
+      <div className="bg-white px-4 py-8 flex justify-center">
+        <div className="w-full h max-w-screen-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {currentItemsT.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-5 rounded-3xl shadow-md hover:shadow-xl transition-all overflow-hidden h-auto flex flex-col"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-64 object-cover rounded-xl mb-4"
+                />
+                <h3 className="text-xl font-bold text-gray-800 mt-1">
+                  {item.title}
+                </h3>
+                <hr className="border-t border-gray-300 mt-2" />
+                <p className="text-gray-600 mt-2 text-sm flex-grow">
+                  {item.description.split("<br>").map((line, idx) => (
+                    <span key={idx}>
+                      {line.trim()}
+                      <br />
+                    </span>
+                  ))}
+                </p>
+                <div className="mt-4 ml-1 flex justify-start">
+                  <Link to="/Page1">
+                    <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
+                      {currentTranslations.Readmore}
+                    </button>
+                  </Link>
+                </div>
+              </div>
             ))}
-          </p>
-          <div className="mt-4 ml-1 flex justify-start">
-            <Link to="/Page1">
-              <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
-                {currentTranslations.Readmore}
-              </button>
-            </Link>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
-
+      </div>
     </>
   );
 };

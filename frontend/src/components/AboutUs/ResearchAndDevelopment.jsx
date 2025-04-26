@@ -57,18 +57,18 @@ const ResearchAndDevelopment = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
+          className="relative w-full h-auto overflow-hidden rounded-xl"
         >
-          <div className="bg-[#fff] p-6 pb-1 md:p-12">
+          <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
             <div
-              className="relative h-[350px] bg-cover rounded-4xl  overflow-hidden"
-              style={{ backgroundImage: `url(${background}) `}}
+              className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
+              style={{ backgroundImage: `url(${background}) ` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute inset-0 flex items-center justify-left">
+              <div className="absolute inset-0 flex items-center justify-left sm:justify-left">
                 <div>
                   <h1
-                    className="text-white text-4xl font-bold mb-4 pl-4 "
+                    className="text-white text-3xl sm:text-4xl font-bold mb-4 pl-4"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                   >
                     {currentTranslations.ResearchDevelopment}

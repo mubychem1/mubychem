@@ -109,22 +109,23 @@ const ContactUs = () => {
   return (
     <>
       {/* -----------------Contact Us Banner --------------*/}
-      <div className="bg-white p-6 md:p-12">
+      <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
-          className="relative h-[350px] bg-cover rounded-4xl overflow-hidden "
-          style={{ backgroundImage: `url(${background})` }}
+          className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
+          style={{ backgroundImage: `url(${background}) `}}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-left">
-            <div>
-              <h1 className="text-white text-5xl font-bold mb-4 pl-4 ">
-                {currentTranslations.CONTACT_US}
+          <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
+          <div style={{ fontFamily: "Montserrat, sans-serif" }}>
+          <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
+          {currentTranslations.CONTACT_US}
               </h1>
-              <p className="text-white text-lg pl-5 ">Muby Chem Private Limited</p>
+              <p className="text-white text-base sm:text-lg md:text-lg">
+              Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
-      </div>
+      </div>
       {/* -------------Contact Information -------------------*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-white p-12">
         {contactDetails.map((contact, index) => (

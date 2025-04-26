@@ -18,7 +18,7 @@ const translations = {
     // -------------Footer Section ----------
     Home: "Home",
     About: "About Us",
-    Product: "Our Products",
+    AllProducts: "Products",
     BLOGS: "Events",
     // Events: "Events",
     Career: "Careers",
@@ -124,10 +124,8 @@ const translations = {
     submit: "Submit →",
 
     // Download Broucher
-    DownloadBrochure: "Download Broucher",
+    DownloadBrochure: "Download Brochure",
    
-
-
     /* -----------------About Us------------------ */
     mubyChemDescriptionMain:
       "Muby Chem is an USFDA-registered and FSSC 22000-certified leading manufacturer of high-purity pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals, serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally.",
@@ -158,6 +156,8 @@ const translations = {
     AboutusHeading: "Muby Chem – Trusted Since 1976",
 
     //--------------Manufacturing Overview-----------
+    
+    CompanyOverview: "Company Overview",
     ManufacturingOverview: "Manufacturing Overview",
     ManufacturingDesc: "Our current facility has the capability to manufacture a broad range of pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals . The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and Good Manufacturing Practices (GMP).",
     ManufacturingDesc1: " This USFDA-registered, state-of-the-art facility, located in Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal, and Kosher standards .",
@@ -481,10 +481,15 @@ const translations = {
 
   fr: {
     HOME: "ACCUEIL",
+    Home: "Accueil",
     ABOUT: "À PROPOS DE NOUS",
+    About: "À Propos de nous",
     PRODUCTS: "PRODUITS",
+    AllProducts: "Produits",
     BLOGS: "Événements",
+    Blogs: "Événements",
     CAREER: "CARRIÈRE",
+    Career: "CARRIÈRE",
     CONTACT_US: "CONTACTEZ-NOUS",
     USEFUL_LINKS: "Liens utiles",
 
@@ -639,6 +644,7 @@ DownloadBrochure: "Télécharger la brochure",
 
 
     //--------------Manufacturing Overview-----------
+    CompanyOverview: "Aperçu de l’entreprise",
     ManufacturingOverview: "Aperçu de la fabrication",
     ManufacturingDesc: "Notre installation actuelle est capable de fabriquer une large gamme d'ingrédients pharmaceutiques, d'excipients, de sels minéraux et de produits chimiques spécialisés. L'installation est conçue et équipée de machines et de technologies avancées pour produire des produits de haute qualité conformes aux réglementations environnementales et aux Bonnes Pratiques de Fabrication (BPF).",
     ManufacturingDesc1: "Cette installation ultramoderne enregistrée auprès de l'USFDA, située à Ankleshwar, Gujarat, Inde, est certifiée cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal et Casher.",
@@ -899,15 +905,20 @@ DownloadBrochure: "Télécharger la brochure",
 
   ru: {
     HOME: "ГЛАВНАЯ",
+    Home: "ГЛАВНАЯ",
     ABOUT: "О НАС",
+    About: "О НАС",
     PRODUCTS: "ПРОДУКТЫ",
+    AllProducts: "ПРОДУКТЫ",
     BLOGS: "События",
+    Blogs: "События",
     CAREER: "КАРЬЕРА",
+    Career: "КАРЬЕРА",
     CONTACT_US: "СВЯЗАТЬСЯ С НАМИ",
     USEFUL_LINKS: "Полезные ссылки",
-
+    CompanyOverview: "Обзор компании",
     // -------------Footer Section ----------
-    PRODUCT: "Продукт",
+    AllProducts: "Продукт",
     CATEGORIES: "Категории",
     PHARMACEUTICALS: "Фармацевтика",
     FOOD_ADDITIVES: "Пищевые добавки",
@@ -1327,12 +1338,18 @@ DownloadBrochure: "Télécharger la brochure",
 
   ko: {
     HOME: "홈",
+    Home: "홈",
     ABOUT: "회사 소개",
+    About: "회사 소개",
     PRODUCTS: "제품",
+    AllProducts: "제품",
     BLOGS: "이벤트",
+    Blogs: "이벤트",
     CAREER: "채용",
+    Career: "채용",
     CONTACT_US: "문의하기",
     USEFUL_LINKS: "유용한 링크",
+    CompanyOverview: "회사 개요",
 
     // -------------Footer Section ----------
     PRODUCT: "제품",
@@ -1895,11 +1912,16 @@ DownloadBrochure: "Télécharger la brochure",
   },
   es: {
     HOME: "INICIO",
+    Home:"INICIO",
     ABOUT: "SOBRE NOSOTROS",
+    About:"SOBRE NOSOTROS",
     PRODUCTS: "PRODUCTOS",
+    AllProducts: "PRODUCTOS",
     BLOGS: "Eventos",
     CAREER: "CARRERA",
+    Career: "CARRERA",
     CONTACT_US: "CONTÁCTENOS",
+    CompanyOverview: "Descripción de la empresa",
     USEFUL_LINKS: "Enlaces Útiles",
 
     // -------------Footer Section ----------
@@ -2478,10 +2500,15 @@ DownloadBrochure: "Télécharger la brochure",
   },
   ar: {
     HOME: "الرئيسية",
+    Home: "الرئيسية",
     ABOUT: "من نحن",
+    About: "من نحن",
     PRODUCTS: "المنتجات",
+    AllProducts:"منتج",
     BLOGS: "الأحداث",
+    Blogs: "الأحداث",
     CAREER: "فرص العمل",
+    Career: "فرص العمل",
     CONTACT_US: "اتصل بنا",
     USEFUL_LINKS: "روابط مفيدة",
 
@@ -2615,6 +2642,7 @@ DownloadBrochure: "Télécharger la brochure",
     Product1: "قسم المنتجات",
 
     //--------------Manufacturing Overview-----------
+     CompanyOverview: "نظرة عامة على الشركة",
     ManufacturingOverview: "نظرة عامة على التصنيع",
     ManufacturingDesc: "تمتلك منشأتنا الحالية القدرة على تصنيع مجموعة واسعة من المكونات الدوائية والمكونات المساعدة والأملاح المعدنية والمواد الكيميائية المتخصصة. تم تصميم المنشأة وتجهيزها بآلات وتقنيات متقدمة لإنتاج منتجات عالية الجودة وفقًا للوائح البيئية وممارسات التصنيع الجيدة (GMP).",
     ManufacturingDesc1: "تقع هذه المنشأة الحديثة المسجلة في إدارة الغذاء والدواء الأمريكية (USFDA) في أنكليشوار، غوجارات، الهند، وهي معتمدة بمعايير cGMP و GLP و ISO 9001 و FSSC 22000 و FSSAI و حلال و كوشير.",

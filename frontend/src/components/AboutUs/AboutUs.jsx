@@ -14,6 +14,7 @@ import { AnimatePresence } from "framer-motion";
 import VerticalTabs from "../Home/VerticalTabs";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
+import map from '../../assets/map-image.png';
 
 // const steps = [
 //   {
@@ -219,33 +220,39 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="relative bg-[#fff] "
+        className="relative bg-[#fff]"
       >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-auto md:h-auto lg:h-auto overflow-hidden rounded-xl"
+          className="relative w-full h-auto overflow-hidden rounded-xl"
         >
+          {/* Optional background image (Uncomment and add image path if needed) */}
           {/* <img
-            src={''} // Add your background image path here
-            alt="About Us Background"
-            className="w-full h-full object-cover"
-          /> */}
-          <div className="bg-[#fff] p-6 pb-1 md:p-12">
+      src={''} // Add your background image path here
+      alt="About Us Background"
+      className="w-full h-full object-cover"
+    /> */}
+
+          <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
             <div
-              className="relative h-[350px] bg-cover rounded-4xl  overflow-hidden"
+              className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
               style={{ backgroundImage: `url(${background})` }}
             >
               <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute inset-0 flex items-center justify-left">
+              <div className="absolute inset-0 flex items-center justify-left sm:justify-left">
                 <div>
-                  <h1 className="text-white text-4xl font-bold mb-4 pl-4 ">
+                  <h1
+                    className="text-white text-3xl sm:text-4xl font-bold mb-4 pl-4"
+                    style={{ fontFamily: "Montserrat, sans-serif" }}
+                  >
                     {currentTranslations.AboutusHeading}
                   </h1>
-                  {/* <p className="text-white text-lg pl-5 ">
-                    Muby Chem Private Limited
-                  </p> */}
+                  {/* Optional subtitle */}
+                  {/* <p className="text-white text-lg pl-5">
+              Muby Chem Private Limited
+            </p> */}
                 </div>
               </div>
             </div>
@@ -317,7 +324,31 @@ const AboutUs = () => {
           </p> */}
         </motion.div>
       </motion.div>
+      
+      {/* --------------world map Section --------- */}
+      <div className="bg-white flex flex-col items-center p-10 pt-0 scroll-pt-0">
+        <h1
+          className="text-4xl text-center text-gray-900"
+          style={{ fontFamily: " " }}
+        >
+          Supplying to 60+ countries worldwide
+        </h1>
+      </div>
+
+      <div>
+        <img
+          src={map}
+          alt="map"
+          className="bg-white items-center h-auto w-auto justify-center rounded-lg border-12 ml-29 border-[#773135]"
+        />
+      </div>
+
+      
       {/*--------------------- 3 post ----------------- */}
+
+
+
+
       {/* <motion.div
         initial="hidden"
         animate="visible"
@@ -400,18 +431,17 @@ const AboutUs = () => {
       </motion.div> */}
       {/*--------------------- Sample post ----------------- */}
 
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center justify-center px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-white flex items-center justify-center"
+          className="bg-white flex items-center justify-center w-full"
         >
-          <div className=" rounded-lg border-12 border-[#773135]">
+          <div className="w-full max-w-4xl aspect-video rounded-lg border-4 border-[#773135] overflow-hidden">
             <iframe
-              width="800"
-              height="350"
+              className="w-full h-full"
               src="https://www.youtube.com/embed/buwI_49ZTp0?si=5cAs2dZBEgK7k5lp"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

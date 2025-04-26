@@ -14,6 +14,14 @@ import { Link } from "react-router-dom";
 
 const phoneNumber = "022 23770100";
 
+const linkPaths = {
+  Home: '/',
+  About: '/about',
+  AllProducts: '/allproducts',
+  BLOGS: '/blogs',
+  CAREER: '/career'
+};
+
 const Footer = () => {
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
   const currentTranslations = translations[language] || translations.en; // Fallback to English
@@ -30,7 +38,7 @@ const Footer = () => {
               </a>
               <p
                 className="mt-2 text-gray-100"
-                 
+
               >
                 {currentTranslations.SPECIALTY_CHEMICALS}
               </p>
@@ -45,13 +53,11 @@ const Footer = () => {
               <h5 className="tracking-wide text-gray-100 font-bold">
                 {currentTranslations.USEFUL_LINKS}
               </h5>
-              <ul
-                className="list-none mt-6 space-y-2"
-              >
-                {["HOME", "ABOUT", "Product", "BLOGS", "CAREER"].map((key) => (
+              <ul className="list-none mt-6 space-y-2">
+                {Object.keys(linkPaths).map((key) => (
                   <li key={key}>
                     <Link
-                      to={`/${key.toLowerCase()}`} // Dynamic route path
+                      to={linkPaths[key]}
                       className="text-gray-100 transition-all duration-500 ease-in-out"
                     >
                       {currentTranslations[key]}

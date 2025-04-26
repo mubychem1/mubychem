@@ -307,21 +307,21 @@ const Header = () => {
                                 <button className="self-end" onClick={() => setIsMobileMenuOpen(false)}>
                                     <IoClose className="text-3xl" />
                                 </button>
-                                <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
+                                <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
                                 <div>
-                                    <button onClick={() => setIsAboutOpen(!isAboutOpen)} className="w-full text-left">About us</button>
+                                    <button onClick={() => setIsAboutOpen(!isAboutOpen)} className="w-full text-left">{currentTranslations.ABOUT}</button>
                                     {isAboutOpen && (
                                         <div className="pl-4">
-                                            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>Company Overview</NavLink><br /><hr />
-                                            <NavLink to="/about-us/cgmp-manufacturing" onClick={() => setIsMobileMenuOpen(false)}>Manufacturing Overview </NavLink><br /><hr />
-                                            <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>Research & Development </NavLink><br /><hr />
+                                            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.CompanyOverview}</NavLink><br /><hr />
+                                            <NavLink to="/about-us/cgmp-manufacturing" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.ManufacturingOverview}</NavLink><br /><hr />
+                                            <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.ResearchDevelopment}</NavLink><br /><hr />
                                         </div>
                                     )}
                                 </div>
-                                <NavLink to="/allProducts" onClick={() => setIsMobileMenuOpen(false)}>Products</NavLink>
-                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Events</NavLink>
-                                <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>CAREER</NavLink>
-                                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
+                                <NavLink to="/allProducts" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
+                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
+                                <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
+                                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
                             </motion.div>
                             
                         )}
@@ -371,7 +371,7 @@ const Header = () => {
                             className="bg-[#773135] h-12 rounded-full text-[10px] sm:text-[10px] font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
                         >
                             <div className="flex items-center gap-2 mr-2">
-                                <p className="sm:text-[10px]">{currentTranslations.DownloadBrochure}</p>
+                                <a className="sm:text-[12px]">{currentTranslations.DownloadBrochure}</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <AiOutlineDownload

@@ -54,11 +54,7 @@ function Pharmaceuticals() {
   };
 
   return (
-    <>
-      <style>
-        {`@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');`}
-      </style>
-
+    <div className="font-montserrat"> {/* Apply font-family to the main container */}
       {/* Background Section */}
       <div className="bg-white p-4 sm:p-6 md:p-12">
         <div
@@ -75,7 +71,7 @@ function Pharmaceuticals() {
       </div>
 
       {/* Search Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto p-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto pt-0 py-10 px-6">
         <div className="flex items-center w-full bg-white rounded-xl shadow-sm px-4 py-3 border border-gray-200">
           <FaSearch className="text-gray-400 mr-3 text-xl" />
           <input
@@ -89,9 +85,9 @@ function Pharmaceuticals() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 px-4 pb-10">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 pb-10">
         {/* Sidebar - Industry & Category */}
-        <div className="lg:col-span-4 space-y-6 lg:sticky top-4 self-start h-fit ml-0 lg:ml-10">
+        <aside className="lg:col-span-4 space-y-6 lg:sticky top-6 self-start h-fit lg:ml-8">
           <div className="border p-4 rounded shadow-sm">
             <h2 className="font-bold text-lg mb-3">Industry</h2>
             <div className="space-y-2">
@@ -115,13 +111,10 @@ function Pharmaceuticals() {
               ))}
             </div>
           </div>
-        </div>
+        </aside>
 
         {/* Product List */}
-        <div
-          className="lg:col-span-8 space-y-6 mr-0 lg:mr-10"
-          style={{ fontFamily: "'Montserrat', sans-serif" }}
-        >
+        <main className="lg:col-span-8 space-y-6 lg:mr-7">
           {loading ? (
             <div className="flex flex-col items-center justify-center h-64 text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -142,7 +135,7 @@ function Pharmaceuticals() {
                       {product.category}
                     </span>
                     <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
-                      <h3 className="text-xl sm:text-2xl font-semibold text-[#773135] mb-2">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-[#773135] mb-2 hover:underline">
                         {product.product_name}
                       </h3>
                     </Link>
@@ -158,7 +151,7 @@ function Pharmaceuticals() {
 
                   <div className="md:col-span-1 flex flex-col gap-3">
                     <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
-                      <button className="bg-[#773135] text-white px-4 py-2 rounded cursor-pointer w-full text-sm sm:text-base">
+                      <button className="bg-[#773135] text-white px-4 py-2 rounded cursor-pointer w-full text-sm sm:text-base hover:bg-[#5e272a]">
                         More Details
                       </button>
                     </Link>
@@ -171,7 +164,7 @@ function Pharmaceuticals() {
                 <button
                   onClick={() => paginate(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50"
+                  className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50 hover:bg-gray-100"
                 >
                   Previous
                 </button>
@@ -183,17 +176,16 @@ function Pharmaceuticals() {
                 <button
                   onClick={() => paginate(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50"
+                  className="px-4 py-2 border rounded bg-white text-[#7b3931] border-[#7b3931] disabled:opacity-50 hover:bg-gray-100"
                 >
                   Next
                 </button>
               </div>
             </>
           )}
-        </div>
+        </main>
       </div>
-
-    </>
+    </div>
   );
 }
 

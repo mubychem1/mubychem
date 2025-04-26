@@ -22,23 +22,23 @@ import ResearchAndDevelopment from './components/AboutUs/ResearchAndDevelopment.
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="/about-us/cgmp-manufacturing" element={<CgmpManufacturing/>} />
-      <Route path="/about-us/research-development" element={<ResearchAndDevelopment/>} />
+      <Route path="/about-us/cgmp-manufacturing" element={<CgmpManufacturing />} />
+      <Route path="/about-us/research-development" element={<ResearchAndDevelopment />} />
       {/* <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
         {/* Child Routes for Products */}
-        {/* <Route path="category1" element={<Pharmaceuticals />} />
-      </Route> */} 
-        <Route path="allProducts" element={<Pharmaceuticals/>}/>
+      {/* <Route path="category1" element={<Pharmaceuticals />} />
+      </Route> */}
+      <Route path="allproducts" element={<Pharmaceuticals />} />
       {/* <Route path="products" element={<Products />} />
       <Route path="products/sucoferric-oxyhydroxide" element={<Simple />} />*/}
-      <Route path="blogs" element={<Blog/>}/>
-      <Route path="Page1" element={<Page1/>}/>
-      <Route path="contact" element={<ContactUs/>}/>
-      <Route path="career" element={<Career/>}/>
+      <Route path="blogs" element={<Blog />} />
+      <Route path="Page1" element={<Page1 />} />
+      <Route path="contact" element={<ContactUs />} />
+      <Route path="career" element={<Career />} />
       {/* <Route path="simple" element={<Simple />} /> */}
-      <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes/>} />
+      <Route path="PharmaceuticalsDes/:id" element={<PharmaceuticalsDes />} />
     </Route>
   )
 );
