@@ -255,38 +255,62 @@ const Home = () => {
   };
 
   // --------estimation -----
-   const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submissionResult, setSubmissionResult] = useState(null);
-    
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionResult, setSubmissionResult] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
+    product: "",
     message: "",
-    });
+  });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = (name) => (event) => {
+    setFormData({ ...formData, [name]: event.target.value })
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionResult(null)
+
     try {
       console.log("aayush");
+      
+      const response = await axios.post('https://mubychem.onrender.com/api/contact', formData)
 
-      const response = await axios.post(
-        "http://mubychem.onrender.com/api/contact",
-        formData
-      );
-      alert(response.data.message);
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
+      setSubmissionResult({
+        success: true,
+        message: 'Thank you for your message. We will get back to you soon!'
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        product: "",
+        message: "",
+      });
+
     } catch (error) {
-      console.log("mayuri");
+      console.log("saloni");
+      
+      console.error('Submission error:', error);
 
-      alert("Error submitting form. Try again!");
+      const errorMessage =
+        error.response?.data?.message || 'An unexpected error occurred. Please try again.';
+
+      setSubmissionResult({
+        success: false,
+        message: errorMessage,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-  };
+  }
+
+
 
   return (
     <>
@@ -316,7 +340,7 @@ const Home = () => {
                   </h1>
                   <p className="text-black text-sm sm:text-lg leading-6 pb-5">
                     {currentTranslations.Leading} <br />
-                    {currentTranslations.Specialty} <br /> 
+                    {currentTranslations.Specialty} <br />
                     {currentTranslations.Active}
                   </p>
                 </div>
@@ -413,10 +437,10 @@ const Home = () => {
 
       {/* Product category section */}
       <div className="pt-6 px-4 md:px-20 md:pt-12">
-      <div className="bg-[#773135] p-4 md:px-12 pt-10 pb-5">
-      <div className="font-['Montserrat',sans-serif] w-full text-center md:text-left">
-      <h2 className="text-2xl md:text-[30px] leading-[40px] md:leading-[50px] font-bold pl-3 text-[#fff]">
-      {currentTranslations.Product1}
+        <div className="bg-[#773135] p-4 md:px-12 pt-10 pb-5">
+          <div className="font-['Montserrat',sans-serif] w-full text-center md:text-left">
+            <h2 className="text-2xl md:text-[30px] leading-[40px] md:leading-[50px] font-bold pl-3 text-[#fff]">
+              {currentTranslations.Product1}
             </h2>
           </div>
 
@@ -435,7 +459,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.ActivePharmaceuticalIngredients}
+                {currentTranslations.ActivePharmaceuticalIngredients}
               </p>
             </motion.div>
 
@@ -451,7 +475,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.PharmaExcipients}
+                {currentTranslations.PharmaExcipients}
               </p>
             </motion.div>
 
@@ -467,7 +491,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.MineralSalts}
+                {currentTranslations.MineralSalts}
               </p>
             </motion.div>
           </div>
@@ -486,7 +510,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.SpecialtyChemicals}
+                {currentTranslations.SpecialtyChemicals}
               </p>
             </motion.div>
 
@@ -502,7 +526,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.AminoAcids}
+                {currentTranslations.AminoAcids}
               </p>
             </motion.div>
 
@@ -518,7 +542,7 @@ const Home = () => {
                 className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
               />
               <p className="text-[#fff] font-bold text-xl mt-2">
-              {currentTranslations.FragranceFlavorChemicals}
+                {currentTranslations.FragranceFlavorChemicals}
               </p>
             </motion.div>
           </div>
@@ -685,16 +709,16 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-      
+
         <div className="bg-[#773135] p-9 rounded-xl shadow-lg w-full max-w-md relative">
-      
+
           {/* Title */}
           <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
             {currentTranslations.Get} {currentTranslations.estimate}
           </h2>
 
           {/* Form Fields */}
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-[#fff]">
                 {currentTranslations.Name}
@@ -702,6 +726,8 @@ const Home = () => {
               <input
                 type="text"
                 className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+                value={formData.name}
+                onChange={handleChange('name')}
                 required
               />
             </div>
@@ -713,6 +739,8 @@ const Home = () => {
               <input
                 type="email"
                 className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                value={formData.email}
+                onChange={handleChange('email')}
                 required
               />
             </div>
@@ -724,6 +752,8 @@ const Home = () => {
               <input
                 type="tel"
                 className="w-full border-b-2 border-[#fff] text-[#fff]  focus:outline-none focus:border-[#fff] py-1"
+                value={formData.phone}
+                onChange={handleChange('phone')}
                 required
               />
             </div>
@@ -735,8 +765,10 @@ const Home = () => {
               <input
                 type={"text"}
                 className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
+                value={formData.product}
+                onChange={handleChange('product')}
                 required
-              />           
+              />
             </div>
 
             <div>
@@ -746,14 +778,23 @@ const Home = () => {
               <textarea
                 type="text"
                 className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
+                value={formData.message}
+                onChange={handleChange('message')}
+                required
               />
             </div>
             <button
               type="submit"
               className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
+              disabled={isSubmitting}
             >
-              {currentTranslations.Submit}
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
+            {submissionResult && (
+              <p className={submissionResult.success ? 'text-green-500' : 'text-red-500'}>
+                {submissionResult.message}
+              </p>
+            )}
           </form>
         </div>
       </div>
