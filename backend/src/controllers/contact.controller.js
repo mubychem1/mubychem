@@ -5,9 +5,9 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 import {ContactProductDescription} from "../models/contactdesc.model.js"
 
 export const submitContactForm = asyncHandler(async (req, res) => {
-    const { name, email, phone, subject, message } = req.body;
+    const { name, email, phone, product, message } = req.body;
 
-    const newContact = new Contact({ name, email, phone, subject, message });
+    const newContact = new Contact({ name, email, phone, product, message });
     await newContact.save();
 
     res.status(201).json({ success: true, message: "Form submitted successfully" });
