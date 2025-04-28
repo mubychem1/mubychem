@@ -324,26 +324,8 @@ const AboutUs = () => {
           </p> */}
         </motion.div>
       </motion.div>
-      
-      {/* --------------world map Section --------- */}
-      <div className="bg-white flex flex-col items-center p-10 pt-0 scroll-pt-0">
-        <h1
-          className="text-4xl text-center text-gray-900"
-          style={{ fontFamily: " " }}
-        >
-          Supplying to 60+ countries worldwide
-        </h1>
-      </div>
 
-      <div>
-        <img
-          src={map}
-          alt="map"
-          className="bg-white items-center h-auto w-auto justify-center rounded-lg border-12 ml-29 border-[#773135]"
-        />
-      </div>
 
-      
       {/*--------------------- 3 post ----------------- */}
 
 
@@ -451,6 +433,27 @@ const AboutUs = () => {
           </div>
         </motion.div>
       </div>
+
+
+
+      {/* --------------world map Section --------- */}
+      <div className="bg-white flex flex-col items-center p-6 md:p-10">
+        <h1
+          className="text-2xl md:text-4xl text-center text-gray-900 font-semibold"
+          style={{ fontFamily: "Montserrat, sans-serif" }}
+        >
+          Supplying to 60+ countries worldwide
+        </h1>
+      </div>
+
+      <div className="flex justify-center bg-white px-4">
+        <img
+          src={map}
+          alt="map"
+          className="rounded-lg border-4 border-[#773135] w-full max-w-3xl h-auto"
+        />
+      </div>
+
 
       {/* --------------Feature Section --------- */}
       <div className="bg-white flex flex-col items-center p-10">

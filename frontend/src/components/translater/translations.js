@@ -125,10 +125,14 @@ const translations = {
 
     // Download Broucher
     DownloadBrochure: "Download Brochure",
-   
+
     /* -----------------About Us------------------ */
     mubyChemDescriptionMain:
-      "Muby Chem is an USFDA-registered and FSSC 22000-certified leading manufacturer of high-purity pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals, serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally.",
+    "Muby Chem is an ",
+    mubychemdes:" USFDA-registered and FSSC 22000-certified ",
+    mubychemdes1:"leading manufacturer of high-purity",
+    mubychemdes2:" pharmaceutical excipients, Active Pharmaceutical Ingredients (APIs), mineral salts, and specialty chemicals,",
+    mubychemdes3:" serving the pharmaceutical, nutraceutical, food & beverage, and cosmetic & personal care industries globally",
     mubyChemDescriptionMain2:
       "With over four decades of experience and a legacy of trust, we are recognized for our quality-first approach, consistent reliability, and customer-centric solutions.",
     mubyChemDescription1:
@@ -156,7 +160,7 @@ const translations = {
     AboutusHeading: "Muby Chem – Trusted Since 1976",
 
     //--------------Manufacturing Overview-----------
-    
+
     CompanyOverview: "Company Overview",
     ManufacturingOverview: "Manufacturing Overview",
     ManufacturingDesc: "Our current facility has the capability to manufacture a broad range of pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals . The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and Good Manufacturing Practices (GMP).",
@@ -305,7 +309,7 @@ const translations = {
       {
         id: 1,
         title: "React Developer at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "The Area Sales Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
         responsibility: ["Develop and execute sales plans to achieve revenue targets.", "Manage and motivate a team of sales representatives.", "Identify and develop new customers.", "Maintain and grow relationships with existing customers.", "Conduct market research and analysis.", "Represent the company at trade shows and industry events.", "Stay up-to-date on industry trends and regulations."],
@@ -316,7 +320,7 @@ const translations = {
       {
         id: 2,
         title: "Marketing Manager at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "The Marketing Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
         responsibility: ["Primary key role as Sales, Marketing & Customer retention.", "To conduct regular follow-up of all the Prospective Clients through Phone Calls and Mails.", "To visit clients on a regular basis.", "Excellent in PPT presentation.", "Excellent in MIS preparation and circular timely.", "Must have Analytical Skills.", "Good command over English (Listening, Reading, Speaking)", "Excellent mail drafting skill.", "Should have Minimum 4 years’ experience in Pharmaceutical or Chemicals Industries.", "Coordination with other team members to create a good working atmosphere.", "Monitor market trends, analysis consumer markets activities to identify opportunities.", "Planning and implementing business strategies.", "Identifying key market opportunities", "Maintain a good relationship with both existing and prospective customers."],
@@ -327,7 +331,7 @@ const translations = {
       {
         id: 3,
         title: "R & D Executive at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are actively looking for credible team members in R&D who would be primarily responsible for:",
         responsibility: ["Identifying techno commercially attractive and non infringing route for identified for commercialization in time bound manner.", "Develop & standardize industrially feasible processes and also meet long term cost targets.", "Identify & develop new products.", "Maintain and grow relationships with existing customers.", "Prepare feasibility report, cost analysis report, monthly progress report and TDR", "Demonstrate/validate the lab scale process up to commercial scale", "Lead a team of scientist and chemists for new products / process development and improvement of the existing products", "Knowledge and understanding of synthetic methods, analytical methods and relevant products.", "Excellent skills in interpretation of analytical data from UV, IR, NMR, GC, GCMS & HPLC, LCMS, MS and so on.", "Well versed with GLP, GMP and IMS guidelines.", "Understanding of literature/ patents.", "Understanding and accomplishment of Customer requirements."],
@@ -338,7 +342,7 @@ const translations = {
       {
         id: 4,
         title: "SEO Executive at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are looking for an SEO/SEM expert to manage all search engine optimization and marketing activities.",
         responsibility: ["Execute tests, collect and analyze data and results, identify trends and insights in order to achieve maximum ROI in paid search campaigns.", "Track, report, and analyze website analytics and PPC initiatives and campaigns.", "Manage campaign expenses, staying on budget, estimating monthly costs and reconciling discrepancies.", "Optimize copy and landing pages for search engine marketing", "Perform ongoing keyword discovery, expansion and optimization.", "Research and implement search engine optimization recommendations.", "Research and analyze competitor advertising links.", "Develop and implement link building strategy.", "Work with the development team to ensure SEO best practices are properly implemented on newly developed code.", "Work with editorial and marketing teams to drive SEO in content creation and content programming.", "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords.", "Proven SEO experience", "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.", "Solid understanding of performance marketing, conversion, and online customer acquisition.", "In-depth experience with website analytics tools (e.g., Google Analytics, Net Insight, Omniture, Web Trends).", "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite).", "Experience with A/B and multivariate experiments", "Working knowledge of HTML, CSS, and JavaScript development and constraints", "Knowledge of ranking factors and search engine algorithms.", "Up-to-date with the latest trends and best practices in SEO and SEM.",],
@@ -349,7 +353,7 @@ const translations = {
       {
         id: 5,
         title: "Sr Accounts Executive at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a highly competent Senior Accounts Executive to independently manage various accounting activities on a daily, monthly, quarterly, and annual basis. The ideal candidate will coordinate with internal and external stakeholders to ensure completion of annual audits and maintain accurate financial records. Key responsibilities include:",
         responsibility: ["Performing comprehensive accounting tasks, including but not limited to client payments, vouchers, bills, receipts, bank reconciliation, and reconciliation of sundry debtors & creditors.", "Handling all compliance activities proficiently, such as GST, TDS, PT, and Advance Tax.", "Reviewing closing entries in the system prior to preparing monthly financial reports.", "Analyzing and reporting on financial status, including income statement variances, and communicating results to management.", "Contributing to budget preparation and analysis.", "Identifying opportunities to improve systems and procedures and initiating corrective actions as necessary."],
@@ -360,7 +364,7 @@ const translations = {
       {
         id: 6,
         title: "Purchase Executive at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic Sourcing Executive with a minimum of 1.5 years of experience in the Chemicals & Pharmaceuticals industries. The ideal candidate will be responsible for the preparation and processing of purchase orders, sourcing new vendors, and maintaining effective communication with local vendors and traders. Key responsibilities include:",
         responsibility: ["Identifying techno commercially attractive and non infringing route for identified for commercialization in time bound manner.", "Sourcing new vendors and evaluating their suitability for partnership.", "Following up with local vendors and traders to obtain competitive rates and samples of materials.", "Negotiating rates, quantities, and ensuring the quality of materials.", "Coordinating with suppliers and transporters to ensure timely delivery of materials."],
@@ -371,7 +375,7 @@ const translations = {
       {
         id: 7,
         title: "HR Executive at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions. The ideal candidate will possess knowledge of various job portals such as Naukri.com, Indeed, as well as proficiency in leveraging social media channels like Instagram, Facebook, etc., for sourcing top talent.",
         responsibility: ["Conduct end-to-end recruitment activities for open positions within the organization.", "Utilize job portals like Naukri.com, Indeed, and social media platforms to actively source potential candidates.", "Create engaging job postings and ensure their visibility across all relevant portals and social media platforms.", "Establish effective communication with potential candidates, providing them with a brief introduction to the company and job description.", "Coordinate with external consultancies, campuses, and colleges to gather alumni details for potential candidates", "Screen resumes, conduct initial screenings, and schedule interviews for candidates matching the required criteria.", "Provide real-time feedback to interviewed candidates and maintain ongoing communication throughout the recruitment process.", "Facilitate offer roll-outs, negotiate salaries, and ensure smooth closures for successful onboarding."],
@@ -382,7 +386,7 @@ const translations = {
       {
         id: 7,
         title: "QA Asst Manager at Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
         responsibility: ["QA Executive shall verify documents and facility as per existing procedures, cGMP and GLP in company premises.", "To issue the Batch Manufacturing Record, Equipment cleaning record, Logbooks, Analytical Report for raw material, finish product and packing material or any other documents.", "SOP preparation of different departments/ preparation of draft SOPs.", "Line Clearance activities for Production department before start of the process.", "To issue the Change control form, deviation form, Out of Specification form, Customer complaint form etc. as required from relevant dept.", "Review of Batch Manufacturing Record, Analytical reports/records and filling. After verification of all documents and release of finish product.", "To verify Pest control activities on daily basis and record.", "Monitoring of Temperature and Humidity of Finish goods store/ Packing & Blending Area and record.", "Sampling activity of Finish product, stability, retained sample, In–process and Rejected material.", "To prepare/Review BMR, MFR as per regulatory requirements.", "Distribution, retrieval and control of SOPs, documents/records of all department.", "To participate in internal audits, customer audit, regulatory inspection.", "To Attend Quality Review meeting as per schedule.", "To prepare documents & records and monitoring of activities as per SOPs.", "To prepare protocol/Report Technology Transfer documents and Activity.", "To ensure data integrity as per procedure.", "To review Production, QC, QA, Store, Engineering and EHS activity.", "Data storage and gathering and trending of quality-related data for preparation of Annual Product Review.", "To prepare approved vendor list and maintain vendor qualification.", "To send samples to external agency or lab for testing.", "Conduct traceability Activity.", "Preparation and maintain CAPA log.", "To ensure that deviations, product recall, return goods and customer Complaints, OOS, OOT by CAPA and Root Cause analysis are investigated, fill up of report and log the same.", "To verify of process validation, cleaning validation and equipment qualification and to prepare protocol and report.", "To verify Analytical Method validation or verification.", "To investigate Returned Material and maintain the record.", "To investigate Product complaint and maintain the record.", "Ensuring compliance of the systems used for maintaining the equipment and calibrating equipment/instruments/preparation of schedule.", "To prepare a schedule and conduct training on cGMP, GLP and evaluation of the training.", "Providing training to all concerned on cGMP and on job specific or based on needs identified.", "Any other assignment/work allocated by Head QA.", "To ensure disposal of waste is carried out as per procedure.", "To Support the head of department in the environmental management work and reporting to the head of Department regarding how the environmental management work is continuing.", "Investigation of deviation/incident related to Environment management with co-ordination with head of department."],
@@ -612,13 +616,16 @@ const translations = {
     information1: "vous le coût du service.",
     submit: "Soumettre →",
 
-// Download Broucher
-DownloadBrochure: "Télécharger la brochure",
+    // Download Broucher
+    DownloadBrochure: "Télécharger la brochure",
 
 
     /* -----------------About Us------------------ */
-    mubyChemDescriptionMain: "Muby Chem est un fabricant de premier plan, enregistré auprès de la FDA américaine et certifié FSSC 22000, de produits pharmaceutiques de haute pureté, d'ingrédients pharmaceutiques actifs (API), de sels minéraux et de produits chimiques spécialisés, desservant les industries pharmaceutique, nutraceutique, alimentaire, cosmétique et de soins personnels dans le monde entier.",
-    mubyChemDescriptionMain2: "Avec plus de quatre décennies d'expérience et un héritage de confiance, nous sommes reconnus pour notre approche axée sur la qualité, notre fiabilité constante et nos solutions centrées sur le client.",
+    mubyChemDescriptionMain: "Muby Chem est un ",
+    mubychemdes: " fabricant certifié USFDA et FSSC 22000 ",
+    mubychemdes1: "leader dans la fabrication de produits de haute pureté",
+    mubychemdes2: " d'excipients pharmaceutiques, d'ingrédients pharmaceutiques actifs (API), de sels minéraux et de produits chimiques spécialisés,",
+    mubychemdes3: " au service des industries pharmaceutique, nutraceutique, alimentaire, cosmétique et de soins personnels à l’échelle mondiale",    mubyChemDescriptionMain2: "Avec plus de quatre décennies d'expérience et un héritage de confiance, nous sommes reconnus pour notre approche axée sur la qualité, notre fiabilité constante et nos solutions centrées sur le client.",
     mubyChemDescription1: "a été fondée en 1976",
     muby: "Muby Chem Pvt. Ltd.",
     mubysub: "et est devenue un fabricant réputé et orienté client de haute pureté de",
@@ -786,7 +793,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 1,
         title: "Développeur React chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Le/La responsable régional(e) des ventes est responsable des ventes et du marketing des principes actifs pharmaceutiques (API), des produits chimiques de spécialité et des excipients sur une zone géographique donnée. Le/La candidat(e) idéal(e) devra justifier d'une expérience réussie dans l'industrie chimique et posséder de solides compétences en leadership.",
         responsibility: ["Développer et exécuter des plans de vente pour atteindre les objectifs de revenus.", "Gérer et motiver une équipe de représentants commerciaux.", "Identifier et développer de nouveaux clients.", "Entretenir et développer les relations avec les clients existants.", "Réaliser des études et des analyses de marché.", "Représenter l'entreprise lors de salons professionnels et d'événements sectoriels.", "Restez au courant des tendances et des réglementations de l’industrie."],
@@ -797,7 +804,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 2,
         title: "Responsable marketing chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Le/La responsable marketing est responsable des ventes et du marketing des principes actifs pharmaceutiques (API), des produits chimiques de spécialité et des excipients sur une zone géographique donnée. Le/La candidat(e) idéal(e) devra justifier d'une expérience réussie dans l'industrie chimique et posséder de solides compétences en leadership.",
         responsibility: ["Rôle clé principal : ventes, marketing et fidélisation de la clientèle.", "Suivi régulier de tous les clients potentiels par téléphone et par courrier.", "Visites régulières chez les clients.", " Excellentes présentations PowerPoint.", " Excellentes préparations MIS et respect des délais des circulaires.", " Compétences analytiques requises.", "Bonne maîtrise de l'anglais (écoute, lecture, expression orale) ", "Excellentes compétences en rédaction de courrier.", "Au moins 4 ans d'expérience dans l'industrie pharmaceutique ou chimique.", "Coordination avec les autres membres de l'équipe pour créer une bonne ambiance de travail.", "Surveillance des tendances du marché, analyse des activités des marchés de consommation pour identifier les opportunités.", "Planification et mise en œuvre de stratégies commerciales. ", "Identification des principales opportunités de marché.", "Entretien de bonnes relations avec les clients existants et potentiels. "],
@@ -808,7 +815,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 3,
         title: "Responsable R&D chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons activement des membres d'équipe crédibles en R&D qui seraient principalement responsables de :",
         responsibility: ["Identifier une voie de commercialisation techniquement attractive et non contrefaisante dans les délais impartis.", "Développer et normaliser des procédés industriellement viables et atteindre les objectifs de coûts à long terme.", "Identifier et développer de nouveaux produits.", "Entretenir et développer les relations avec les clients existants.", "Préparer un rapport de faisabilité, un rapport d'analyse des coûts, un rapport d'avancement mensuel et un rapport de synthèse.", "Démontrer/valider le procédé à l'échelle du laboratoire jusqu'à l'échelle commerciale.", "Diriger une équipe de scientifiques et de chimistes pour le développement de nouveaux produits/procédés et l'amélioration des produits existants.", "Connaissance et compréhension des méthodes de synthèse, des méthodes d'analyse et des produits concernés.", "Excellentes compétences en interprétation des données analytiques UV, IR, RMN, GC, GCMS et HPLC, LCMS, MS, etc.", "Maîtrise des directives BPL, BPF et IMS.", "Compréhension de la littérature et des brevets.", "Compréhension et respect des exigences des clients."],
@@ -819,7 +826,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 4,
         title: "Responsable SEO chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un expert SEO/SEM pour gérer toutes les activités d'optimisation et de marketing des moteurs de recherche.",
         responsibility: ["Exécuter des tests, collecter et analyser des données et des résultats, identifier des tendances et des insights afin d'optimiser le retour sur investissement de vos campagnes de référencement payant.", "Suivre, générer des rapports et analyser les analyses de sites web et les initiatives et campagnes PPC.", "Gérer les dépenses de campagne, respecter le budget, estimer les coûts mensuels et corriger les écarts.", "Optimiser le contenu et les pages de destination pour le référencement", "Découverte, expansion et optimisation continues des mots clés.", "Rechercher et mettre en œuvre des recommandations d'optimisation pour les moteurs de recherche.", "Rechercher et analyser les liens publicitaires des concurrents.", "Élaborer et mettre en œuvre une stratégie de link building.", "Collaborer avec l'équipe de développement pour garantir la bonne mise en œuvre des meilleures pratiques SEO sur le code nouvellement développé.", "Collaborer avec les équipes éditoriales et marketing pour optimiser le référencement dans la création et la programmation de contenu.", "Recommander des modifications à l'architecture, au contenu, aux liens et à d'autres facteurs du site web afin d'améliorer le positionnement SEO pour les mots clés ciblés.", "Expérience avérée en SEO", "Expérience avérée en SEM dans la gestion de campagnes PPC sur Google, Yahoo et Bing.", "Solide compréhension du marketing de performance, de la conversion et de l'acquisition de clients en ligne.", "Expérience approfondie des outils d'analyse de sites web.(par exemple, Google Analytics, Net Insight, Omniture, Web Trends).", "Expérience avec les outils de gestion des enchères (par exemple, Click Equations, Marin, Kenshoo, Search Ignite).", "Expérience avec les expériences A/B et multivariées", "Connaissance pratique du développement et des contraintes HTML, CSS et JavaScript", "Connaissance des facteurs de classement et des algorithmes des moteurs de recherche.", "À jour avec les dernières tendances et les meilleures pratiques en matière de SEO et de SEM.",],
@@ -830,7 +837,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 5,
         title: "Responsable des comptes senior chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un(e) chargé(e) de comptes senior hautement compétent(e) pour gérer de manière autonome diverses activités comptables sur une base quotidienne, mensuelle, trimestrielle et annuelle. Le/la candidat(e) idéal(e) assurera la coordination avec les parties prenantes internes et externes afin de garantir la réalisation des audits annuels et la tenue de registres financiers précis. Ses principales responsabilités incluent :",
         responsibility: ["Effectuer des tâches comptables complètes, y compris, mais sans s'y limiter, les paiements clients, les bons, les factures, les reçus, le rapprochement bancaire et le rapprochement des divers débiteurs et créanciers.", "Gérer efficacement toutes les activités de conformité, telles que la TPS, la TDS, la TP et l'avance de taxe.", "Vérifier les écritures de clôture dans le système avant la préparation des rapports financiers mensuels.", "Analyser et rendre compte de la situation financière, y compris des écarts dans le compte de résultat, et communiquer les résultats à la direction.", "Contribuer à la préparation et à l'analyse du budget.", "Identifier les opportunités d'amélioration des systèmes et des procédures et mettre en place les mesures correctives nécessaires."],
@@ -841,7 +848,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 6,
         title: "Responsable des achats chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un responsable sourcing dynamique possédant au moins un an et demi d'expérience dans les secteurs de la chimie et de la pharmacie. Le/La candidat(e) idéal(e) sera responsable de la préparation et du traitement des commandes, de la recherche de nouveaux fournisseurs et du maintien d'une communication efficace avec les fournisseurs et négociants locaux. Ses principales responsabilités incluent :",
         responsibility: ["Identifier des voies de commercialisation techniquement attractives et non contrefaisantes pour une commercialisation dans des délais déterminés.", "Trouver de nouveaux fournisseurs et évaluer leur aptitude à un partenariat.", "Assurer le suivi auprès des fournisseurs et commerçants locaux pour obtenir des tarifs compétitifs et des échantillons de matériaux.", "Négocier les tarifs, les quantités et garantir la qualité des matériaux.", "Coordonner avec les fournisseurs et les transporteurs pour assurer la livraison des matériaux dans les délais."],
@@ -852,7 +859,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 7,
         title: "Responsable RH chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un spécialiste du recrutement dynamique et compétent pour rejoindre notre équipe et assurer le recrutement de bout en bout pour les postes vacants. Le/La candidat(e) idéal(e) maîtrisera divers portails d'emploi tels que Naukri.com et Indeed, ainsi que les réseaux sociaux comme Instagram et Facebook, pour dénicher les meilleurs talents.",
         responsibility: ["Mettre en place des activités de recrutement de bout en bout pour les postes vacants au sein de l'organisation.", "Utiliser des portails d'emploi comme Naukri.com, Indeed et les réseaux sociaux pour trouver activement des candidats potentiels.", "Créer des offres d'emploi attrayantes et assurer leur visibilité sur tous les portails et réseaux sociaux pertinents.", "Établir une communication efficace avec les candidats potentiels en leur fournissant une brève présentation de l'entreprise et une description de poste.", "Coordonner avec des cabinets de conseil externes, des campus et des universités pour recueillir les informations sur les anciens élèves des candidats potentiels.", "Examiner les CV, effectuer des présélections et planifier des entretiens pour les candidats correspondant aux critères requis.", "Fournir un retour d'information en temps réel aux candidats interviewés et maintenir une communication continue tout au long du processus de recrutement.", "Faciliter le lancement des offres, négocier les salaires et assurer une clôture en douceur pour une intégration réussie."],
@@ -863,7 +870,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 7,
         title: "Responsable adjoint de l'assurance qualité chez Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un spécialiste du recrutement dynamique et qualifié pour rejoindre notre équipe et faciliter le recrutement de bout en bout pour les postes vacants.",
         responsibility: ["Le responsable de l'assurance qualité doit vérifier les documents et les installations conformément aux procédures en vigueur, aux BPF et aux BPL dans les locaux de l'entreprise.", "Émettre le registre de fabrication par lots, le registre de nettoyage des équipements, les journaux de bord, le rapport d'analyse des matières premières, du produit fini et des matériaux d'emballage, ou tout autre document.", "Préparation des procédures opérationnelles standard (POS) des différents services/préparation des projets de POS.", "Activités de validation de ligne pour le service de production avant le début du processus.", "Émettre les formulaires de contrôle des modifications, de déviation, de non-conformité, de réclamation client, etc., selon les besoins du service concerné. Examen du registre de fabrication par lots, des rapports/dossiers analytiques et du remplissage. Après vérification de tous les documents et libération du produit fini. Vérification quotidienne des activités de lutte antiparasitaire et enregistrement. Surveillance de la température et de l'humidité du magasin de produits finis/de la zone d'emballage et de mélange et enregistrement. Échantillonnage du produit fini, stabilité, échantillon conservé, matières en cours de fabrication et rejetées. Préparation et examen des BMR et MFR conformément aux exigences réglementaires. Distribution, récupération et contrôle des procédures opérationnelles normalisées (PON), documents/dossiers de tous les services. Participation aux audits internes, audits clients et inspections réglementaires. Participation aux réunions d'évaluation qualité selon le calendrier. Préparation des documents et dossiers et suivi des activités conformément aux PON. Préparation des protocoles/rapports de transfert de technologie et des documents d'activité.", "Assurer l'intégrité des données conformément à la procédure.", "Vérifier les activités de production, de contrôle qualité, d'assurance qualité, de magasin, d'ingénierie et d'ESS.", "Stockage, collecte et analyse des données relatives à la qualité pour la préparation de la revue annuelle des produits.", "Préparer la liste des fournisseurs approuvés et maintenir leur qualification.", "Envoyer des échantillons à un organisme ou un laboratoire externe pour analyse.", "Effectuer des activités de traçabilité.", "Préparation et tenue à jour du journal des mesures correctives et préventives.", "S'assurer que les écarts, les rappels de produits, les retours de marchandises et les réclamations des clients, les OOS, les OOT par CAPA et l'analyse des causes profondes sont étudiés, remplir un rapport et l'enregistrer.", "Vérifier la validation du processus, la validation du nettoyage et la qualification de l'équipement, et préparer le protocole et le rapport.", "Vérifier la validation ou la vérification des méthodes d'analyse.", "Enquêter sur les retours de matériel et tenir un registre.", "Enquêter sur les réclamations concernant les produits et tenir un registre.", "Assurer la conformité des systèmes utilisés pour la maintenance de l'équipement, l'étalonnage des équipements/instruments et la préparation du calendrier.", "Élaborer un calendrier et dispenser une formation sur les BPF, les BPL et l'évaluation des formation.", "Fournir une formation à toutes les personnes concernées sur les BPF et sur des tâches spécifiques ou en fonction des besoins identifiés.", "Toute autre tâche/travail assigné par le responsable de l'assurance qualité.", "S'assurer que l'élimination des déchets est effectuée conformément à la procédure.", "Soutenir le chef de service dans le travail de gestion environnementale et lui rendre compte de la poursuite du travail de gestion environnementale.", "Enquête sur les écarts/incidents liés à la gestion de l'environnement en coordination avec le chef de service."],
@@ -1026,7 +1033,11 @@ DownloadBrochure: "Télécharger la brochure",
     submit: "Представлять на рассмотрение →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescriptionMain: "Muby Chem — ведущий производитель высокочистых фармацевтических эксципиентов, активных фармацевтических ингредиентов (API), минеральных солей и специальных химикатов, зарегистрированный в USFDA и сертифицированный по FSSC 22000. Мы обслуживаем фармацевтическую, нутрицевтическую, пищевую, косметическую и личную гигиену по всему миру.",
+    mubyChemDescriptionMain: "Muby Chem — это ",
+    mubychemdes: " производитель, зарегистрированный в USFDA и сертифицированный по FSSC 22000 ",
+    mubychemdes1: "ведущий производитель высокочистых",
+    mubychemdes2: " фармацевтических вспомогательных веществ, активных фармацевтических ингредиентов (API), минеральных солей и специализированных химикатов,",
+    mubychemdes3: " обслуживающий фармацевтическую, нутрицевтическую, пищевую, косметическую и личную гигиену по всему миру",
     mubyChemDescriptionMain2: "С более чем сорокалетним опытом и наследием доверия, нас признают за наш приоритет качества, стабильную надежность и ориентированные на клиента решения.",
     mubyChemDescription1: "была основана в 1976 году",
     muby: "Muby Chem Pvt. Ltd.",
@@ -1191,7 +1202,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 1,
         title: "Разработчик React в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Региональный менеджер по продажам отвечает за продажи и маркетинг API, специальных химикатов и вспомогательных веществ в пределах обозначенной географической области. Идеальный кандидат должен иметь подтвержденный послужной список успеха в химической промышленности, а также сильные лидерские навыки.",
         responsibility: ["Разрабатывать и выполнять планы продаж для достижения целевых показателей выручки.", "Управлять и мотивировать команду торговых представителей.", "Выявлять и развивать новых клиентов.", "Поддерживать и развивать отношения с существующими клиентами.", "Проводить маркетинговые исследования и анализ.", "Представлять компанию на выставках и отраслевых мероприятиях.", "Быть ​​в курсе отраслевых тенденций и нормативных актов."],
@@ -1202,7 +1213,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 2,
         title: "Менеджер по маркетингу в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Менеджер по маркетингу отвечает за продажи и маркетинг API, специальных химикатов и вспомогательных веществ в пределах обозначенной географической области. Идеальный кандидат должен иметь подтвержденный послужной список успеха в химической промышленности, а также сильные лидерские навыки.",
         responsibility: ["Основная ключевая роль в продажах, маркетинге и удержании клиентов.", "Регулярное отслеживание всех потенциальных клиентов посредством телефонных звонков и писем.", "Регулярное посещение клиентов.", "Отличное владение презентациями PPT.", "Отличное владение MIS и своевременная подготовка циркуляров.", "Необходимо иметь аналитические навыки.", "Хорошее владение английским языком (аудирование, чтение, говорение)", "Отличные навыки составления писем.", "Необходимо иметь не менее 4 лет опыта работы в фармацевтической или химической промышленности.", "Взаимодействие с другими членами команды для создания хорошей рабочей атмосферы.", "Мониторинг рыночных тенденций, анализ деятельности потребительских рынков для выявления возможностей.", "Планирование и реализация бизнес-стратегий.", "Определение ключевых рыночных возможностей.", "Поддержание хороших отношений как с существующими, так и с потенциальными клиентами."],
@@ -1213,7 +1224,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 3,
         title: "Руководитель отдела НИОКР в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы активно ищем надежных членов команды в отделе исследований и разработок, которые будут в первую очередь отвечать за:",
         responsibility: ["Определение технологически привлекательного, коммерчески не нарушающего прав пути для коммерциализации в установленные сроки", "Разработка и стандартизация промышленно осуществимых процессов, а также достижение долгосрочных целевых показателей затрат", "Определение и разработка новых продуктов", "Поддержание и развитие отношений с существующими клиентами", "Подготовка отчета о осуществимости, отчета об анализе затрат, ежемесячного отчета о ходе работ и TDR", "Демонстрация/валидация процесса лабораторного масштаба до коммерческого масштаба", "Руководство группой ученых и химиков для разработки новых продуктов/процессов и улучшения существующих продуктов", "Знание и понимание синтетических методов, аналитических методов и соответствующих продуктов", "Превосходные навыки интерпретации аналитических данных с помощью УФ, ИК, ЯМР, ГХ, ГХ-МС и ВЭЖХ, ЖХ-МС, МС и т. д.", "Хорошо разбираюсь в рекомендациях GLP, GMP и IMS", "Понимание литературы/патентов", "Понимание и выполнение требований заказчика."],
@@ -1224,7 +1235,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 4,
         title: "SEO-специалист в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем эксперта по SEO/SEM для управления всеми мероприятиями по поисковой оптимизации и маркетингу.",
         responsibility: ["Выполнять тесты, собирать и анализировать данные и результаты, выявлять тенденции и идеи для достижения максимальной окупаемости инвестиций в платные поисковые кампании.", "Отслеживать, составлять отчеты и анализировать аналитику веб-сайта, инициативы и кампании PPC.", "Управлять расходами на кампанию, придерживаться бюджета, оценивать ежемесячные расходы и устранять расхождения.", "Оптимизировать текст и целевые страницы для маркетинга в поисковых системах", "Выполнять постоянное обнаружение, расширение и оптимизацию ключевых слов.", "Исследовать и внедрять рекомендации по поисковой оптимизации.", "Исследовать и анализировать рекламные ссылки конкурентов.", "Разрабатывать и внедрять стратегию построения ссылок.", "Работать с командой разработчиков, чтобы гарантировать, что лучшие практики SEO правильно реализованы в недавно разработанном коде.", "Работать с редакционными и маркетинговыми командами, чтобы стимулировать SEO при создании контента и программировании контента.", "Рекомендовать изменения в архитектуре веб-сайта, контенте, ссылках и других факторах для улучшения позиций SEO по целевым ключевым словам.", "Подтвержденный опыт SEO", "Подтвержденный опыт SEM, управление кампаниями PPC в Google, Yahoo и Bing.", "Глубокое понимание маркетинга производительности, конверсии и онлайн-клиентов приобретение.", "Глубокий опыт работы с инструментами веб-аналитики (например, Google Analytics, Net Insight, Omniture, Web Trends)", "Опыт работы с инструментами управления ставками (например, Click Equations, Marin, Kenshoo, Search Ignite)", "Опыт проведения A/B и многомерных экспериментов", "Практические знания разработки и ограничений HTML, CSS и JavaScript", "Знание факторов ранжирования и алгоритмов поисковых систем", "Знание последних тенденций и лучших практик в области SEO и SEM.",],
@@ -1235,7 +1246,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 5,
         title: "Старший специалист по работе с клиентами в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем высококомпетентного старшего бухгалтера, который сможет самостоятельно управлять различными бухгалтерскими операциями на ежедневной, ежемесячной, ежеквартальной и ежегодной основе. Идеальный кандидат будет координировать работу с внутренними и внешними заинтересованными сторонами для обеспечения завершения ежегодных аудитов и ведения точных финансовых записей. Основные обязанности включают:",
         responsibility: ["Выполнение комплексных бухгалтерских задач, включая, помимо прочего, клиентские платежи, ваучеры, счета, квитанции, банковскую сверку и сверку с различными дебиторами и кредиторами.", "Умелое выполнение всех мероприятий по обеспечению соответствия, таких как GST, TDS, PT и авансовый налог.", "Проверка закрывающих записей в системе перед подготовкой ежемесячных финансовых отчетов.", "Анализ и составление отчетов о финансовом положении, включая отклонения в отчете о прибылях и убытках, и сообщение результатов руководству.", "Участие в подготовке и анализе бюджета.", "Определение возможностей для улучшения систем и процедур и инициирование корректирующих действий по мере необходимости."],
@@ -1246,7 +1257,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 6,
         title: "Специалист по закупкам в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного руководителя по снабжению с опытом работы в химической и фармацевтической промышленности не менее 1,5 лет. Идеальный кандидат будет отвечать за подготовку и обработку заказов на закупку, поиск новых поставщиков и поддержание эффективной коммуникации с местными поставщиками и трейдерами. Основные обязанности включают:",
         responsibility: ["Определение технологически привлекательного, коммерчески привлекательного и не нарушающего прав пути для коммерциализации в установленные сроки", "Поиск новых поставщиков и оценка их пригодности для партнерства", "Взаимодействие с местными поставщиками и трейдерами для получения конкурентоспособных цен и образцов материалов", "Ведение переговоров по ценам, количествам и обеспечение качества материалов", "Взаимодействие с поставщиками и перевозчиками для обеспечения своевременной доставки материалов."],
@@ -1257,7 +1268,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 7,
         title: "Специалист по кадрам в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного и опытного специалиста по подбору персонала, который присоединится к нашей команде и будет заниматься сквозным подбором персонала на открытые должности. Идеальный кандидат должен обладать знаниями различных порталов по трудоустройству, таких как Naukri.com, Indeed, а также навыками использования каналов социальных сетей, таких как Instagram, Facebook и т. д., для поиска лучших талантов.",
         responsibility: ["Проводить комплексные мероприятия по подбору персонала на открытые должности в организации.", "Использовать такие порталы по трудоустройству, как Naukri.com, Indeed, и платформы социальных сетей для активного поиска потенциальных кандидатов.", "Создавать привлекательные объявления о вакансиях и обеспечивать их видимость на всех соответствующих порталах и платформах социальных сетей.", "Налаживать эффективную коммуникацию с потенциальными кандидатами, предоставляя им краткое представление о компании и описание вакансии.", "Взаимодействовать с внешними консалтинговыми компаниями, кампусами и колледжами для сбора данных о выпускниках для потенциальных кандидатов.", "Просматривать резюме, проводить первоначальные отборы и назначать собеседования для кандидатов, соответствующих требуемым критериям.", "Предоставлять обратную связь в режиме реального времени кандидатам, прошедшим собеседование, и поддерживать постоянную коммуникацию на протяжении всего процесса подбора персонала.", "Содействовать выпуску предложений, вести переговоры о заработной плате и обеспечивать плавное закрытие для успешного приема на работу."],
@@ -1268,7 +1279,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 8,
         title: "Помощник менеджера по контролю качества в Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного и опытного специалиста по подбору персонала, который присоединится к нашей команде и будет заниматься комплексным подбором персонала на открытые вакансии.",
         responsibility: ["Руководитель отдела контроля качества должен проверить документы и оборудование в соответствии с существующими процедурами, cGMP и GLP на территории компании", "Выпустить протокол производства партии, протокол очистки оборудования, журналы, аналитический отчет по сырью, готовой продукции и упаковочным материалам или любые другие документы", "Подготовка СОП различных отделов/подготовка проектов СОП", "Деятельность по очистке линии для производственного отдела перед началом процесса", "Выпустить форму контроля изменений, форму отклонения, форму несоответствия спецификации, форму жалобы клиента и т. д. по требованию соответствующего отдела", "Проверка протокола производства партии, аналитических отчетов/записей и заполнение. После проверки всех документов и выпуска готовой продукции", "Ежедневно проверять мероприятия по борьбе с вредителями и вести записи", "Мониторинг температуры и влажности на складе готовой продукции/в зоне упаковки и смешивания и вести записи", "Деятельность по отбору проб готовой продукции, стабильности, сохраненных образцов, материалов в процессе производства и отбракованных материалов", "Подготовка/проверка BMR, MFR в соответствии с нормативными требованиями", "Распределение, поиск и контроль стандартных операционных процедур, документов/записей всех отделов", "Участие во внутренних аудитах, аудите клиентов, инспекциях регулирующих органов", "Посещение совещаний по обзору качества в соответствии с графиком", "Подготовка документов и записей и мониторинг деятельности в соответствии с стандартными операционными процедурами", "Подготовка протоколов/отчетов по передаче технологий и деятельности", "Обеспечение целостности данных в соответствии с процедурой", "Проверка деятельности по производству, контролю качества, обеспечению качества, хранению, проектированию и охране труда и окружающей среды, здоровья и безопасности труда", "Хранение данных, сбор и отслеживание тенденций данных, связанных с качеством, для подготовки ежегодного обзора продукции", "Подготовка утвержденного списка поставщиков и поддержание квалификации поставщиков", "Отправка образцов во внешнее агентство или лабораторию для тестирования", "Проведение мероприятий по прослеживаемости", "Подготовка и ведение журнала CAPA", "Обеспечение расследования отклонений, отзыва продукции, возврата товаров и жалоб клиентов, OOS, OOT по CAPA и анализу первопричин, заполнение отчетов и их регистрация", "Проверка валидации процесса, валидации очистки и квалификации оборудования, а также подготовка протокола и отчета", "Проверка валидации или верификации аналитического метода", "Расследование возвращенного материала и ведение записи", "Расследование жалоб на продукцию и ведение записи", "Обеспечение соответствия систем, используемых для обслуживания оборудования и калибровки оборудования/инструментов/составления графика", "Составление графика и проведение обучения по cGMP, GLP и оценка обучения", "Обеспечение обучения всех заинтересованных лиц по cGMP и по конкретной работе или на основе выявленных потребностей", "Любое другое задание/работа, назначенная руководителем отдела обеспечения качества", "Обеспечение утилизации отходов в соответствии с процедурой", "Оказание поддержки руководителю отдела в работе по управлению окружающей средой и предоставление отчета руководителю отдела о том, как продолжается работа по управлению окружающей средой", "Расследование отклонений/инцидентов, связанных с управлением окружающей средой, по согласованию с руководителем отдела"],
@@ -1455,7 +1466,11 @@ DownloadBrochure: "Télécharger la brochure",
     submit: "제출하다 →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescriptionMain: "Muby Chem은 USFDA에 등록되고 FSSC 22000 인증을 받은 고순도 의약 부형제, 원료의약품(API), 미네랄 솔트 및 특수 화학물질의 선도 제조업체로서, 전 세계 제약, 건강기능식품, 식음료, 화장품 및 개인 위생 산업에 서비스를 제공합니다.",
+    mubyChemDescriptionMain: "Muby Chem은 ",
+    mubychemdes: " USFDA 등록 및 FSSC 22000 인증을 받은 ",
+    mubychemdes1: "고순도 제품의 선도적인 제조업체입니다",
+    mubychemdes2: " 제약 부형제, 활성 의약 성분(API), 미네랄 염 및 특수 화학 물질을 포함하여,",
+    mubychemdes3: " 제약, 건강보조식품, 식음료, 화장품 및 개인 관리 산업에 전 세계적으로 서비스를 제공합니다",
     mubyChemDescriptionMain2: "40년 이상의 경험과 신뢰의 유산을 바탕으로, 우리는 품질 우선 접근 방식, 일관된 신뢰성 및 고객 중심 솔루션으로 인정받고 있습니다.",
     mubyChemDescription1: "는 1976년에 설립되었습니다",
     muby: "Muby Chem Pvt. Ltd.",
@@ -1624,7 +1639,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 1,
         title: "Muby Chem Private Limited의 리액트 개발자",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "지역 영업 관리자는 API, 특수 화학물질 및 부형제의 영업 및 마케팅을 담당하며, 지정된 지리적 지역 내에서 활동합니다. 이상적인 후보자는 화학 산업에서 성공적인 경력을 보유하고 있으며, 강력한 리더십 능력을 갖춘 분이어야 합니다.",
         responsibility: [
@@ -1650,7 +1665,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 2,
         title: "Muby Chem Private Limited의 마케팅 매니저",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "마케팅 매니저는 지정된 지역 내에서 API, 특수 화학물질 및 부형제의 영업 및 마케팅을 담당합니다. 이상적인 후보자는 화학 산업에서 성공적인 경력을 보유하고 있으며, 강력한 리더십 능력을 갖춘 분이어야 합니다.",
         responsibility: [
@@ -1684,7 +1699,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 3,
         title: "Muby Chem Private Limited의 연구개발(R&D) 임원",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "우리는 다음 역할을 주로 담당할 신뢰할 수 있는 R&D 팀원을 적극적으로 찾고 있습니다:",
         responsibility: [
@@ -1707,7 +1722,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 4,
         title: "Muby Chem Private Limited의 SEO 담당자",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "검색 엔진 최적화(SEO) 및 마케팅(SEM) 활동을 관리할 SEO/SEM 전문가를 찾고 있습니다.",
         responsibility: [
@@ -1738,7 +1753,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 5,
         title: "Muby Chem Private Limited의 수석 회계 담당자",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "당사는 일일, 월간, 분기별 및 연간 회계 활동을 독립적으로 관리할 수 있는 고도의 역량을 갖춘 수석 회계 담당자를 찾고 있습니다. 이상적인 후보자는 내부 및 외부 이해관계자와 협력하여 연간 감사가 완료되도록 하고 정확한 재무 기록을 유지해야 합니다. 주요 책임은 다음과 같습니다:",
         responsibility: [
@@ -1756,7 +1771,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 6,
         title: "Muby Chem Private Limited의 구매 담당자",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "화학 및 제약 업계에서 최소 1.5년의 경력을 가진 역동적인 구매 담당자를 찾고 있습니다. 이상적인 후보자는 구매 주문의 준비 및 처리, 신규 공급업체 소싱, 현지 공급업체 및 상인과의 효과적인 커뮤니케이션 유지에 책임이 있습니다. 주요 업무는 다음과 같습니다:",
         responsibility: [
@@ -1779,7 +1794,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 7,
         title: "Muby Chem Private Limited의 인사 담당자 (HR Executive)",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "우리는 역동적이고 숙련된 채용 전문가를 찾고 있습니다. 이 포지션은 공석에 대한 채용 전 과정을 관리하게 되며, Naukri.com, Indeed와 같은 채용 포털뿐 아니라 Instagram, Facebook 등 소셜 미디어 채널을 활용하여 우수한 인재를 발굴할 수 있는 능력이 요구됩니다.",
         responsibility: [
@@ -1807,7 +1822,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 8,
         title: "Muby Chem Private Limited의 품질보증 부매니저 (QA Asst Manager)",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "공석에 대한 채용을 원활히 진행하기 위해, 역동적이고 숙련된 품질보증 전문가를 모집합니다.",
         responsibility: [
@@ -1912,9 +1927,9 @@ DownloadBrochure: "Télécharger la brochure",
   },
   es: {
     HOME: "INICIO",
-    Home:"INICIO",
+    Home: "INICIO",
     ABOUT: "SOBRE NOSOTROS",
-    About:"SOBRE NOSOTROS",
+    About: "SOBRE NOSOTROS",
     PRODUCTS: "PRODUCTOS",
     AllProducts: "PRODUCTOS",
     BLOGS: "Eventos",
@@ -1942,7 +1957,7 @@ DownloadBrochure: "Télécharger la brochure",
     COMPANY_NAME: "Muby Chem Private Limited",
     EMAIL: "info@mubychemicals.com",
     COPYRIGHT: "Todos los derechos reservados.",
-    
+
 
     SPECIALTY_CHEMICALS:
       "Nos especializamos en la producción de productos químicos y excipientes especiales de alta calidad. Nuestros productos son conocidos por su pureza y eficacia y respaldan a diversas industrias en todo el mundo.",
@@ -2031,8 +2046,11 @@ DownloadBrochure: "Télécharger la brochure",
     submit: "Entregar →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescriptionMain: "Muby Chem es un fabricante líder registrado por la USFDA y certificado por FSSC 22000, especializado en excipientes farmacéuticos de alta pureza, ingredientes farmacéuticos activos (APIs), sales minerales y productos químicos especiales, que presta servicios a las industrias farmacéutica, nutracéutica, alimentaria, cosmética y de cuidado personal a nivel mundial.",
-    mubyChemDescriptionMain2: "Con más de cuatro décadas de experiencia y un legado de confianza, somos reconocidos por nuestro enfoque en la calidad, fiabilidad constante y soluciones centradas en el cliente.",
+    mubyChemDescriptionMain: "Muby Chem es un ",
+    mubychemdes: " fabricante registrado por la USFDA y certificado por FSSC 22000 ",
+    mubychemdes1: "líder en la fabricación de productos de alta pureza",
+    mubychemdes2: " como excipientes farmacéuticos, ingredientes farmacéuticos activos (API), sales minerales y productos químicos especializados,",
+    mubychemdes3: " que presta servicios a las industrias farmacéutica, nutracéutica, alimentaria, cosmética y de cuidado personal a nivel mundial",    mubyChemDescriptionMain2: "Con más de cuatro décadas de experiencia y un legado de confianza, somos reconocidos por nuestro enfoque en la calidad, fiabilidad constante y soluciones centradas en el cliente.",
     mubyChemDescription1: "fue fundada en 1976",
     muby: "Muby Chem Pvt. Ltd.",
     mubysub: "y se ha convertido en un fabricante confiable y centrado en el cliente de alta pureza de",
@@ -2195,7 +2213,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 1,
         title: "Desarrollador React en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "El Gerente de Ventas de Área es responsable de las ventas y el marketing de API, productos químicos especiales y excipientes dentro de una zona geográfica designada. El candidato ideal tendrá un historial comprobado de éxito en la industria química, así como fuertes habilidades de liderazgo.",
         responsibility: [
@@ -2222,7 +2240,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 2,
         title: "Gerente de Marketing en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "El Gerente de Marketing es responsable de las ventas y el marketing de API, productos químicos especiales y excipientes dentro de una zona geográfica designada. El candidato ideal tendrá un historial comprobado de éxito en la industria química, así como sólidas habilidades de liderazgo.",
         responsibility: [
@@ -2256,7 +2274,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 3,
         title: "Ejecutivo de I+D en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando activamente miembros creíbles para el equipo de I+D que serán principalmente responsables de:",
         responsibility: [
@@ -2282,7 +2300,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 4,
         title: "Ejecutivo de SEO en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un experto en SEO/SEM para gestionar todas las actividades de optimización y marketing en motores de búsqueda.",
         responsibility: [
@@ -2316,7 +2334,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 5,
         title: "Ejecutivo Senior de Contabilidad en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Ejecutivo Senior de Contabilidad altamente competente para gestionar de forma independiente diversas actividades contables a diario, mensualmente, trimestralmente y anualmente. El candidato ideal coordinará con partes interesadas internas y externas para garantizar la finalización de las auditorías anuales y mantener registros financieros precisos. Las responsabilidades clave incluyen:",
         responsibility: [
@@ -2334,7 +2352,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 6,
         title: "Ejecutivo de Compras en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Ejecutivo de Suministros dinámico con un mínimo de 1.5 años de experiencia en las industrias Química y Farmacéutica. El candidato ideal será responsable de la preparación y procesamiento de órdenes de compra, búsqueda de nuevos proveedores y mantenimiento de una comunicación efectiva con proveedores y comerciantes locales. Las responsabilidades clave incluyen:",
         responsibility: [
@@ -2356,7 +2374,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 7,
         title: "Ejecutivo de Recursos Humanos en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes. El candidato ideal deberá tener conocimiento de portales de empleo como Naukri.com, Indeed, y habilidades para utilizar redes sociales como Instagram, Facebook, etc., para captar talento.",
         responsibility: [
@@ -2384,7 +2402,7 @@ DownloadBrochure: "Télécharger la brochure",
       {
         id: 8,
         title: "Asistente de Gerente de Aseguramiento de Calidad (QA) en Muby Chem Private Limited",
-        location: "Sandhurst",
+        location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes.",
 
@@ -2504,7 +2522,7 @@ DownloadBrochure: "Télécharger la brochure",
     ABOUT: "من نحن",
     About: "من نحن",
     PRODUCTS: "المنتجات",
-    AllProducts:"منتج",
+    AllProducts: "منتج",
     BLOGS: "الأحداث",
     Blogs: "الأحداث",
     CAREER: "فرص العمل",
@@ -2616,7 +2634,11 @@ DownloadBrochure: "Télécharger la brochure",
     submit: "يُقدِّم →",
 
     /* -----------------About Us------------------ */
-    mubyChemDescriptionMain: "Muby Chem هي شركة رائدة مسجلة لدى إدارة الغذاء والدواء الأمريكية (USFDA) ومعتمدة من FSSC 22000، متخصصة في تصنيع المواد المساعدة الصيدلانية عالية النقاء، والمكونات الصيدلانية الفعالة (APIs)، والأملاح المعدنية، والمواد الكيميائية المتخصصة، وتخدم الصناعات الدوائية، والتغذية، والأغذية والمشروبات، ومستحضرات التجميل والعناية الشخصية عالميًا.",
+    mubyChemDescriptionMain: "شركة موبي كيم هي ",
+    mubychemdes: " شركة مسجلة لدى إدارة الغذاء والدواء الأمريكية (USFDA) وحاصلة على شهادة FSSC 22000 ",
+    mubychemdes1: "ورائدة في تصنيع المنتجات عالية النقاء",
+    mubychemdes2: " مثل السواغات الصيدلانية، والمكونات الصيدلانية الفعالة (APIs)، والأملاح المعدنية، والمواد الكيميائية المتخصصة،",
+    mubychemdes3: " وتخدم الصناعات الصيدلانية، والمكملات الغذائية، والأغذية والمشروبات، ومستحضرات التجميل والعناية الشخصية على مستوى العالم",
     mubyChemDescriptionMain2: "بأكثر من أربعة عقود من الخبرة وإرث من الثقة، نحن معروفون بنهجنا الذي يركز على الجودة، والموثوقية المتسقة، والحلول التي تركز على العميل.",
     mubyChemDescription1: "تأسست في عام 1976",
     muby: "شركة موبي كيم الخاصة المحدودة",
@@ -2642,7 +2664,7 @@ DownloadBrochure: "Télécharger la brochure",
     Product1: "قسم المنتجات",
 
     //--------------Manufacturing Overview-----------
-     CompanyOverview: "نظرة عامة على الشركة",
+    CompanyOverview: "نظرة عامة على الشركة",
     ManufacturingOverview: "نظرة عامة على التصنيع",
     ManufacturingDesc: "تمتلك منشأتنا الحالية القدرة على تصنيع مجموعة واسعة من المكونات الدوائية والمكونات المساعدة والأملاح المعدنية والمواد الكيميائية المتخصصة. تم تصميم المنشأة وتجهيزها بآلات وتقنيات متقدمة لإنتاج منتجات عالية الجودة وفقًا للوائح البيئية وممارسات التصنيع الجيدة (GMP).",
     ManufacturingDesc1: "تقع هذه المنشأة الحديثة المسجلة في إدارة الغذاء والدواء الأمريكية (USFDA) في أنكليشوار، غوجارات، الهند، وهي معتمدة بمعايير cGMP و GLP و ISO 9001 و FSSC 22000 و FSSAI و حلال و كوشير.",

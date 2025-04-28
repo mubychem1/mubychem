@@ -318,18 +318,17 @@ const Home = () => {
               style={{ backgroundImage: `url(${homeImage})` }}
             >
               {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
-              <div className="absolute inset-0 flex items-end bottom-7 pl-2 justify-left">
-                <div>
-                  <h1 className="text-[#773135] text-2xl  mb-4  ">
+              <div className="absolute inset-0 flex items-center bottom-2 sm:bottom-7 justify-left">
+                <div class="bg-white/40 backdrop-blur-sm w-[90%] max-w-2xl pl-2 p-5 rounded-lg">
+                  <h1 className="text-[#773135] text-lg sm:text-2xl mb-2 sm:mb-2  ">
                     {currentTranslations.Empowering}
                   </h1>
-                  <p className="text-black text-3xl  leading-6 pb-19">
+                  <p className="text-black text-sm sm:text-lg leading-6 pb-5">
                     {currentTranslations.Leading} <br />
-                    {currentTranslations.Specialty}
-                    <br /> {currentTranslations.Active}
+                    {currentTranslations.Specialty} <br /> 
+                    {currentTranslations.Active}
                   </p>
                 </div>
-                          
               </div>
             </div>
           </div>
@@ -381,7 +380,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            {currentTranslations.mubyChemDescriptionMain}
+            {currentTranslations.mubyChemDescriptionMain}<b>{currentTranslations.mubychemdes}</b>{currentTranslations.mubychemdes1}<b>{currentTranslations.mubychemdes2}</b>{currentTranslations.mubychemdes3}
           </motion.p>
           <motion.p
             className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-6"
@@ -442,7 +441,7 @@ const Home = () => {
               <img
                 src={ActivePharmaceuticalIngredients}
                 alt="Active Pharmaceutical Ingredients"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px]  sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.ActivePharmaceuticalIngredients}
@@ -458,7 +457,7 @@ const Home = () => {
               <img
                 src={PharmaExcipients}
                 alt="Pharma Excipients"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.PharmaExcipients}
@@ -474,7 +473,7 @@ const Home = () => {
               <img
                 src={MineralSalts}
                 alt="Mineral Salts"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.MineralSalts}
@@ -493,7 +492,7 @@ const Home = () => {
               <img
                 src={SpecialtyChemicals}
                 alt="Specialty Chemicals"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.SpecialtyChemicals}
@@ -509,7 +508,7 @@ const Home = () => {
               <img
                 src={AminoAcids}
                 alt="Amino Acids"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.AminoAcids}
@@ -525,7 +524,7 @@ const Home = () => {
               <img
                 src={Fragrance}
                 alt="Fragrance & Flavor Chemicals"
-                className="w-full max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
+                className="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px]"
               />
               <p className="text-white font-bold mt-2 text-xl sm:text-2xl">
                 {currentTranslations.FragranceFlavorChemicals}
@@ -850,7 +849,7 @@ const Home = () => {
           <img
             src={homecontact}
             alt="Scientist working"
-            className="rounded-3xl  w-full h-[600px]"
+            className="rounded-3xl  w-full h-[560px] "
           />
         </div>
 

@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#773135] text-gray-200 min-h-full p-2 rounded-t-3xl rounded-b-xl"  >
-        <div className="container mx-auto py-5 px-10 min-h-[350px] pt-7">
+        <div className="container mx-auto py-5 px-0 sm:px-10 min-h-[350px] pt-7">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-7">
             {/* Logo & Description */}
             <div className="lg:col-span-4 col-span-12">

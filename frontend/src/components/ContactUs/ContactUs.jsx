@@ -22,21 +22,21 @@ const ContactUs = () => {
   const contactDetails = [
     {
       title: {
-        en: "Mail Us 24/7",
-        fr: "Envoyez-nous un e-mail 24h/24 et 7j/7",
-        ru: "Пишите нам 24/7",
-        ko: "24/7로 메일을 보내주세요",
-        es: "Envíenos un correo electrónico 24/7",
+        en: "Mail Id ",
+        fr: "Envoyez-nous un e-mail ",
+        ru: "Пишите нам ",
+        ko: " 메일을 보내주세요",
+        es: "Envíenos un correo electrónico ",
         ar: "راسلنا على مدار الساعة طوال أيام الأسبوع",
       },
       details:
-        ["no-reply@mubychem.com", "support@MubyChem.com"],
+        ["info@mubychem.com"],
       icon: <Mail className="text-[#773135]" size={32} />,
       link: "mailto:support@MubyChem.com",
     },
     {
       title: {
-        en: "Our Location",
+        en: "Corporate Address",
         fr: "Notre emplacement",
         ru: "Наше местоположение",
         ko: "우리의 위치",
@@ -56,14 +56,14 @@ const ContactUs = () => {
     },
     {
       title: {
-        en: "Call US 24/7",
+        en: "Call Us 24/7",
         fr: "Appelez-nous 24h/24 et 7j/7",
         ru: "Звоните нам 24/7",
         ko: "24시간 연중무휴로 전화주세요",
         es: "Llámanos 24/7",
         ar: "اتصل بنا على مدار الساعة طوال أيام الأسبوع",
       },
-      details: ["Phone: +91 222 377 0100", "Mobile: +91 222 377 0100"],
+      details: ["Mobile: +91 222 377 0100"],
       icon: <Phone className="text-[#773135]" size={32} />,
       link: "tel:+912223770100",
     },
@@ -77,8 +77,8 @@ const ContactUs = () => {
         ar: "أيام العمل",
       },
       details: [
-        "Mon to Fri - 09:00am To 06:00pm",
-        "Saturday to Sunday - Closed",
+        "Mon to Sat - 09:00am To 06:00pm",
+        " Sunday - Closed",
       ],
       icon: <Calendar className="text-[#773135]" size={32} />,
       link: "#working-hours", // This could scroll to a section with more info
@@ -179,12 +179,12 @@ const ContactUs = () => {
           </button> */}
         </div>
 
-        {/* Right Side (Form) */}
-        <div className="w-full md:w-[50%] lg:w-[45%] p-6 md:p-8 bg-white rounded-3xl shadow-xl max-w-[95%] md:max-w-[80%] lg:max-w-[60%] flex-grow">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
+        {/** Right Side (Form) */}
+        <div className="w-full md:w-[50%] lg:w-[45%] p-6 md:p-8 bg-[#773135] rounded-3xl shadow-xl max-w-[95%] md:max-w-[80%] lg:max-w-[60%] flex-grow">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white text-center">
             {currentTranslations.staff}
           </h3>
-          <p className="text-gray-500 text-sm text-center mt-2">
+          <p className="text-white text-sm text-center mt-2">
             {currentTranslations.message}
           </p>
 
@@ -205,18 +205,18 @@ const ContactUs = () => {
             {({ isSubmitting }) => (
               <Form className="mt-6 space-y-4">
                 {/* Two Column Layout for Name & Email */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
                   <Field
                     type="text"
                     name="name"
                     placeholder="Name"
-                    className="w-full p-3 border rounded-full bg-white"
+                    className="w-full p-3 border border-[#fff] text-white rounded-full bg-[#773135]"
                   />
                   <Field
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="w-full p-3 border rounded-full bg-white"
+                    className="w-full p-3 border border-[#fff] text-white rounded-full bg-[#773135]"
                   />
                 </div>
 
@@ -226,13 +226,13 @@ const ContactUs = () => {
                     type="tel"
                     name="phone"
                     placeholder="Phone"
-                    className="w-full p-3 border rounded-full bg-white"
+                    className="w-full p-3 border border-[#fff] text-white  rounded-full bg-[#773135]"
                   />
                   <Field
                     type="text"
                     name="subject"
                     placeholder="Product"
-                    className="w-full p-3 border rounded-full bg-white"
+                    className="w-full p-3 border border-[#fff] text-white rounded-full bg-[#773135]"
                   />
                 </div>
 
@@ -241,7 +241,7 @@ const ContactUs = () => {
                   as="textarea"
                   name="message"
                   placeholder="Message"
-                  className="w-full p-3 border rounded-3xl bg-white h-28"
+                  className="w-full p-3 border border-[#fff] text-white  rounded-3xl bg-[#773135] h-28"
                 />
 
                 {/* Checkbox */}
@@ -253,7 +253,7 @@ const ContactUs = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-48 py-3 bg-white text-black border border-black font-medium rounded-full hover:bg-[#7B3931] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
+                  className="w-48 py-3 bg-[#773135] text-white border border-[#fff] font-medium rounded-full hover:bg-[#fff] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
                 >
                   {isSubmitting ? "Submitting..." : "Submit →"}
                 </button>
@@ -264,7 +264,7 @@ const ContactUs = () => {
       </div>
 
       {/*----------------- Map section --------------- */}
-      <section className="py-8 px-6 bg-white flex justify-center  ">
+      <section className="py-8 px-6 pt-0 bg-white flex justify-center  ">
         <div className="w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
           <iframe
             title="Google Map"

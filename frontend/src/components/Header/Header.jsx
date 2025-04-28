@@ -178,7 +178,7 @@ const Header = () => {
                                         }`
                                     }
                                 >
-                                    {currentTranslations.PRODUCTS}
+                                    {currentTranslations.AllProducts}
                                 </NavLink>
                             </li>
 
