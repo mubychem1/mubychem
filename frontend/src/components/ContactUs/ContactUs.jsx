@@ -248,7 +248,7 @@ const ContactUs = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-48 py-3 bg-[#773135] text-white border border-[#fff] font-medium rounded-full hover:bg-[#fff] transition flex justify-center items-center gap-2 mx-auto md:ml-5"
+                  className="w-48 py-3 bg-[#773135] text-white border border-[#fff] font-medium rounded-full transition flex justify-center items-center gap-2 mx-auto md:ml-5 cursor-pointer"
                 >
                   {isSubmitting ? "Submitting..." : "Submit →"}
                 </button>

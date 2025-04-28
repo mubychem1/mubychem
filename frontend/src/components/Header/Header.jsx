@@ -70,39 +70,14 @@ const Header = () => {
         },
     ];
 
-    // const menuItems = [
-    //     {
-    //         label: "Pharmaceuticals Chemicals",
-    //         link: "",
-    //         submenu: [
-    //             { label: "Pharmaceuticals", link: "/pharmaceuticals/category1" },
-    //             { label: "Speciality Chemicals", link: "/pharmaceuticals/category1" },
-    //             { label: "Excipients", link: "/pharmaceuticals/category1" },
-    //         ]
-    //     },
-    //     { label: "API/Intermediates", link: "/products/category2/" },
-    //     {
-    //         label: "Fine Chemicals",
-    //         link: "/products/category3",
-    //         submenu: [
-    //             { label: "Analytical Reagent", link: "/products/category3/" },
-    //             { label: "Lab Chemicals", link: "/products/category3/" },
-    //         ]
-    //     },
-    //     {
-    //         label: "Nutraceuticals", link: "/products/category4",
-    //         submenu: [
-    //             {
-    //                 label: "Mineral Fortifiers", link: "/products/category4/"
-    //             },
-    //             {
-    //                 label: "Food Additives", link: "/products/category4/"
-    //             }
-    //         ]
-    //     },
-    //     { label: "Amino Acid", link: "/products/category5" },
-    //     { label: "Other Products", link: "/products/category6" },
-    // ];
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/Docker.pdf';
+        link.download = 'Docker.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <>
@@ -434,16 +409,20 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
+
+                        {/* Brochure Download button  */}
                         <button
-                            // onClick={() => ()}
-                            className="bg-[#773135] h-12 rounded-full text-[10px] sm:text-[10px] font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleDownload();
+                            }}
+                            className="bg-[#773135] h-12 rounded-full text-[10px] font-semibold text-white flex items-center px-4 border border-gray-300 focus:ring-2 focus:ring-blue-300 cursor-pointer"
                         >
                             <div className="flex items-center gap-2 mr-2">
-                                <a className="sm:text-[12px]">{currentTranslations.DownloadBrochure}</a>
+                                <span className="sm:text-[12px]">{currentTranslations.DownloadBrochure}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <AiOutlineDownload
-                                    className="text-white text-2xl mr-1" />
+                                <AiOutlineDownload className="text-white text-2xl mr-1" />
                             </div>
                         </button>
 
