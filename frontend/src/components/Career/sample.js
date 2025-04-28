@@ -8,19 +8,20 @@ import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
 import { ChevronDown } from "lucide-react";
 
-const Dropdown = ({ label, options, onSelect }) => {
+const Dropdown = ({ label, options }) => {
   const [selected, setSelected] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative w-90">
+    <div className="relative w-60">
       <label className="text-gray-700 text-sm block mb-1">{label}</label>
+
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center border-b-2 border-[#773135] py-2 cursor-pointer"
       >
         <span className="text-sm text-gray-700">
-          {selected || `Select ${label}`}
+          {selected || `Select ${label} `}
         </span>
         <ChevronDown className="h-4 w-4 text-[#773135]" />
       </div>
@@ -58,7 +59,7 @@ const JobCard = ({
   buttonLabels = { jobDescription: "Job Description", applyNow: "Apply Now" },
 }) => (
   <div className="bg-[#ecf2ff] rounded-2xl p-6 flex flex-col items-start w-full max-w-sm border border-gray-400 h-full">
-    <div className="w-12 h-12 flex items-center justify-center rounded-full">
+    <div className={`w-12 h-12 flex items-center justify-center rounded-full `}>
       <img src={registration} alt="Badge Icon" className="w-10 h-10" />
     </div>
     <h3 className="mt-4 text-lg font-semibold text-gray-900">{position}</h3>
@@ -68,7 +69,7 @@ const JobCard = ({
     <div className="mt-4 flex justify-between w-full">
       <button
         onClick={() =>
-          onOpen(position, description, responsibility, qualification, experience)
+          onOpen(title, description, responsibility, qualification, experience)
         }
         className="px-6 py-2 text-yellow-900 border rounded-lg cursor-pointer"
       >
@@ -87,12 +88,13 @@ const JobCard = ({
 const Career = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState({
-    position: "",
+    title: "",
     description: "",
     responsibility: [],
     qualification: [],
     experience: "",
   });
+  const [selectedPosition, setSelectedPosition] = useState("");
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -102,25 +104,28 @@ const Career = () => {
     resume: null,
   });
 
+
   const [selectedBusinessUnit, setSelectedBusinessUnit] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
+
+
+  const language = useSelector((state) => state.language.language); // Get selected language from Redux
+  const currentTranslations = translations[language] || translations.en; // Fallback to English
+  // const jobs = currentTranslations.jobs;
+  const jobs = currentTranslations.jobs || [];
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionResult, setSubmissionResult] = useState(null);
 
-  const language = useSelector((state) => state.language.language);
-  const currentTranslations = translations[language] || translations.en;
-  const jobs = currentTranslations.jobs || [];
-
   const openModal = (
-    position,
+    title,
     description,
     responsibility,
     qualification,
     experience
   ) => {
     setSelectedJob({
-      position,
+      title,
       description,
       responsibility,
       qualification,
@@ -195,23 +200,22 @@ const Career = () => {
       <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
           className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
-          style={{ backgroundImage: `url(${background})` }}
+          style={{ backgroundImage: ` url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
             <div style={{ fontFamily: "Montserrat, sans-serif" }}>
-              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4">
+              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
                 {currentTranslations.CAREER}
               </h1>
-              <p className="text-white text-base sm:text-lg md:text-lg">
-                Muby Chem Private Limited
-              </p>
+              <p className="text-white text-base sm:text-lg md:text-lg">Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
       </div>
 
-      <section className="p-10 pt-0 bg-[#fff]">
+
+      <section className="p-10 pt-0 bg-[#fff] ">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">
             {currentTranslations.heading1}
@@ -220,8 +224,8 @@ const Career = () => {
             {currentTranslations.heading}
           </p>
         </div>
-
         <br />
+
         <div className="flex justify-center items-center gap-10">
           <Dropdown
             label="Business Unit"
@@ -245,8 +249,9 @@ const Career = () => {
           />
         </div>
 
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {filteredJobs.map((job) => (
+
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center ">
+          {jobs.map((job) => (
             <JobCard
               key={job.id}
               {...job}
@@ -257,18 +262,29 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Job Description Modal */}
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 flex items-center justify-center z-50">
+      {/* ------- job Description ---------- */}
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="fixed inset-0 flex items-center justify-center z-50"
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full z-10 max-h-[80vh] overflow-y-auto">
           <div className="flex justify-end">
-            <button onClick={() => setIsOpen(false)} className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931] cursor-pointer">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-2 bg-[#7B3931] text-white rounded-lg hover:bg-[#7B3931] cursor-pointer"
+            >
               ✖
             </button>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedJob.position}</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            {selectedJob.title}
+          </h3>
           <p className="text-gray-900">{selectedJob.description}</p>
-          <h3 className="text-lg py-2">{currentTranslations.responsibilities}</h3>
+          <h3 className="text-lg py-2">
+            {currentTranslations.responsibilities}
+          </h3>
           <ul className="text-gray-700 list-disc pl-5">
             {selectedJob.responsibility.map((item, index) => (
               <li key={index}>{item}</li>
@@ -285,7 +301,7 @@ const Career = () => {
         </div>
       </Dialog>
 
-      {/* Apply Now Modal */}
+      {/* -------------- apply now --------- */}
       <Dialog
         open={isFormOpen}
         onClose={() => setIsFormOpen(false)}

@@ -87,7 +87,7 @@ const CgmpManufacturing = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-[#fff] p-12  pt-0 flex flex-col md:flex-row items-center md:items-start "
+        className="bg-[#fff] p-12 pt-3 py-6 sm:pt-0 flex flex-col md:flex-row items-center md:items-start "
       >
         {/* Text Content Section */}
         <motion.div
@@ -95,7 +95,7 @@ const CgmpManufacturing = () => {
           className="w-full text-center md:text-left "
         >
           <p className="text-gray-600 text-justify">
-          {currentTranslations.ManufacturingDesc}
+          {currentTranslations.ManufacturingDesc}<b>{currentTranslations.ManufacturingDescB}</b>{currentTranslations.ManufacturingDescC}<b>{currentTranslations.ManufacturingDescD}</b>
           </p>
           <p className="text-gray-600 mt-4 text-justify">
           {currentTranslations.ManufacturingDesc1}
@@ -103,13 +103,21 @@ const CgmpManufacturing = () => {
           <p className="text-gray-600 mt-4 text-justify">
           {currentTranslations.ManufacturingDesc2}
           </p>
-          <h5
-              className="text-[20px] leading-[50px] font-bold tracking-[0]  normal-case not-italic w-full">
-           {currentTranslations.ManufacturingDesc3}
-          </h5>
-
           
-                <div className="flex items-center justify-center px-6">
+
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="bg-[#fff] px-12  py-0 flex flex-col md:flex-row items-center md:items-start "
+      >
+      <h5 className="text-[20px] font-bold normal-case not-italic w-full">
+           {currentTranslations.ManufacturingDesc3}
+          </h5></motion.div>
+      <div className="flex items-center justify-center px-6 py-10">
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -129,8 +137,6 @@ const CgmpManufacturing = () => {
                     </div>
                   </motion.div>
                 </div>
-        </motion.div>
-      </motion.div>
     </>
   );
 };

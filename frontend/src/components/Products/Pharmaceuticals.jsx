@@ -5,13 +5,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Pharmaceuticals() {
-  const industries = [
-    "Pharmaceuticals",
-    "Nutraceuticals",
-    "Food & Beverages",
-    "Personal Care & Cosmetics",
-    "Veterinary & Animal Health",
-  ];
+  const Dosage_Forms= [
+    "Oral",
+    "Parenteral",
+    "Topical",
+    "Transdermal",
+    "Ophthalmic",
+    "Otic",
+    "Respiratory/Inhaled",
+    "Rectal/Vaginal (Suppositories)"
+  ];
 
   const categories = [
     "Active Pharmaceutical Ingredients (APIs)",
@@ -89,9 +92,9 @@ function Pharmaceuticals() {
         {/* Sidebar - Industry & Category */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky top-6 self-start h-fit lg:ml-8">
           <div className="border p-4 rounded shadow-sm">
-            <h2 className="font-bold text-lg mb-3">Industry</h2>
+            <h2 className="font-bold text-lg mb-3">Dosage Forms</h2>
             <div className="space-y-2">
-              {industries.map((item, idx) => (
+              {Dosage_Forms.map((item, idx) => (
                 <label key={idx} className="flex items-center space-x-1.5">
                   <input type="checkbox" className="form-checkbox" />
                   <span className="text-sm"> {item}</span>

@@ -63,7 +63,7 @@ const Header = () => {
             label: "Company Overview",
             link: "about",
         },
-        { label: "Manufacturing Overview", link: "/about-us/cgmp-manufacturing" },
+        { label: "Manufacturing Overview", link: "/about-us/manufacturingOverview" },
         {
             label: "Research & Development",
             link: "/about-us/research-development",
@@ -156,7 +156,7 @@ const Header = () => {
                                                     <NavLink
                                                         to={item.link}
                                                         className={({ isActive }) =>
-                                                            `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
+                                                            `cursor-pointer hover:text-[#773135] hover:pl-2 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
                                                         }
                                                     >
                                                         {hoveredIndex === index && <FaMinus />}
@@ -313,17 +313,85 @@ const Header = () => {
                                     {isAboutOpen && (
                                         <div className="pl-4">
                                             <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.CompanyOverview}</NavLink><br /><hr />
-                                            <NavLink to="/about-us/cgmp-manufacturing" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.ManufacturingOverview}</NavLink><br /><hr />
+                                            <NavLink to="/about-us/manufacturingoverview" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.ManufacturingOverview}</NavLink><br /><hr />
                                             <NavLink to="/about-us/research-development" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.ResearchDevelopment}</NavLink><br /><hr />
                                         </div>
                                     )}
                                 </div>
-                                <NavLink to="/allProducts" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
-                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
-                                <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
-                                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Home}</NavLink>
+                                <NavLink to="/allProducts" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Product}</NavLink>
+                                <NavLink to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.BLOGS}</NavLink>
+                                <NavLink to="/career" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Career}</NavLink>
+                                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>{currentTranslations.Contact}</NavLink>
+                                {/* --- Search in Mobile --- */}
+                                <div className="flex items-center gap-3 mt-6">
+                                    <div
+                                        className="flex items-center space-x-2 bg-[#773135] p-2 rounded-full cursor-pointer"
+                                        onClick={() => setIsTap(true)}
+                                    >
+                                        <IoMdSearch className="text-white text-xl" />
+                                    </div>
+
+                                    {isTap && (
+                                        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+                                            <div className="relative w-full max-w-2xl px-6 h-[40vh] min-h-[250px] flex flex-col justify-center">
+                                                <button className="absolute top-5 right-5 text-white text-3xl" onClick={() => setIsTap(false)}>
+                                                    <IoClose />
+                                                </button>
+                                                <div className="bg-transparent border-b border-gray-300 text-white text-xl p-4 flex items-center w-full">
+                                                    <input
+                                                        type="text"
+                                                        placeholder="Search ..."
+                                                        className="bg-transparent border-none outline-none w-full placeholder-gray-300"
+                                                    />
+                                                    <IoMdSearch className="text-white text-2xl cursor-pointer" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* --- Download Brochure in Mobile --- */}
+                                <button
+                                    className="bg-[#773135] w-full h-12 rounded-full text-sm font-semibold text-white flex items-center justify-center mt-4"
+                                >
+                                    <AiOutlineDownload className="text-white text-xl mr-2" />
+                                    <span>Download Brochure</span>
+                                </button>
+
+                                {/* --- Language Selector in Mobile --- */}
+                                <div className="relative mt-4">
+                                    <button
+                                        onClick={() => setIsOpe(!isOpe)}
+                                        className="bg-[#773135] w-full h-12 rounded-full text-sm font-semibold text-white flex justify-between items-center px-4"
+                                    >
+                                        <div className="flex items-center gap-2">
+                                            <img src={selected.flag} alt={selected.label} className="w-5 h-5 rounded-full" />
+                                            {selected.label}
+                                        </div>
+                                        <ChevronDown className="h-4 w-4" />
+                                    </button>
+                                    {isOpe && (
+                                        <ul className="absolute w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                                            {options.map((option) => (
+                                                <li
+                                                    key={option.value}
+                                                    onClick={() => {
+                                                        handleLanguageChange(option.value);
+                                                        setSelected(option);
+                                                        setIsOpe(false);
+                                                    }}
+                                                    className="flex items-center gap-2 p-3 text-gray-700 hover:bg-blue-200 cursor-pointer font-semibold"
+                                                >
+                                                    <img src={option.flag} alt={option.label} className="w-5 h-5 rounded-full" />
+                                                    {option.label}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+
                             </motion.div>
-                            
+
                         )}
                     </div>
 

@@ -153,12 +153,7 @@ const ContactUs = () => {
                 <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center">
                   {contact.icon}
                 </div>
-                {/* <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  className="absolute bottom-[-15px] right-[-15px] bg-white p-3 rounded-full cursor-pointer hover:bg-gray-100 transition"
-                >
-                  <ArrowUpRight className="text-blue-500" size={20} />
-                </motion.div> */}
+             
               </div>
             </motion.div>
           </a>
@@ -193,7 +188,7 @@ const ContactUs = () => {
               name: "",
               email: "",
               phone: "",
-              subject: "",
+              product: "",
               message: "",
             }}
             validationSchema={validationSchema}
@@ -230,7 +225,7 @@ const ContactUs = () => {
                   />
                   <Field
                     type="text"
-                    name="subject"
+                    name="product"
                     placeholder="Product"
                     className="w-full p-3 border border-[#fff] text-white rounded-full bg-[#773135]"
                   />

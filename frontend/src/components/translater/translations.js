@@ -163,7 +163,10 @@ const translations = {
 
     CompanyOverview: "Company Overview",
     ManufacturingOverview: "Manufacturing Overview",
-    ManufacturingDesc: "Our current facility has the capability to manufacture a broad range of pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals . The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and Good Manufacturing Practices (GMP).",
+    ManufacturingDesc: "Our current facility has the capability to manufacture a broad range of ",
+    ManufacturingDescB:"pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals.",
+    ManufacturingDescC:" The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and ",
+    ManufacturingDescD:"Good Manufacturing Practices (GMP).",
     ManufacturingDesc1: " This USFDA-registered, state-of-the-art facility, located in Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal, and Kosher standards .",
     ManufacturingDesc2: "With modern production techniques, flexible processes, and procedures, we offer efficient services for both small batches and large orders.",
     ManufacturingDesc3: " Explore Our State-of-the-Art Manufacturing Facility:",
@@ -186,23 +189,23 @@ const translations = {
     Researchdesc12: "* Documents and Support for eCTD and DMF are available.",
     //-----------------Page1--------
 
-    Blogs: "Up Coming Events & Exhibition",
-    Blogs1: "Past Events & Exhibition",
+    Blogs: "Upcoming Events & Exhibitions",
+    Blogs1: "Past Events & Exhibitions",
     data: [
       {
-        title: " Petfood Forum",
+        position: " Petfood Forum",
         description:
           "Booth #2509 ,<br>April 28–30 2025, <br>Kansas City Convention Center Kansas City,<br> Missouri, USA",
         image: petfoodforum,
       },
       {
-        title: "Arab Pharma Manufacturer",
+        position: "Arab Pharma Manufacturer",
         description:
           "Booth # 1129,<br> July 08-09 2025 ,<br>Jordan International Exhibition Center (JIEC),<br> Amman, Jordan",
         image: apm,
       },
       {
-        title: "CPHI South East Asia",
+        position: "CPHI South East Asia",
         description:
           "Booth # L17,<br> July 16-18 2025 ,<br>MITEC, <br>Kuala Lumpur, Malaysia",
         image: csea,
@@ -210,19 +213,19 @@ const translations = {
     ],
     dataT: [
       {
-        title: " In Cosmetics",
+        position: " In Cosmetics",
         description:
           "Booth # EU10 & EU11,<br> April 08 - 10, 2025,<br> Amsterdam, Netherlands",
         image: cosmetics,
       },
       {
-        title: "Expo Farma",
+        position: "Expo Farma",
         description:
           "Booth No. 1064,<br> April 02 - 04, 2025,<br> C.P. 03810, Mexico",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description:
           "Suite No. 1109,<br> Mar 17 - 20, 2025,<br> The Benjamin Royal Sonesta,<br> NY, USA",
         image: dcat,
@@ -308,7 +311,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "React Developer at Muby Chem Private Limited",
+        position: "React Developer at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "The Area Sales Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
@@ -319,7 +322,7 @@ const translations = {
 
       {
         id: 2,
-        title: "Marketing Manager at Muby Chem Private Limited",
+        position: "Marketing Manager at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "The Marketing Manager is responsible for the sales and marketing of API, Speciality chemicals, and excipients within a designated geographical area. The ideal candidate will have a proven track record of success in the chemical industry, as well as strong leadership skills.",
@@ -330,7 +333,7 @@ const translations = {
 
       {
         id: 3,
-        title: "R & D Executive at Muby Chem Private Limited",
+        position: "R & D Executive at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are actively looking for credible team members in R&D who would be primarily responsible for:",
@@ -341,7 +344,7 @@ const translations = {
 
       {
         id: 4,
-        title: "SEO Executive at Muby Chem Private Limited",
+        position: "SEO Executive at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are looking for an SEO/SEM expert to manage all search engine optimization and marketing activities.",
@@ -352,7 +355,7 @@ const translations = {
 
       {
         id: 5,
-        title: "Sr Accounts Executive at Muby Chem Private Limited",
+        position: "Sr Accounts Executive at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a highly competent Senior Accounts Executive to independently manage various accounting activities on a daily, monthly, quarterly, and annual basis. The ideal candidate will coordinate with internal and external stakeholders to ensure completion of annual audits and maintain accurate financial records. Key responsibilities include:",
@@ -363,7 +366,7 @@ const translations = {
 
       {
         id: 6,
-        title: "Purchase Executive at Muby Chem Private Limited",
+        position: "Purchase Executive at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic Sourcing Executive with a minimum of 1.5 years of experience in the Chemicals & Pharmaceuticals industries. The ideal candidate will be responsible for the preparation and processing of purchase orders, sourcing new vendors, and maintaining effective communication with local vendors and traders. Key responsibilities include:",
@@ -374,7 +377,7 @@ const translations = {
 
       {
         id: 7,
-        title: "HR Executive at Muby Chem Private Limited",
+        position: "HR Executive at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions. The ideal candidate will possess knowledge of various job portals such as Naukri.com, Indeed, as well as proficiency in leveraging social media channels like Instagram, Facebook, etc., for sourcing top talent.",
@@ -385,7 +388,7 @@ const translations = {
 
       {
         id: 7,
-        title: "QA Asst Manager at Muby Chem Private Limited",
+        position: "QA Asst Manager at Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
@@ -396,7 +399,7 @@ const translations = {
 
       {
         id: 8,
-        title: "QC Head at Muby Chem Private Limited",
+        position: "QC Head at Muby Chem Private Limited",
         location: "Taloja and Ankleshwar",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
@@ -532,16 +535,16 @@ const translations = {
     whereChemistryMeets: "Là où la chimie se rencontre.",
     ourProducts: "Nos produits",
     watchVideo: "Regarder la vidéo",
-    pharmaceuticalsTitle: "Produits pharmaceutiques",
+    pharmaceuticalsposition: "Produits pharmaceutiques",
     pharmaceuticalsDescription:
       "Nous fabriquons des ingrédients pharmaceutiques actifs (APIs) et des excipients de haute qualité qui servent de base aux formulations pharmaceutiques. Nos produits sont soigneusement fabriqués dans des conditions contrôlées pour garantir leur puissance, leur pureté et leur efficacité.",
-    specialitychemicalsTitle: "Produits chimiques spécialisés",
+    specialitychemicalsposition: "Produits chimiques spécialisés",
     specialitychemicalsDescription:
       "Des solutions chimiques sur mesure conçues spécialement pour vos besoins, garantissant des résultats optimaux et une intégration transparente dans vos processus de production.",
-    nutraceuticalsTitle: "Nutraceutiques",
+    nutraceuticalsposition: "Nutraceutiques",
     nutraceuticalsDescription:
       "Nous sommes spécialisés dans le développement et la fabrication. Nos nutraceutiques combinent le meilleur de la nature et de la science pour offrir des solutions avancées et efficaces pour divers besoins en matière de santé et d'alimentation. Notre engagement envers la qualité garantit que chaque produit que nous créons répond aux normes les plus élevées en matière de sécurité, d'efficacité et de conformité réglementaire.",
-    mineralfortifiersTitle: "Fortifiants minéraux",
+    mineralfortifiersposition: "Fortifiants minéraux",
     mineralfortifiersDescription:
       "Nos fortifiants minéraux sont conçus pour répondre à divers besoins nutritionnels, garantissant que vous obtenez les bons minéraux en quantités appropriées. Grâce à notre technologie de pointe et à notre engagement envers la qualité, nous fournissons des fortifiants minéraux qui répondent aux normes mondiales de sécurité, d'efficacité et de durabilité.",
 
@@ -680,33 +683,33 @@ const translations = {
 
     data: [
       {
-        title: "Forum sur les aliments pour animaux de compagnie",
+        position: "Forum sur les aliments pour animaux de compagnie",
         description: "Stand n°2509,<br>28–30 avril 2025,<br>Centre des congrès de Kansas City,<br>Kansas City, Missouri, États-Unis",
         image: petfoodforum,
       },
       {
-        title: "Fabricant pharmaceutique arabe",
+        position: "Fabricant pharmaceutique arabe",
         description: "Stand n°1129,<br>8–9 juillet 2025,<br>Centre d'exposition international de Jordanie (JIEC),<br>Amman, Jordanie",
         image: apm,
       },
       {
-        title: "CPHI Asie du Sud-Est",
+        position: "CPHI Asie du Sud-Est",
         description: "Stand n°L17,<br>16–18 juillet 2025,<br>MITEC,<br>Kuala Lumpur, Malaisie",
         image: csea,
       },],
     dataT: [
       {
-        title: "En Cosmétique",
+        position: "En Cosmétique",
         description: "Stand n°EU10 & EU11,<br>8–10 avril 2025,<br>Amsterdam, Pays-Bas",
         image: cosmetics,
       },
       {
-        title: "Ferme d'exposition",
+        position: "Ferme d'exposition",
         description: "Stand n°1064,<br>2–4 avril 2025,<br>Mexico, Mexique",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description: "Suite n°1109,<br>17–20 mars 2025,<br>The Benjamin Royal Sonesta,<br>New York, États-Unis",
         image: dcat,
       },
@@ -792,7 +795,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "Développeur React chez Muby Chem Private Limited",
+        position: "Développeur React chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Le/La responsable régional(e) des ventes est responsable des ventes et du marketing des principes actifs pharmaceutiques (API), des produits chimiques de spécialité et des excipients sur une zone géographique donnée. Le/La candidat(e) idéal(e) devra justifier d'une expérience réussie dans l'industrie chimique et posséder de solides compétences en leadership.",
@@ -803,7 +806,7 @@ const translations = {
 
       {
         id: 2,
-        title: "Responsable marketing chez Muby Chem Private Limited",
+        position: "Responsable marketing chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Le/La responsable marketing est responsable des ventes et du marketing des principes actifs pharmaceutiques (API), des produits chimiques de spécialité et des excipients sur une zone géographique donnée. Le/La candidat(e) idéal(e) devra justifier d'une expérience réussie dans l'industrie chimique et posséder de solides compétences en leadership.",
@@ -814,7 +817,7 @@ const translations = {
 
       {
         id: 3,
-        title: "Responsable R&D chez Muby Chem Private Limited",
+        position: "Responsable R&D chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons activement des membres d'équipe crédibles en R&D qui seraient principalement responsables de :",
@@ -825,7 +828,7 @@ const translations = {
 
       {
         id: 4,
-        title: "Responsable SEO chez Muby Chem Private Limited",
+        position: "Responsable SEO chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un expert SEO/SEM pour gérer toutes les activités d'optimisation et de marketing des moteurs de recherche.",
@@ -836,7 +839,7 @@ const translations = {
 
       {
         id: 5,
-        title: "Responsable des comptes senior chez Muby Chem Private Limited",
+        position: "Responsable des comptes senior chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un(e) chargé(e) de comptes senior hautement compétent(e) pour gérer de manière autonome diverses activités comptables sur une base quotidienne, mensuelle, trimestrielle et annuelle. Le/la candidat(e) idéal(e) assurera la coordination avec les parties prenantes internes et externes afin de garantir la réalisation des audits annuels et la tenue de registres financiers précis. Ses principales responsabilités incluent :",
@@ -847,7 +850,7 @@ const translations = {
 
       {
         id: 6,
-        title: "Responsable des achats chez Muby Chem Private Limited",
+        position: "Responsable des achats chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un responsable sourcing dynamique possédant au moins un an et demi d'expérience dans les secteurs de la chimie et de la pharmacie. Le/La candidat(e) idéal(e) sera responsable de la préparation et du traitement des commandes, de la recherche de nouveaux fournisseurs et du maintien d'une communication efficace avec les fournisseurs et négociants locaux. Ses principales responsabilités incluent :",
@@ -858,7 +861,7 @@ const translations = {
 
       {
         id: 7,
-        title: "Responsable RH chez Muby Chem Private Limited",
+        position: "Responsable RH chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un spécialiste du recrutement dynamique et compétent pour rejoindre notre équipe et assurer le recrutement de bout en bout pour les postes vacants. Le/La candidat(e) idéal(e) maîtrisera divers portails d'emploi tels que Naukri.com et Indeed, ainsi que les réseaux sociaux comme Instagram et Facebook, pour dénicher les meilleurs talents.",
@@ -869,7 +872,7 @@ const translations = {
 
       {
         id: 7,
-        title: "Responsable adjoint de l'assurance qualité chez Muby Chem Private Limited",
+        position: "Responsable adjoint de l'assurance qualité chez Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un spécialiste du recrutement dynamique et qualifié pour rejoindre notre équipe et faciliter le recrutement de bout en bout pour les postes vacants.",
@@ -880,7 +883,7 @@ const translations = {
 
       {
         id: 8,
-        title: "Responsable du contrôle qualité chez Muby Chem Private Limited",
+        position: "Responsable du contrôle qualité chez Muby Chem Private Limited",
         location: "Taloja and Ankleshwar",
         color: "bg-[#7B3931]",
         description: "Nous recherchons un spécialiste du recrutement dynamique et qualifié pour rejoindre notre équipe et faciliter le recrutement de bout en bout pour les postes vacants.",
@@ -1090,33 +1093,33 @@ const translations = {
     Blogs1: "Прошедшие события и выставки",
     data: [
       {
-        title: "Форум по кормам для домашних животных",
+        position: "Форум по кормам для домашних животных",
         description: "Стенд №2509,<br>28–30 апреля 2025 г.,<br>Конференц-центр Канзас-Сити,<br>Канзас-Сити, Миссури, США",
         image: petfoodforum,
       },
       {
-        title: "Арабский фармацевтический производитель",
+        position: "Арабский фармацевтический производитель",
         description: "Стенд №1129,<br>8–9 июля 2025 г.,<br>Международный выставочный центр Иордании (JIEC),<br>Амман, Иордания",
         image: apm,
       },
       {
-        title: "CPHI Юго-Восточная Азия",
+        position: "CPHI Юго-Восточная Азия",
         description: "Стенд №L17,<br>16–18 июля 2025 г.,<br>MITEC,<br>Куала-Лумпур, Малайзия",
         image: csea,
       },],
     dataT: [
       {
-        title: "В косметике",
+        position: "В косметике",
         description: "Стенд №EU10 и EU11,<br>8–10 апреля 2025 г.,<br>Амстердам, Нидерланды",
         image: cosmetics,
       },
       {
-        title: "Экспо Ферма",
+        position: "Экспо Ферма",
         description: "Стенд №1064,<br>2–4 апреля 2025 г.,<br>Мехико, Мексика",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description: "Сьют №1109,<br>17–20 марта 2025 г.,<br>The Benjamin Royal Sonesta,<br>Нью-Йорк, США",
         image: dcat,
       },
@@ -1201,7 +1204,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "Разработчик React в Muby Chem Private Limited",
+        position: "Разработчик React в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Региональный менеджер по продажам отвечает за продажи и маркетинг API, специальных химикатов и вспомогательных веществ в пределах обозначенной географической области. Идеальный кандидат должен иметь подтвержденный послужной список успеха в химической промышленности, а также сильные лидерские навыки.",
@@ -1212,7 +1215,7 @@ const translations = {
 
       {
         id: 2,
-        title: "Менеджер по маркетингу в Muby Chem Private Limited",
+        position: "Менеджер по маркетингу в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Менеджер по маркетингу отвечает за продажи и маркетинг API, специальных химикатов и вспомогательных веществ в пределах обозначенной географической области. Идеальный кандидат должен иметь подтвержденный послужной список успеха в химической промышленности, а также сильные лидерские навыки.",
@@ -1223,7 +1226,7 @@ const translations = {
 
       {
         id: 3,
-        title: "Руководитель отдела НИОКР в Muby Chem Private Limited",
+        position: "Руководитель отдела НИОКР в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы активно ищем надежных членов команды в отделе исследований и разработок, которые будут в первую очередь отвечать за:",
@@ -1234,7 +1237,7 @@ const translations = {
 
       {
         id: 4,
-        title: "SEO-специалист в Muby Chem Private Limited",
+        position: "SEO-специалист в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем эксперта по SEO/SEM для управления всеми мероприятиями по поисковой оптимизации и маркетингу.",
@@ -1245,7 +1248,7 @@ const translations = {
 
       {
         id: 5,
-        title: "Старший специалист по работе с клиентами в Muby Chem Private Limited",
+        position: "Старший специалист по работе с клиентами в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем высококомпетентного старшего бухгалтера, который сможет самостоятельно управлять различными бухгалтерскими операциями на ежедневной, ежемесячной, ежеквартальной и ежегодной основе. Идеальный кандидат будет координировать работу с внутренними и внешними заинтересованными сторонами для обеспечения завершения ежегодных аудитов и ведения точных финансовых записей. Основные обязанности включают:",
@@ -1256,7 +1259,7 @@ const translations = {
 
       {
         id: 6,
-        title: "Специалист по закупкам в Muby Chem Private Limited",
+        position: "Специалист по закупкам в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного руководителя по снабжению с опытом работы в химической и фармацевтической промышленности не менее 1,5 лет. Идеальный кандидат будет отвечать за подготовку и обработку заказов на закупку, поиск новых поставщиков и поддержание эффективной коммуникации с местными поставщиками и трейдерами. Основные обязанности включают:",
@@ -1267,7 +1270,7 @@ const translations = {
 
       {
         id: 7,
-        title: "Специалист по кадрам в Muby Chem Private Limited",
+        position: "Специалист по кадрам в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного и опытного специалиста по подбору персонала, который присоединится к нашей команде и будет заниматься сквозным подбором персонала на открытые должности. Идеальный кандидат должен обладать знаниями различных порталов по трудоустройству, таких как Naukri.com, Indeed, а также навыками использования каналов социальных сетей, таких как Instagram, Facebook и т. д., для поиска лучших талантов.",
@@ -1278,7 +1281,7 @@ const translations = {
 
       {
         id: 8,
-        title: "Помощник менеджера по контролю качества в Muby Chem Private Limited",
+        position: "Помощник менеджера по контролю качества в Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Мы ищем динамичного и опытного специалиста по подбору персонала, который присоединится к нашей команде и будет заниматься комплексным подбором персонала на открытые вакансии.",
@@ -1289,7 +1292,7 @@ const translations = {
 
       {
         id: 9,
-        title: "Руководитель отдела контроля качества в Muby Chem Private Limited",
+        position: "Руководитель отдела контроля качества в Muby Chem Private Limited",
         location: "Taloja and Ankleshwar",
         color: "bg-[#7B3931]",
         description: "We are seeking a dynamic and skilled Recruitment Specialist to join our team and facilitate end-to-end recruitment for open positions.",
@@ -1523,33 +1526,33 @@ const translations = {
     Blogs1: "지난 행사 및 전시회",
     data: [
       {
-        title: "펫푸드 포럼",
+        position: "펫푸드 포럼",
         description: "부스 번호: #2509,<br>2025년 4월 28일–30일,<br>캔자스시티 컨벤션 센터,<br>미주리주 캔자스시티, 미국",
         image: petfoodforum,
       },
       {
-        title: "아랍 제약 제조업체",
+        position: "아랍 제약 제조업체",
         description: "부스 번호: #1129,<br>2025년 7월 8일–9일,<br>요르단 국제 전시 센터 (JIEC),<br>암만, 요르단",
         image: apm,
       },
       {
-        title: "CPHI 동남아시아",
+        position: "CPHI 동남아시아",
         description: "부스 번호: #L17,<br>2025년 7월 16일–18일,<br>MITEC,<br>쿠알라룸푸르, 말레이시아",
         image: csea,
       },],
     dataT: [
       {
-        title: "화장품에서",
+        position: "화장품에서",
         description: "부스 번호: #EU10 & EU11,<br>2025년 4월 8일–10일,<br>암스테르담, 네덜란드",
         image: cosmetics,
       },
       {
-        title: "엑스포 농장",
+        position: "엑스포 농장",
         description: "부스 번호: #1064,<br>2025년 4월 2일–4일,<br>멕시코시티, 멕시코",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description: "스위트 번호: #1109,<br>2025년 3월 17일–20일,<br>더 벤자민 로열 소네스타,<br>뉴욕, 미국",
         image: dcat,
       },
@@ -1638,7 +1641,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "Muby Chem Private Limited의 리액트 개발자",
+        position: "Muby Chem Private Limited의 리액트 개발자",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "지역 영업 관리자는 API, 특수 화학물질 및 부형제의 영업 및 마케팅을 담당하며, 지정된 지리적 지역 내에서 활동합니다. 이상적인 후보자는 화학 산업에서 성공적인 경력을 보유하고 있으며, 강력한 리더십 능력을 갖춘 분이어야 합니다.",
@@ -1664,7 +1667,7 @@ const translations = {
 
       {
         id: 2,
-        title: "Muby Chem Private Limited의 마케팅 매니저",
+        position: "Muby Chem Private Limited의 마케팅 매니저",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "마케팅 매니저는 지정된 지역 내에서 API, 특수 화학물질 및 부형제의 영업 및 마케팅을 담당합니다. 이상적인 후보자는 화학 산업에서 성공적인 경력을 보유하고 있으며, 강력한 리더십 능력을 갖춘 분이어야 합니다.",
@@ -1698,7 +1701,7 @@ const translations = {
 
       {
         id: 3,
-        title: "Muby Chem Private Limited의 연구개발(R&D) 임원",
+        position: "Muby Chem Private Limited의 연구개발(R&D) 임원",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "우리는 다음 역할을 주로 담당할 신뢰할 수 있는 R&D 팀원을 적극적으로 찾고 있습니다:",
@@ -1721,7 +1724,7 @@ const translations = {
       },
       {
         id: 4,
-        title: "Muby Chem Private Limited의 SEO 담당자",
+        position: "Muby Chem Private Limited의 SEO 담당자",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "검색 엔진 최적화(SEO) 및 마케팅(SEM) 활동을 관리할 SEO/SEM 전문가를 찾고 있습니다.",
@@ -1752,7 +1755,7 @@ const translations = {
       },
       {
         id: 5,
-        title: "Muby Chem Private Limited의 수석 회계 담당자",
+        position: "Muby Chem Private Limited의 수석 회계 담당자",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "당사는 일일, 월간, 분기별 및 연간 회계 활동을 독립적으로 관리할 수 있는 고도의 역량을 갖춘 수석 회계 담당자를 찾고 있습니다. 이상적인 후보자는 내부 및 외부 이해관계자와 협력하여 연간 감사가 완료되도록 하고 정확한 재무 기록을 유지해야 합니다. 주요 책임은 다음과 같습니다:",
@@ -1770,7 +1773,7 @@ const translations = {
 
       {
         id: 6,
-        title: "Muby Chem Private Limited의 구매 담당자",
+        position: "Muby Chem Private Limited의 구매 담당자",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "화학 및 제약 업계에서 최소 1.5년의 경력을 가진 역동적인 구매 담당자를 찾고 있습니다. 이상적인 후보자는 구매 주문의 준비 및 처리, 신규 공급업체 소싱, 현지 공급업체 및 상인과의 효과적인 커뮤니케이션 유지에 책임이 있습니다. 주요 업무는 다음과 같습니다:",
@@ -1793,7 +1796,7 @@ const translations = {
 
       {
         id: 7,
-        title: "Muby Chem Private Limited의 인사 담당자 (HR Executive)",
+        position: "Muby Chem Private Limited의 인사 담당자 (HR Executive)",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "우리는 역동적이고 숙련된 채용 전문가를 찾고 있습니다. 이 포지션은 공석에 대한 채용 전 과정을 관리하게 되며, Naukri.com, Indeed와 같은 채용 포털뿐 아니라 Instagram, Facebook 등 소셜 미디어 채널을 활용하여 우수한 인재를 발굴할 수 있는 능력이 요구됩니다.",
@@ -1821,7 +1824,7 @@ const translations = {
 
       {
         id: 8,
-        title: "Muby Chem Private Limited의 품질보증 부매니저 (QA Asst Manager)",
+        position: "Muby Chem Private Limited의 품질보증 부매니저 (QA Asst Manager)",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "공석에 대한 채용을 원활히 진행하기 위해, 역동적이고 숙련된 품질보증 전문가를 모집합니다.",
@@ -1867,7 +1870,7 @@ const translations = {
 
       {
         id: 9,
-        title: "Muby Chem Private Limited의 품질관리 책임자 (QC Head)",
+        position: "Muby Chem Private Limited의 품질관리 책임자 (QC Head)",
         location: "Taloja 및 Ankleshwar",
         color: "bg-[#7B3931]",
         description: "공석에 대한 채용을 원활히 진행하기 위해, 역동적이고 숙련된 품질관리 전문가를 모집합니다.",
@@ -2102,33 +2105,33 @@ const translations = {
     Blogs1: "Eventos y exposiciones pasados",
     data: [
       {
-        title: "Foro de alimentos para mascotas",
+        position: "Foro de alimentos para mascotas",
         description: "Stand n.º 2509,<br>28–30 de abril de 2025,<br>Centro de Convenciones de Kansas City,<br>Kansas City, Missouri, EE. UU.",
         image: petfoodforum,
       },
       {
-        title: "Fabricante farmacéutico árabe",
+        position: "Fabricante farmacéutico árabe",
         description: "Stand n.º 1129,<br>8–9 de julio de 2025,<br>Centro Internacional de Exposiciones de Jordania (JIEC),<br>Amán, Jordania",
         image: apm,
       },
       {
-        title: "CPHI Sudeste Asiático",
+        position: "CPHI Sudeste Asiático",
         description: "Stand n.º L17,<br>16–18 de julio de 2025,<br>MITEC,<br>Kuala Lumpur, Malasia",
         image: csea,
       },],
     dataT: [
       {
-        title: "En Cosmética",
+        position: "En Cosmética",
         description: "Stand n.º EU10 & EU11,<br>8–10 de abril de 2025,<br>Ámsterdam, Países Bajos",
         image: cosmetics,
       },
       {
-        title: "Granja Expo",
+        position: "Granja Expo",
         description: "Stand n.º 1064,<br>2–4 de abril de 2025,<br>Ciudad de México, México",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description: "Suite n.º 1109,<br>17–20 de marzo de 2025,<br>The Benjamin Royal Sonesta,<br>Nueva York, EE. UU.",
         image: dcat,
       },
@@ -2212,7 +2215,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "Desarrollador React en Muby Chem Private Limited",
+        position: "Desarrollador React en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "El Gerente de Ventas de Área es responsable de las ventas y el marketing de API, productos químicos especiales y excipientes dentro de una zona geográfica designada. El candidato ideal tendrá un historial comprobado de éxito en la industria química, así como fuertes habilidades de liderazgo.",
@@ -2239,7 +2242,7 @@ const translations = {
 
       {
         id: 2,
-        title: "Gerente de Marketing en Muby Chem Private Limited",
+        position: "Gerente de Marketing en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "El Gerente de Marketing es responsable de las ventas y el marketing de API, productos químicos especiales y excipientes dentro de una zona geográfica designada. El candidato ideal tendrá un historial comprobado de éxito en la industria química, así como sólidas habilidades de liderazgo.",
@@ -2273,7 +2276,7 @@ const translations = {
 
       {
         id: 3,
-        title: "Ejecutivo de I+D en Muby Chem Private Limited",
+        position: "Ejecutivo de I+D en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando activamente miembros creíbles para el equipo de I+D que serán principalmente responsables de:",
@@ -2299,7 +2302,7 @@ const translations = {
 
       {
         id: 4,
-        title: "Ejecutivo de SEO en Muby Chem Private Limited",
+        position: "Ejecutivo de SEO en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un experto en SEO/SEM para gestionar todas las actividades de optimización y marketing en motores de búsqueda.",
@@ -2333,7 +2336,7 @@ const translations = {
 
       {
         id: 5,
-        title: "Ejecutivo Senior de Contabilidad en Muby Chem Private Limited",
+        position: "Ejecutivo Senior de Contabilidad en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Ejecutivo Senior de Contabilidad altamente competente para gestionar de forma independiente diversas actividades contables a diario, mensualmente, trimestralmente y anualmente. El candidato ideal coordinará con partes interesadas internas y externas para garantizar la finalización de las auditorías anuales y mantener registros financieros precisos. Las responsabilidades clave incluyen:",
@@ -2351,7 +2354,7 @@ const translations = {
 
       {
         id: 6,
-        title: "Ejecutivo de Compras en Muby Chem Private Limited",
+        position: "Ejecutivo de Compras en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Ejecutivo de Suministros dinámico con un mínimo de 1.5 años de experiencia en las industrias Química y Farmacéutica. El candidato ideal será responsable de la preparación y procesamiento de órdenes de compra, búsqueda de nuevos proveedores y mantenimiento de una comunicación efectiva con proveedores y comerciantes locales. Las responsabilidades clave incluyen:",
@@ -2373,7 +2376,7 @@ const translations = {
 
       {
         id: 7,
-        title: "Ejecutivo de Recursos Humanos en Muby Chem Private Limited",
+        position: "Ejecutivo de Recursos Humanos en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes. El candidato ideal deberá tener conocimiento de portales de empleo como Naukri.com, Indeed, y habilidades para utilizar redes sociales como Instagram, Facebook, etc., para captar talento.",
@@ -2401,7 +2404,7 @@ const translations = {
 
       {
         id: 8,
-        title: "Asistente de Gerente de Aseguramiento de Calidad (QA) en Muby Chem Private Limited",
+        position: "Asistente de Gerente de Aseguramiento de Calidad (QA) en Muby Chem Private Limited",
         location: "Mumbai",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes.",
@@ -2449,7 +2452,7 @@ const translations = {
 
       {
         id: 9,
-        title: "Jefe de Control de Calidad (QC) en Muby Chem Private Limited",
+        position: "Jefe de Control de Calidad (QC) en Muby Chem Private Limited",
         location: "Taloja y Ankleshwar",
         color: "bg-[#7B3931]",
         description: "Estamos buscando un Especialista en Reclutamiento dinámico y capacitado para unirse a nuestro equipo y facilitar el proceso de reclutamiento de principio a fin para los puestos vacantes.",
@@ -2693,33 +2696,33 @@ const translations = {
     Blogs1: "الفعاليات والمعارض السابقة",
     data: [
       {
-        title: "منتدى أغذية الحيوانات الأليفة",
+        position: "منتدى أغذية الحيوانات الأليفة",
         description: "الجناح رقم #2509،<br>28–30 أبريل 2025،<br>مركز مؤتمرات كانساس سيتي،<br>كانساس سيتي، ميزوري، الولايات المتحدة",
         image: petfoodforum,
       },
       {
-        title: "الشركة العربية فارما",
+        position: "الشركة العربية فارما",
         description: "الجناح رقم #1129،<br>8–9 يوليو 2025،<br>مركز المعارض الدولي الأردني (JIEC)،<br>عمّان، الأردن",
         image: apm,
       },
       {
-        title: "CPHI جنوب شرق آسيا",
+        position: "CPHI جنوب شرق آسيا",
         description: "الجناح رقم #L17،<br>16–18 يوليو 2025،<br>MITEC،<br>كوالالمبور، ماليزيا",
         image: csea,
       },],
     dataT: [
       {
-        title: "في مستحضرات التجميل",
+        position: "في مستحضرات التجميل",
         description: "الجناح رقم #EU10 و EU11،<br>8–10 أبريل 2025،<br>أمستردام، هولندا",
         image: cosmetics,
       },
       {
-        title: "مزرعة اكسبو",
+        position: "مزرعة اكسبو",
         description: "الجناح رقم #1064،<br>2–4 أبريل 2025،<br>مدينة مكسيكو، المكسيك",
         image: apexpofarmam,
       },
       {
-        title: "DCAT",
+        position: "DCAT",
         description: "الجناح رقم #1109،<br>17–20 مارس 2025،<br>فندق ذا بنجامين رويال سونيستا،<br>نيويورك، الولايات المتحدة",
         image: dcat,
       },
@@ -2806,7 +2809,7 @@ const translations = {
     jobs: [
       {
         id: 1,
-        title: "مطور React في شركة ميوبي كيم الخاصة المحدودة",
+        position: "مطور React في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "مدير المبيعات الإقليمي مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
@@ -2831,7 +2834,7 @@ const translations = {
       },
       {
         id: 2,
-        title: "مدير تسويق في شركة ميوبي كيم الخاصة المحدودة",
+        position: "مدير تسويق في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "مدير التسويق مسؤول عن مبيعات وتسويق المواد الكيميائية النشطة (API)، والمواد الكيميائية المتخصصة، والمساعدات الصيدلانية ضمن منطقة جغرافية محددة. يجب أن يكون لدى المرشح المثالي سجل مثبت من النجاح في صناعة الكيماويات، بالإضافة إلى مهارات قيادية قوية.",
@@ -2864,7 +2867,7 @@ const translations = {
       },
       {
         id: 3,
-        title: "تنفيذي البحث والتطوير في شركة ميوبي كيم الخاصة المحدودة",
+        position: "تنفيذي البحث والتطوير في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نحن نبحث بنشاط عن أعضاء فريق موثوقين في قسم البحث والتطوير، والذين سيكونون مسؤولين بشكل أساسي عن:",
@@ -2890,7 +2893,7 @@ const translations = {
 
       {
         id: 4,
-        title: "تنفيذي تحسين محركات البحث (SEO) في شركة ميوبي كيم الخاصة المحدودة",
+        position: "تنفيذي تحسين محركات البحث (SEO) في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نبحث عن خبير SEO/SEM لإدارة جميع أنشطة تحسين محركات البحث والتسويق.",
@@ -2922,7 +2925,7 @@ const translations = {
 
       {
         id: 5,
-        title: "تنفيذي أول للحسابات في شركة ميوبي كيم الخاصة المحدودة",
+        position: "تنفيذي أول للحسابات في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نبحث عن تنفيذي أول للحسابات ذو كفاءة عالية لإدارة مختلف الأنشطة المحاسبية بشكل مستقل على أساس يومي، شهري، ربع سنوي وسنوي. سيتعاون المرشح المثالي مع أصحاب المصلحة لضمان استكمال التدقيق السنوي والحفاظ على سجلات مالية دقيقة.",
@@ -2940,7 +2943,7 @@ const translations = {
 
       {
         id: 6,
-        title: "تنفيذي مشتريات في شركة ميوبي كيم الخاصة المحدودة",
+        position: "تنفيذي مشتريات في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نبحث عن تنفيذي توريد ديناميكي لديه خبرة لا تقل عن 1.5 سنة في صناعات الكيماويات والأدوية. سيكون مسؤولًا عن إعداد ومعالجة أوامر الشراء، والبحث عن موردين جدد، والحفاظ على التواصل الفعال مع الموردين المحليين.",
@@ -2961,7 +2964,7 @@ const translations = {
       },
       {
         id: 7,
-        title: "تنفيذي الموارد البشرية في شركة ميوبي كيم الخاصة المحدودة",
+        position: "تنفيذي الموارد البشرية في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية. يجب أن يكون لدى المرشح المثالي معرفة بمنصات التوظيف مثل Naukri.com وIndeed، بالإضافة إلى الكفاءة في استخدام قنوات التواصل الاجتماعي مثل Instagram وFacebook لاستقطاب أفضل المواهب.",
@@ -2990,7 +2993,7 @@ const translations = {
 
       {
         id: 8,
-        title: "مساعد مدير ضمان الجودة في شركة ميوبي كيم الخاصة المحدودة",
+        position: "مساعد مدير ضمان الجودة في شركة ميوبي كيم الخاصة المحدودة",
         location: "ساندهيرست",
         color: "bg-[#7B3931]",
         description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",
@@ -3031,7 +3034,7 @@ const translations = {
 
       {
         id: 9,
-        title: "رئيس قسم مراقبة الجودة في شركة ميوبي كيم الخاصة المحدودة",
+        position: "رئيس قسم مراقبة الجودة في شركة ميوبي كيم الخاصة المحدودة",
         location: "تالوجا وأنكليشوار",
         color: "bg-[#7B3931]",
         description: "نبحث عن أخصائي توظيف ديناميكي وماهر للانضمام إلى فريقنا والمساعدة في تنفيذ عملية التوظيف من البداية إلى النهاية.",

@@ -7,7 +7,7 @@ export const submitForm = createAsyncThunk(
     try {
       console.log("Aayush");
       
-      const response = await fetch("http://mubychem.onrender.com/api/contact", {
+      const response = await fetch("https://mubychem.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

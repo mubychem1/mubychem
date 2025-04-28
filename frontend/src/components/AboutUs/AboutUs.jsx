@@ -450,7 +450,7 @@ const AboutUs = () => {
         <img
           src={map}
           alt="map"
-          className="rounded-lg border-4 border-[#773135] w-full max-w-3xl h-auto"
+          className="rounded-lg border-4 border-[#773135] w-full max-w-4xl h-auto"
         />
       </div>
 

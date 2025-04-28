@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import { motion } from "framer-motion";
 import { FaArrowRight, FaPlay, FaArrowLeft } from "react-icons/fa";
 import { IoMdFlask, IoIosArrowForward } from "react-icons/io";
@@ -20,6 +21,7 @@ import glutten from "../../assets/logo/glutten-free.png";
 import glp from "../../assets/logo/glp.png";
 import fssc from "../../assets/logo/fssc-22000.png";
 import fssai from "../../assets/logo/fssai.png";
+// import fdca from "../../assets/logo/fdca.png";
 import fami from "../../assets/logo/fami-qs.png";
 import allergen from "../../assets/logo/allergen-free.png";
 import bg from "../../assets/slider-1.jpeg";
@@ -87,6 +89,10 @@ const certification = [
     title: "",
     bgImage: glutten,
   },
+  // {
+  //   title: '',
+  //   bgImage: gptw
+  // },
 ];
 
 const services = [
@@ -255,16 +261,13 @@ const Home = () => {
   };
 
   // --------estimation -----
-   const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submissionResult, setSubmissionResult] = useState(null);
-    
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
-    });
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -291,6 +294,7 @@ const Home = () => {
   return (
     <>
       {/* ----------------- Banner------------------ */}
+
       <motion.section
         initial="hidden"
         animate="visible"
@@ -303,6 +307,11 @@ const Home = () => {
           transition={{ duration: 1 }}
           className="relative w-full h-[340px] md:h-auto lg:h-auto overflow-hidden rounded-bl-[80px] rounded-tr-[80px]"
         >
+          {/* <img
+                  src={''} // Add your background image path here
+                  alt="About Us Background"
+                  className="w-full h-full object-cover"
+                /> */}
           <div className="bg-[#fff] p-6 md:p-12">
             <div
               className="relative h-[250px] sm:h-[300px] md:h-[340px] bg-cover bg-center rounded-bl-[40px] sm:rounded-bl-[60px] md:rounded-bl-[80px] rounded-tr-[40px] sm:rounded-tr-[60px] md:rounded-tr-[80px] overflow-hidden"
@@ -636,12 +645,166 @@ const Home = () => {
         </div>
       </div>
 
+      {/* --------------Feature Section --------- */}
+      {/* <div className="bg-white flex flex-col items-center py-12 px-3"> */}
+      {/* <div className="border border-black px-4 py-1 rounded-full text-sm text text-[#001837] uppercase font-openSans leading-4" style={{
+          fontFamily: "Times New Roman",
+        }}
+        >
+          WHY CHOOSE US?
+        </div> */}
+      {/* < h1 className="text-4xl text-center mt-4 text-gray-900" style={{ fontFamily: " " }}>
+          {currentTranslations.Featureheading}<br />{currentTranslations.Featureheading1}
+        </ h1>
+
+        <div className="flex items-center mt-8 max-w-7xl w-full">
+          <VerticalTabs />
+        </div>
+
+
+      </div> */}
+
+      {/* --------------Our Services ------------ */}
+      {/* <div className="bg-[#773135] text-white bg-no-repeat  py-16" style={{ backgroundImage: `url(${bg})` }}>
+        <div className="flex justify-between items-center px-15">
+          <div className="text-left">
+            <button className=" text-white border border-white px-4 py-2 rounded-full text-sm"  >
+              Certifications
+            </button>
+            < h1 className="text-4xl  mt-4"  >Reliable & High Quality Service</ h1>
+          </div>
+
+          <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
+            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronLeft size={20} />
+            </button>
+            <div className="border-l border-gray-400 h-5"></div>
+            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div> */}
+
+      {/* <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
+          <motion.div
+            className="flex space-x-6"
+            animate={{ x: `-${currentIndex * 320}px` }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
+            {certification.concat(certification).map((certification, index) => (
+              <div
+                key={index}
+                className="group w-[290px] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
+              >
+                <img
+                  src={certification.bgImage}
+                  alt="Scientist working in lab"
+                  className="w-full h-full rounded-2xl"
+                /> */}
+      {/* <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                ></div> */}
+
+      {/* <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+                  {service.icon}
+                </div> */}
+
+      {/* <h3 className="mt-12 text-2xl pt-42  relative" style={{
+                  fontFamily: "Times New Roman",
+                }}>{certification.title}</h3> 
+                 */}
+
+      {/* <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                    ➜
+                  </button>
+                </div> */}
+      {/* </div>
+            ))}
+          </motion.div>
+        </div>
+      </div> */}
+
+      {/* <div className="bg-[#773135] text-white  py-16">
+        <div className="flex justify-between items-center px-15">
+          <div className="text-left">
+            <button className="bg-[#773135] text-white border border-white px-4 py-2 rounded-full text-sm "  >
+              OUR SERVICE
+            </button>
+            < h1 className="text-4xl  mt-4"  >Reliable & High Quality Service</ h1>
+          </div>
+
+          <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md">
+            <button onClick={prevSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronLeft size={20} />
+            </button>
+            <div className="border-l border-gray-400 h-5"></div>
+            <button onClick={nextSlide} className="p-2 rounded-full hover:bg-gray-200 transition">
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+
+        <div className="overflow-hidden relative flex items-center mt-10 h-[400px] px-5">
+          <motion.div
+            className="flex space-x-6"
+            animate={{ x: `-${currentIndex * 320}px` }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
+            {services.concat(services).map((service, index) => (
+              <div
+                key={index}
+                className="group w-[290px] bg-[#773135] p-6 rounded-4xl flex-shrink-0 border border-white h-[400px] relative overflow-hidden"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{ backgroundImage: `url(${service.bgImage})` }}
+                ></div>
+
+                <div className="absolute top-4 right-4 text-3xl pt-5 pr-5 opacity-100 group-hover:opacity-0 transition duration-300">
+                  {service.icon}
+                </div>
+
+                <h3 className="mt-12 text-2xl pt-42  relative" style={{
+                  fontFamily: "Times New Roman",
+                }}>{service.title}</h3>
+                <p className="mt-2 text-sm opacity-75 relative" style={{ fontFamily: "Graphik" }}>We manufacture high-quality active pharmaceutical ingredients (APIs)</p>
+
+                <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                    ➜
+                  </button>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div> */}
+
       <div className="bg-[#fff] mt-10">
         <div className="text-center">
           <h2 className="text-[35px] leading-[60px] font-bold tracking-[0] text-[#001837] normal-case not-italic w-full font-['Montserrat',sans-serif]">
             {currentTranslations.accre}
           </h2>
         </div>
+        {/* <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center px-4 sm:px-15 space-y-4 sm:space-y-0"> */}
+        {/* <div className="flex items-center space-x-2 bg-white text-black p-2 rounded-full shadow-md self-start sm:self-auto">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full hover:bg-[#F8F2DE] transition"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <div className="border-l border-gray-400 h-5"></div>
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full hover:bg-[#F8F2DE] transition"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div> */}
+        {/*         </div> */}
 
         <div className="overflow-hidden relative flex items-center h-[200px] px-5 font-['Montserrat',sans-serif]">
           <motion.div
@@ -667,6 +830,12 @@ const Home = () => {
                     {certification.title}
                   </h3>
 
+                  {/* 
+                <div className="mt-4 relative">
+                  <button className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
+                    ➜
+                  </button>
+                </div> */}
                 </div>
               ))}
           </motion.div>
@@ -685,9 +854,14 @@ const Home = () => {
         </div>
 
         {/* Form Section */}
-      
+        {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
+        {/* <div className="flex items-center justify-center min-h-screen bg-[#773135]"> */}
         <div className="bg-[#773135] p-9 rounded-xl shadow-lg w-full max-w-md relative">
-      
+          {/* Close button */}
+          {/* <button className="absolute top-4 right-4 text-[#773135] text-2xl font-bold">
+              ×
+            </button> */}
+
           {/* Title */}
           <h2 className="text-2xl font-semibold text-center text-[#fff] mb-6">
             {currentTranslations.Get} {currentTranslations.estimate}
@@ -736,7 +910,14 @@ const Home = () => {
                 type={"text"}
                 className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#ffff] py-1 pr-8"
                 required
-              />           
+              />
+              {/* <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-0 top-6 text-[#773135]"
+                >
+                  👁
+                </button>  */}
             </div>
 
             <div>
@@ -748,12 +929,31 @@ const Home = () => {
                 className="w-full border-b-2 border-[#fff] text-[#fff] focus:outline-none focus:border-[#fff] py-1"
               />
             </div>
+
+            {/* Checkbox and Dummy Text */}
+            {/* <div className="flex items-start mt-2">
+                <input type="checkbox" className="mr-2 mt-1 text-[#773135]" />
+                <p className="text-xs text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod...
+                </p>
+              </div> */}
+
+            {/* Submit Button */}
             <button
               type="submit"
               className="w-full py-2 bg-[#fff] text-black font-semibold rounded-md mt-4"
             >
               {currentTranslations.Submit}
             </button>
+
+            {/* Sign in link */}
+            {/* <p className="text-sm text-center text-gray-600 mt-4">
+                Already have an account?{" "}
+                <a href="#" className="text-[#773135] hover:underline">
+                  Sing in
+                </a>
+              </p> */}
           </form>
         </div>
       </div>

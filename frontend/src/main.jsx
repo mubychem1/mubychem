@@ -24,7 +24,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="about" element={<AboutUs />} />
-      <Route path="/about-us/cgmp-manufacturing" element={<CgmpManufacturing />} />
+      <Route path="/about-us/manufacturingOverview" element={<CgmpManufacturing />} />
       <Route path="/about-us/research-development" element={<ResearchAndDevelopment />} />
       {/* <Route path="pharmaceuticals" element={<Pharmaceuticals />}>
         {/* Child Routes for Products */}
