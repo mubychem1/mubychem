@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 const productSchema = new mongoose.Schema({
-    category: {
+    dosageForm: {
         type: String,
         required: true,
         trim: true
