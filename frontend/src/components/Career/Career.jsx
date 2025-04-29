@@ -7,12 +7,17 @@ import career from "../../assets/career.png";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
 import { ChevronDown } from "lucide-react";
+import microscopeImage from "../../assets/logo/gptw.png";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
+
 
 const Dropdown = ({ label, options, onSelect }) => {
   const [selected, setSelected] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    
     <div className="relative w-90">
       <label className="text-gray-700 text-sm block mb-1">{label}</label>
       <div
@@ -192,6 +197,47 @@ const Career = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Career - Mubychem Pvt. Ltd.</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="canonical" href="" />
+
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Career - Mubychem Pvt. Ltd.",
+        "url": "https://www.mubychem.com/about",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Mubychem Pvt. Ltd.",
+          "url": "https://www.mubychem.com", 
+          "logo": "https://www.mubychem.com/logo.png",
+          "description": "Mubychem Pvt. Ltd. is a reputed chemical manufacturing company in India, known for high-quality industrial and pharmaceutical chemicals.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Your Street Address",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "PIN Code",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "Customer Service"
+          }
+        }
+      }
+    `}
+        </script>
+
+      </Helmet>
+
+
       <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
           className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
@@ -222,28 +268,38 @@ const Career = () => {
         </div>
 
         <br />
-        <div className="flex justify-center items-center gap-10">
-          <Dropdown
-            label="Business Unit"
-            options={[
-              "Marketing Manager at Muby Chem Private Limited",
-              "SEO Executive at Muby Chem Private Limited",
-              "Sr Accounts Executive at Muby Chem Private Limited",
-              "Purchase Executive at Muby Chem Private Limited",
-              "R & D Executive at Muby Chem Private Limited",
-              "QC Head at Muby Chem Private Limited",
-              "QA Asst Manager at Muby Chem Private Limited",
-              "Web Developer at Muby Chem Private Limited",
-              "HR Executive at Muby Chem Private Limited",
-            ]}
-            onSelect={(value) => setSelectedBusinessUnit(value)}
-          />
-          <Dropdown
-            label="Location"
-            options={["Mumbai", "Ankleshwar", "Bangalore"]}
-            onSelect={(value) => setSelectedLocation(value)}
-          />
-        </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
+    <div className="flex flex-col sm:flex-row gap-10">
+      <Dropdown
+        label="Business Unit"
+        options={[
+          "Marketing Manager at Muby Chem Private Limited",
+          "SEO Executive at Muby Chem Private Limited",
+          "Sr Accounts Executive at Muby Chem Private Limited",
+          "Purchase Executive at Muby Chem Private Limited",
+          "R & D Executive at Muby Chem Private Limited",
+          "QC Head at Muby Chem Private Limited",
+          "QA Asst Manager at Muby Chem Private Limited",
+          "Web Developer at Muby Chem Private Limited",
+          "HR Executive at Muby Chem Private Limited",
+        ]}
+        onSelect={(value) => setSelectedBusinessUnit(value)}
+      />
+      <Dropdown
+        label="Location"
+        options={["Mumbai", "Taloja and Ankleshwar", "Bangalore"]}
+        onSelect={(value) => setSelectedLocation(value)}
+      />
+    </div>
+
+    <motion.div animate={{ x: [0, 100, 0] }}>
+      <img
+        src={microscopeImage}
+        alt="Lab Equipment"
+        className="h-50 rounded-xl"
+      />
+    </motion.div>
+  </div>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {filteredJobs.map((job) => (

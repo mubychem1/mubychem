@@ -552,7 +552,7 @@ const VerticalTabs = () => {
             <h3 className="text-2xl font-bold text-gray-900 ">
               {content[activeTab].title[language]}
             </h3>
-            <p className="text-[#6a7391]  text-justify mt-3">
+            <p className="text-[#6a7391] text-lg text-justify mt-3">
               {content[activeTab].description[language]}
             </p>
             <ul className="mt-4 text-justify space-y-2" style={{ fontFamily: " " }}>

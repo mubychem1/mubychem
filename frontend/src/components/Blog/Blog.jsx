@@ -5,6 +5,8 @@ import Page1 from "./Page1";
 import { Link } from "react-router-dom";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
+
 
 // const data = [
 //   {
@@ -48,8 +50,53 @@ const Blog = () => {
   const indexOfFirstItemT = indexOfLastItemT - ITEMS_PER_PAGE;
   const currentItemsT = dataT.slice(indexOfFirstItemT, indexOfLastItemT);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => setIsOpen(!isOpen);
   return (
     <>
+    <Helmet>
+        <title>Blog - Mubychem Pvt. Ltd.</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="canonical" href="" />
+
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Blog - Mubychem Pvt. Ltd.",
+        "url": "https://www.mubychem.com/about",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Mubychem Pvt. Ltd.",
+          "url": "https://www.mubychem.com", 
+          "logo": "https://www.mubychem.com/logo.png",
+          "description": "Mubychem Pvt. Ltd. is a reputed chemical manufacturing company in India, known for high-quality industrial and pharmaceutical chemicals.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Your Street Address",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "PIN Code",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "Customer Service"
+          }
+        }
+      }
+    `}
+        </script>
+
+      </Helmet>
+
+
+
       <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
           className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
@@ -75,7 +122,7 @@ const Blog = () => {
         </h1>
       </div>
 
-      <div className="bg-white  p-8 flex justify-center items-center flex-col ">
+      <div className="bg-white px-4 py-8 flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {currentItems.map((item, index) => (
             <div
@@ -104,12 +151,83 @@ const Blog = () => {
                 <button className="p-2 bg-[#7B3931] text-white rounded-full hover:bg-blue-700 transition-all">&#10140;</button>
               </div> */}
 
-              <div className="mt-4 ml-1 flex justify-start">
+              {/* <div className="mt-4 ml-1 flex justify-start">
                 <Link to="/Page1">
                   <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
                     {currentTranslations.Readmore}
                   </button>
                 </Link>
+              </div> */}
+
+              <div className="flex flex-col items-left justify-left  p-6">
+                {/* Button to trigger modal */}
+                <button
+                  onClick={toggleModal}
+                  className="bg-[#7B3931] hover:bg-[#5c2821] text-white font-semibold py-3 px-6 rounded-full transition duration-300"
+                >
+                  {currentTranslations.Readmore}
+                </button>
+
+                {/* Modal */}
+                {isOpen && (
+                  <div className="fixed inset-0  bg-opacity-10 flex items-center justify-center z-50">
+                    <div className="bg-[#7B3931] border-5 border-[#000] text-white rounded-3xl p-8 w-full max-w-2xl relative">
+                      <button
+                        onClick={toggleModal}
+                        className="absolute top-4 right-6 text-white text-2xl font-bold"
+                      >
+                        ×
+                      </button>
+
+                      <h2 className="text-3xl font-bold mb-2 text-center">
+                        {currentTranslations.staff}{" "}
+                      </h2>
+                      <p className="text-center mb-6">
+                        {currentTranslations.message}{" "}
+                      </p>
+
+                      <form className="space-y-4">
+                        <div className="flex flex-col md:flex-row gap-4">
+                          <input
+                            type="text"
+                            placeholder="Name"
+                            className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                          />
+                          <input
+                            type="email"
+                            placeholder="Email"
+                            className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                          />
+                        </div>
+                        <div className="flex flex-col md:flex-row gap-4">
+                          <input
+                            type="text"
+                            placeholder="Phone"
+                            className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Product"
+                            className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                          />
+                        </div>
+                        <textarea
+                          rows="4"
+                          placeholder="Message"
+                          className="w-full p-3 rounded-2xl border border-white bg-transparent placeholder-white focus:outline-none"
+                        ></textarea>
+                        <div className="flex justify-center">
+                          <button
+                            type="submit"
+                            className="bg-white text-[#7B3931] font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition"
+                          >
+                            {currentTranslations.submit}{" "}
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -147,12 +265,83 @@ const Blog = () => {
                     </span>
                   ))}
                 </p>
-                <div className="mt-4 ml-1 flex justify-start">
-                  <Link to="/Page1">
+                {/* <div className="mt-4 ml-1 flex justify-start">
+                  
                     <button className="p-2 bg-[#7B3931] text-white rounded-full transition-all font-semibold cursor-pointer">
                       {currentTranslations.Readmore}
                     </button>
-                  </Link>
+                  
+                </div> */}
+
+                <div className="flex flex-col items-left justify-left  p-6">
+                  {/* Button to trigger modal */}
+                  <button
+                    onClick={toggleModal}
+                    className="bg-[#7B3931] hover:bg-[#5c2821] text-white font-semibold py-3 px-6 rounded-full transition duration-300"
+                  >
+                    {currentTranslations.Readmore}
+                  </button>
+
+                  {/* Modal */}
+                  {isOpen && (
+                    <div className="fixed inset-0  bg-opacity-10 flex items-center justify-center z-50">
+                      <div className="bg-[#7B3931] border-5 border-[#000] text-white rounded-3xl p-8 w-full max-w-2xl relative">
+                        <button
+                          onClick={toggleModal}
+                          className="absolute top-4 right-6 text-white text-2xl font-bold"
+                        >
+                          ×
+                        </button>
+
+                        <h2 className="text-3xl font-bold mb-2 text-center">
+                          {currentTranslations.staff}{" "}
+                        </h2>
+                        <p className="text-center mb-6">
+                          {currentTranslations.message}{" "}
+                        </p>
+
+                        <form className="space-y-4">
+                          <div className="flex flex-col md:flex-row gap-4">
+                            <input
+                              type="text"
+                              placeholder="Name"
+                              className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                            />
+                            <input
+                              type="email"
+                              placeholder="Email"
+                              className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                            />
+                          </div>
+                          <div className="flex flex-col md:flex-row gap-4">
+                            <input
+                              type="text"
+                              placeholder="Phone"
+                              className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Product"
+                              className="w-full p-3 rounded-full border border-white bg-transparent placeholder-white focus:outline-none"
+                            />
+                          </div>
+                          <textarea
+                            rows="4"
+                            placeholder="Message"
+                            className="w-full p-3 rounded-2xl border border-white bg-transparent placeholder-white focus:outline-none"
+                          ></textarea>
+                          <div className="flex justify-center">
+                            <button
+                              type="submit"
+                              className="bg-white text-[#7B3931] font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition"
+                            >
+                              {currentTranslations.submit}{" "}
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

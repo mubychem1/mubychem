@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import translations from "../translater/translations.js";
+import { Helmet } from "react-helmet";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -22,7 +24,7 @@ const ContactUs = () => {
   const contactDetails = [
     {
       title: {
-        en: "Mail Id ",
+        en: "Mail ID ",
         fr: "Envoyez-nous un e-mail ",
         ru: "Пишите нам ",
         ko: " 메일을 보내주세요",
@@ -44,7 +46,7 @@ const ContactUs = () => {
         ar: "موقعنا",
       },
       details:
-        ["Sandhrust road ", "Dongri  Mumbai "],
+        ["S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009"],
       // fr:["Route Sandrush", "Dongri Mumbai"],
       // ru:["«Сандраш Роуд», «Донгри Мумбаи»"],        
       // ko:["샌드러시 로드", "동리 뭄바이"],
@@ -77,8 +79,7 @@ const ContactUs = () => {
         ar: "أيام العمل",
       },
       details: [
-        "Mon to Sat - 09:00am To 06:00pm",
-        " Sunday - Closed",
+        "Mon to Sat - 09:00 AM to 06:00 PM , Sun - Closed",
       ],
       icon: <Calendar className="text-[#773135]" size={32} />,
       link: "#working-hours", // This could scroll to a section with more info
@@ -108,24 +109,65 @@ const ContactUs = () => {
 
   return (
     <>
+    <Helmet>
+            <title>Contact Us - Mubychem Pvt. Ltd.</title>
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <link rel="canonical" href="" />
+    
+            {/* Schema.org JSON-LD */}
+            <script type="application/ld+json">
+              {`
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Contact Us - Mubychem Pvt. Ltd.",
+            "url": "https://www.mubychem.com/about",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Mubychem Pvt. Ltd.",
+              "url": "https://www.mubychem.com", 
+              "logo": "https://www.mubychem.com/logo.png",
+              "description": "Mubychem Pvt. Ltd. is a reputed chemical manufacturing company in India, known for high-quality industrial and pharmaceutical chemicals.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Your Street Address",
+                "addressLocality": "City",
+                "addressRegion": "State",
+                "postalCode": "PIN Code",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-XXXXXXXXXX",
+                "contactType": "Customer Service"
+              }
+            }
+          }
+        `}
+            </script>
+    
+          </Helmet>
+
+
       {/* -----------------Contact Us Banner --------------*/}
       <div className="bg-[#fff] p-6 pb-1 sm:p-8 md:p-12">
         <div
           className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-[350px] bg-cover rounded-4xl overflow-hidden"
-          style={{ backgroundImage: `url(${background}) `}}
+          style={{ backgroundImage: `url(${background}) ` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-6 md:px-8">
-          <div style={{ fontFamily: "Montserrat, sans-serif" }}>
-          <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
-          {currentTranslations.CONTACT_US}
+            <div style={{ fontFamily: "Montserrat, sans-serif" }}>
+              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 ">
+                {currentTranslations.CONTACT_US}
               </h1>
               <p className="text-white text-base sm:text-lg md:text-lg">
-              Muby Chem Private Limited</p>
+                Muby Chem Private Limited</p>
             </div>
           </div>
         </div>
-      </div>
+      </div>
       {/* -------------Contact Information -------------------*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-10 bg-white p-12">
         {contactDetails.map((contact, index) => (
@@ -153,7 +195,7 @@ const ContactUs = () => {
                 <div className="bg-[#f8faff] p-4 rounded-xl flex items-center justify-center">
                   {contact.icon}
                 </div>
-             
+
               </div>
             </motion.div>
           </a>
@@ -248,7 +290,7 @@ const ContactUs = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-48 py-3 bg-[#773135] text-white border border-[#fff] font-medium rounded-full transition flex justify-center items-center gap-2 mx-auto md:ml-5 cursor-pointer"
+                  className="w-48 py-3 bg-[#773135] hover:bg-white text-white hover:text-[#773135] border border-[#fff] font-medium rounded-full transition flex justify-center items-center gap-2 mx-auto md:ml-5 cursor-pointer"
                 >
                   {isSubmitting ? "Submitting..." : "Submit →"}
                 </button>
@@ -269,7 +311,7 @@ const ContactUs = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        
+
         </div>
       </section>
     </>

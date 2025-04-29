@@ -38,6 +38,8 @@ import MineralSalts from "../../assets/MineralSalts.jpg";
 import SpecialtyChemicals from "../../assets/SpecialtyChemicals.jpg";
 import AminoAcids from "../../assets/AminoAcids.jpg";
 import Fragrance from "../../assets/Fragrance.jpg";
+import { Helmet } from "react-helmet";
+
 
 const certification = [
   {
@@ -314,6 +316,48 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+        <title> Mubychem Pvt. Ltd. | Home Page</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="canonical" href="" />
+
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Mubychem Pvt. Ltd. | Home Page",
+        "url": "https://www.mubychem.com/about",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Mubychem Pvt. Ltd.",
+          "url": "https://www.mubychem.com", 
+          "logo": "https://www.mubychem.com/logo.png",
+          "description": "Mubychem Pvt. Ltd. is a reputed chemical manufacturing company in India, known for high-quality industrial and pharmaceutical chemicals.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Your Street Address",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "PIN Code",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "Customer Service"
+          }
+        }
+      }
+    `}
+        </script>
+
+      </Helmet>
+
+
+
       {/* ----------------- Banner------------------ */}
       <motion.section
         initial="hidden"

@@ -89,6 +89,8 @@ import background from "../../assets/background.png";
 import { motion } from "framer-motion";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
+
 const Blog = () => {
   const language = useSelector((state) => state.language.language); // Get selected language from Redux
 
@@ -96,6 +98,10 @@ const Blog = () => {
 
   return (
     <>
+    
+
+
+
       {/* Blog page details */}
       <div className="flex flex-col"  >
         {/* ----------Research Section  -------------- */}

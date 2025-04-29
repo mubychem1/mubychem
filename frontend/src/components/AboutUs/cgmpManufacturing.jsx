@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import background from "../../assets/Cgmp_Manufacturing.jpg";
 import translations from "../translater/translations.js";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -46,6 +47,47 @@ const CgmpManufacturing = () => {
   };
   return (
     <>
+    <Helmet>
+            <title>Manufactoring Overview - Mubychem Pvt. Ltd.</title>
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <link rel="canonical" href="" />
+    
+            {/* Schema.org JSON-LD */}
+            <script type="application/ld+json">
+              {`
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Manufactoring Overview - Mubychem Pvt. Ltd",
+            "url": "https://www.mubychem.com/about",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Mubychem Pvt. Ltd.",
+              "url": "https://www.mubychem.com", 
+              "logo": "https://www.mubychem.com/logo.png",
+              "description": "Mubychem Pvt. Ltd. is a reputed chemical manufacturing company in India, known for high-quality industrial and pharmaceutical chemicals.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Your Street Address",
+                "addressLocality": "City",
+                "addressRegion": "State",
+                "postalCode": "PIN Code",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-XXXXXXXXXX",
+                "contactType": "Customer Service"
+              }
+            }
+          }
+        `}
+            </script>
+    
+          </Helmet>
+
+          
       {/* -----------------About Us Banner------------------ */}
       <motion.section
         initial="hidden"

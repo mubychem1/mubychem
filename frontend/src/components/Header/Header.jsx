@@ -32,7 +32,8 @@ const Header = () => {
         dispatch(setLanguage(selectedLanguage));
     };
 
-    const currentTranslations = translations[language] || translations.en
+    const currentTranslations = translations[language] || translations.en;
+    const selectedLanguage = useSelector((state) => state.language.language);
 
     const [isOpen, setIsOpen] = useState(false);
     const [isTap, setIsTap] = useState(false);
@@ -57,18 +58,42 @@ const Header = () => {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [subhoveredIndex, setSubhoveredIndex] = useState(null);
-
+    
     const aboutMenuItems = [
         {
-            label: "Company Overview",
-            link: "about",
+          link: "about",
+          label: {
+            en: "Company Overview",
+            ar: "نظرة عامة على الشركة",
+            es: "Descripción de la empresa",
+            ru: "Обзор компании",
+            fr: "Présentation de l'entreprise",
+            ko: "회사 개요",
+          },
         },
-        { label: "Manufacturing Overview", link: "/about-us/manufacturingOverview" },
         {
-            label: "Research & Development",
-            link: "/about-us/research-development",
+          link: "/about-us/manufacturingOverview",
+          label: {
+            en: "Manufacturing Overview",
+            ar: "نظرة عامة على التصنيع",
+            es: "Descripción de fabricación",
+            ru: "Обзор производства",
+            fr: "Présentation de la fabrication",
+            ko: "제조 개요",
+          },
         },
-    ];
+        {
+          link: "/about-us/research-development",
+          label: {
+            en: "Research & Development",
+            ar: "البحث والتطوير",
+            es: "Investigación y desarrollo",
+            ru: "Исследования и разработки",
+            fr: "Recherche et développement",
+            ko: "연구 및 개발",
+          },
+        },
+      ];
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -93,7 +118,7 @@ const Header = () => {
                     {/* ---------Navigation ---------- */}
                     <div className="flex items-center flex-grow justify-center">
                         {/* Desktop Navigation Menu */}
-                        <ul className="hidden md:flex items-center text-[14px] sm:text-[12px] font-bold font-['Montserrat',sans-serif] text-gray-700">
+                        <ul className="hidden md:flex items-center text-[16px] sm:text-[14px] lg:text-[12px] font-bold font-['Montserrat',sans-serif] text-gray-700">
                             <li className='px-4 py-2'>
                                 <NavLink
                                     to="/"
@@ -115,34 +140,24 @@ const Header = () => {
                                         {aboutMenuItems.map((item, index) => (
                                             <li
                                                 key={index}
-                                                className="relative px-6 py-3 text-gray-800 flex items-center justify-between hover:bg-gray-100 transition-all duration-300 ease-in-out group"
+                                                className="relative px-6 py-3 text-gray-800 flex items-center justify-between hover:bg-gray-100 group"
                                                 onMouseEnter={() => setHoveredIndex(index)}
                                                 onMouseLeave={() => setHoveredIndex(null)}
                                             >
-                                                {/* If submenu exists -> Don't navigate */}
-                                                {item.submenu ? (
-                                                    <span
-                                                        className="cursor-default text-[14px] flex items-center gap-2 text-black group-hover:text-[#773135] transition-all duration-300 ease-in-out"
-                                                    >
-                                                        {hoveredIndex === index && <FaMinus />}
-                                                        {item.label}
-                                                    </span>
-                                                ) : (
-                                                    <NavLink
-                                                        to={item.link}
-                                                        className={({ isActive }) =>
-                                                            `cursor-pointer hover:text-[#773135] hover:pl-2 text-[14px] flex items-center gap-2 transition-all duration-300 ease-in-out ${isActive ? "text-[#773135]" : "text-black"}`
-                                                        }
-                                                    >
-                                                        {hoveredIndex === index && <FaMinus />}
-                                                        {item.label}
-                                                    </NavLink>
-                                                )}
-
+                                                <NavLink
+                                                    to={item.link}
+                                                    className={({ isActive }) =>
+                                                        `cursor-pointer hover:text-[#773135] hover:pl-5 text-[14px] flex items-center gap-2 ${isActive ? "text-[#773135]" : "text-black"
+                                                        }`
+                                                    }
+                                                >
+                                                    {hoveredIndex === index && <FaMinus />}
+                                                    {item.label[selectedLanguage] || item.label.en} {/* <-- Updated here */}
+                                                </NavLink>
                                             </li>
                                         ))}
                                     </ul>
-                                </div>
+                                </div>
                             </li>
 
                             <li className='px-4 py-2'>

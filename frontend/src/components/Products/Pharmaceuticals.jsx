@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Pharmaceuticals() {
-  const Dosage_Forms= [
+  const Dosage_Forms = [
     "Oral",
     "Parenteral",
     "Topical",
@@ -14,7 +14,7 @@ function Pharmaceuticals() {
     "Otic",
     "Respiratory/Inhaled",
     "Rectal/Vaginal (Suppositories)"
-  ];
+  ];
 
   const categories = [
     "Active Pharmaceutical Ingredients (APIs)",
@@ -134,9 +134,16 @@ function Pharmaceuticals() {
                   className="border rounded p-4 sm:p-6 shadow-sm grid grid-cols-1 md:grid-cols-5 gap-4 items-start"
                 >
                   <div className="md:col-span-4">
-                    <span className="bg-gray-300 text-gray-700 text-xs sm:text-sm px-3 py-1 rounded-full inline-block mb-2">
-                      {product.category}
-                    </span>
+                    <div className="mb-2 flex flex-wrap gap-2">
+                      {product.dosageForm?.split(',').map((form, i) => (
+                        <span
+                          key={i}
+                          className="bg-gray-300 text-gray-700 text-xs sm:text-sm px-3 py-1 rounded-full inline-block"
+                        >
+                          {form.trim()}
+                        </span>
+                      ))}
+                    </div>
                     <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
                       <h3 className="text-xl sm:text-2xl font-semibold text-[#773135] mb-2 hover:underline">
                         {product.product_name}
@@ -161,6 +168,7 @@ function Pharmaceuticals() {
                   </div>
                 </div>
               ))}
+
 
               {/* Pagination */}
               <div className="flex justify-center items-center gap-4 mt-6">

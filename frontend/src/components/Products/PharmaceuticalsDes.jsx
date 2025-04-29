@@ -102,7 +102,7 @@ const PharmaceuticalsDes = () => {
           style={{ backgroundImage: `url(${background})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-start font-[Poppins]">
+          <div className="absolute inset-0 flex items-center justify-start ">
             <div className="px-4">
               <h1 className="text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4">
                 {product.name}
@@ -115,7 +115,7 @@ const PharmaceuticalsDes = () => {
         </div>
       </div>
 
-    
+
       <button
         onClick={() => window.history.back()}
         className="bg-[#7b3931] text-white font-bold py-2 px-4 rounded cursor-pointer ml-12 sm:ml-8 lg:ml-12 xl:ml-12 mt-10"
@@ -125,7 +125,7 @@ const PharmaceuticalsDes = () => {
 
       <div className="py-5 p-12">
         <p className="text-lg text-gray-700 sm:text-base md:text-lg lg:text-xl text-justify">
-          Muby Chem is a leading manufacturer and supplier of <strong>{product.name}</strong> <strong>{product.casNo}</strong> , offering high-purity [API/Excipients/Specialty Chemical ]. As a USFDA-registered and GMP-certified company, Muby Chem supports customers with comprehensive documentation and ensures the highest standards in pharmaceutical manufacturing.
+          Muby Chem is a leading manufacturer and supplier of <strong>{product.name}</strong> ( CAS No. <strong>{product.casNo}</strong>), offering high-purity [API/Excipients/Specialty Chemical ]. As a USFDA-registered and GMP-certified company, Muby Chem supports customers with comprehensive documentation and ensures the highest standards in pharmaceutical manufacturing.
         </p>
       </div>
 
@@ -178,13 +178,23 @@ const PharmaceuticalsDes = () => {
           </table>
         </div>
 
-        <div className="self-end pr-5 mt-5 lg:mt-0">
+        <div className="flex justify-center items-center h-48 lg:h-64 pr-28">
+          <div>
+            <img
+              src={product.img}
+              alt={product.name}
+              className="sm:w-[250px] lg:w-[300px] h-auto rounded-lg"
+            />
+          </div>
+        </div>
+
+        {/* <div className="self-end px-4 mt-5 lg:mt-0 max-w-[500px] mx-auto">
           <img
             src={product.img}
             alt={product.name}
-            className="w-full sm:w-[350px] lg:w-[550px] h-auto lg:h-[200px] rounded-lg  transition-transform duration-300 ease-in-out hover:scale-110"
+            className="w-full h-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"
           />
-        </div>
+        </div> */}
       </div>
 
 
@@ -198,13 +208,13 @@ const PharmaceuticalsDes = () => {
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Indication</h2>
-            <ul className="list-disc pl-5 space-y-2 text-justify">
+            {/* <ul className="list-disc pl-5 space-y-2 text-justify">
               <li>Relief of irritation and inflammation in the throat, mouth, and gastrointestinal tract</li>
               <li>Used in formulations for cough, sore throat, and gastritis</li>
               <li>Supportive treatment for oral ulcers and periodontal health</li>
               <li>Acts as a natural stabilizer and emulsifier in pharmaceutical and nutraceutical preparations</li>
               <li>Incorporated in lozenges, syrups, and suspensions for its soothing and protective properties</li>
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Muby Chem Expertise</h2>

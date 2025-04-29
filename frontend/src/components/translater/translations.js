@@ -45,8 +45,8 @@ const translations = {
       "We specialize in producing high-quality specialty chemicals, APIs and excipients. Our products are known for their purity and effectiveness, supporting various industries worldwide.",
 
     CorporateOffice: "Corporate Office:",
-    CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
-    ManufacturingPlant: "Manufacturing Plant:",
+    CorporateOfficeAddress: "Office No 97, Sarifa Mansion, Ground Floor, Chinchbunder, Mumbai- 400 009, India",
+    ManufacturingPlant: "Manufacturing Facility:",
     ManufacturingPlantAddress: "Plot No. 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
     // -------Home Section ---------
     qualityChemicals: "Quality Chemicals Worldwide - Since 1976",
@@ -151,13 +151,13 @@ const translations = {
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Watch Video",
     Professional: "Professional and Experienced",
-    staff: "staff ready to help you",
     National: "National Science Day",
     Enquire: "Enquire Now ➝",
     Experts: "With The Best Experts In Science",
     Trusted: "Trusted by thousands of people & companies.",
     Client: "Client Reviews",
     AboutusHeading: "Muby Chem – Trusted Since 1976",
+    supply:"Supplying to 60+ countries worldwide",
 
     //--------------Manufacturing Overview-----------
 
@@ -167,9 +167,9 @@ const translations = {
     ManufacturingDescB:"pharmaceutical ingredients, excipients, mineral salts, and specialty chemicals.",
     ManufacturingDescC:" The facility is designed and equipped with advanced machinery and technology to produce top-quality products in compliance with environmental regulations and ",
     ManufacturingDescD:"Good Manufacturing Practices (GMP).",
-    ManufacturingDesc1: " This USFDA-registered, state-of-the-art facility, located in Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal, and Kosher standards .",
+    ManufacturingDesc1: "This USFDA-registered, state-of-the-art facility, located in Ankleshwar, Gujarat, India , is certified for cGMP, GLP, ISO 9001, FSSC 22000, FSSAI, Halal, Kosher and FamiQS standards .",
     ManufacturingDesc2: "With modern production techniques, flexible processes, and procedures, we offer efficient services for both small batches and large orders.",
-    ManufacturingDesc3: " Explore Our State-of-the-Art Manufacturing Facility:",
+    ManufacturingDesc3: "Explore Our State-of-the-Art Manufacturing Facility:",
 
     //-------------Research & Development----------
     ResearchDevelopment: "Research & Development",
@@ -231,7 +231,7 @@ const translations = {
         image: dcat,
       },
     ],
-    Readmore: "Schedule Meeting ➝",
+    Readmore: "Schedule a Meeting ➝",
     //--------Blogs---------
 
     Uploaded: "Uploaded By: admin | 12th August 2024",
@@ -418,7 +418,6 @@ const translations = {
     AnswerDescription:
       "We carefully screen all of our cleaners, so you can rest assured that your home would receive the absolute highest quality of service.",
     Details: "More Details →",
-    staff: "Send a message to staff",
     message:
       "Your email address will not be published. Required fields are marked *",
     message1: "Save my name, email, and website for next time.",
@@ -426,7 +425,7 @@ const translations = {
     Questions: "Have Questions?",
     AnswerDescription: "Our team is ready to help. Reach out any time!",
     Details: "More Details",
-    staff: "Speak to Our Staff",
+    staff: "Get in Touch with Us",
     message: "Fill out the form below and we'll get back to you.",
     message1: "I agree to the terms and conditions",
 
@@ -525,8 +524,8 @@ const translations = {
     SPECIALTY_CHEMICALS:
       "Nous sommes spécialisés dans la production de produits chimiques et d'excipients de spécialité de haute qualité. Nos produits sont connus pour leur pureté et leur efficacité, soutenant diverses industries dans le monde entier.",
     CorporateOffice: "Siège social :",
-    CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
-    ManufacturingPlant: "Usine de fabrication :",
+    CorporateOfficeAddress: "Office No 97, Sarifa Mansion, Ground Floor, Chinchbunder, Mumbai- 400 009, India",
+    ManufacturingPlant: "Installation de fabrication :",
     ManufacturingPlantAddress: "Parcelle n° 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
     //---------- Home Section ---------
     qualityChemicals:
@@ -643,7 +642,7 @@ const translations = {
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Regarder la vidéo",
     Professional: "Professionnels et expérimentés",
-    staff: "équipe prête à vous aider",
+    // staff: "équipe prête à vous aider",
     National: "Journée nationale de la science",
     Enquire: "Demander maintenant ➝",
     Experts: "Avec les meilleurs experts scientifiques",
@@ -651,6 +650,7 @@ const translations = {
     Client: "Avis des clients",
     AboutusHeading: "Muby Chem – De confiance depuis 1976",
     Product1: "Division de Produits",
+    supply:"Fourniture à plus de 60 pays dans le monde entier",
 
 
     //--------------Manufacturing Overview-----------
@@ -899,7 +899,7 @@ const translations = {
     AnswerDescription:
       "Nous sélectionnons soigneusement tous nos nettoyeurs, afin que vous puissiez être sûr que votre maison recevra le service de la plus haute qualité.",
     Details: "Plus de détails →",
-    staff: "Envoyer un message au personnel",
+    
     message:
       "Votre adresse e-mail ne sera pas publiée. Les champs obligatoires sont marqués *",
     message1:
@@ -953,8 +953,8 @@ const translations = {
     SPECIALTY_CHEMICALS:
       "Мы специализируемся на производстве высококачественных специальных химикатов и вспомогательных веществ. Наша продукция известна своей чистотой и эффективностью и находит применение в различных отраслях промышленности по всему миру.",
     CorporateOffice: "Головной офис:",
-    CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Мумбаи, Махараштра 400009",
-    ManufacturingPlant: "Производственный завод:",
+    CorporateOfficeAddress: "Office No 97, Sarifa Mansion, Ground Floor, Chinchbunder, Mumbai- 400 009, India",
+    ManufacturingPlant: "Производственное предприятие",
     ManufacturingPlantAddress: "Участок № 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Гуджарат 393002",
 
     // -------Home Section ---------
@@ -1056,7 +1056,7 @@ const translations = {
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Смотреть видео",
     Professional: "Профессиональный и опытный",
-    staff: "персонал, готовый помочь вам",
+    // staff: "персонал, готовый помочь вам",
     National: "Национальный день науки",
     Enquire: "Запросить ➝",
     Experts: "С лучшими экспертами в области науки",
@@ -1064,6 +1064,7 @@ const translations = {
     Client: "Отзывы клиентов",
     AboutusHeading: "Muby Chem – Надёжность с 1976 года",
     Product1: "Продуктовое подразделение",
+    supply:"Поставка в более чем 60 стран мира",
 
     //--------------Manufacturing Overview-----------
     ManufacturingOverview: "Обзор производства",
@@ -1388,8 +1389,8 @@ const translations = {
     SPECIALTY_CHEMICALS:
       "당사는 고품질 특수 화학물질 및 부형제 생산을 전문으로 합니다. 당사 제품은 순도와 효과로 유명하며 전 세계 다양한 산업을 지원하고 있습니다.",
     CorporateOffice: "본사:",
-    CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, 뭄바이, 마하라슈트라 400009",
-    ManufacturingPlant: "제조 공장:",
+    CorporateOfficeAddress: "Office No 97, Sarifa Mansion, Ground Floor, Chinchbunder, Mumbai- 400 009, India",
+    ManufacturingPlant: "제조 시설:",
     ManufacturingPlantAddress: "부지 번호 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, 구자라트 393002",
     // -------Home Section ---------
     qualityChemicals: "1976년부터 전 세계에 고품질 화학물질 공급",
@@ -1489,7 +1490,7 @@ const translations = {
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "영상 보기",
     Professional: "전문적이고 경험 있는",
-    staff: "직원이 도와드립니다",
+    // staff: "직원이 도와드립니다",
     National: "국가 과학의 날",
     Enquire: "지금 문의하기 ➝",
     Experts: "과학 최고의 전문가와 함께",
@@ -1497,6 +1498,7 @@ const translations = {
     Client: "고객 후기",
     AboutusHeading: "Muby Chem – 1976년부터 신뢰받는 브랜드",
     Product1: "제품 부문",
+    supply:"전 세계 60개국 이상에 공급",
 
     //--------------Manufacturing Overview-----------
     ManufacturingOverview: "제조 개요",
@@ -1941,6 +1943,7 @@ const translations = {
     CONTACT_US: "CONTÁCTENOS",
     CompanyOverview: "Descripción de la empresa",
     USEFUL_LINKS: "Enlaces Útiles",
+    DownloadBrochure: "Descargar folleto",
 
     // -------------Footer Section ----------
     PRODUCT: "Producto",
@@ -1965,8 +1968,8 @@ const translations = {
     SPECIALTY_CHEMICALS:
       "Nos especializamos en la producción de productos químicos y excipientes especiales de alta calidad. Nuestros productos son conocidos por su pureza y eficacia y respaldan a diversas industrias en todo el mundo.",
     CorporateOffice: "Oficina Corporativa:",
-    CorporateOfficeAddress: "S-8, Sarifa Mansion, 2nd Flank Road, Chinchbunder, Mandvi, Mumbai, Maharashtra 400009",
-    ManufacturingPlant: "Planta de Fabricación:",
+    CorporateOfficeAddress: "Office No 97, Sarifa Mansion, Ground Floor, Chinchbunder, Mumbai- 400 009, India",
+    ManufacturingPlant: "Instalación de fabricación:",
     ManufacturingPlantAddress: "Parcela No. 2900/46, 47, 162, 164, 164, 165, 166, 167 GIDC Ankleshwar, Bharuch, Gujarat 393002",
 
     // -------Home Section ---------
@@ -2068,7 +2071,7 @@ const translations = {
     welcomeToMubyChem: "Muby Chem Private Limited",
     watchVideo: "Ver video",
     Professional: "Profesionales con experiencia",
-    staff: "equipo listo para ayudarte",
+    // staff: "equipo listo para ayudarte",
     National: "Día Nacional de la Ciencia",
     Enquire: "Consultar ahora ➝",
     Experts: "Con los mejores expertos en ciencia",
@@ -2076,6 +2079,7 @@ const translations = {
     Client: "Opiniones de los clientes",
     AboutusHeading: "Muby Chem – De confianza desde 1976",
     Product1: "División de Productos",
+    supply:"Suministrando a más de 60 países en todo el mundo",
 
     //--------------Manufacturing Overview-----------
     ManufacturingOverview: "Resumen de Fabricación",
@@ -2505,7 +2509,7 @@ const translations = {
     AnswerDescription:
       "Seleccionamos cuidadosamente a todos nuestros limpiadores, por lo que puede estar seguro de que su hogar recibirá la más alta calidad de servicio.",
     Details: "Más detalles →",
-    staff: "Enviar un mensaje al personal",
+    // staff: "Enviar un mensaje al personal",
     message:
       "Su dirección de correo electrónico no será publicada. Los campos obligatorios están marcados *",
     message1: "Guarda mi nombre, correo electrónico y sitio web para la próxima vez.",
@@ -2555,7 +2559,7 @@ const translations = {
       "نحن متخصصون في إنتاج المواد الكيميائية المتخصصة عالية الجودة والمكونات الإضافية. منتجاتنا معروفة بنقاوتها وفعاليتها، وتدعم العديد من الصناعات حول العالم.",
     CorporateOffice: "المكتب الرئيسي:",
     CorporateOfficeAddress: "S-8، قصر سريفة، الطريق الثاني، تشينشباندر، ماندفي، مومباي، ماهاراشترا 400009",
-    ManufacturingPlant: "مصنع التصنيع:",
+    ManufacturingPlant: "منشأة تصنيع",
     ManufacturingPlantAddress: "قطعة رقم 2900/46، 47، 162، 164، 164، 165، 166، 167، منطقة GIDC أنكليشوار، بهروتش، غوجارات 393002",
     //---------- Home Section ---------
     qualityChemicals:
@@ -2657,7 +2661,7 @@ const translations = {
     welcomeToMubyChem: "موبي كيم برايفت ليميتد",
     watchVideo: "شاهد الفيديو",
     Professional: "فريق محترف وذو خبرة",
-    staff: "جاهز لمساعدتك",
+    // staff: "جاهز لمساعدتك",
     National: "اليوم الوطني للعلوم",
     Enquire: "استفسر الآن ➝",
     Experts: "مع أفضل الخبراء في العلوم",
@@ -2665,6 +2669,7 @@ const translations = {
     Client: "آراء العملاء",
     AboutusHeading: "موبي كيم – موثوق به منذ عام 1976",
     Product1: "قسم المنتجات",
+    supply:"التوريد إلى أكثر من 60 دولة حول العالم",
 
     //--------------Manufacturing Overview-----------
     CompanyOverview: "نظرة عامة على الشركة",
