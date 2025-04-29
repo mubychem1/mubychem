@@ -208,13 +208,11 @@ const PharmaceuticalsDes = () => {
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Indication</h2>
-            {/* <ul className="list-disc pl-5 space-y-2 text-justify">
-              <li>Relief of irritation and inflammation in the throat, mouth, and gastrointestinal tract</li>
-              <li>Used in formulations for cough, sore throat, and gastritis</li>
-              <li>Supportive treatment for oral ulcers and periodontal health</li>
-              <li>Acts as a natural stabilizer and emulsifier in pharmaceutical and nutraceutical preparations</li>
-              <li>Incorporated in lozenges, syrups, and suspensions for its soothing and protective properties</li>
-            </ul> */}
+            <ul className="list-disc pl-5 space-y-2">
+              {product.indication?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Muby Chem Expertise</h2>
