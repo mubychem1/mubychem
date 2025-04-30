@@ -13,7 +13,7 @@ function Pharmaceuticals() {
     "Ophthalmic",
     "Otic",
     "Respiratory/Inhaled",
-    "Rectal/Vaginal (Suppositories)"
+    "Rectal/Vaginal (Suppositories)",
   ];
 
   const categories = [
@@ -26,6 +26,7 @@ function Pharmaceuticals() {
   ];
 
   const [products, setProducts] = useState([]);
+  const [selectedDosageForms, setSelectedDosageForms] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,21 @@ function Pharmaceuticals() {
     fetchProducts();
   }, [currentPage]);
 
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedDosageForms]);
+
+  // Filtering logic
+  const filteredProducts =
+    selectedDosageForms.length === 0
+      ? products
+      : products.filter((product) =>
+          product.dosageForm
+            ?.split(",")
+            .some((form) => selectedDosageForms.includes(form.trim()))
+        );
+
   const paginate = (pageNumber) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
@@ -57,7 +73,7 @@ function Pharmaceuticals() {
   };
 
   return (
-    <div className="font-montserrat"> {/* Apply font-family to the main container */}
+    <div className="font-montserrat">
       {/* Background Section */}
       <div className="bg-white p-4 sm:p-6 md:p-12">
         <div
@@ -96,8 +112,21 @@ function Pharmaceuticals() {
             <div className="space-y-2">
               {Dosage_Forms.map((item, idx) => (
                 <label key={idx} className="flex items-center space-x-1.5">
-                  <input type="checkbox" className="form-checkbox" />
-                  <span className="text-sm"> {item}</span>
+                  <input
+                    type="checkbox"
+                    className="form-checkbox"
+                    value={item}
+                    checked={selectedDosageForms.includes(item)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setSelectedDosageForms((prev) =>
+                        prev.includes(value)
+                          ? prev.filter((form) => form !== value)
+                          : [...prev, value]
+                      );
+                    }}
+                  />
+                  <span className="text-sm">{item}</span>
                 </label>
               ))}
             </div>
@@ -122,20 +151,20 @@ function Pharmaceuticals() {
             <div className="flex flex-col items-center justify-center h-64 text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
             </div>
-          ) : products.length === 0 ? (
+          ) : filteredProducts.length === 0 ? (
             <div className="text-center text-gray-500 text-lg py-12">
               No products found.
             </div>
           ) : (
             <>
-              {products.map((product, index) => (
+              {filteredProducts.map((product, index) => (
                 <div
                   key={index}
                   className="border rounded p-4 sm:p-6 shadow-sm grid grid-cols-1 md:grid-cols-5 gap-4 items-start"
                 >
                   <div className="md:col-span-4">
                     <div className="mb-2 flex flex-wrap gap-2">
-                      {product.dosageForm?.split(',').map((form, i) => (
+                      {product.dosageForm?.split(",").map((form, i) => (
                         <span
                           key={i}
                           className="bg-gray-300 text-gray-700 text-xs sm:text-sm px-3 py-1 rounded-full inline-block"
@@ -144,14 +173,18 @@ function Pharmaceuticals() {
                         </span>
                       ))}
                     </div>
-                    <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
+                    <Link
+                      to={`/PharmaceuticalsDes/${product.commonId}`}
+                      key={product._id}
+                    >
                       <h3 className="text-xl sm:text-2xl font-semibold text-[#773135] mb-2 hover:underline">
                         {product.product_name}
                       </h3>
                     </Link>
                     {product.therapeuticCategor && (
                       <p className="text-sm sm:text-base mb-1">
-                        <strong>Therapeutic Category:</strong> {product.therapeuticCategor}
+                        <strong>Therapeutic Category:</strong>{" "}
+                        {product.therapeuticCategor}
                       </p>
                     )}
                     <p className="text-sm sm:text-base">
@@ -160,7 +193,7 @@ function Pharmaceuticals() {
                   </div>
 
                   <div className="md:col-span-1 flex flex-col gap-3">
-                    <Link to={`/PharmaceuticalsDes/${product.commonId}`} key={product._id}>
+                    <Link to={`/PharmaceuticalsDes/${product.commonId}`}>
                       <button className="bg-[#773135] text-white px-4 py-2 rounded cursor-pointer w-full text-sm sm:text-base hover:bg-[#5e272a]">
                         More Details
                       </button>
@@ -168,7 +201,6 @@ function Pharmaceuticals() {
                   </div>
                 </div>
               ))}
-
 
               {/* Pagination */}
               <div className="flex justify-center items-center gap-4 mt-6">

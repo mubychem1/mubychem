@@ -125,7 +125,7 @@ const PharmaceuticalsDes = () => {
 
       <div className="py-5 p-12">
         <p className="text-lg text-gray-700 sm:text-base md:text-lg lg:text-xl text-justify">
-          Muby Chem is a leading manufacturer and supplier of <strong>{product.name}</strong> ( CAS No. <strong>{product.casNo}</strong>), offering high-purity [API/Excipients/Specialty Chemical ]. As a USFDA-registered and GMP-certified company, Muby Chem supports customers with comprehensive documentation and ensures the highest standards in pharmaceutical manufacturing.
+          <strong>Muby Chem </strong> is a leading manufacturer and supplier of <strong>{product.name}</strong> <strong>(CAS No. {product.casNo})</strong>, offering high-purity [API/Excipient/Specialty Chemical]. As a <strong>USFDA-registered </strong> and <strong>GMP-certified </strong>company, Muby Chem supports customers with comprehensive documentation and ensures the highest standards in pharmaceutical manufacturing.
         </p>
       </div>
 
@@ -202,10 +202,10 @@ const PharmaceuticalsDes = () => {
       <div className="min-h-screen bg-white flex flex-col lg:flex-row px-4 lg:px-20 py-12 gap-12">
         {/* Left Section - Description */}
         <div className="lg:w-1/2 text-gray-800 space-y-10 -ml-2 lg:-ml-6">
-          <div>
+          {/* <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Mechanism Of Action</h2>
             <p className="text-justify">{product.mechanismOfAction}</p>
-          </div>
+          </div> */}
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Indication</h2>
             <ul className="list-disc pl-5 space-y-2">
@@ -214,6 +214,13 @@ const PharmaceuticalsDes = () => {
               ))}
             </ul>
           </div>
+
+          <div>
+            <h2 className="text-4xl font-semibold text-[#773135] mb-4">Mechanism Of Action</h2>
+            <p className="text-justify">{product.mechanismOfAction}</p>
+          </div>
+
+
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Muby Chem Expertise</h2>
             <p className="text-justify">
