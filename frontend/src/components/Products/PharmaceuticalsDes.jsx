@@ -198,8 +198,8 @@ const PharmaceuticalsDes = () => {
       </div>
 
 
-      {/* Description & Contact Form */}
-      <div className="min-h-screen bg-white flex flex-col lg:flex-row px-4 lg:px-20 py-12 gap-12">
+     {/* Description & Contact Form */}
+     <div className="min-h-screen bg-white flex flex-col lg:flex-row px-4 lg:px-20 py-12 gap-12">
         {/* Left Section - Description */}
         <div className="lg:w-1/2 text-gray-800 space-y-10 -ml-2 lg:-ml-6">
           {/* <div>
@@ -217,8 +217,17 @@ const PharmaceuticalsDes = () => {
 
           <div>
             <h2 className="text-4xl font-semibold text-[#773135] mb-4">Mechanism Of Action</h2>
-            <p className="text-justify">{product.mechanismOfAction}</p>
+            <ul className="list-disc pl-5 space-y-2">
+              {Array.isArray(product.mechanismOfAction) ? (
+                product.mechanismOfAction.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))
+              ) : (
+                <li>No data available</li>
+              )}
+            </ul>
           </div>
+
 
 
           <div>
@@ -305,7 +314,7 @@ const PharmaceuticalsDes = () => {
             )}
           </form>
         </div>
-      </div>
+      </div>
 
     </>
   );
