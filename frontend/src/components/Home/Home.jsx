@@ -39,7 +39,7 @@ import SpecialtyChemicals from "../../assets/SpecialtyChemicals.jpg";
 import AminoAcids from "../../assets/AminoAcids.jpg";
 import Fragrance from "../../assets/Fragrance.jpg";
 import { Helmet } from "react-helmet";
-
+import { Link } from "react-router-dom";
 
 const certification = [
   {
@@ -279,7 +279,7 @@ const Home = () => {
 
     try {
       console.log("aayush");
-      
+
       const response = await axios.post('https://mubychem.onrender.com/api/contact', formData)
 
       setSubmissionResult({
@@ -297,7 +297,7 @@ const Home = () => {
 
     } catch (error) {
       console.log("saloni");
-      
+
       console.error('Submission error:', error);
 
       const errorMessage =
@@ -316,7 +316,7 @@ const Home = () => {
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title> Mubychem Pvt. Ltd. | Home Page</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -397,86 +397,54 @@ const Home = () => {
       {/* ----------Research Section  -------------- */}
       <div className="bg-white flex flex-col md:flex-row items-center justify-between w-full md:px-20 font-['Montserrat',sans-serif]">
         {/* Left Side - Image */}
-        <motion.div
-          className="w-full sm:w-3/4 md:w-1/2  px-4 sm:px-6 md:px-0 flex justify-center"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <div className="w-full sm:w-3/4 md:w-1/2 px-4 sm:px-6 md:px-0 flex justify-center">
           <img
             src={microscopeImage}
             alt="Lab Equipment"
             className="w-full max-w-[647px] h-auto sm:h-[439px] rounded-xl"
           />
-        </motion.div>
+        </div>
 
         {/* Right Side - Content */}
-        <motion.div
-          className="w-full md:w-2/5 text-gray-800 max-w-lg mt-4 md:mt-[-1px] text-center md:text-left px-4 md:px-0"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        >
+        <div className="w-full md:w-2/5 text-gray-800 max-w-lg mt-4 md:mt-[-1px] text-center md:text-left px-4 md:px-0">
           {/* Heading */}
-          <motion.h2
-            className="text-[24px] sm:text-[26px] md:text-[29px] leading-[36px] sm:leading-[44px] md:leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
+          <h2 className="text-[24px] sm:text-[26px] md:text-[29px] leading-[36px] sm:leading-[44px] md:leading-[60px] tracking-[0] text-[#001837] normal-case not-italic w-full">
             {currentTranslations.welcomeToMubyChem}
-          </motion.h2>
+          </h2>
 
           {/* Subheading */}
-          <motion.p className="mb-4 text-sm sm:text-base">
+          <p className="mb-4 text-sm sm:text-base">
             {currentTranslations.obsessedWithQuality}
-          </motion.p>
+          </p>
 
           {/* Description */}
-          <motion.p
-            className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-          >
-            {currentTranslations.mubyChemDescriptionMain}<b>{currentTranslations.mubychemdes}</b>{currentTranslations.mubychemdes1}<b>{currentTranslations.mubychemdes2}</b>{currentTranslations.mubychemdes3}
-          </motion.p>
-          <motion.p
-            className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-          >
+          <p className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-4">
+            {currentTranslations.mubyChemDescriptionMain}
+            <b>{currentTranslations.mubychemdes}</b>
+            {currentTranslations.mubychemdes1}
+            <b>{currentTranslations.mubychemdes2}</b>
+            {currentTranslations.mubychemdes3}
+          </p>
+
+          <p className="text-justify text-[14px] sm:text-[15px] leading-[1.6] text-[#000] mb-6">
             {currentTranslations.mubyChemDescriptionMain2}
-          </motion.p>
+          </p>
 
           {/* Features Section */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-6 mb-6 border-t pt-3 border-gray-400"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.3 },
-              },
-            }}
-          >
+          <div className="flex flex-col sm:flex-row gap-6 mb-6 border-t pt-3 border-gray-400">
             {/* Add features here */}
-          </motion.div>
+          </div>
 
           {/* Button */}
-          <motion.button
+          <button
             className="h-12 sm:h-14 mt-4 px-6 py-2 sm:py-3 text-[#001837] border border-[#001837] font-Times New Roman rounded-full  
     flex items-center justify-center gap-2 hover:bg-[#773135] hover:text-white transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             <a href="/about">{currentTranslations.knowMore}</a>
             <FaArrowRight />
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
+
       </div>
 
       {/* Product category section */}
@@ -490,106 +458,90 @@ const Home = () => {
 
           {/* First Row */}
           <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
-            {/* Each Item */}
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={ActivePharmaceuticalIngredients}
-                alt="Active Pharmaceutical Ingredients"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.ActivePharmaceuticalIngredients}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={ActivePharmaceuticalIngredients}
+                  alt="Active Pharmaceutical Ingredients"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto cursor-pointer"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.ActivePharmaceuticalIngredients}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={PharmaExcipients}
-                alt="Pharma Excipients"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.PharmaExcipients}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={PharmaExcipients}
+                  alt="Pharma Excipients"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto cursor-pointer"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.PharmaExcipients}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={MineralSalts}
-                alt="Mineral Salts"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.MineralSalts}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={MineralSalts}
+                  alt="Mineral Salts"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto cursor-pointer"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.MineralSalts}
+                </p>
+              </Link>
+            </div>
           </div>
+
 
           {/* Second Row */}
           <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={SpecialtyChemicals}
-                alt="Specialty Chemicals"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.SpecialtyChemicals}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={SpecialtyChemicals}
+                  alt="Specialty Chemicals"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.SpecialtyChemicals}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={AminoAcids}
-                alt="Amino Acids"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.AminoAcids}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src="https://res.cloudinary.com/dqwovqy2u/image/upload/v1746515811/AminoAcids_ojeuuc.jpg"
+                  alt="Amino Acids"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.AminoAcids}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={Fragrance}
-                alt="Fragrance & Flavor Chemicals"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#fff] font-bold text-xl mt-2">
-                {currentTranslations.FragranceFlavorChemicals}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src="https://res.cloudinary.com/dqwovqy2u/image/upload/v1746515486/Fragrance_wzieur.jpg"
+                  alt="Fragrance & Flavor Chemicals"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#fff] font-bold text-xl mt-2">
+                  {currentTranslations.FragranceFlavorChemicals}
+                </p>
+              </Link>
+            </div>
           </div>
+
+
         </div>
       </div>
 
@@ -602,105 +554,88 @@ const Home = () => {
 
           {/* First Row */}
           <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={Pharmaceutical}
-                alt="Pharmaceuticals"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.Pharmaceuticals}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={Pharmaceutical}
+                  alt="Pharmaceuticals"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.Pharmaceuticals}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={biotech}
-                alt="BioTech"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.Biopharma}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={biotech}
+                  alt="BioTech"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.Biopharma}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={Nutraceutical}
-                alt="Nutraceuticals"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.Nutraceuticals}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={Nutraceutical}
+                  alt="Nutraceuticals"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.Nutraceuticals}
+                </p>
+              </Link>
+            </div>
           </div>
 
           {/* Second Row */}
           <div className="flex flex-col md:flex-row md:justify-between text-center pt-5 gap-4">
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={FoodBeverages}
-                alt="Food & Beverages"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.FoodBeverages}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={FoodBeverages}
+                  alt="Food & Beverages"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.FoodBeverages}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={PersonalCare}
-                alt="Personal Care"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.PersonalCareCosmetics}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={PersonalCare}
+                  alt="Personal Care"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.PersonalCareCosmetics}
+                </p>
+              </Link>
+            </div>
 
-            <motion.div
-              className="w-full md:w-1/3 m-2"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src={Veterinary}
-                alt="Veterinary"
-                className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
-              />
-              <p className="text-[#773135] font-bold text-xl mt-2">
-                {currentTranslations.VeterinaryAnimalHealth}
-              </p>
-            </motion.div>
+            <div className="w-full md:w-1/3 m-2">
+              <Link to="/allproducts">
+                <img
+                  src={Veterinary}
+                  alt="Veterinary"
+                  className="w-full h-auto max-w-sm sm:h-[220px] rounded-bl-[80px] rounded-tr-[80px] mx-auto"
+                />
+                <p className="text-[#773135] font-bold text-xl mt-2">
+                  {currentTranslations.VeterinaryAnimalHealth}
+                </p>
+              </Link>
+            </div>
           </div>
+
         </div>
       </div>
 
@@ -712,17 +647,13 @@ const Home = () => {
         </div>
 
         <div className="overflow-hidden relative flex items-center h-[200px] px-5 font-['Montserrat',sans-serif]">
-          <motion.div
-            className="flex space-x-6 "
-            animate={{ x: `-${currentIndex * 320}px` }}
-            transition={{ ease: "linear", duration: 1 }}
-          >
+          <div className="flex space-x-6">
             {certification
               .concat(certification, certification, certification)
               .map((certification, index) => (
                 <div
                   key={index}
-                  className="group w-[200px] bg-[] p-6 rounded-4xl flex-shrink-0 border border-white h-[200px] text-white hover:text-[#773135] relative overflow-hidden"
+                  className="group w-[200px] p-6 rounded-4xl flex-shrink-0 border border-white h-[200px] text-white hover:text-[#773135] relative overflow-hidden"
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:opacity-100 transition duration-500 h-auto"
@@ -734,11 +665,11 @@ const Home = () => {
                   <h3 className="text-2xl relative text-Black text-center pt-70 font-['Montserrat',sans-serif]">
                     {certification.title}
                   </h3>
-
                 </div>
               ))}
-          </motion.div>
+          </div>
         </div>
+
       </div>
 
       {/* {------------estimate section--------------} */}

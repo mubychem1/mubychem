@@ -45,7 +45,7 @@ const Footer = () => {
                 {["Home", "ABOUT", "AllProducts", "BLOGS", "CAREER"].map((key) => (
                   <li key={key}>
                     <Link
-                      to={`/${key.toLowerCase()}`}
+                      to={key === "Home" ? "/" : `/${key.toLowerCase()}`}
                       className="text-gray-100 transition-all duration-500 ease-in-out text-sm sm:text-base"
                     >
                       {currentTranslations[key]}
