@@ -60,43 +60,92 @@ import { Product } from "../models/product.model.js";
 //     }
 // });
 
+// export const productList = asyncHandler(async (req, res) => {
+//     const page = parseInt(req.query.page) || 1; // Current page number, defaults to 1
+//     const limit = parseInt(req.query.limit) || 10; // Number of products per page, defaults to 10
+//     const skip = (page - 1) * limit; // Number of products to skip for pagination
+  
+//     // console.log("Fetching products:", { page, limit, skip });
+  
+//     // Get total number of products
+//     const total = await Product.countDocuments();
+//     console.log("Total products:", total);
+  
+//     // Fetch products with pagination
+//     const products = await Product.find().skip(skip).limit(limit);
+  
+//     // Check if products exist
+//     if (!products || products.length === 0) {
+//       return res.status(404).json({
+//         statusCode: 404,
+//         data: [],
+//         message: "No products found."
+//       });
+//     }
+  
+//     // Calculate total pages
+//     const totalPages = Math.ceil(total / limit);
+  
+//     console.log("Total pages:", totalPages);
+  
+//     // Return response with product data and pagination metadata
+//     res.status(200).json({
+//       statusCode: 200,
+//       data: products,
+//       message: "Product list fetched successfully",
+//       meta: {
+//         total,
+//         currentPage: page,
+//         totalPages
+//       }
+//     });
+//   });
+
+
 export const productList = asyncHandler(async (req, res) => {
-    const page = parseInt(req.query.page) || 1; // Current page number, defaults to 1
-    const limit = parseInt(req.query.limit) || 10; // Number of products per page, defaults to 10
-    const skip = (page - 1) * limit; // Number of products to skip for pagination
-  
-    // console.log("Fetching products:", { page, limit, skip });
-  
-    // Get total number of products
-    const total = await Product.countDocuments();
-    console.log("Total products:", total);
-  
-    // Fetch products with pagination
-    const products = await Product.find().skip(skip).limit(limit);
-  
-    // Check if products exist
-    if (!products || products.length === 0) {
-      return res.status(404).json({
-        statusCode: 404,
-        data: [],
-        message: "No products found."
-      });
-    }
-  
-    // Calculate total pages
-    const totalPages = Math.ceil(total / limit);
-  
-    console.log("Total pages:", totalPages);
-  
-    // Return response with product data and pagination metadata
-    res.status(200).json({
-      statusCode: 200,
-      data: products,
-      message: "Product list fetched successfully",
-      meta: {
-        total,
-        currentPage: page,
-        totalPages
-      }
-    });
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+  const skip = (page - 1) * limit;
+  const { dosageForm } = req.query; // Get the dosageForm query parameter
+
+  const filters = {}; // Initialize an empty filter object
+
+  if (dosageForm) {
+    // If dosageForm is provided, create a filter
+    const selectedForms = dosageForm.split(',').map(form => form.trim().toLowerCase());
+    // Assuming your Product model has a 'dosageForm' field that is a string
+    // with comma-separated values. We'll use a $in operator with a regex
+    // to find products where any of the selected forms (case-insensitive)
+    // are present as whole words.
+    filters.dosageForm = { $in: selectedForms.map(form => new RegExp(`\\b${form}\\b`, 'i')) };
+  }
+
+  console.log("Fetching products with filters:", { page, limit, skip, filters });
+
+  const total = await Product.countDocuments(filters); // Apply filters to count
+  console.log("Total products matching filter:", total);
+
+  const products = await Product.find(filters).skip(skip).limit(limit); // Apply filters to find
+
+  if (!products || products.length === 0) {
+    return res.status(404).json({
+      statusCode: 404,
+      data: [],
+      message: "No products found matching the criteria.",
+    });
+  }
+
+  const totalPages = Math.ceil(total / limit);
+  console.log("Total pages matching filter:", totalPages);
+
+  res.status(200).json({
+    statusCode: 200,
+    data: products,
+    message: "Product list fetched successfully",
+    meta: {
+      total,
+      currentPage: page,
+      totalPages,
+    },
   });
+});
