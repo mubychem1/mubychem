@@ -245,7 +245,6 @@ function Pharmaceuticals() {
     "Oral",
     "Parenteral",
     "Topical",
-    "Transdermal",
     "Ophthalmic",
     "Otic",
     "Respiratory/Inhaled",
